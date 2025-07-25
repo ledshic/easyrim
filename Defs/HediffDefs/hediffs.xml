@@ -31,9 +31,9 @@
     <defName>bravesoul</defName>
     <hediffClass>Hediff_High</hediffClass>
     <label>brave soul</label>
-    <description>An immortal warrior's spirit burns within, forged through countless battles. Death
-      itself bends to their indomitable will, and their combat prowess transcends mortal
-      limitations.</description>
+    <description>
+      An immortal warrior's spirit burns within, forged through countless battles. Death itself bends to their indomitable will, and their combat prowess transcends mortal limitations.
+    </description>
     <defaultLabelColor>(0,206,209)</defaultLabelColor>
     <scenarioCanAdd>true</scenarioCanAdd>
     <maxSeverity>1.0</maxSeverity>
@@ -84,9 +84,9 @@
     <defName>pioneerspirit</defName>
     <hediffClass>Hediff_High</hediffClass>
     <label>pioneer spirit</label>
-    <description>The essence of exploration and discovery flows through their veins. Born to chart
-      the unknown, they possess an otherworldly connection to the wilderness and an innate mastery
-      over all forms of labor and combat.</description>
+    <description>
+      The essence of exploration and discovery flows through their veins. Born to chart the unknown, they possess an otherworldly connection to the wilderness and an innate mastery over all forms of labor and combat.
+    </description>
     <defaultLabelColor>(135,206,235)</defaultLabelColor>
     <scenarioCanAdd>true</scenarioCanAdd>
     <maxSeverity>1.0</maxSeverity>
@@ -154,7 +154,9 @@
     <defName>transcendence_cognitive</defName>
     <hediffClass>Hediff_High</hediffClass>
     <label>cognitive enhancement</label>
-    <description>Enhanced mental capabilities from mechanite integration.</description>
+    <description>
+      Enhanced mental capabilities from mechanite integration.
+    </description>
     <defaultLabelColor>(192,150,64)</defaultLabelColor>
     <maxSeverity>1.0</maxSeverity>
     <isBad>false</isBad>
@@ -202,7 +204,9 @@
     <defName>transcendence_physical</defName>
     <hediffClass>Hediff_High</hediffClass>
     <label>physical enhancement</label>
-    <description>Enhanced physical capabilities from mechanite integration.</description>
+    <description>
+      Enhanced physical capabilities from mechanite integration.
+    </description>
     <defaultLabelColor>(192,150,64)</defaultLabelColor>
     <maxSeverity>1.0</maxSeverity>
     <isBad>false</isBad>
@@ -245,7 +249,9 @@
     <defName>transcendence_biological</defName>
     <hediffClass>Hediff_High</hediffClass>
     <label>biological enhancement</label>
-    <description>Enhanced biological systems from mechanite integration.</description>
+    <description>
+      Enhanced biological systems from mechanite integration.
+    </description>
     <defaultLabelColor>(192,150,64)</defaultLabelColor>
     <maxSeverity>1.0</maxSeverity>
     <isBad>false</isBad>
@@ -299,7 +305,9 @@
     <defName>transcendence_environmental</defName>
     <hediffClass>Hediff_High</hediffClass>
     <label>environmental adaptation</label>
-    <description>Enhanced resistance to environmental hazards from mechanite integration.</description>
+    <description>
+      Enhanced resistance to environmental hazards from mechanite integration.
+    </description>
     <defaultLabelColor>(192,150,64)</defaultLabelColor>
     <maxSeverity>1.0</maxSeverity>
     <isBad>false</isBad>
@@ -330,7 +338,9 @@
     <defName>transcendence_psychic</defName>
     <hediffClass>Hediff_High</hediffClass>
     <label>psychic enhancement</label>
-    <description>Enhanced psychic capabilities from mechanite integration.</description>
+    <description>
+      Enhanced psychic capabilities from mechanite integration.
+    </description>
     <defaultLabelColor>(192,150,64)</defaultLabelColor>
     <maxSeverity>1.0</maxSeverity>
     <isBad>false</isBad>
@@ -355,7 +365,9 @@
     <defName>psylink_fullpower</defName>
     <hediffClass>Hediff_Psylink</hediffClass>
     <label>psylink level 6</label>
-    <description>A psylink with the highest level of psychic capability.</description>
+    <description>
+      A psylink with the highest level of psychic capability.
+    </description>
     <scenarioCanAdd>true</scenarioCanAdd>
     <isBad>false</isBad>
     <defaultLabelColor>(128,0,255)</defaultLabelColor>

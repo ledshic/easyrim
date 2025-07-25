@@ -1,36 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-  <transcendence.label>&lt;color=#C09604&gt;超凡境界&lt;/color&gt;</transcendence.label>
-  <transcendence.description>
-    先进的闪耀科技机械体从根本上改造了身体，将其提升到超越凡人的境界。每一个生物系统都以巅峰效率运作，同时心智达到完美的清晰状态。
-  </transcendence.description>
-
-  <!-- Transcendence Sub-Hediffs Translations -->
-  <transcendence_cognitive.label>认知强化</transcendence_cognitive.label>
-  <transcendence_cognitive.description>机械体融合带来的精神能力增强。</transcendence_cognitive.description>
-
-  <transcendence_physical.label>身体强化</transcendence_physical.label>
-  <transcendence_physical.description>机械体融合带来的身体能力增强。</transcendence_physical.description>
-
-  <transcendence_biological.label>生物强化</transcendence_biological.label>
-  <transcendence_biological.description>机械体融合带来的生物系统增强。</transcendence_biological.description>
-
-  <transcendence_environmental.label>环境适应</transcendence_environmental.label>
-  <transcendence_environmental.description>机械体融合带来的环境危险抗性增强。</transcendence_environmental.description>
-
-  <transcendence_psychic.label>灵能强化</transcendence_psychic.label>
-  <transcendence_psychic.description>机械体融合带来的灵能天赋增强。</transcendence_psychic.description>
-
-  <psylink_fullpower.label>&lt;color=#8000FF&gt;灵能链接 6级&lt;/color&gt;</psylink_fullpower.label>
-  <psylink_fullpower.description>
-    超越时代的闪耀科技杰作，将意识与宇宙灵能网络完美融合。纳米级的神经接口在大脑皮层中编织出复杂的量子回路，每一个思维脉冲都能引发现实的扭曲。掌握此等力量者已成为生物与机械、物质与精神的完美桥梁，能够操控最为强大的灵能法术，甚至重塑时空的基本法则。</psylink_fullpower.description>
-
-  <bravesoul.label>&lt;color=#00CED1&gt;不朽战魂&lt;/color&gt;</bravesoul.label>
-  <bravesoul.description>不朽战士的灵魂在体内燃烧，经历无数战场的洗礼而锻造成型。死亡本身也要向其不屈的意志低头，其战斗技艺已超越凡人的极限。血与火的考验化作永恒的力量，守护他人便是其存在的终极意义。
-  </bravesoul.description>
-
-  <pioneerspirit.label>&lt;color=#87CEEB&gt;先驱之魂&lt;/color&gt;</pioneerspirit.label>
-  <pioneerspirit.description>探索与发现的本质在血管中流淌，天生便是未知领域的开拓者。拥有与荒野的超凡联系，以及对所有劳作和战斗形式的天赋掌握。每一个未知世界都在其指引下成为人类的新家园，开拓便是其与生俱来的宿命。
-  </pioneerspirit.description>
-
+	<transcendence.label>&lt;color=#C09604&gt;超凡境界&lt;/color&gt;</transcendence.label>
+	<transcendence.description>先进的闪耀科技机械体从根本上改造了身体，将其提升到超越凡人的境界。每一个生物系统都以巅峰效率运作，同时心智达到完美的清晰状态。</transcendence.description>
+	<!-- Transcendence Sub-Hediffs Translations -->
+	<transcendence_cognitive.label>认知强化</transcendence_cognitive.label>
+	<transcendence_cognitive.description>机械体融合带来的精神能力增强。</transcendence_cognitive.description>
+	<transcendence_physical.label>身体强化</transcendence_physical.label>
+	<transcendence_physical.description>机械体融合带来的身体能力增强。</transcendence_physical.description>
+	<transcendence_biological.label>生物强化</transcendence_biological.label>
+	<transcendence_biological.description>机械体融合带来的生物系统增强。</transcendence_biological.description>
+	<transcendence_environmental.label>环境适应</transcendence_environmental.label>
+	<transcendence_environmental.description>机械体融合带来的环境危险抗性增强。</transcendence_environmental.description>
+	<transcendence_psychic.label>灵能强化</transcendence_psychic.label>
+	<transcendence_psychic.description>机械体融合带来的灵能天赋增强。</transcendence_psychic.description>
+	<psylink_fullpower.label>&lt;color=#8000FF&gt;灵能链接 6级&lt;/color&gt;</psylink_fullpower.label>
+	<psylink_fullpower.description>超越时代的闪耀科技杰作，将意识与宇宙灵能网络完美融合。纳米级的神经接口在大脑皮层中编织出复杂的量子回路，每一个思维脉冲都能引发现实的扭曲。掌握此等力量者已成为生物与机械、物质与精神的完美桥梁，能够操控最为强大的灵能法术，甚至重塑时空的基本法则。</psylink_fullpower.description>
+	<bravesoul.label>&lt;color=#00CED1&gt;不朽战魂&lt;/color&gt;</bravesoul.label>
+	<bravesoul.description>不朽战士的灵魂在体内燃烧，经历无数战场的洗礼而锻造成型。死亡本身也要向其不屈的意志低头，其战斗技艺已超越凡人的极限。血与火的考验化作永恒的力量，守护他人便是其存在的终极意义。</bravesoul.description>
+	<pioneerspirit.label>&lt;color=#87CEEB&gt;先驱之魂&lt;/color&gt;</pioneerspirit.label>
+	<pioneerspirit.description>探索与发现的本质在血管中流淌，天生便是未知领域的开拓者。拥有与荒野的超凡联系，以及对所有劳作和战斗形式的天赋掌握。每一个未知世界都在其指引下成为人类的新家园，开拓便是其与生俱来的宿命。</pioneerspirit.description>
 </LanguageData>
