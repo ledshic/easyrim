@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<LanguageData>
+    <MakeSynthread.label>编织合成纤维</MakeSynthread.label>
+    <MakeSynthread.description>将贵金属的导电特性与高分子聚合物的韧性完美融合，在分子层面重新定义纤维的极限。每一根丝线都承载着工业文明的结晶。</MakeSynthread.description>
+    <MakeSynthread.jobString>正在编织合成纤维</MakeSynthread.jobString>
+
+    <MakeHyperweave.label>铸造超织物</MakeHyperweave.label>
+    <MakeHyperweave.description>以魔菇的生物韧性为基底，融入太空级零件的超凡科技，创造出足以抵御宇宙射线与能量武器的终极防护织物。此乃超越时代的传奇工艺。</MakeHyperweave.description>
+    <MakeHyperweave.jobString>正在铸造超织物</MakeHyperweave.jobString>
+</LanguageData>

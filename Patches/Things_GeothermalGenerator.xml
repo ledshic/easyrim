@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="GeothermalGenerator"]/comps</xpath>
+        <value>
+            <comps>
+                <li Class="CompProperties_Power">
+                    <compClass>CompPowerPlantSteam</compClass>
+                    <basePowerConsumption>-9600</basePowerConsumption>
+                    <transmitsPower>true</transmitsPower>
+                </li>
+                <li Class="CompProperties_Breakdownable" />
+                <li Class="CompProperties_Stunnable">
+                    <useLargeEMPEffecter>true</useLargeEMPEffecter>
+                    <empChancePerTick>0.7</empChancePerTick>
+                    <affectedDamageDefs>
+                        <li>EMP</li>
+                    </affectedDamageDefs>
+                </li>
+            </comps>
+        </value>
+    </Operation>
+
+</Patch>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <nanocreate.degreeDatas.0.label>&lt;color=#C0C0C0&gt;nanocreate&lt;/color&gt;</nanocreate.degreeDatas.0.label>
+  <nanocreate.degreeDatas.0.description>[PAWN_nameDef] was once the pinnacle creation of a brilliant civilization, with countless nanomachines flowing through their bloodstream. Though abandoned on a rimworld, their creator heritage grants them abilities far beyond ordinary humans.</nanocreate.degreeDatas.0.description>
+
+  <braveheart.degreeDatas.0.label>&lt;color=#00CED1&gt;braveheart&lt;/color&gt;</braveheart.degreeDatas.0.label>
+  <braveheart.degreeDatas.0.description>[PAWN_nameDef] burns with an eternal warrior's flame, having survived countless battlefields. Death is merely another challenge to conquer, and protecting others is the very meaning of their existence.</braveheart.degreeDatas.0.description>
+
+  <pathfinder.degreeDatas.0.label>&lt;color=#87CEEB&gt;pathfinder&lt;/color&gt;</pathfinder.degreeDatas.0.label>
+  <pathfinder.degreeDatas.0.description>[PAWN_nameDef] is a natural-born guide to the unknown, with footprints scattered across the deepest reaches of space. Every uncharted world becomes humanity's new home under their guidance - pioneering is their destiny.</pathfinder.degreeDatas.0.description>
+</LanguageData>

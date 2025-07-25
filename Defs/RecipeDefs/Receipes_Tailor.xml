@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <RecipeDef>
+        <!-- 配方的唯一标识 -->
+        <defName>MakeSynthread</defName>
+        <!-- 显示名称，可在游戏中看到 -->
+        <label>make synthread
+        </label>
+        <!-- 工作时显示的描述 -->
+        <jobString>Making Synthread.</jobString>
+        <!-- 定义制造此物品所需的工作量，可自行调整 -->
+        <workAmount>2200</workAmount>
+        <!-- 使用的工作速度统计项 -->
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <!-- 工作时播放的特效名称 -->
+        <effectWorking>Cook</effectWorking>
+        <!-- 工作时播放的声音 -->
+        <soundWorking>Recipe_Machining</soundWorking>
+
+        <!-- 所需原料列表 -->
+        <ingredients>
+            <!-- 100 布料 -->
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Cloth</li>
+                    </thingDefs>
+                </filter>
+                <count>100</count>
+            </li>
+            <!-- 120 银 -->
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Silver</li>
+                    </thingDefs>
+                </filter>
+                <count>120</count>
+            </li>
+            <!-- 20 玻璃钢 -->
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Plasteel</li>
+                    </thingDefs>
+                </filter>
+                <count>20</count>
+            </li>
+        </ingredients>
+
+        <!-- 制造出的产品 -->
+        <products>
+            <!-- 制作 60 合成纤维 -->
+            <Synthread>60</Synthread>
+        </products>
+
+        <!-- 指定哪些工作台可以使用此配方，此处为高级工作台 -->
+        <recipeUsers>
+            <li>FabricationBench</li>
+        </recipeUsers>
+
+        <researchPrerequisite>
+            <li>AdvancedFabrication</li>
+        </researchPrerequisite>
+
+        <!-- 需要制造技能 -->
+        <skillRequirements>
+            <Crafting>8</Crafting>
+        </skillRequirements>
+
+        <workSkill>Crafting</workSkill>
+    </RecipeDef>
+
+    <RecipeDef>
+        <!-- 配方的唯一标识 -->
+        <defName>MakeHyperweave</defName>
+        <!-- 显示名称，可在游戏中看到 -->
+        <label>make hyperweave</label>
+        <!-- 工作时显示的描述 -->
+        <jobString>Making Hyperweave.</jobString>
+        <!-- 定义制造此物品所需的工作量，可根据平衡性自行调整 -->
+        <workAmount>2500</workAmount>
+        <!-- 使用的工作速度统计项 -->
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <!-- 工作时播放的特效名称 -->
+        <effectWorking>Cook</effectWorking>
+        <!-- 工作时播放的声音 -->
+        <soundWorking>Recipe_Machining</soundWorking>
+
+        <!-- 所需原料列表 -->
+        <ingredients>
+            <!-- 60 合成纤维 -->
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Synthread</li>
+                    </thingDefs>
+                </filter>
+                <count>60</count>
+            </li>
+            <!-- 20 蘑菇布 -->
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>DevilstrandCloth</li>
+                    </thingDefs>
+                </filter>
+                <count>20</count>
+            </li>
+            <!-- 2 高级零部件 -->
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentSpacer</li>
+                    </thingDefs>
+                </filter>
+                <count>20</count>
+            </li>
+        </ingredients>
+
+        <!-- 制造出的产品 -->
+        <products>
+            <!-- 产出 60 超织物 -->
+            <Hyperweave>60</Hyperweave>
+        </products>
+
+        <!-- 指定哪些工作台可以使用此配方，此处为高级工作台 -->
+        <recipeUsers>
+            <li>FabricationBench</li>
+        </recipeUsers>
+
+        <researchPrerequisite>
+            <li>AdvancedFabrication</li>
+        </researchPrerequisite>
+
+        <!-- 需要制造技能要求，可根据需求调整 -->
+        <skillRequirements>
+            <Crafting>10</Crafting>
+        </skillRequirements>
+
+        <workSkill>Crafting</workSkill>
+    </RecipeDef>
+
+</Defs>

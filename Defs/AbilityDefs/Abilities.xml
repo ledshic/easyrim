@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <AbilityDef ParentName="PsycastBaseSkip">
+    <defName>imbafarskip</defName>
+    <label>farskip</label>
+    <description>Skip the caster, along with anyone standing near them, to an ally at a distant
+      location. This can send people far across the planet, but only works if there is a willing
+      ally on the other side to use as a navigation beacon. The skipped people will always appear
+      near a random ally on the target map.</description>
+    <level>1</level>
+    <iconPath>UI/Abilities/Farskip</iconPath>
+    <hotKey>Misc12</hotKey>
+    <targetWorldCell>True</targetWorldCell>
+    <showGizmoOnWorldView>True</showGizmoOnWorldView>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <statBases>
+      <Ability_PsyfocusCost>0</Ability_PsyfocusCost>
+      <Ability_EffectRadius>6</Ability_EffectRadius>
+    </statBases>
+    <verbProperties>
+      <warmupTime>5</warmupTime>
+      <range>6</range>
+      <drawAimPie>False</drawAimPie>
+      <requireLineOfSight>False</requireLineOfSight>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityFarskip">
+        <stunTicks>18~60</stunTicks>
+        <clamorType>Ability</clamorType>
+        <clamorRadius>10</clamorRadius>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <AbilityDef>
+    <defName>MetalbloodSurge</defName>
+    <label>metalblood injection</label>
+    <description>Use the metalblood heart to release metalblood serum into the bloodstream, reducing
+      incoming damage for a short period of time.</description>
+    <iconPath>UI/Abilities/MetalbloodInjection</iconPath>
+    <cooldownTicksRange>15000</cooldownTicksRange> <!-- 6 hours -->
+    <hostile>false</hostile>
+    <groupAbility>true</groupAbility>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <aiCanUse>true</aiCanUse>
+    <ai_IsOffensive>true</ai_IsOffensive>
+    <targetRequired>false</targetRequired>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <statBases>
+      <Ability_Duration>120</Ability_Duration>
+    </statBases>
+    <charges>6</charges>
+    <cooldownPerCharge>true</cooldownPerCharge>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <drawAimPie>false</drawAimPie>
+      <requireLineOfSight>false</requireLineOfSight>
+      <nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+      <soundCast>Pawn_Ghoul_Frenzy</soundCast>
+      <targetable>false</targetable>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>Metalblood</hediffDef>
+        <onlyApplyToSelf>True</onlyApplyToSelf>
+        <replaceExisting>true</replaceExisting>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <AbilityDef
+    ParentName="AbilityTouchBase">
+    <defName>BlessHealing</defName>
+    <label>unnatural healing</label>
+    <description>Use dark psychic influence to heal someone. The process will stop bleeding, restore
+      blood loss, and can even heal significant injuries. However, it may also have unexpected side
+      effects.</description>
+    <iconPath>UI/Abilities/UnnaturalHealing</iconPath>
+    <cooldownTicksRange>6000</cooldownTicksRange> <!-- 6 days -->
+    <showPsycastEffects>false</showPsycastEffects>
+    <sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
+    <stunTargetWhileCasting>true</stunTargetWhileCasting>
+    <moteOffsetAmountTowardsTarget>0.5</moteOffsetAmountTowardsTarget>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <warmupMote>Mote_HoraxSmallSpellWarmup</warmupMote>
+    <warmupEffecter>HoraxianAbilityCasting</warmupEffecter>
+    <warmupSound>AnomalyAbilityWarmup</warmupSound>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <charges>7</charges>
+    <cooldownPerCharge>true</cooldownPerCharge>
+    <verbProperties>
+      <verbClass>Verb_CastAbilityTouch</verbClass>
+      <drawAimPie>false</drawAimPie>
+      <range>-1</range>
+      <warmupTime>4.5</warmupTime>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetMechs>false</canTargetMechs>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_UnnaturalHealing" />
+    </comps>
+  </AbilityDef>
+
+  <AbilityDef
+    Name="ShapeFlesh">
+    <defName>ChaosCall</defName>
+    <label>shape flesh</label>
+    <description>Induce a dark archotech to reconfigure a corpse into a horrendous fleshbeast. The
+      fleshbeast will be hostile to all humans, including the one who created it.</description>
+    <iconPath>UI/Abilities/ShapeFlesh</iconPath>
+    <cooldownTicksRange>3600</cooldownTicksRange> <!-- 60 seconds -->
+    <charges>9</charges>
+    <cooldownPerCharge>true</cooldownPerCharge>
+    <showPsycastEffects>false</showPsycastEffects>
+    <sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <moteOffsetAmountTowardsTarget>0.5</moteOffsetAmountTowardsTarget>
+    <warmupMote>Mote_HoraxSmallSpellWarmup</warmupMote>
+    <warmupEffecter>HoraxianAbilityCasting</warmupEffecter>
+    <warmupSound>AnomalyAbilityWarmup</warmupSound>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <warmupTime>2</warmupTime>
+      <range>99</range>
+      <requireLineOfSight>True</requireLineOfSight>
+      <drawHighlightWithLineOfSight>true</drawHighlightWithLineOfSight>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetMechs>false</canTargetMechs>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetCorpses>true</canTargetCorpses>
+        <onlyTargetCorpses>true</onlyTargetCorpses>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_FleshbeastFromCorpse" />
+    </comps>
+  </AbilityDef>
+
+  <AbilityDef>
+    <defName>CommandSlaughter</defName>
+    <label>psychic slaughter</label>
+    <description>Use dark psychic power to induce chaotic reconfiguration of flesh. This kills a
+      flesh creature in seconds and converts its body into a pile of twisted flesh.</description>
+    <iconPath>UI/Abilities/Slaughter</iconPath>
+    <cooldownTicksRange>180000</cooldownTicksRange> <!-- 3 days -->
+    <showPsycastEffects>false</showPsycastEffects>
+    <sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
+    <stunTargetWhileCasting>true</stunTargetWhileCasting>
+    <moteOffsetAmountTowardsTarget>0.5</moteOffsetAmountTowardsTarget>
+    <warmupMote>Mote_HoraxSmallSpellWarmup</warmupMote>
+    <warmupEffecter>HoraxianAbilityCasting</warmupEffecter>
+    <warmupSound>AnomalyAbilityWarmup</warmupSound>
+    <writeCombatLog>true</writeCombatLog>
+    <charges>8</charges>
+    <cooldownPerCharge>true</cooldownPerCharge>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <warmupTime>2</warmupTime>
+      <range>99</range>
+      <requireLineOfSight>false</requireLineOfSight>
+      <drawHighlightWithLineOfSight>true</drawHighlightWithLineOfSight>
+      <targetParams>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetMechs>false</canTargetMechs>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_PsychicSlaughter" />
+    </comps>
+  </AbilityDef>
+</Defs>

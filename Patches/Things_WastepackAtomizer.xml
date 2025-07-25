@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>
+            /Defs/ThingDef[defName="WastepackAtomizer"]/comps
+        </xpath>
+        <value>
+            <comps>
+                <li Class="CompProperties_Power">
+                    <compClass>CompPowerTrader</compClass>
+                    <basePowerConsumption>800</basePowerConsumption>
+                </li>
+                <li Class="CompProperties_Atomizer">
+                    <thingDef>Wastepack</thingDef>
+                    <stackLimit>100</stackLimit>
+                    <drawContainedThing>false</drawContainedThing>
+                    <ticksPerAtomize>3000</ticksPerAtomize>
+                    <resolveEffecter>AtomizerResolve</resolveEffecter>
+                    <workingEffecter>WastepackAtomizer_Working</workingEffecter>
+                    <materialsAddedSound>WastepackAtomizer_MaterialInserted</materialsAddedSound>
+                    <contentsDrawOffset>(0.05, 0, 0.2)</contentsDrawOffset>
+                </li>
+                <li Class="CompProperties_Flickable" />
+            </comps>
+        </value>
+    </Operation>
+
+</Patch>

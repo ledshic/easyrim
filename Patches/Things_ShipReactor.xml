@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="Ship_Reactor"]/comps</xpath>
+        <value>
+            <comps>
+                <li Class="CompProperties_Power">
+                    <compClass>CompPowerPlant</compClass>
+                    <basePowerConsumption>-72000</basePowerConsumption>
+                    <transmitsPower>true</transmitsPower>
+                </li>
+                <li Class="CompProperties_ShipPart" />
+                <li Class="CompProperties_Hibernatable">
+                    <incidentTargetWhileStarting>Map_RaidBeacon</incidentTargetWhileStarting>
+                    <sustainerActive>ShipReactor_Ambience</sustainerActive>
+                </li>
+            </comps>
+        </value>
+    </Operation>
+
+</Patch>

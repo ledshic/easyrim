@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<languageData>
+    <imbafarskip.label>虚空穿梭</imbafarskip.label>
+    <imbafarskip.description>
+        撕裂时空壁垒，将施法者及周围同伴瞬息间投送至边缘世界的另一端。这种古老的超凡技艺需要远方盟友的心灵共鸣作为锚点，穿越者将在盟友的意识牵引下重塑躯体。 </imbafarskip.description>
+    <MetalbloodSurge.label>钢铁洪流</MetalbloodSurge.label>
+    <MetalbloodSurge.description>唤醒体内沉睡的机械之心，让液态金属如洪流般涌入血管。钢铁与血肉的完美融合将化身为战场上的不朽传说，直至金属冷却，血液重归平静。
+    </MetalbloodSurge.description>
+    <CommandSlaughter.label>死神凝视
+    </CommandSlaughter.label>
+    <CommandSlaughter.description>
+        以禁忌的心灵之力窥视死亡本质，一瞬间便能令生命之线断裂。目标的血肉将在恐怖的嘶鸣中崩解重组，化为扭曲的肉块，仿佛从未存在过完整的形态。</CommandSlaughter.description>
+    <ChaosCall.label>畸变召唤</ChaosCall.label>
+    <ChaosCall.description>向深渊中的远古意识低语，让腐朽的尸骸在异端科技的触碰下获得新生。诞生的畸形造物将成为纯粹的杀戮机器，连创造者的气息也无法平息它们心中的暴虐。</ChaosCall.description>
+    <BlessHealing.label>渎神医术</BlessHealing.label>
+    <BlessHealing.description>借用禁断知识强行逆转生命凋零，让濒死的血肉重新焕发生机。虽能瞬间愈合致命创伤，但这种亵渎自然法则的行为可能引发不可名状的诅咒降临。</BlessHealing.description>
+</languageData>

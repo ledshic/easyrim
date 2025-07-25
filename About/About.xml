@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<packageId>sant.rimcheats</packageId>
+	<name>轻松环世界 - easyrim</name>
+	<author>Passion=Life</author>
+	<supportedVersions>
+		<li>1.6</li>
+	</supportedVersions>
+	<description>轻松环世界 - 超强特性模组
+
+		一个让环世界游戏变得更轻松的作弊模组，添加了强力的殖民者特性。
+
+		特性介绍：
+		• 纳米造物主 - 全面提升美观、速度、负重、护甲、学习和工作效率
+		• 不朽之魂 - 巨大的战斗加成、移动、治疗和精神抗性提升
+		• 星际先驱 - 卓越的远程战斗、采矿/收获产量和生存能力
+
+		同时包含：
+		- 无灵能消耗的远程跳跃能力
+		- 增强的金属血液注射能力
+		- 大幅提升地热发电机功率输出 (9600W)
+		- 各种其他平衡性修改
+
+		⚠️ 警告: 这是一个作弊模组，会让游戏变得非常简单。请谨慎使用。
+
+		支持版本: RimWorld 1.6 (Odyssey)
+		语言支持: 中文简体 &amp; English
+	</description>
+</ModMetaData>
