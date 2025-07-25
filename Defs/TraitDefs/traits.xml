@@ -8,29 +8,6 @@
 				<label>&lt;color=#C0C0C0&gt;nanocreate&lt;/color&gt;</label>
 				<description>[PAWN_nameDef]</description>
 				<marketValueFactorOffset>-0.35</marketValueFactorOffset>
-				<statOffsets>
-					<PawnBeauty>3</PawnBeauty>
-					<MoveSpeed>0.2</MoveSpeed>
-					<CarryingCapacity>25</CarryingCapacity>
-					<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
-					<ArmorRating_Sharp>0.2</ArmorRating_Sharp>
-					<ArmorRating_Heat>2</ArmorRating_Heat>
-					<MentalBreakThreshold>-1</MentalBreakThreshold>
-				</statOffsets>
-				<statFactors>
-					<GlobalLearningFactor>2</GlobalLearningFactor>
-					<WorkSpeedGlobal>2</WorkSpeedGlobal>
-					<MoveSpeed>1.25</MoveSpeed>
-					<NegotiationAbility>2</NegotiationAbility>
-					<ResearchSpeed>2</ResearchSpeed>
-					<IncomingDamageFactor>0.2</IncomingDamageFactor>
-					<ConversionPower>2</ConversionPower>
-					<SocialImpact>2</SocialImpact>
-					<TradePriceImprovement>2</TradePriceImprovement>
-					<MeditationFocusGain>2</MeditationFocusGain>
-					<PsychicSensitivity>2</PsychicSensitivity>
-					<GeneralLaborSpeed>2</GeneralLaborSpeed>
-				</statFactors>
 			</li>
 		</degreeDatas>
 	</TraitDef>
