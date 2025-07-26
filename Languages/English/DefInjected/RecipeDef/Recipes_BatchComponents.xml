@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <Make_ComponentIndustrialBatch.label>make components (batch)</Make_ComponentIndustrialBatch.label>
+  <Make_ComponentIndustrialBatch.description>Make a batch of industrial components at once.</Make_ComponentIndustrialBatch.description>
+  <Make_ComponentSpacerBatch.label>make advanced components (batch)</Make_ComponentSpacerBatch.label>
+  <Make_ComponentSpacerBatch.description>Make a batch of advanced components at once.</Make_ComponentSpacerBatch.description>
+</LanguageData>

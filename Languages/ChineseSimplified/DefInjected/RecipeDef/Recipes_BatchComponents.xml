@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <Make_ComponentIndustrialBatch.label>批量制造组件</Make_ComponentIndustrialBatch.label>
+  <Make_ComponentIndustrialBatch.description>一次性批量制造工业组件。</Make_ComponentIndustrialBatch.description>
+  <Make_ComponentSpacerBatch.label>批量制造高级组件</Make_ComponentSpacerBatch.label>
+  <Make_ComponentSpacerBatch.description>一次性批量制造高级组件。</Make_ComponentSpacerBatch.description>
+</LanguageData>

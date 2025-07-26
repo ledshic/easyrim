@@ -7,7 +7,7 @@
 			<li>
 				<label>&lt;color=#C0C0C0&gt;nanocreate&lt;/color&gt;</label>
 				<description>[PAWN_nameDef]</description>
-				<marketValueFactorOffset>-0.35</marketValueFactorOffset>
+				<marketValueFactorOffset>-1</marketValueFactorOffset>
 			</li>
 		</degreeDatas>
 	</TraitDef>
@@ -21,7 +21,7 @@
 				<description>[PAWN_nameDef]</description>
 				<marketValueFactorOffset>0.35</marketValueFactorOffset>
 				<statOffsets>
-					<MoveSpeed>0.6</MoveSpeed>
+					<MoveSpeed>0.8</MoveSpeed>
 					<CarryingCapacity>50</CarryingCapacity>
 					<ArmorRating_Blunt>1</ArmorRating_Blunt>
 					<ArmorRating_Sharp>1</ArmorRating_Sharp>
@@ -30,7 +30,6 @@
 				</statOffsets>
 				<statFactors>
 					<GlobalLearningFactor>5</GlobalLearningFactor>
-					<MoveSpeed>1.5</MoveSpeed>
 					<CarryingCapacity>2</CarryingCapacity>
 					<MeleeHitChance>5</MeleeHitChance>
 					<MeleeArmorPenetration>2</MeleeArmorPenetration>

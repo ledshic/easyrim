@@ -56,7 +56,7 @@
         <sound>OxygenPump_Ambient</sound>
       </li>
     </comps>
-    <designationCategory>Power</designationCategory>
+    <designationCategory>Odyssey</designationCategory>
     <researchPrerequisites>
       <li>Electricity</li>
     </researchPrerequisites>
