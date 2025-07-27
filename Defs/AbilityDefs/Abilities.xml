@@ -13,7 +13,7 @@
     <hostile>false</hostile>
     <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
     <statBases>
-      <Ability_PsyfocusCost>0</Ability_PsyfocusCost>
+      <Ability_PsyfocusCost>-1</Ability_PsyfocusCost>
       <Ability_EffectRadius>6</Ability_EffectRadius>
     </statBases>
     <verbProperties>

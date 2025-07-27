@@ -76,7 +76,7 @@
 		<defName>pioneerspirit</defName>
 		<hediffClass>Hediff_High</hediffClass>
 		<label>pioneer spirit</label>
-		<description>      The essence of exploration and discovery flows through their veins. Born to chart the unknown, they possess an otherworldly connection to the wilderness and an innate mastery over all forms of labor and combat.    </description>
+		<description>The essence of exploration and discovery flows through their veins. Born to chart the unknown, they possess an otherworldly connection to the wilderness and an innate mastery over all forms of labor and combat.</description>
 		<defaultLabelColor>(135,206,235)</defaultLabelColor>
 		<scenarioCanAdd>true</scenarioCanAdd>
 		<maxSeverity>1.0</maxSeverity>
@@ -165,9 +165,6 @@
 						<offset>0.25</offset>
 					</li>
 				</capMods>
-				<statOffsets>
-					<PawnBeauty>3</PawnBeauty>
-				</statOffsets>
 				<statFactors>
 					<StudyEfficiency>2</StudyEfficiency>
 					<WorkSpeedGlobalOffsetMech>2</WorkSpeedGlobalOffsetMech>
@@ -212,6 +209,7 @@
 					</li>
 				</capMods>
 				<statOffsets>
+					<PawnBeauty>3</PawnBeauty>
 					<MechBandwidth>12</MechBandwidth>
 					<MoveSpeed>0.2</MoveSpeed>
 					<CarryingCapacity>25</CarryingCapacity>
@@ -223,6 +221,7 @@
 					<MoveSpeed>1.25</MoveSpeed>
 					<IncomingDamageFactor>0.2</IncomingDamageFactor>
 					<StaggerDurationFactor>0</StaggerDurationFactor>
+					<Flammability>0</Flammability>
 				</statFactors>
 			</li>
 		</stages>
