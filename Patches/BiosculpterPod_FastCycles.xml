@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<!-- Patch to optimize biosculpter pod - reduce cycle times and improve biotuning -->
+	<!-- Reduce Medic cycle from 6 days to 0.1 day -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="BiosculpterPod"]/comps/li[@Class="CompProperties_BiosculpterPod_HealingCycle" and key="medic"]/durationDays</xpath>
+		<value>
+			<durationDays>0.1</durationDays>
+		</value>
+	</Operation>
+	<!-- Reduce Bioregeneration cycle from 25 days to 0.5 day -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="BiosculpterPod"]/comps/li[@Class="CompProperties_BiosculpterPod_HealingCycle" and key="bioregeneration"]/durationDays</xpath>
+		<value>
+			<durationDays>0.5</durationDays>
+		</value>
+	</Operation>
+	<!-- Reduce Age reversal cycle from 8 days to 0.1 day -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="BiosculpterPod"]/comps/li[@Class="CompProperties_BiosculpterPod_AgeReversalCycle"]/durationDays</xpath>
+		<value>
+			<durationDays>0.1</durationDays>
+		</value>
+	</Operation>
+	<!-- Reduce Pleasure cycle from 4 days to 0.1 day -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="BiosculpterPod"]/comps/li[@Class="CompProperties_BiosculpterPod_PleasureCycle"]/durationDays</xpath>
+		<value>
+			<durationDays>0.1</durationDays>
+		</value>
+	</Operation>
+
+	<!-- Increase biotuned cycle speed factor from 1.25 to 1.5 (50% faster) -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="BiosculpterPod"]/comps/li[@Class="CompProperties_BiosculpterPod"]/biotunedCycleSpeedFactor</xpath>
+		<value>
+			<biotunedCycleSpeedFactor>1.5</biotunedCycleSpeedFactor>
+		</value>
+	</Operation>
+</Patch>
