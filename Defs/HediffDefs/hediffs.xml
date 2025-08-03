@@ -166,14 +166,14 @@
 					</li>
 				</capMods>
 				<statFactors>
-					<MeleeCooldownFactor>0.5</MeleeCooldownFactor>
-					<MeleeHitChance>1</MeleeHitChance>
-					<MeleeArmorPenetration>1</MeleeArmorPenetration>
-					<MeleeDamageFactor>1.25</MeleeDamageFactor>
-					<MeleeDodgeChance>1</MeleeDodgeChance>
-					<RangedCooldownFactor>0.6</RangedCooldownFactor>
-					<ShootingAccuracyPawn>2</ShootingAccuracyPawn>
-					<AimingDelayFactor>0.5</AimingDelayFactor>
+					<MeleeCooldownFactor>0.6</MeleeCooldownFactor>
+					<MeleeHitChance>1.4</MeleeHitChance>
+					<MeleeArmorPenetration>1.6</MeleeArmorPenetration>
+					<MeleeDamageFactor>1.5</MeleeDamageFactor>
+					<MeleeDodgeChance>1.6</MeleeDodgeChance>
+					<RangedCooldownFactor>0.4</RangedCooldownFactor>
+					<ShootingAccuracyPawn>1.8</ShootingAccuracyPawn>
+					<AimingDelayFactor>0.4</AimingDelayFactor>
 					<StudyEfficiency>2</StudyEfficiency>
 					<WorkSpeedGlobalOffsetMech>2</WorkSpeedGlobalOffsetMech>
 					<GlobalLearningFactor>2</GlobalLearningFactor>
@@ -312,7 +312,7 @@
 					<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">1.2</VacuumResistance>
 					<ComfyTemperatureMin>-250</ComfyTemperatureMin>
 					<ComfyTemperatureMax>250</ComfyTemperatureMax>
-					<Flammability>0</Flammability>
+					<Flammability>-1.2</Flammability>
 					<ToxicResistance>1</ToxicResistance>
 				</statOffsets>
 			</li>
