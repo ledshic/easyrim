@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-	<transcendence.label>&lt;color=#C09604&gt;超凡境界&lt;/color&gt;</transcendence.label>
+	<transcendence.label>&lt;color=#C0C0C0&gt;超凡境界&lt;/color&gt;</transcendence.label>
 	<transcendence.description>先进的闪耀科技机械体从根本上改造了身体，将其提升到超越凡人的境界。每一个生物系统都以巅峰效率运作，同时心智达到完美的清晰状态。</transcendence.description>
 	<!-- Transcendence Sub-Hediffs Translations -->
 	<transcendence_cognitive.label>认知强化</transcendence_cognitive.label>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<!-- Patch to optimize infinite chemreactor - reduce fuel generation time -->
+	<!-- Reduce chemfuel generation interval from 10 days to 0.5 days (from 600000 ticks to 30000 ticks) -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="InfiniteChemreactor"]/comps/li[@Class="CompProperties_Spawner"]/spawnIntervalRange</xpath>
+		<value>
+			<spawnIntervalRange><min>30000</min><max>30000</max></spawnIntervalRange>
+		</value>
+	</Operation>
+</Patch>

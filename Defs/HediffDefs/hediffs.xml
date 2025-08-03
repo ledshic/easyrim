@@ -5,7 +5,7 @@
 		<hediffClass>Hediff_High</hediffClass>
 		<label>transcendence</label>
 		<description>      Advanced glitter tech mechanites have fundamentally transformed the body, elevating it beyond mortal limitations. Every biological system operates at peak efficiency while the mind achieves perfect clarity.    </description>
-		<defaultLabelColor>(192,150,64)</defaultLabelColor>
+		<defaultLabelColor>(192,192,192)</defaultLabelColor>
 		<scenarioCanAdd>true</scenarioCanAdd>
 		<maxSeverity>1.0</maxSeverity>
 		<isBad>false</isBad>
@@ -143,7 +143,7 @@
 		<hediffClass>Hediff_High</hediffClass>
 		<label>cognitive enhancement</label>
 		<description>      Enhanced mental capabilities from mechanite integration.    </description>
-		<defaultLabelColor>(192,150,64)</defaultLabelColor>
+		<defaultLabelColor>(192,192,192)</defaultLabelColor>
 		<maxSeverity>1.0</maxSeverity>
 		<isBad>false</isBad>
 		<comps>
@@ -166,6 +166,14 @@
 					</li>
 				</capMods>
 				<statFactors>
+					<MeleeCooldownFactor>0.5</MeleeCooldownFactor>
+					<MeleeHitChance>1</MeleeHitChance>
+					<MeleeArmorPenetration>1</MeleeArmorPenetration>
+					<MeleeDamageFactor>1.25</MeleeDamageFactor>
+					<MeleeDodgeChance>1</MeleeDodgeChance>
+					<RangedCooldownFactor>0.6</RangedCooldownFactor>
+					<ShootingAccuracyPawn>2</ShootingAccuracyPawn>
+					<AimingDelayFactor>0.5</AimingDelayFactor>
 					<StudyEfficiency>2</StudyEfficiency>
 					<WorkSpeedGlobalOffsetMech>2</WorkSpeedGlobalOffsetMech>
 					<GlobalLearningFactor>2</GlobalLearningFactor>
@@ -186,7 +194,7 @@
 		<hediffClass>Hediff_High</hediffClass>
 		<label>physical enhancement</label>
 		<description>      Enhanced physical capabilities from mechanite integration.    </description>
-		<defaultLabelColor>(192,150,64)</defaultLabelColor>
+		<defaultLabelColor>(192,192,192)</defaultLabelColor>
 		<maxSeverity>1.0</maxSeverity>
 		<isBad>false</isBad>
 		<comps>
@@ -221,7 +229,6 @@
 					<MoveSpeed>1.25</MoveSpeed>
 					<IncomingDamageFactor>0.2</IncomingDamageFactor>
 					<StaggerDurationFactor>0</StaggerDurationFactor>
-					<Flammability>0</Flammability>
 				</statFactors>
 			</li>
 		</stages>
@@ -231,7 +238,7 @@
 		<hediffClass>Hediff_High</hediffClass>
 		<label>biological enhancement</label>
 		<description>      Enhanced biological systems from mechanite integration.    </description>
-		<defaultLabelColor>(192,150,64)</defaultLabelColor>
+		<defaultLabelColor>(192,192,192)</defaultLabelColor>
 		<maxSeverity>1.0</maxSeverity>
 		<isBad>false</isBad>
 		<comps>
@@ -284,7 +291,7 @@
 		<hediffClass>Hediff_High</hediffClass>
 		<label>environmental adaptation</label>
 		<description>      Enhanced resistance to environmental hazards from mechanite integration.    </description>
-		<defaultLabelColor>(192,150,64)</defaultLabelColor>
+		<defaultLabelColor>(192,192,192)</defaultLabelColor>
 		<maxSeverity>1.0</maxSeverity>
 		<isBad>false</isBad>
 		<comps>
@@ -305,6 +312,8 @@
 					<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">1.2</VacuumResistance>
 					<ComfyTemperatureMin>-250</ComfyTemperatureMin>
 					<ComfyTemperatureMax>250</ComfyTemperatureMax>
+					<Flammability>0</Flammability>
+					<ToxicResistance>1</ToxicResistance>
 				</statOffsets>
 			</li>
 		</stages>
@@ -314,7 +323,7 @@
 		<hediffClass>Hediff_High</hediffClass>
 		<label>psychic enhancement</label>
 		<description>      Enhanced psychic capabilities from mechanite integration.    </description>
-		<defaultLabelColor>(192,150,64)</defaultLabelColor>
+		<defaultLabelColor>(192,192,192)</defaultLabelColor>
 		<maxSeverity>1.0</maxSeverity>
 		<isBad>false</isBad>
 		<comps>
