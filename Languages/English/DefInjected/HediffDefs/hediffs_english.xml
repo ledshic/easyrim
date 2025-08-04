@@ -11,4 +11,13 @@
   <pioneerspirit.label>&lt;color=#87CEEB&gt;pioneer spirit&lt;/color&gt;</pioneerspirit.label>
   <pioneerspirit.description>
     The essence of exploration and discovery flows through their veins. Born to chart the unknown, they possess an otherworldly connection to the wilderness and an innate mastery over all forms of labor and combat. Every uncharted world becomes humanity's new home under their guidance - pioneering is their destiny.</pioneerspirit.description>
+
+  <adaptive_armor.label>&lt;color=#646464&gt;adaptive armor&lt;/color&gt;</adaptive_armor.label>
+  <adaptive_armor.description>
+    Advanced adaptive armor that responds to the health condition. As health decreases, the armor becomes more protective but restricts movement. Nanoscale actuators analyze threat levels and automatically adjust defensive parameters.</adaptive_armor.description>
+  <adaptive_armor.stages.0.label>adaptive armor (active)</adaptive_armor.stages.0.label>
+  <adaptive_armor.stages.1.label>adaptive armor (alert)</adaptive_armor.stages.1.label>
+  <adaptive_armor.stages.2.label>adaptive armor (defensive)</adaptive_armor.stages.2.label>
+  <adaptive_armor.stages.3.label>adaptive armor (emergency)</adaptive_armor.stages.3.label>
+  <adaptive_armor.stages.4.label>adaptive armor (fortress)</adaptive_armor.stages.4.label>
 </LanguageData>

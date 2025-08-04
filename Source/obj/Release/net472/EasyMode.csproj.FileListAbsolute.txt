@@ -1,0 +1,6 @@
+F:\SteamLibrary\steamapps\common\RimWorld\Mods\easymode\Source\obj\Release\net472\EasyMode.csproj.AssemblyReference.cache
+F:\SteamLibrary\steamapps\common\RimWorld\Mods\easymode\Source\obj\Release\net472\EasyMode.GeneratedMSBuildEditorConfig.editorconfig
+F:\SteamLibrary\steamapps\common\RimWorld\Mods\easymode\Source\obj\Release\net472\EasyMode.AssemblyInfoInputs.cache
+F:\SteamLibrary\steamapps\common\RimWorld\Mods\easymode\Source\obj\Release\net472\EasyMode.AssemblyInfo.cs
+F:\SteamLibrary\steamapps\common\RimWorld\Mods\easymode\Source\obj\Release\net472\EasyMode.csproj.CoreCompileInputs.cache
+F:\SteamLibrary\steamapps\common\RimWorld\Mods\easymode\Source\obj\Release\net472\EasyMode.sourcelink.json

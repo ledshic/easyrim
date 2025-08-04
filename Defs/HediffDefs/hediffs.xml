@@ -11,18 +11,41 @@
 		<isBad>false</isBad>
 		<comps>
 			<li Class="HediffCompProperties_HealPermanentWounds" />
-			<li Class="HediffCompProperties_GiveHediff">
-				<hediffDef>transcendence_cognitive</hediffDef>
-				<atSeverity>1</atSeverity>
+			<li Class="EasyMode.HediffCompProperties_GiveMultipleHediffs">
+				<atSeverity>0</atSeverity>
 				<disappearsAfterGiving>false</disappearsAfterGiving>
-			</li>
-			<li Class="HediffCompProperties_SeverityPerSecond">
-				<severityPerSecondRange>0.5</severityPerSecondRange>
+				<hediffsToGive>
+					<li>
+						<hediffDef>transcendence_cognitive</hediffDef>
+						<severity>1.0</severity>
+					</li>
+					<li>
+						<hediffDef>transcendence_physical</hediffDef>
+						<severity>1.0</severity>
+					</li>
+					<li>
+						<hediffDef>transcendence_biological</hediffDef>
+						<severity>1.0</severity>
+					</li>
+					<li>
+						<hediffDef>transcendence_environmental</hediffDef>
+						<severity>1.0</severity>
+					</li>
+					<li>
+						<hediffDef>transcendence_psychic</hediffDef>
+						<severity>1.0</severity>
+					</li>
+					<li>
+						<hediffDef>adaptive_armor</hediffDef>
+						<severity>1.0</severity>
+					</li>
+				</hediffsToGive>
 			</li>
 		</comps>
 		<preventsDeath>true</preventsDeath>
 		<keepOnBodyPartRestoration> True </keepOnBodyPartRestoration>
 	</HediffDef>
+
 	<HediffDef>
 		<defName>bravesoul</defName>
 		<hediffClass>Hediff_High</hediffClass>
@@ -72,6 +95,7 @@
 			</li>
 		</stages>
 	</HediffDef>
+
 	<HediffDef>
 		<defName>pioneerspirit</defName>
 		<hediffClass>Hediff_High</hediffClass>
@@ -138,6 +162,7 @@
 			</li>
 		</stages>
 	</HediffDef>
+
 	<HediffDef>
 		<defName>transcendence_cognitive</defName>
 		<hediffClass>Hediff_High</hediffClass>
@@ -146,13 +171,6 @@
 		<defaultLabelColor>(192,192,192)</defaultLabelColor>
 		<maxSeverity>1.0</maxSeverity>
 		<isBad>false</isBad>
-		<comps>
-			<li Class="HediffCompProperties_GiveHediff">
-				<hediffDef>transcendence_physical</hediffDef>
-				<atSeverity>1</atSeverity>
-				<disappearsAfterGiving>false</disappearsAfterGiving>
-			</li>
-		</comps>
 		<stages>
 			<li>
 				<capMods>
@@ -189,6 +207,7 @@
 			</li>
 		</stages>
 	</HediffDef>
+
 	<HediffDef>
 		<defName>transcendence_physical</defName>
 		<hediffClass>Hediff_High</hediffClass>
@@ -197,13 +216,6 @@
 		<defaultLabelColor>(192,192,192)</defaultLabelColor>
 		<maxSeverity>1.0</maxSeverity>
 		<isBad>false</isBad>
-		<comps>
-			<li Class="HediffCompProperties_GiveHediff">
-				<hediffDef>transcendence_biological</hediffDef>
-				<atSeverity>1</atSeverity>
-				<disappearsAfterGiving>false</disappearsAfterGiving>
-			</li>
-		</comps>
 		<stages>
 			<li>
 				<capMods>
@@ -233,6 +245,7 @@
 			</li>
 		</stages>
 	</HediffDef>
+
 	<HediffDef>
 		<defName>transcendence_biological</defName>
 		<hediffClass>Hediff_High</hediffClass>
@@ -242,11 +255,6 @@
 		<maxSeverity>1.0</maxSeverity>
 		<isBad>false</isBad>
 		<comps>
-			<li Class="HediffCompProperties_GiveHediff">
-				<hediffDef>transcendence_environmental</hediffDef>
-				<atSeverity>1</atSeverity>
-				<disappearsAfterGiving>false</disappearsAfterGiving>
-			</li>
 			<li Class="HediffCompProperties_GiveAbility">
 				<abilityDefs>
 					<li>ResurrectNoCost</li>
@@ -282,10 +290,12 @@
 					<li>Mood</li>
 					<li>Beauty</li>
 					<li>Outdoors</li>
+					<li>Indoors</li>
 				</disablesNeeds>
 			</li>
 		</stages>
 	</HediffDef>
+
 	<HediffDef>
 		<defName>transcendence_environmental</defName>
 		<hediffClass>Hediff_High</hediffClass>
@@ -295,11 +305,6 @@
 		<maxSeverity>1.0</maxSeverity>
 		<isBad>false</isBad>
 		<comps>
-			<li Class="HediffCompProperties_GiveHediff">
-				<hediffDef>transcendence_psychic</hediffDef>
-				<atSeverity>1</atSeverity>
-				<disappearsAfterGiving>false</disappearsAfterGiving>
-			</li>
 			<li Class="HediffCompProperties_GiveAbility">
 				<abilityDefs>
 					<li>TranscendentDropPods</li>
@@ -318,6 +323,7 @@
 			</li>
 		</stages>
 	</HediffDef>
+
 	<HediffDef>
 		<defName>transcendence_psychic</defName>
 		<hediffClass>Hediff_High</hediffClass>
@@ -332,6 +338,7 @@
 					<li>imbafarskip</li>
 				</abilityDefs>
 			</li>
+			<li Class="EasyMode.HediffCompProperties_RestorePsy" restorePercent="0.01" tickInterval="10" />
 		</comps>
 		<stages>
 			<li>
@@ -342,6 +349,7 @@
 			</li>
 		</stages>
 	</HediffDef>
+
 	<HediffDef>
 		<defName>psylink_fullpower</defName>
 		<hediffClass>Hediff_Psylink</hediffClass>
@@ -401,6 +409,86 @@
 				<statFactors>
 					<PsychicEntropyMax>2.6667</PsychicEntropyMax>
 					<PsychicEntropyRecoveryRate>1.625</PsychicEntropyRecoveryRate>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>adaptive_armor</defName>
+		<hediffClass>Hediff_High</hediffClass>
+		<label>adaptive armor</label>
+		<description>Advanced adaptive armor that responds to the wearer's health condition. As health decreases, the armor becomes more protective but restricts movement.</description>
+		<defaultLabelColor>(100,100,100)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>5.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="EasyMode.HediffCompProperties_AdaptiveArmor">
+				<tickInterval>60</tickInterval>
+				<!-- Health thresholds for stage transitions (0.0 to 1.0) -->
+				<!-- Uncomment and modify these values to customize thresholds -->
+				<!-- <stage1Threshold>1.0</stage1Threshold>    100% health for Stage 1 -->
+				<!-- <stage2Threshold>0.85</stage2Threshold>   85% health for Stage 2 -->
+				<!-- <stage3Threshold>0.70</stage3Threshold>   70% health for Stage 3 -->
+				<!-- <stage4Threshold>0.55</stage4Threshold>   55% health for Stage 4 -->
+				<!-- Stage 5 triggers below stage4Threshold -->
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<minSeverity>1</minSeverity>
+				<label>adaptive armor (active)</label>
+				<statOffsets>
+					<MoveSpeed>0.25</MoveSpeed>
+				</statOffsets>
+			</li>
+			<li>
+				<minSeverity>2</minSeverity>
+				<label>adaptive armor (alert)</label>
+				<statOffsets>
+					<MoveSpeed>0.0625</MoveSpeed>
+				</statOffsets>
+				<statFactors>
+					<ArmorRating_Blunt>1.3125</ArmorRating_Blunt>
+					<ArmorRating_Sharp>1.3125</ArmorRating_Sharp>
+					<ArmorRating_Heat>1.3125</ArmorRating_Heat>
+				</statFactors>
+			</li>
+			<li>
+				<minSeverity>3</minSeverity>
+				<label>adaptive armor (defensive)</label>
+				<statOffsets>
+					<MoveSpeed>-0.125</MoveSpeed>
+				</statOffsets>
+				<statFactors>
+					<ArmorRating_Blunt>1.625</ArmorRating_Blunt>
+					<ArmorRating_Sharp>1.625</ArmorRating_Sharp>
+					<ArmorRating_Heat>1.625</ArmorRating_Heat>
+				</statFactors>
+			</li>
+			<li>
+				<minSeverity>4</minSeverity>
+				<label>adaptive armor (emergency)</label>
+				<statOffsets>
+					<MoveSpeed>-0.3125</MoveSpeed>
+				</statOffsets>
+				<statFactors>
+					<ArmorRating_Blunt>1.9375</ArmorRating_Blunt>
+					<ArmorRating_Sharp>1.9375</ArmorRating_Sharp>
+					<ArmorRating_Heat>1.9375</ArmorRating_Heat>
+				</statFactors>
+			</li>
+			<li>
+				<minSeverity>5</minSeverity>
+				<label>adaptive armor (fortress)</label>
+				<statOffsets>
+					<MoveSpeed>-0.75</MoveSpeed>
+				</statOffsets>
+				<statFactors>
+					<ArmorRating_Blunt>2.25</ArmorRating_Blunt>
+					<ArmorRating_Sharp>2.25</ArmorRating_Sharp>
+					<ArmorRating_Heat>2.25</ArmorRating_Heat>
 				</statFactors>
 			</li>
 		</stages>
