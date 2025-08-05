@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="BuildingBase">
+    <defName>AutoDrill</defName>
+    <label>auto drill</label>
+    <description>An automated deep-crust drilling rig that extracts minerals without requiring manual labor. Automatically drills resources from deep underground and outputs them directly. Use a ground-penetrating scanner to detect the best resources. This drill will yield stone chunks if no resources are present. Can be repositioned freely.</description>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Things/Building/Production/DeepDrill</texPath>
+      <drawSize>(2,2)</drawSize>
+      <drawRotated>false</drawRotated>
+      <shadowData>
+        <volume>(0.52, 0.53, 0.09)</volume>
+        <offset>(0,0,-0.43)</offset>
+      </shadowData>
+    </graphicData>
+    <size>(1,1)</size>
+    <altitudeLayer>Building</altitudeLayer>
+    <tickerType>Normal</tickerType>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <fillPercent>0.5</fillPercent>
+    <hasInteractionCell>true</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <designationCategory>Production</designationCategory>
+    <designationHotKey>Misc11</designationHotKey>
+    <specialDisplayRadius>2.6</specialDisplayRadius> <!-- 21 closest cells, must be in sync with CompDeepDrill -->
+    <rotatable>true</rotatable>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <uiIconOffset>(0, 0.03)</uiIconOffset>
+    <uiIconScale>0.85</uiIconScale>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <building>
+      <uninstallWork>2500</uninstallWork>
+      <buildingTags>
+        <li>Production</li>
+      </buildingTags>
+      <destroySound>BuildingDestroyed_Metal_Small</destroySound>
+    </building>
+    <thingCategories>
+      <li>BuildingsProduction</li>
+    </thingCategories>
+    <costList>
+      <Steel>200</Steel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+      <ComponentSpacer>1</ComponentSpacer>
+    </costList>
+    <placeWorkers>
+      <li>PlaceWorker_DeepDrill</li>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
+    </placeWorkers>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <researchPrerequisites>
+      <li>DeepDrilling</li>
+      <li>Fabrication</li>
+    </researchPrerequisites>
+    <statBases>
+      <MaxHitPoints>4000</MaxHitPoints>
+      <WorkToBuild>150</WorkToBuild>
+      <Flammability>0.5</Flammability>
+      <Beauty>-25</Beauty>
+      <Mass>50</Mass>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>300</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_DeepDrill" />
+      <li Class="EasyMode.CompProperties_AutoDrill">
+        <drillTicksPerWork>120</drillTicksPerWork>
+        <resourceOutputMultiplier>1</resourceOutputMultiplier>
+        <spawnIntervalRange>
+          <min>600</min>
+          <max>1200</max>
+        </spawnIntervalRange>
+      </li>
+      <li Class="CompProperties_CreatesInfestations" />
+    </comps>
+  </ThingDef>
+</Defs>

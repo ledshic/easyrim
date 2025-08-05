@@ -41,3 +41,4 @@ F:\SteamLibrary\steamapps\common\RimWorld\Mods\easymode\Source\bin\Debug\net472\
 F:\SteamLibrary\steamapps\common\RimWorld\Mods\easymode\Source\obj\Debug\net472\EasyMode.csproj.Up2Date
 F:\SteamLibrary\steamapps\common\RimWorld\Mods\easymode\Source\obj\Debug\net472\EasyMode.dll
 F:\SteamLibrary\steamapps\common\RimWorld\Mods\easymode\Source\obj\Debug\net472\EasyMode.pdb
+F:\SteamLibrary\steamapps\common\RimWorld\Mods\easymode\Source\bin\Debug\net472\0Harmony.dll

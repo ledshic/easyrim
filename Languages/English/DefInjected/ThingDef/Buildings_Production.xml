@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  
+  <AutoDrill.label>auto drill</AutoDrill.label>
+  <AutoDrill.description>An automated deep-crust drilling rig that extracts minerals without requiring manual labor. Automatically drills resources from deep underground and outputs them directly. Use a ground-penetrating scanner to detect the best resources. This drill will yield stone chunks if no resources are present. Can be repositioned freely.</AutoDrill.description>
+  
+</LanguageData>

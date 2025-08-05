@@ -338,7 +338,7 @@
 					<li>imbafarskip</li>
 				</abilityDefs>
 			</li>
-			<li Class="EasyMode.HediffCompProperties_RestorePsy" restorePercent="0.01" tickInterval="10" />
+			<li Class="EasyMode.HediffCompProperties_RestorePsy" />
 		</comps>
 		<stages>
 			<li>
@@ -448,48 +448,36 @@
 				<label>adaptive armor (alert)</label>
 				<statOffsets>
 					<MoveSpeed>0.0625</MoveSpeed>
+					<ArmorRating_Blunt>0.3125</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0.3125</ArmorRating_Sharp>
 				</statOffsets>
-				<statFactors>
-					<ArmorRating_Blunt>1.3125</ArmorRating_Blunt>
-					<ArmorRating_Sharp>1.3125</ArmorRating_Sharp>
-					<ArmorRating_Heat>1.3125</ArmorRating_Heat>
-				</statFactors>
 			</li>
 			<li>
 				<minSeverity>3</minSeverity>
 				<label>adaptive armor (defensive)</label>
 				<statOffsets>
 					<MoveSpeed>-0.125</MoveSpeed>
+					<ArmorRating_Blunt>0.625</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0.625</ArmorRating_Sharp>
 				</statOffsets>
-				<statFactors>
-					<ArmorRating_Blunt>1.625</ArmorRating_Blunt>
-					<ArmorRating_Sharp>1.625</ArmorRating_Sharp>
-					<ArmorRating_Heat>1.625</ArmorRating_Heat>
-				</statFactors>
 			</li>
 			<li>
 				<minSeverity>4</minSeverity>
 				<label>adaptive armor (emergency)</label>
 				<statOffsets>
 					<MoveSpeed>-0.3125</MoveSpeed>
+					<ArmorRating_Blunt>0.9375</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0.9375</ArmorRating_Sharp>
 				</statOffsets>
-				<statFactors>
-					<ArmorRating_Blunt>1.9375</ArmorRating_Blunt>
-					<ArmorRating_Sharp>1.9375</ArmorRating_Sharp>
-					<ArmorRating_Heat>1.9375</ArmorRating_Heat>
-				</statFactors>
 			</li>
 			<li>
 				<minSeverity>5</minSeverity>
 				<label>adaptive armor (fortress)</label>
 				<statOffsets>
 					<MoveSpeed>-0.75</MoveSpeed>
+					<ArmorRating_Blunt>1.25</ArmorRating_Blunt>
+					<ArmorRating_Sharp>1.25</ArmorRating_Sharp>
 				</statOffsets>
-				<statFactors>
-					<ArmorRating_Blunt>2.25</ArmorRating_Blunt>
-					<ArmorRating_Sharp>2.25</ArmorRating_Sharp>
-					<ArmorRating_Heat>2.25</ArmorRating_Heat>
-				</statFactors>
 			</li>
 		</stages>
 	</HediffDef>
