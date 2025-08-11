@@ -20,8 +20,7 @@
     <passability>PassThroughOnly</passability>
     <pathCost>50</pathCost>
     <fillPercent>0.5</fillPercent>
-    <hasInteractionCell>true</hasInteractionCell>
-    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <hasInteractionCell>false</hasInteractionCell>
     <designationCategory>Production</designationCategory>
     <designationHotKey>Misc11</designationHotKey>
     <specialDisplayRadius>2.6</specialDisplayRadius> <!-- 21 closest cells, must be in sync with CompDeepDrill -->
@@ -32,7 +31,7 @@
     <uiIconScale>0.85</uiIconScale>
     <minifiedDef>MinifiedThing</minifiedDef>
     <building>
-      <uninstallWork>2500</uninstallWork>
+      <uninstallWork>250</uninstallWork>
       <buildingTags>
         <li>Production</li>
       </buildingTags>
@@ -43,8 +42,7 @@
     </thingCategories>
     <costList>
       <Steel>200</Steel>
-      <ComponentIndustrial>4</ComponentIndustrial>
-      <ComponentSpacer>1</ComponentSpacer>
+      <ComponentIndustrial>8</ComponentIndustrial>
     </costList>
     <placeWorkers>
       <li>PlaceWorker_DeepDrill</li>
@@ -54,12 +52,11 @@
     <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
     <researchPrerequisites>
       <li>DeepDrilling</li>
-      <li>Fabrication</li>
     </researchPrerequisites>
     <statBases>
       <MaxHitPoints>4000</MaxHitPoints>
       <WorkToBuild>150</WorkToBuild>
-      <Flammability>0.5</Flammability>
+      <Flammability>0.15</Flammability>
       <Beauty>-25</Beauty>
       <Mass>50</Mass>
     </statBases>
@@ -79,7 +76,6 @@
           <max>1200</max>
         </spawnIntervalRange>
       </li>
-      <li Class="CompProperties_CreatesInfestations" />
     </comps>
   </ThingDef>
 </Defs>
