@@ -51,8 +51,11 @@
 				<basePowerConsumption>-3200</basePowerConsumption>
 				<transmitsPower>true</transmitsPower>
 			</li>
-			<li Class="CompProperties_AmbientSound">
-				<sound>OxygenPump_Ambient</sound>
+			<li Class="CompProperties_TempControl">
+				<energyPerSecond>21</energyPerSecond>
+			</li>
+			<li Class="CompProperties_OxygenPusher">
+				<airPerSecondPerHundredCells>0.01</airPerSecondPerHundredCells>
 			</li>
 		</comps>
 		<designationCategory>Odyssey</designationCategory>
