@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- Parent container: now splits into multiple specialized sub-hediffs -->
+	<HediffDef>
+		<defName>pioneerspirit</defName>
+		<hediffClass>Hediff_High</hediffClass>
+		<label>pioneer spirit</label>
+		<description>The essence of exploration and discovery flows through their veins. Born to chart the unknown, they possess an otherworldly connection to the wilderness and an innate mastery over all forms of labor and combat.</description>
+		<defaultLabelColor>(135,206,235)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="EasyMode.HediffCompProperties_GiveMultipleHediffs">
+				<atSeverity>0</atSeverity>
+				<disappearsAfterGiving>false</disappearsAfterGiving>
+				<hediffsToGive>
+					<li>
+						<hediffDef>pioneerspirit_physical</hediffDef>
+						<severity>1.0</severity>
+					</li>
+					<li>
+						<hediffDef>pioneerspirit_industry</hediffDef>
+						<severity>1.0</severity>
+					</li>
+					<li>
+						<hediffDef>pioneerspirit_combat</hediffDef>
+						<severity>1.0</severity>
+					</li>
+					<li>
+						<hediffDef>pioneerspirit_resilience</hediffDef>
+						<severity>1.0</severity>
+					</li>
+				</hediffsToGive>
+			</li>
+		</comps>
+	</HediffDef>
+
+	<!-- Physical/mobility & logistics (movement, manipulation, hauling) -->
+	<HediffDef>
+		<defName>pioneerspirit_physical</defName>
+		<hediffClass>Hediff_High</hediffClass>
+		<label>frontier vigor</label>
+		<description>Refined physicality for exploration and hauling.</description>
+		<defaultLabelColor>(135,206,235)</defaultLabelColor>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.25</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.50</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.40</offset>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>0.45</offset>
+					</li>
+				</capMods>
+				<statOffsets>
+					<!-- pathfinder + pioneerspirit movement/carry -->
+					<MoveSpeed>1.3</MoveSpeed>
+					<CarryingCapacity>325</CarryingCapacity>
+				</statOffsets>
+				<statFactors>
+					<MoveSpeed>1.5</MoveSpeed>
+					<CarryingCapacity>2</CarryingCapacity>
+					<!-- Stack with industry to reach 4x global work speed total (2x here, 2x there) -->
+					<WorkSpeedGlobal>2</WorkSpeedGlobal>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<!-- Labor/industry & research yields/speeds -->
+	<HediffDef>
+		<defName>pioneerspirit_industry</defName>
+		<hediffClass>Hediff_High</hediffClass>
+		<label>pioneer industry</label>
+		<description>Mastery of labor and production.</description>
+		<defaultLabelColor>(135,206,235)</defaultLabelColor>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<statOffsets>
+					<!-- Mining speed offset from original pioneer -->
+					<MiningSpeed>2.0</MiningSpeed>
+				</statOffsets>
+				<statFactors>
+					<!-- pathfinder + pioneer yields and work speed -->
+					<WorkSpeedGlobal>2</WorkSpeedGlobal>
+					<GlobalLearningFactor>3</GlobalLearningFactor>
+					<MiningYield>2</MiningYield>
+					<PlantHarvestYield>2</PlantHarvestYield>
+					<DrugHarvestYield>2</DrugHarvestYield>
+					<MedicalTendQuality>2</MedicalTendQuality>
+					<ResearchSpeed>2</ResearchSpeed>
+					<!-- Pioneer ranged aim bonus stacks across hediffs -->
+					<RangedCooldownFactor>0.15</RangedCooldownFactor>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<!-- Combat proficiency & battlefield awareness -->
+	<HediffDef>
+		<defName>pioneerspirit_combat</defName>
+		<hediffClass>Hediff_High</hediffClass>
+		<label>frontier marksmanship</label>
+		<description>Tactical superiority and combat readiness.</description>
+		<defaultLabelColor>(135,206,235)</defaultLabelColor>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<statOffsets>
+					<ShootingAccuracyPawn>15</ShootingAccuracyPawn>
+					<ArmorRating_Blunt>0.8</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0.8</ArmorRating_Sharp>
+					<ArmorRating_Heat>0.6</ArmorRating_Heat>
+				</statOffsets>
+				<statFactors>
+					<RangedCooldownFactor>0.1</RangedCooldownFactor>
+					<AimingDelayFactor>0.1</AimingDelayFactor>
+					<ShootingAccuracyPawn>3</ShootingAccuracyPawn>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<!-- Survival, recovery, and mental steadiness -->
+	<HediffDef>
+		<defName>pioneerspirit_resilience</defName>
+		<hediffClass>Hediff_High</hediffClass>
+		<label>survival instinct</label>
+		<description>Endurance, recovery, and unshakable resolve.</description>
+		<defaultLabelColor>(135,206,235)</defaultLabelColor>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<painFactor>0.3</painFactor>
+				<capMods>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>0.35</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>0.30</offset>
+					</li>
+					<li>
+						<capacity>Metabolism</capacity>
+						<offset>0.35</offset>
+					</li>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>0.25</offset>
+					</li>
+				</capMods>
+				<regeneration>40</regeneration>
+				<statOffsets>
+					<MentalBreakThreshold>-0.4</MentalBreakThreshold>
+				</statOffsets>
+				<statFactors>
+					<RestRateMultiplier>2</RestRateMultiplier>
+					<ImmunityGainSpeed>2</ImmunityGainSpeed>
+					<InjuryHealingFactor>2</InjuryHealingFactor>
+					<!-- pathfinder learning factor -->
+					<GlobalLearningFactor>2</GlobalLearningFactor>
+					<!-- Stack with combat to reach pioneer+pathfinder targeting -->
+					<AimingDelayFactor>0.2</AimingDelayFactor>
+					<IncomingDamageFactor>0.5</IncomingDamageFactor>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+</Defs>

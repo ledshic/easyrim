@@ -26,4 +26,39 @@
 	<adaptive_armor.stages.2.label>适应性装甲 (防御)</adaptive_armor.stages.2.label>
 	<adaptive_armor.stages.3.label>适应性装甲 (紧急)</adaptive_armor.stages.3.label>
 	<adaptive_armor.stages.4.label>适应性装甲 (堡垒)</adaptive_armor.stages.4.label>
+
+	<!-- Brave Soul sub-hediffs -->
+	<bravesoul_cognitive.label>认知炽焰</bravesoul_cognitive.label>
+	<bravesoul_cognitive.description>战魂激发心智，锐化感知并提升学习能力。</bravesoul_cognitive.description>
+
+	<bravesoul_physical.label>体能强势</bravesoul_physical.label>
+	<bravesoul_physical.description>久经战阵锤炼的敏捷与掌控。</bravesoul_physical.description>
+
+	<bravesoul_vitals.label>生命升华</bravesoul_vitals.label>
+	<bravesoul_vitals.description>器官强化与加速复原。</bravesoul_vitals.description>
+	<!-- 生命升华阶段命名 -->
+	<bravesoul_vitals.stages.0.label>生命升华（稳态）</bravesoul_vitals.stages.0.label>
+	<bravesoul_vitals.stages.1.label>生命升华（激活）</bravesoul_vitals.stages.1.label>
+	<bravesoul_vitals.stages.2.label>生命升华（涌动）</bravesoul_vitals.stages.2.label>
+	<bravesoul_vitals.stages.3.label>生命升华（狂热）</bravesoul_vitals.stages.3.label>
+	<bravesoul_vitals.stages.4.label>生命升华（不灭）</bravesoul_vitals.stages.4.label>
+
+	<bravesoul_combat.label>战斗精通</bravesoul_combat.label>
+	<bravesoul_combat.description>至高武艺与自适应防御。</bravesoul_combat.description>
+
+	<bravesoul_spirit.label>不屈意志</bravesoul_spirit.label>
+	<bravesoul_spirit.description>在死亡面前也稳固心神的决心。</bravesoul_spirit.description>
+
+	<!-- Pioneer Spirit sub-hediffs -->
+	<pioneerspirit_physical.label>边荒强健</pioneerspirit_physical.label>
+	<pioneerspirit_physical.description>为探索与搬运而精炼的体能。</pioneerspirit_physical.description>
+
+	<pioneerspirit_industry.label>先驱工艺</pioneerspirit_industry.label>
+	<pioneerspirit_industry.description>对劳作与生产的精通。</pioneerspirit_industry.description>
+
+	<pioneerspirit_combat.label>边荒枪术</pioneerspirit_combat.label>
+	<pioneerspirit_combat.description>战场上的战术优势与随时待战。</pioneerspirit_combat.description>
+
+	<pioneerspirit_resilience.label>求生本能</pioneerspirit_resilience.label>
+	<pioneerspirit_resilience.description>耐力、复原与不动如山的意志。</pioneerspirit_resilience.description>
 </LanguageData>
