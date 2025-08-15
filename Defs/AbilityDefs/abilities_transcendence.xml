@@ -60,4 +60,31 @@
 			</li>
 		</comps>
 	</AbilityDef>
+	<AbilityDef>
+		<defName>TranscendentSelfTeleport</defName>
+		<label>transcendent jump</label>
+		<description>Instantly shift the caster through folded space to a targeted location on the same map. Uses the same safety checks as transport pods for landing zones.</description>
+		<iconPath>UI/Commands/CallDropPods</iconPath>
+		<cooldownTicksRange>450</cooldownTicksRange>
+		<hostile>false</hostile>
+		<aiCanUse>false</aiCanUse>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<range>999</range>
+			<warmupTime>0</warmupTime>
+			<requireLineOfSight>false</requireLineOfSight>
+			<drawAimPie>false</drawAimPie>
+			<targetParams>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="EasyMode.CompProperties_AbilityTeleportSelf" />
+		</comps>
+	</AbilityDef>
 </Defs>
