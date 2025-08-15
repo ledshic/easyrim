@@ -10,7 +10,6 @@
 		<maxSeverity>1.0</maxSeverity>
 		<isBad>false</isBad>
 		<comps>
-			<li Class="HediffCompProperties_HealPermanentWounds" />
 			<li Class="EasyMode.HediffCompProperties_GiveMultipleHediffs">
 				<atSeverity>0</atSeverity>
 				<disappearsAfterGiving>false</disappearsAfterGiving>
@@ -140,6 +139,7 @@
 					<li>TranscendentDropPods</li>
 				</abilityDefs>
 			</li>
+			<li Class="HediffCompProperties_HealPermanentWounds" />
 		</comps>
 		<preventsDeath>true</preventsDeath>
 		<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>

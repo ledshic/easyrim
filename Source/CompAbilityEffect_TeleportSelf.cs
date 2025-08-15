@@ -175,7 +175,7 @@ namespace EasyMode
                 return false;
             }
 
-            // Disallow impassable world tiles (oceans/void/mountains marked impassable).
+            // Disallow impassable world tiles (oceans/void/mountains etc.). Use WorldPathGrid to be compatible with 1.5 SurfaceTile changes.
             var grid = Find.WorldGrid;
             if (tile < 0 || tile >= grid.TilesCount)
             {
@@ -185,8 +185,7 @@ namespace EasyMode
                 }
                 return false;
             }
-            var tileInfo = grid[tile];
-            if ((tileInfo.biome != null && tileInfo.biome.impassable) || tileInfo.hilliness == Hilliness.Impassable)
+            if (!Find.WorldPathGrid.Passable(tile))
             {
                 if (throwMessages)
                 {
@@ -230,7 +229,7 @@ namespace EasyMode
                     pawn.DeSpawn(DestroyMode.Vanish);
                 }
 
-                caravan.AddPawn(pawn, addCarriedIfAny: true);
+                caravan.AddPawn(pawn, true);
                 TryPlaySound(DefDatabase<SoundDef>.GetNamedSilentFail("Psycast_Skip_Entry"), IntVec3.Zero, null);
                 return;
             }
@@ -244,7 +243,7 @@ namespace EasyMode
                 if (targetMap == null)
                 {
                     // Generate map instantly (no traveling object), mirroring pod/shuttle arrival behavior.
-                    targetMap = GetOrGenerateMapUtility.GetOrGenerateMap(mapParent);
+                    targetMap = MapGenerator.GenerateMap(new IntVec3(200, 1, 200), mapParent, mapParent.MapGeneratorDef, null);
                 }
 
                 // Open a second-stage targeting on the destination map so the player can pick an exact landing cell,

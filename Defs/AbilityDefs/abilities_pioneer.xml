@@ -43,9 +43,6 @@
 				<applicableToMechs>False</applicableToMechs>
 				<canTargetBaby>False</canTargetBaby>
 			</li>
-			<li Class="CompProperties_AbilitySocialInteraction">
-				<interactionDef>WorkDrive</interactionDef>
-			</li>
 		</comps>
 	</AbilityDef>
 </Defs>

@@ -11,6 +11,13 @@
 		<maxSeverity>1.0</maxSeverity>
 		<isBad>false</isBad>
 		<comps>
+			<li Class="HediffCompProperties_GiveAbility">
+				<abilityDefs>
+					<li>ResurrectNoCost</li>
+					<li>TranscendentSelfTeleport</li>
+					<li>TranscendentDropPods</li>
+				</abilityDefs>
+			</li>
 			<li Class="EasyMode.HediffCompProperties_GiveMultipleHediffs">
 				<atSeverity>0</atSeverity>
 				<disappearsAfterGiving>false</disappearsAfterGiving>

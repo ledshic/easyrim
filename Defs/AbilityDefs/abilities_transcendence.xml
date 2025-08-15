@@ -70,6 +70,9 @@
 		<targetWorldCell>True</targetWorldCell>
 		<showGizmoOnWorldView>True</showGizmoOnWorldView>
 		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+		<displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+		<showWhenDrafted>true</showWhenDrafted>
 		<verbProperties>
 			<verbClass>Verb_CastAbility</verbClass>
 			<range>999</range>
