@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <languageData>
-	<imbafarskip.label>维度裂隙</imbafarskip.label>
-	<imbafarskip.description>撕裂时空结构，瞬息间将施法者及其盟友传送至遥远的彼端。这项强大的能力需要目的地的盟友作为锚点，引导旅者穿越世界间的虚无空间。穿越者将在目标地图的随机盟友附近重现。</imbafarskip.description>
 	<MetalbloodSurge.label>赤钢融血</MetalbloodSurge.label>
 	<MetalbloodSurge.description>激活金属血心植入体，令液态金属机械涌入血管，创造血肉与钢铁的暂时融合。这种强化会显著减少受到的伤害，融合体暂时会由于液态金属的易燃性更惧怕火焰，效果会随着金属化合物被自然过滤而消退。</MetalbloodSurge.description>
 	<BlessHealing.label>机械复原</BlessHealing.label>
@@ -12,8 +10,10 @@
 	<CommandSlaughter.description>释放毁灭性心灵攻击，导致活体组织发生灾难性细胞破坏。目标的血肉快速恶化并重新形成扭曲的有机物质团块，通过可怖的生物重构瞬间杀死目标。这种能力代表了血肉操控技术的巅峰。</CommandSlaughter.description>
 	<ResurrectNoCost.label>机械复生</ResurrectNoCost.label>
 	<ResurrectNoCost.description>利用血流中的机械单元为死者恢复生命。这些微观机器修复细胞损伤，重启生命功能，重建神经通路。复活的成功和质量取决于尸体的状况——新鲜的身体保留更多记忆和身体完整性，而老旧遗骸可能遭受永久的认知或身体损伤。</ResurrectNoCost.description>
-	<TranscendentDropPods.label>超凡撤离</TranscendentDropPods.label>
-	<TranscendentDropPods.description>召唤通过维度裂隙物化的先进投放舱。这些虚无容器能够以比传统投放舱技术大幅缩短的准备时间将你和盟友传送至遥远位置。</TranscendentDropPods.description>
+	<TranscendentDropPods.label>主脑投送</TranscendentDropPods.label>
+	<TranscendentDropPods.description>模拟机械主脑的控制信号，命令近地物资投送卫星向目标区域投下数个一次性投送舱。</TranscendentDropPods.description>
+	<TranscendentSelfTeleport.label>序列化跃迁</TranscendentSelfTeleport.label>
+	<TranscendentSelfTeleport.description>序列化自身进入高维隧道，并在目标的时空坐标处反序列化重构实体。</TranscendentSelfTeleport.description>
 	<!-- WorkGuidance ability -->
 	<WorkGuidance.label>工作指导</WorkGuidance.label>
 	<WorkGuidance.description>呼吁目标在一段时间内更加努力工作，提升生产效率。</WorkGuidance.description>

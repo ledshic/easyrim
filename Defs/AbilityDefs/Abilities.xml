@@ -1,34 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<AbilityDef ParentName="PsycastBaseSkip">
-		<defName>imbafarskip</defName>
-		<label>dimensional rift</label>
-		<description>Tear open a rift in spacetime to instantly transport the caster and nearby allies across vast distances. This powerful ability requires a willing ally at the destination to serve as an anchor point, guiding travelers through the void between worlds. Those who traverse the rift will emerge near a random allied pawn on the target map.</description>
-		<level>1</level>
-		<iconPath>UI/Abilities/Farskip</iconPath>
-		<hotKey>Misc12</hotKey>
-		<targetWorldCell>True</targetWorldCell>
-		<showGizmoOnWorldView>True</showGizmoOnWorldView>
-		<hostile>false</hostile>
-		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
-		<statBases>
-			<Ability_PsyfocusCost>-1</Ability_PsyfocusCost>
-			<Ability_EffectRadius>6</Ability_EffectRadius>
-		</statBases>
-		<verbProperties>
-			<warmupTime>5</warmupTime>
-			<range>6</range>
-			<drawAimPie>False</drawAimPie>
-			<requireLineOfSight>False</requireLineOfSight>
-		</verbProperties>
-		<comps>
-			<li Class="CompProperties_AbilityFarskip">
-				<stunTicks>18~60</stunTicks>
-				<clamorType>Ability</clamorType>
-				<clamorRadius>10</clamorRadius>
-			</li>
-		</comps>
-	</AbilityDef>
 	<AbilityDef>
 		<defName>MetalbloodSurge</defName>
 		<label>crimson steel infusion</label>

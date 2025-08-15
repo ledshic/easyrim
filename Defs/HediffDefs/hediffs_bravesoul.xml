@@ -116,19 +116,19 @@
 				<capMods>
 					<li>
 						<capacity>BloodFiltration</capacity>
-						<offset>0.50</offset>
+						<offset>0.15</offset>
 					</li>
 					<li>
 						<capacity>BloodPumping</capacity>
-						<offset>0.60</offset>
+						<offset>0.20</offset>
 					</li>
 					<li>
 						<capacity>Metabolism</capacity>
-						<offset>0.40</offset>
+						<offset>0.10</offset>
 					</li>
 					<li>
 						<capacity>Breathing</capacity>
-						<offset>0.30</offset>
+						<offset>0.10</offset>
 					</li>
 				</capMods>
 				<regeneration>150</regeneration>
@@ -143,22 +143,25 @@
 				<capMods>
 					<li>
 						<capacity>BloodFiltration</capacity>
-						<offset>0.50</offset>
+						<offset>0.20</offset>
 					</li>
 					<li>
 						<capacity>BloodPumping</capacity>
-						<offset>0.60</offset>
+						<offset>0.25</offset>
 					</li>
 					<li>
 						<capacity>Metabolism</capacity>
-						<offset>0.40</offset>
+						<offset>0.15</offset>
 					</li>
 					<li>
 						<capacity>Breathing</capacity>
-						<offset>0.30</offset>
+						<offset>0.15</offset>
 					</li>
 				</capMods>
 				<regeneration>200</regeneration>
+				<statOffsets>
+					<MoveSpeed>0.20</MoveSpeed>
+				</statOffsets>
 				<statFactors>
 					<RestRateMultiplier>1.5</RestRateMultiplier>
 					<ImmunityGainSpeed>1.5</ImmunityGainSpeed>
@@ -170,22 +173,25 @@
 				<capMods>
 					<li>
 						<capacity>BloodFiltration</capacity>
-						<offset>0.50</offset>
+						<offset>0.25</offset>
 					</li>
 					<li>
 						<capacity>BloodPumping</capacity>
-						<offset>0.60</offset>
+						<offset>0.30</offset>
 					</li>
 					<li>
 						<capacity>Metabolism</capacity>
-						<offset>0.40</offset>
+						<offset>0.20</offset>
 					</li>
 					<li>
 						<capacity>Breathing</capacity>
-						<offset>0.30</offset>
+						<offset>0.20</offset>
 					</li>
 				</capMods>
 				<regeneration>250</regeneration>
+				<statOffsets>
+					<MoveSpeed>0.60</MoveSpeed>
+				</statOffsets>
 				<statFactors>
 					<RestRateMultiplier>2.0</RestRateMultiplier>
 					<ImmunityGainSpeed>2.0</ImmunityGainSpeed>
@@ -197,22 +203,25 @@
 				<capMods>
 					<li>
 						<capacity>BloodFiltration</capacity>
-						<offset>0.50</offset>
+						<offset>0.30</offset>
 					</li>
 					<li>
 						<capacity>BloodPumping</capacity>
-						<offset>0.60</offset>
+						<offset>0.35</offset>
 					</li>
 					<li>
 						<capacity>Metabolism</capacity>
-						<offset>0.40</offset>
+						<offset>0.25</offset>
 					</li>
 					<li>
 						<capacity>Breathing</capacity>
-						<offset>0.30</offset>
+						<offset>0.25</offset>
 					</li>
 				</capMods>
 				<regeneration>325</regeneration>
+				<statOffsets>
+					<MoveSpeed>0.80</MoveSpeed>
+				</statOffsets>
 				<statFactors>
 					<RestRateMultiplier>2.5</RestRateMultiplier>
 					<ImmunityGainSpeed>2.5</ImmunityGainSpeed>
@@ -224,7 +233,7 @@
 				<capMods>
 					<li>
 						<capacity>BloodFiltration</capacity>
-						<offset>0.50</offset>
+						<offset>0.75</offset>
 					</li>
 					<li>
 						<capacity>BloodPumping</capacity>
@@ -232,15 +241,24 @@
 					</li>
 					<li>
 						<capacity>Metabolism</capacity>
-						<offset>0.40</offset>
+						<offset>0.80</offset>
 					</li>
 					<li>
 						<capacity>Breathing</capacity>
-						<offset>0.30</offset>
+						<offset>0.60</offset>
 					</li>
 				</capMods>
 				<regeneration>400</regeneration>
+				<statOffsets>
+					<MoveSpeed>2.20</MoveSpeed>
+				</statOffsets>
 				<statFactors>
+					<MeleeHitChance>0.20</MeleeHitChance>
+					<MeleeDodgeChance>0</MeleeDodgeChance>
+					<StaggerDurationFactor>0</StaggerDurationFactor>
+					<MeleeDamageFactor>5.0</MeleeDamageFactor>
+					<MeleeArmorPenetration>5.0</MeleeArmorPenetration>
+					<Flammability>0</Flammability>
 					<RestRateMultiplier>3.0</RestRateMultiplier>
 					<ImmunityGainSpeed>3.0</ImmunityGainSpeed>
 					<InjuryHealingFactor>3.0</InjuryHealingFactor>
@@ -267,7 +285,7 @@
 				<statFactors>
 					<MeleeHitChance>5</MeleeHitChance>
 					<MeleeArmorPenetration>2</MeleeArmorPenetration>
-					<MeleeCooldownFactor>0.15</MeleeCooldownFactor>
+					<MeleeCooldownFactor>0.35</MeleeCooldownFactor>
 					<MeleeDamageFactor>1.75</MeleeDamageFactor>
 					<MeleeDodgeChance>2</MeleeDodgeChance>
 					<StaggerDurationFactor>0.5</StaggerDurationFactor>

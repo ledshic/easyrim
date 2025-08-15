@@ -52,4 +52,7 @@
 	<pioneerspirit_combat.description>战场上的战术优势与随时待战。</pioneerspirit_combat.description>
 	<pioneerspirit_resilience.label>求生本能</pioneerspirit_resilience.label>
 	<pioneerspirit_resilience.description>耐力、复原与不动如山的意志。</pioneerspirit_resilience.description>
+	<!-- Work Guidance hediff -->
+	<WorkGuidance.label>工作指点</WorkGuidance.label>
+	<WorkGuidance.description>被指点了工作细节与步骤，短时间内工作熟练度明显提升，学习速度显著加快。</WorkGuidance.description>
 </LanguageData>

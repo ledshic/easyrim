@@ -183,7 +183,7 @@
 	<HediffDef>
 		<defName>WorkGuidance</defName>
 		<label>work guidance</label>
-		<description>Received focused guidance at work. For a short time, all skills are bolstered and learning accelerates dramatically.</description>
+		<description>After receiving precise guidance on work details and steps, work proficiency improves noticeably and learning accelerates sharply for a short time.</description>
 		<hediffClass>HediffWithComps</hediffClass>
 		<isBad>false</isBad>
 		<stages>

@@ -2,8 +2,8 @@
 <Defs>
 	<AbilityDef>
 		<defName>WorkGuidance</defName>
-		<label>工作指导</label>
-		<description>呼吁目标在一段时间内更加努力工作，提升生产效率。</description>
+		<label>指导</label>
+		<description>指点目标的细节与步骤，提升其水平和学习能力</description>
 		<jobDef>CastAbilityOnThingMelee</jobDef>
 		<iconPath>UI/Abilities/WorkDrive</iconPath>
 		<warmupMoteSocialSymbol>UI/Abilities/WorkDrive</warmupMoteSocialSymbol>
@@ -11,17 +11,15 @@
 		<showPsycastEffects>False</showPsycastEffects>
 		<displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
 		<disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
-		<showWhenDrafted>false</showWhenDrafted>
-		<groupDef>Leader</groupDef>
-		<overrideGroupCooldown>True</overrideGroupCooldown>
+		<showWhenDrafted>true</showWhenDrafted>
 		<cooldownTicksRange>10000</cooldownTicksRange>
 		<hotKey>Misc12</hotKey>
-		<uiOrder>2</uiOrder>
+		<uiOrder>1</uiOrder>
 		<warmupStartSound>WorkDrive_Warmup</warmupStartSound>
 		<hostile>false</hostile>
 		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
 		<statBases>
-			<Ability_Duration>30000</Ability_Duration>
+			<Ability_Duration>1000</Ability_Duration>
 		</statBases>
 		<verbProperties>
 			<verbClass>Verb_CastAbilityTouch</verbClass>

@@ -55,4 +55,8 @@
 
   <pioneerspirit_resilience.label>survival instinct</pioneerspirit_resilience.label>
   <pioneerspirit_resilience.description>Endurance, recovery, and unshakable resolve.</pioneerspirit_resilience.description>
+
+  <!-- Work Guidance hediff -->
+  <WorkGuidance.label>work guidance</WorkGuidance.label>
+  <WorkGuidance.description>After receiving precise guidance on work details and steps, work proficiency improves noticeably and learning accelerates sharply for a short time.</WorkGuidance.description>
 </LanguageData>

@@ -33,8 +33,8 @@
 	</AbilityDef>
 	<AbilityDef>
 		<defName>TranscendentDropPods</defName>
-		<label>transcendent evacuation</label>
-		<description>Summon advanced drop pods that materialize through dimensional rifts. These ethereal vessels can transport you and your allies to distant locations with greatly reduced preparation time compared to conventional drop pod technology.</description>
+		<label>overmind drops</label>
+		<description>Simulates a mechanoid overmind control signal, ordering nearby logistics satellites to dispatch several single-use drop pods to the target area.</description>
 		<iconPath>UI/Commands/CallDropPods</iconPath>
 		<cooldownTicksRange>30000~45000</cooldownTicksRange>
 		<displayOrder>300</displayOrder>
@@ -62,14 +62,13 @@
 	</AbilityDef>
 	<AbilityDef>
 		<defName>TranscendentSelfTeleport</defName>
-		<label>transcendent jump</label>
-		<description>Instantly shift the caster through folded space to a targeted location on the same map. Uses the same safety checks as transport pods for landing zones.</description>
+		<label>serialized transit</label>
+		<description>Serializes the user into a higher-dimensional transit tunnel, then deserializes at the target spacetime coordinates.</description>
 		<iconPath>UI/Commands/CallDropPods</iconPath>
 		<cooldownTicksRange>450</cooldownTicksRange>
 		<hostile>false</hostile>
-		<aiCanUse>false</aiCanUse>
-		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
-		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+		<targetWorldCell>True</targetWorldCell>
+		<showGizmoOnWorldView>True</showGizmoOnWorldView>
 		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
 		<verbProperties>
 			<verbClass>Verb_CastAbility</verbClass>

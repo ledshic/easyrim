@@ -42,10 +42,7 @@
 				</hediffsToGive>
 			</li>
 		</comps>
-		<preventsDeath>true</preventsDeath>
-		<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
 	</HediffDef>
-
 	<HediffDef>
 		<defName>transcendence_cognitive</defName>
 		<hediffClass>Hediff_High</hediffClass>
@@ -90,7 +87,6 @@
 			</li>
 		</stages>
 	</HediffDef>
-
 	<HediffDef>
 		<defName>transcendence_physical</defName>
 		<hediffClass>Hediff_High</hediffClass>
@@ -128,7 +124,6 @@
 			</li>
 		</stages>
 	</HediffDef>
-
 	<HediffDef>
 		<defName>transcendence_biological</defName>
 		<hediffClass>Hediff_High</hediffClass>
@@ -141,9 +136,13 @@
 			<li Class="HediffCompProperties_GiveAbility">
 				<abilityDefs>
 					<li>ResurrectNoCost</li>
+					<li>TranscendentSelfTeleport</li>
+					<li>TranscendentDropPods</li>
 				</abilityDefs>
 			</li>
 		</comps>
+		<preventsDeath>true</preventsDeath>
+		<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
 		<stages>
 			<li>
 				<capMods>
@@ -178,7 +177,6 @@
 			</li>
 		</stages>
 	</HediffDef>
-
 	<HediffDef>
 		<defName>transcendence_environmental</defName>
 		<hediffClass>Hediff_High</hediffClass>
@@ -187,13 +185,6 @@
 		<defaultLabelColor>(192,192,192)</defaultLabelColor>
 		<maxSeverity>1.0</maxSeverity>
 		<isBad>false</isBad>
-		<comps>
-			<li Class="HediffCompProperties_GiveAbility">
-				<abilityDefs>
-					<li>TranscendentDropPods</li>
-				</abilityDefs>
-			</li>
-		</comps>
 		<stages>
 			<li>
 				<statOffsets>
@@ -206,7 +197,6 @@
 			</li>
 		</stages>
 	</HediffDef>
-
 	<HediffDef>
 		<defName>transcendence_psychic</defName>
 		<hediffClass>Hediff_High</hediffClass>
@@ -216,11 +206,6 @@
 		<maxSeverity>1.0</maxSeverity>
 		<isBad>false</isBad>
 		<comps>
-			<li Class="HediffCompProperties_GiveAbility">
-				<abilityDefs>
-					<li>imbafarskip</li>
-				</abilityDefs>
-			</li>
 			<li Class="EasyMode.HediffCompProperties_RestorePsy" />
 		</comps>
 		<stages>
@@ -232,8 +217,7 @@
 			</li>
 		</stages>
 	</HediffDef>
-
-  	<HediffDef>
+	<HediffDef>
 		<defName>psylink_fullpower</defName>
 		<hediffClass>Hediff_Psylink</hediffClass>
 		<label>psylink level 6</label>
@@ -291,7 +275,6 @@
 			</li>
 		</stages>
 	</HediffDef>
-
 	<HediffDef>
 		<defName>adaptive_armor</defName>
 		<hediffClass>Hediff_High</hediffClass>
