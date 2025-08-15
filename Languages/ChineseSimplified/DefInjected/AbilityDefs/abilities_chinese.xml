@@ -14,4 +14,7 @@
 	<ResurrectNoCost.description>利用血流中的机械单元为死者恢复生命。这些微观机器修复细胞损伤，重启生命功能，重建神经通路。复活的成功和质量取决于尸体的状况——新鲜的身体保留更多记忆和身体完整性，而老旧遗骸可能遭受永久的认知或身体损伤。</ResurrectNoCost.description>
 	<TranscendentDropPods.label>超凡撤离</TranscendentDropPods.label>
 	<TranscendentDropPods.description>召唤通过维度裂隙物化的先进投放舱。这些虚无容器能够以比传统投放舱技术大幅缩短的准备时间将你和盟友传送至遥远位置。</TranscendentDropPods.description>
+	<!-- WorkGuidance ability -->
+	<WorkGuidance.label>工作指导</WorkGuidance.label>
+	<WorkGuidance.description>呼吁目标在一段时间内更加努力工作，提升生产效率。</WorkGuidance.description>
 </languageData>

@@ -35,7 +35,6 @@
 			</li>
 		</comps>
 	</HediffDef>
-
 	<!-- Physical/mobility & logistics (movement, manipulation, hauling) -->
 	<HediffDef>
 		<defName>pioneerspirit_physical</defName>
@@ -79,7 +78,6 @@
 			</li>
 		</stages>
 	</HediffDef>
-
 	<!-- Labor/industry & research yields/speeds -->
 	<HediffDef>
 		<defName>pioneerspirit_industry</defName>
@@ -110,7 +108,6 @@
 			</li>
 		</stages>
 	</HediffDef>
-
 	<!-- Combat proficiency & battlefield awareness -->
 	<HediffDef>
 		<defName>pioneerspirit_combat</defName>
@@ -136,7 +133,6 @@
 			</li>
 		</stages>
 	</HediffDef>
-
 	<!-- Survival, recovery, and mental steadiness -->
 	<HediffDef>
 		<defName>pioneerspirit_resilience</defName>
@@ -183,5 +179,25 @@
 				</statFactors>
 			</li>
 		</stages>
+	</HediffDef>
+	<HediffDef>
+		<defName>WorkGuidance</defName>
+		<label>work guidance</label>
+		<description>Received focused guidance at work. For a short time, all skills are bolstered and learning accelerates dramatically.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<statFactors>
+					<GlobalLearningFactor>3</GlobalLearningFactor>
+				</statFactors>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+			<li Class="HediffCompProperties_DisappearsOnDeath"/>
+		</comps>
 	</HediffDef>
 </Defs>

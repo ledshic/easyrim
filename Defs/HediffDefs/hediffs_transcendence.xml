@@ -246,11 +246,6 @@
 		<minSeverity>0</minSeverity>
 		<maxSeverity>6</maxSeverity>
 		<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
-		<comps>
-			<li Class="HediffCompProperties_SeverityPerSecond">
-				<severityPerSecondRange>1</severityPerSecondRange>
-			</li>
-		</comps>
 		<stages>
 			<li>
 				<minSeverity>1</minSeverity>
@@ -307,9 +302,7 @@
 		<maxSeverity>5.0</maxSeverity>
 		<isBad>false</isBad>
 		<comps>
-			<li Class="EasyMode.HediffCompProperties_AdaptiveArmor">
-				<tickInterval>60</tickInterval>
-			</li>
+			<li Class="EasyMode.HediffCompProperties_AdaptiveArmor"></li>
 		</comps>
 		<stages>
 			<li>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<AbilityDef ParentName="AbilityTouchBase">
+		<defName>ResurrectNoCost</defName>
+		<label>eternal revival</label>
+		<description>Harness advanced archite technology flowing through the bloodstream to restore life to the deceased. These microscopic machines repair cellular damage, restart vital functions, and reconstruct neural pathways. The success and quality of resurrection depends on the corpse's condition - fresher bodies retain more memories and physical integrity, while older remains may suffer permanent cognitive or physical impairments.</description>
+		<iconPath>UI/Abilities/Resurrect</iconPath>
+		<cooldownTicksRange>60000~120000</cooldownTicksRange>
+		<warmupMote>Mote_ResurrectAbility</warmupMote>
+		<warmupStartSound>Resurrect_Cast</warmupStartSound>
+		<displayOrder>600</displayOrder>
+		<hostile>false</hostile>
+		<sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
+		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+		<charges>3</charges>
+		<cooldownPerCharge>true</cooldownPerCharge>
+		<verbProperties>
+			<verbClass>Verb_CastAbilityTouch</verbClass>
+			<drawAimPie>false</drawAimPie>
+			<range>-1</range>
+			<warmupTime>2</warmupTime>
+			<soundCast>Resurrect_Resolve</soundCast>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetCorpses>true</canTargetCorpses>
+				<canTargetMechs>false</canTargetMechs>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="CompProperties_Resurrect" />
+		</comps>
+	</AbilityDef>
+	<AbilityDef>
+		<defName>TranscendentDropPods</defName>
+		<label>transcendent evacuation</label>
+		<description>Summon advanced drop pods that materialize through dimensional rifts. These ethereal vessels can transport you and your allies to distant locations with greatly reduced preparation time compared to conventional drop pod technology.</description>
+		<iconPath>UI/Commands/CallDropPods</iconPath>
+		<cooldownTicksRange>30000~45000</cooldownTicksRange>
+		<displayOrder>300</displayOrder>
+		<sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+		<charges>2</charges>
+		<cooldownPerCharge>true</cooldownPerCharge>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<range>500</range>
+			<warmupTime>0.5</warmupTime>
+			<soundCast>Ability_CallMechanoids</soundCast>
+			<useableInPocketMaps>false</useableInPocketMaps>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="CompProperties_DropMechPods">
+				<numPods>3~4</numPods>
+			</li>
+		</comps>
+	</AbilityDef>
+</Defs>
