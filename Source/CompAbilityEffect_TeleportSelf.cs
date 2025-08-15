@@ -213,17 +213,32 @@ namespace EasyMode
             pawn.stances?.CancelBusyStanceSoft();
             Rot4 rot = pawn.Rotation;
 
-            // Prefer joining an existing player caravan on the tile.
+            // Track origin caravan if any; we'll remove the pawn and destroy the caravan if it becomes empty.
+            Caravan originCaravan = pawn.GetCaravan();
+
+            // Prefer joining an existing player caravan on the tile (not the same as origin caravan).
             var caravan = Find.WorldObjects.Caravans?
-                .FirstOrDefault(c => c.Tile == tile && c.Faction == Faction.OfPlayer);
+                .FirstOrDefault(c => c.Tile == tile && c.Faction == Faction.OfPlayer && c != originCaravan);
             if (caravan != null)
             {
-                // Commit teleport immediately to caravan: play exit VFX then despawn.
+                // Commit teleport immediately to caravan: play exit SFX (camera) then move pawn.
                 if (originMap != null)
                 {
                     TrySpawnEffecter(DefDatabase<EffecterDef>.GetNamedSilentFail("Skip_Exit"), originCell, originMap);
                     TryPlaySound(DefDatabase<SoundDef>.GetNamedSilentFail("Psycast_Skip_Exit"), originCell, originMap);
                 }
+
+                // If pawn comes from another caravan, remove it and destroy if empty.
+                if (originCaravan != null && !originCaravan.Destroyed)
+                {
+                    bool destroy = originCaravan.PawnsListForReading.Count == 1 && originCaravan.PawnsListForReading[0] == pawn;
+                    originCaravan.RemovePawn(pawn);
+                    if (destroy && originCaravan.PawnsListForReading.Count == 0)
+                    {
+                        originCaravan.Destroy();
+                    }
+                }
+
                 if (pawn.Spawned)
                 {
                     pawn.DeSpawn(DestroyMode.Vanish);
@@ -238,6 +253,50 @@ namespace EasyMode
             var mapParent = Find.WorldObjects.MapParents?.FirstOrDefault(mp => mp.Tile == tile && mp.def.canHaveMap);
             if (mapParent != null)
             {
+                // If occupied by another faction, ask for intent first.
+                if (mapParent.Faction != null && mapParent.Faction != Faction.OfPlayer)
+                {
+                    var options = new List<FloatMenuOption>();
+                    options.Add(new FloatMenuOption("访问", () =>
+                    {
+                        if (originMap != null)
+                        {
+                            TrySpawnEffecter(DefDatabase<EffecterDef>.GetNamedSilentFail("Skip_Exit"), originCell, originMap);
+                            TryPlaySound(DefDatabase<SoundDef>.GetNamedSilentFail("Psycast_Skip_Exit"), originCell, originMap);
+                        }
+
+                        if (originCaravan != null && !originCaravan.Destroyed)
+                        {
+                            bool destroy = originCaravan.PawnsListForReading.Count == 1 && originCaravan.PawnsListForReading[0] == pawn;
+                            originCaravan.RemovePawn(pawn);
+                            if (destroy && originCaravan.PawnsListForReading.Count == 0)
+                            {
+                                originCaravan.Destroy();
+                            }
+                        }
+
+                        if (pawn.Spawned)
+                        {
+                            pawn.DeSpawn(DestroyMode.Vanish);
+                        }
+
+                        CaravanMaker.MakeCaravan(new List<Pawn> { pawn }, Faction.OfPlayer, tile, addToWorldPawnsIfNotAlready: true);
+                        TryPlaySound(DefDatabase<SoundDef>.GetNamedSilentFail("Psycast_Skip_Entry"), IntVec3.Zero, null);
+                    }));
+                    options.Add(new FloatMenuOption("进攻", () =>
+                    {
+                        Map targetMap = mapParent.Map;
+                        if (targetMap == null)
+                        {
+                            targetMap = MapGenerator.GenerateMap(new IntVec3(200, 1, 200), mapParent, mapParent.MapGeneratorDef, null);
+                        }
+                        BeginManualLandingTargeting(targetMap, pawn, rot, originMap, originCell, mapParent, originCaravan);
+                    }));
+
+                    Find.WindowStack.Add(new FloatMenu(options));
+                    return;
+                }
+
                 // Get or generate the map for this parent.
                 Map targetMap = mapParent.Map;
                 if (targetMap == null)
@@ -248,7 +307,7 @@ namespace EasyMode
 
                 // Open a second-stage targeting on the destination map so the player can pick an exact landing cell,
                 // emulating transport pods' "choose landing spot" behavior.
-                BeginManualLandingTargeting(targetMap, pawn, rot, originMap, originCell, mapParent);
+                BeginManualLandingTargeting(targetMap, pawn, rot, originMap, originCell, mapParent, originCaravan);
                 return;
             }
 
@@ -258,6 +317,18 @@ namespace EasyMode
                 TrySpawnEffecter(DefDatabase<EffecterDef>.GetNamedSilentFail("Skip_Exit"), originCell, originMap);
                 TryPlaySound(DefDatabase<SoundDef>.GetNamedSilentFail("Psycast_Skip_Exit"), originCell, originMap);
             }
+
+            // If coming from a caravan, detach and destroy if it becomes empty.
+            if (originCaravan != null && !originCaravan.Destroyed)
+            {
+                bool destroy = originCaravan.PawnsListForReading.Count == 1 && originCaravan.PawnsListForReading[0] == pawn;
+                originCaravan.RemovePawn(pawn);
+                if (destroy && originCaravan.PawnsListForReading.Count == 0)
+                {
+                    originCaravan.Destroy();
+                }
+            }
+
             if (pawn.Spawned)
             {
                 pawn.DeSpawn(DestroyMode.Vanish);
@@ -267,7 +338,7 @@ namespace EasyMode
             TryPlaySound(DefDatabase<SoundDef>.GetNamedSilentFail("Psycast_Skip_Entry"), IntVec3.Zero, null);
         }
 
-        private void BeginManualLandingTargeting(Map targetMap, Pawn pawn, Rot4 rot, Map originMap, IntVec3 originCell, MapParent mapParent)
+        private void BeginManualLandingTargeting(Map targetMap, Pawn pawn, Rot4 rot, Map originMap, IntVec3 originCell, MapParent mapParent, Caravan originCaravan)
         {
             if (targetMap == null || pawn == null)
                 return;
@@ -285,7 +356,7 @@ namespace EasyMode
                 {
                     fallback = targetMap.Center;
                 }
-                DoTeleportSpawnAt(pawn, rot, originMap, originCell, targetMap, fallback, mapParent);
+                DoTeleportSpawnAt(pawn, rot, originMap, originCell, targetMap, fallback, mapParent, originCaravan);
                 return;
             }
 
@@ -307,11 +378,11 @@ namespace EasyMode
             Find.Targeter.BeginTargeting(parms, (LocalTargetInfo lt) =>
             {
                 var drop = lt.Cell;
-                DoTeleportSpawnAt(pawn, rot, originMap, originCell, targetMap, drop, mapParent);
+                DoTeleportSpawnAt(pawn, rot, originMap, originCell, targetMap, drop, mapParent, originCaravan);
             });
         }
 
-        private void DoTeleportSpawnAt(Pawn pawn, Rot4 rot, Map originMap, IntVec3 originCell, Map targetMap, IntVec3 dropCell, MapParent mapParent)
+        private void DoTeleportSpawnAt(Pawn pawn, Rot4 rot, Map originMap, IntVec3 originCell, Map targetMap, IntVec3 dropCell, MapParent mapParent, Caravan originCaravan)
         {
             // Re-validate destination just in case (validator should have ensured this already).
             if (targetMap == null)
@@ -322,6 +393,17 @@ namespace EasyMode
                 if (!TryFindTeleportDropCell(targetMap, out dropCell))
                 {
                     dropCell = targetMap.Center;
+                }
+            }
+
+            // If coming from a caravan, detach here (commit time) and destroy if empty to avoid leaving empty caravans behind.
+            if (originCaravan != null && !originCaravan.Destroyed)
+            {
+                bool destroy = originCaravan.PawnsListForReading.Count == 1 && originCaravan.PawnsListForReading[0] == pawn;
+                originCaravan.RemovePawn(pawn);
+                if (destroy && originCaravan.PawnsListForReading.Count == 0)
+                {
+                    originCaravan.Destroy();
                 }
             }
 
