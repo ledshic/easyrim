@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EasyMode")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8da3f66aa61d93124605e435c7ab6e9f69e3d2cb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2be3a704f6675f2ba448fff0bdeb0a8b73035ac5")]
 [assembly: System.Reflection.AssemblyProductAttribute("EasyMode")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EasyMode")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using RimWorld;
 using UnityEngine;
 using Verse;
+using Verse.Sound;
 
 namespace EasyMode
 {
@@ -21,13 +22,7 @@ namespace EasyMode
     {
         public new CompProperties_AbilityTeleportSelf Props => (CompProperties_AbilityTeleportSelf)props;
 
-        public override bool AICanTargetNow => false; // Explicitly disable AI usage (redundant with XML aiCanUse=false).
-
-        public override IEnumerable<FloatMenuOption> GetWornGizmosExtra()
-        {
-            // No extra gizmos.
-            return base.GetWornGizmosExtra();
-        }
+        // Removed invalid override of GetWornGizmosExtra(); CompAbilityEffect 没有该可重写方法。
 
         public override bool Valid(LocalTargetInfo target, bool throwMessages = false)
         {
