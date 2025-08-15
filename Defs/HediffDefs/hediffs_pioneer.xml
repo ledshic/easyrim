@@ -13,9 +13,7 @@
 		<comps>
 			<li Class="HediffCompProperties_GiveAbility">
 				<abilityDefs>
-					<li>ResurrectNoCost</li>
-					<li>TranscendentSelfTeleport</li>
-					<li>TranscendentDropPods</li>
+					<li>WorkGuidance</li>
 				</abilityDefs>
 			</li>
 			<li Class="EasyMode.HediffCompProperties_GiveMultipleHediffs">
