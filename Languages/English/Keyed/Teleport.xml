@@ -3,6 +3,7 @@
   <CannotTeleportHere>Cannot teleport here.</CannotTeleportHere>
   <MustPlaceOnStandable>Cannot teleport: Target cell is not standable.</MustPlaceOnStandable>
   <AbilityInvalidTarget>Invalid target.</AbilityInvalidTarget>
+  <TeleportMultiplayerSyncUnavailable>World teleport is unavailable because Multiplayer sync registration failed.</TeleportMultiplayerSyncUnavailable>
   <TeleportVisit>Visit</TeleportVisit>
   <TeleportAttack>Attack</TeleportAttack>
 </LanguageData>

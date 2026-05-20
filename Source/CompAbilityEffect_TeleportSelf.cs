@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using RimWorld;
 using RimWorld.Planet;
 using UnityEngine;
@@ -23,8 +24,6 @@ namespace EasyMode
     public class CompAbilityEffect_TeleportSelf : CompAbilityEffect
     {
         public new CompProperties_AbilityTeleportSelf Props => (CompProperties_AbilityTeleportSelf)props;
-
-        // Removed invalid override of GetWornGizmosExtra(); CompAbilityEffect 没有该可重写方法。
 
         public override bool Valid(LocalTargetInfo target, bool throwMessages = false)
         {
@@ -70,9 +69,7 @@ namespace EasyMode
             return true;
         }
 
-    // Multiplayer: this method is deterministic and side-effect free beyond map state; if MP is loaded,
-    // they can SyncMethod by patching, but we avoid hard attribute to keep no-dep.
-    public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
+        public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
             var pawn = parent.pawn;
             if (pawn == null || pawn.Map == null || !target.IsValid)
@@ -209,18 +206,33 @@ namespace EasyMode
             // Origin context (for VFX) — do NOT despawn yet if we will open manual landing picker.
             Map originMap = pawn.Map;
             IntVec3 originCell = pawn.PositionHeld;
-            pawn.pather?.StopDead();
-            pawn.stances?.CancelBusyStanceSoft();
             Rot4 rot = pawn.Rotation;
 
             // Track origin caravan if any; we'll remove the pawn and destroy the caravan if it becomes empty.
             Caravan originCaravan = pawn.GetCaravan();
+            bool multiplayerActive = MultiplayerCompatibility.MultiplayerActive;
+            if (multiplayerActive && !MultiplayerCompatibility.SyncMethodsRegistered)
+            {
+                Messages.Message("TeleportMultiplayerSyncUnavailable".Translate(), MessageTypeDefOf.RejectInput, historical: false);
+                return;
+            }
+            if (!multiplayerActive)
+            {
+                pawn.pather?.StopDead();
+                pawn.stances?.CancelBusyStanceSoft();
+            }
 
             // Prefer joining an existing player caravan on the tile (not the same as origin caravan).
             var caravan = Find.WorldObjects.Caravans?
                 .FirstOrDefault(c => c.Tile == tile && c.Faction == Faction.OfPlayer && c != originCaravan);
             if (caravan != null)
             {
+                if (multiplayerActive)
+                {
+                    SyncedTeleportToPlayerCaravan(pawn, tile);
+                    return;
+                }
+
                 // Commit teleport immediately to caravan: play exit SFX (camera) then move pawn.
                 if (originMap != null)
                 {
@@ -259,6 +271,12 @@ namespace EasyMode
                     var options = new List<FloatMenuOption>();
                     options.Add(new FloatMenuOption("TeleportVisit".Translate(), () =>
                     {
+                        if (MultiplayerCompatibility.MultiplayerActive)
+                        {
+                            SyncedTeleportVisitHostile(pawn, tile);
+                            return;
+                        }
+
                         if (originMap != null)
                         {
                             TrySpawnEffecter(DefDatabase<EffecterDef>.GetNamedSilentFail("Skip_Exit"), originCell, originMap);
@@ -285,6 +303,12 @@ namespace EasyMode
                     }));
                     options.Add(new FloatMenuOption("TeleportAttack".Translate(), () =>
                     {
+                        if (MultiplayerCompatibility.MultiplayerActive)
+                        {
+                            SyncedTeleportAttackMapParent(pawn, tile);
+                            return;
+                        }
+
                         Map targetMap = mapParent.Map;
                         if (targetMap == null)
                         {
@@ -301,13 +325,31 @@ namespace EasyMode
                 Map targetMap = mapParent.Map;
                 if (targetMap == null)
                 {
+                    if (multiplayerActive)
+                    {
+                        SyncedTeleportAttackMapParent(pawn, tile);
+                        return;
+                    }
+
                     // Generate map instantly (no traveling object), mirroring pod/shuttle arrival behavior.
                     targetMap = MapGenerator.GenerateMap(new IntVec3(200, 1, 200), mapParent, mapParent.MapGeneratorDef, null);
+                }
+
+                if (multiplayerActive)
+                {
+                    SyncedTeleportAttackMapParent(pawn, tile);
+                    return;
                 }
 
                 // Open a second-stage targeting on the destination map so the player can pick an exact landing cell,
                 // emulating transport pods' "choose landing spot" behavior.
                 BeginManualLandingTargeting(targetMap, pawn, rot, originMap, originCell, mapParent, originCaravan);
+                return;
+            }
+
+            if (multiplayerActive)
+            {
+                SyncedTeleportToEmptyTile(pawn, tile);
                 return;
             }
 
@@ -336,6 +378,122 @@ namespace EasyMode
             var pawns = new List<Pawn> { pawn };
             CaravanMaker.MakeCaravan(pawns, Faction.OfPlayer, tile, addToWorldPawnsIfNotAlready: true);
             TryPlaySound(DefDatabase<SoundDef>.GetNamedSilentFail("Psycast_Skip_Entry"), IntVec3.Zero, null);
+        }
+
+        private static void SyncedTeleportToPlayerCaravan(Pawn pawn, int tile)
+        {
+            if (!TryGetTeleportContext(pawn, out Map originMap, out IntVec3 originCell, out Caravan originCaravan, out _))
+                return;
+
+            Caravan caravan = Find.WorldObjects.Caravans?
+                .FirstOrDefault(c => c.Tile == tile && c.Faction == Faction.OfPlayer && c != originCaravan);
+            if (caravan == null)
+                return;
+
+            PlayExitEffects(originMap, originCell);
+            RemoveFromOriginCaravanIfNeeded(pawn, originCaravan);
+            DespawnIfSpawned(pawn);
+            caravan.AddPawn(pawn, true);
+            TryPlaySound(DefDatabase<SoundDef>.GetNamedSilentFail("Psycast_Skip_Entry"), IntVec3.Zero, null);
+        }
+
+        private static void SyncedTeleportVisitHostile(Pawn pawn, int tile)
+        {
+            if (!TryGetTeleportContext(pawn, out Map originMap, out IntVec3 originCell, out Caravan originCaravan, out _))
+                return;
+
+            if (Find.WorldObjects.MapParents?.Any(mp => mp.Tile == tile && mp.def.canHaveMap) != true)
+                return;
+
+            PlayExitEffects(originMap, originCell);
+            RemoveFromOriginCaravanIfNeeded(pawn, originCaravan);
+            DespawnIfSpawned(pawn);
+            CaravanMaker.MakeCaravan(new List<Pawn> { pawn }, Faction.OfPlayer, tile, addToWorldPawnsIfNotAlready: true);
+            TryPlaySound(DefDatabase<SoundDef>.GetNamedSilentFail("Psycast_Skip_Entry"), IntVec3.Zero, null);
+        }
+
+        private static void SyncedTeleportToEmptyTile(Pawn pawn, int tile)
+        {
+            if (!TryGetTeleportContext(pawn, out Map originMap, out IntVec3 originCell, out Caravan originCaravan, out _))
+                return;
+
+            if (Find.WorldObjects.MapParents?.Any(mp => mp.Tile == tile && mp.def.canHaveMap) == true)
+                return;
+
+            PlayExitEffects(originMap, originCell);
+            RemoveFromOriginCaravanIfNeeded(pawn, originCaravan);
+            DespawnIfSpawned(pawn);
+            CaravanMaker.MakeCaravan(new List<Pawn> { pawn }, Faction.OfPlayer, tile, addToWorldPawnsIfNotAlready: true);
+            TryPlaySound(DefDatabase<SoundDef>.GetNamedSilentFail("Psycast_Skip_Entry"), IntVec3.Zero, null);
+        }
+
+        private static void SyncedTeleportAttackMapParent(Pawn pawn, int tile)
+        {
+            if (!TryGetTeleportContext(pawn, out Map originMap, out IntVec3 originCell, out Caravan originCaravan, out Rot4 rot))
+                return;
+
+            MapParent mapParent = Find.WorldObjects.MapParents?.FirstOrDefault(mp => mp.Tile == tile && mp.def.canHaveMap);
+            if (mapParent == null)
+                return;
+
+            Map targetMap = mapParent.Map;
+            if (targetMap == null)
+            {
+                targetMap = MapGenerator.GenerateMap(new IntVec3(200, 1, 200), mapParent, mapParent.MapGeneratorDef, null);
+            }
+
+            if (!TryFindDeterministicTeleportDropCell(targetMap, out IntVec3 dropCell))
+            {
+                Messages.Message("CannotTeleportHere".Translate(), MessageTypeDefOf.RejectInput, historical: false);
+                return;
+            }
+
+            DoTeleportSpawnAt(pawn, rot, originMap, originCell, targetMap, dropCell, mapParent, originCaravan);
+        }
+
+        private static bool TryGetTeleportContext(Pawn pawn, out Map originMap, out IntVec3 originCell, out Caravan originCaravan, out Rot4 rot)
+        {
+            originMap = pawn?.Map;
+            originCell = pawn?.PositionHeld ?? IntVec3.Invalid;
+            originCaravan = pawn?.GetCaravan();
+            rot = pawn?.Rotation ?? Rot4.South;
+
+            if (pawn == null)
+                return false;
+
+            pawn.pather?.StopDead();
+            pawn.stances?.CancelBusyStanceSoft();
+            return true;
+        }
+
+        private static void PlayExitEffects(Map originMap, IntVec3 originCell)
+        {
+            if (originMap == null || !originCell.IsValid)
+                return;
+
+            TrySpawnEffecter(DefDatabase<EffecterDef>.GetNamedSilentFail("Skip_Exit"), originCell, originMap);
+            TryPlaySound(DefDatabase<SoundDef>.GetNamedSilentFail("Psycast_Skip_Exit"), originCell, originMap);
+        }
+
+        private static void RemoveFromOriginCaravanIfNeeded(Pawn pawn, Caravan originCaravan)
+        {
+            if (originCaravan == null || originCaravan.Destroyed)
+                return;
+
+            bool destroy = originCaravan.PawnsListForReading.Count == 1 && originCaravan.PawnsListForReading[0] == pawn;
+            originCaravan.RemovePawn(pawn);
+            if (destroy && originCaravan.PawnsListForReading.Count == 0)
+            {
+                originCaravan.Destroy();
+            }
+        }
+
+        private static void DespawnIfSpawned(Pawn pawn)
+        {
+            if (pawn.Spawned)
+            {
+                pawn.DeSpawn(DestroyMode.Vanish);
+            }
         }
 
         private void BeginManualLandingTargeting(Map targetMap, Pawn pawn, Rot4 rot, Map originMap, IntVec3 originCell, MapParent mapParent, Caravan originCaravan)
@@ -382,7 +540,7 @@ namespace EasyMode
             });
         }
 
-        private void DoTeleportSpawnAt(Pawn pawn, Rot4 rot, Map originMap, IntVec3 originCell, Map targetMap, IntVec3 dropCell, MapParent mapParent, Caravan originCaravan)
+        private static void DoTeleportSpawnAt(Pawn pawn, Rot4 rot, Map originMap, IntVec3 originCell, Map targetMap, IntVec3 dropCell, MapParent mapParent, Caravan originCaravan)
         {
             // Re-validate destination just in case (validator should have ensured this already).
             if (targetMap == null)
@@ -453,6 +611,145 @@ namespace EasyMode
                 }
             }
             return cell.IsValid;
+        }
+
+        private static bool TryFindDeterministicTeleportDropCell(Map map, out IntVec3 cell)
+        {
+            cell = IntVec3.Invalid;
+            if (map == null)
+                return false;
+
+            IntVec3 center = map.Center;
+            int maxRadius = Mathf.Max(map.Size.x, map.Size.z);
+            int numCells = GenRadial.NumCellsInRadius(maxRadius);
+            for (int i = 0; i < numCells; i++)
+            {
+                IntVec3 candidate = center + GenRadial.RadialPattern[i];
+                if (IsValidTeleportDropCell(candidate, map))
+                {
+                    cell = candidate;
+                    return true;
+                }
+            }
+
+            foreach (IntVec3 candidate in map.AllCells)
+            {
+                if (IsValidTeleportDropCell(candidate, map))
+                {
+                    cell = candidate;
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        private static bool IsValidTeleportDropCell(IntVec3 cell, Map map)
+        {
+            return cell.IsValid
+                && cell.InBounds(map)
+                && cell.Standable(map)
+                && DropCellFinder.SkyfallerCanLandAt(cell, map, new IntVec2(1, 1));
+        }
+    }
+
+    [StaticConstructorOnStartup]
+    internal static class EasyModeMultiplayerSyncInit
+    {
+        static EasyModeMultiplayerSyncInit()
+        {
+            LongEventHandler.ExecuteWhenFinished(MultiplayerCompatibility.RegisterSyncMethods);
+        }
+    }
+
+    internal static class MultiplayerCompatibility
+    {
+        private static bool syncMethodsRegistered;
+
+        internal static bool SyncMethodsRegistered
+        {
+            get
+            {
+                if (!syncMethodsRegistered)
+                {
+                    RegisterSyncMethods();
+                }
+
+                return syncMethodsRegistered;
+            }
+        }
+
+        internal static bool MultiplayerActive
+        {
+            get
+            {
+                try
+                {
+                    Type multiplayerType = Type.GetType("Multiplayer.Client.Multiplayer, Multiplayer");
+                    object client = multiplayerType?.GetProperty("Client")?.GetValue(null, null);
+                    return client != null;
+                }
+                catch
+                {
+                    return false;
+                }
+            }
+        }
+
+        internal static void RegisterSyncMethods()
+        {
+            if (syncMethodsRegistered)
+                return;
+
+            Type mpType = FindType("Multiplayer.API.MP");
+            if (mpType == null)
+                return;
+
+            MethodInfo registerSyncMethod = mpType.GetMethods(BindingFlags.Public | BindingFlags.Static)
+                .FirstOrDefault(method =>
+                {
+                    if (method.Name != "RegisterSyncMethod")
+                        return false;
+
+                    ParameterInfo[] parameters = method.GetParameters();
+                    return parameters.Length == 1 && parameters[0].ParameterType == typeof(MethodInfo);
+                });
+
+            if (registerSyncMethod == null)
+            {
+                Log.Warning("[EasyMode] Multiplayer API loaded, but RegisterSyncMethod(MethodInfo) was not found. World teleport will not be synchronized in Multiplayer.");
+                return;
+            }
+
+            Type teleportType = typeof(CompAbilityEffect_TeleportSelf);
+            string[] methodNames =
+            {
+                "SyncedTeleportToPlayerCaravan",
+                "SyncedTeleportVisitHostile",
+                "SyncedTeleportToEmptyTile",
+                "SyncedTeleportAttackMapParent"
+            };
+
+            foreach (string methodName in methodNames)
+            {
+                MethodInfo method = teleportType.GetMethod(methodName, BindingFlags.NonPublic | BindingFlags.Static);
+                if (method == null)
+                {
+                    Log.Warning("[EasyMode] Could not find teleport sync method: " + methodName);
+                    return;
+                }
+
+                registerSyncMethod.Invoke(null, new object[] { method });
+            }
+
+            syncMethodsRegistered = true;
+        }
+
+        private static Type FindType(string fullName)
+        {
+            return AppDomain.CurrentDomain.GetAssemblies()
+                .Select(assembly => assembly.GetType(fullName))
+                .FirstOrDefault(type => type != null);
         }
     }
 }

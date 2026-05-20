@@ -3,6 +3,7 @@
   <CannotTeleportHere>不能在此处传送。</CannotTeleportHere>
   <MustPlaceOnStandable>无法传送：目标格不可站立。</MustPlaceOnStandable>
   <AbilityInvalidTarget>无效的目标。</AbilityInvalidTarget>
+  <TeleportMultiplayerSyncUnavailable>多人联机同步注册失败，无法使用世界地图传送。</TeleportMultiplayerSyncUnavailable>
   <TeleportVisit>访问</TeleportVisit>
   <TeleportAttack>进攻</TeleportAttack>
 </LanguageData>
