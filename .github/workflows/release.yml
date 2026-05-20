@@ -21,6 +21,7 @@ jobs:
       - name: Setup .NET SDK
         uses: actions/setup-dotnet@v4
         with:
+          # 使用 SDK 风格项目构建 net472 时，GitHub Actions 上用 .NET SDK 即可驱动 MSBuild。
           dotnet-version: 8.0.x
 
       - name: Restore dependencies (Source)
