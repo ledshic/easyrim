@@ -1,0 +1,68 @@
+name: Build Mod
+
+on:
+  # Build CI: push 到 main 或 PR 时触发
+  push:
+    branches:
+      - main
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup .NET SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          # Source/EasyMode.csproj 是 SDK 风格 net472 项目，可由 dotnet+MSBuild 构建。
+          # 使用 8.0.x 以保持主版本稳定，同时自动获取 8.0 补丁更新（安全/稳定性修复）。
+          dotnet-version: 8.0.x
+
+      - name: Restore dependencies (Source)
+        # 按需求仅恢复 Source 目录项目依赖
+        run: dotnet restore ./Source/EasyMode.csproj
+
+      - name: Build project (Source)
+        # Release 构建，不重复 restore
+        run: dotnet build ./Source/EasyMode.csproj --configuration Release --no-restore
+
+      - name: Package full mod structure
+        # 打包完整 RimWorld 模组目录结构为 staging 目录：About / Assemblies / Defs 等
+        run: |
+          set -euo pipefail
+
+          STAGING_DIR="$RUNNER_TEMP/mod-package/easyrim"
+          rm -rf "$STAGING_DIR"
+          mkdir -p "$STAGING_DIR"
+
+          # 复制模组目录（存在才复制，避免目录不存在时报错）
+          for dir in About Assemblies Defs Languages Patches Textures Sounds; do
+            if [ -d "$dir" ]; then
+              cp -a "$dir" "$STAGING_DIR/"
+            fi
+          done
+
+          # 将本次构建产物覆盖到包内 Assemblies（确保 artifact 包含最新 DLL）
+          mkdir -p "$STAGING_DIR/Assemblies"
+          cp -f ./Source/bin/Release/net472/*.dll "$STAGING_DIR/Assemblies/"
+
+          # 可选根文件（若存在则打包）
+          for file in LoadFolders.xml loadfolders.xml; do
+            if [ -f "$file" ]; then
+              cp -f "$file" "$STAGING_DIR/"
+            fi
+          done
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: easyrim-mod
+          path: ${{ runner.temp }}/mod-package/easyrim
+          if-no-files-found: error
