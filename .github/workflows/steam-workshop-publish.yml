@@ -1,0 +1,127 @@
+name: Publish to Steam Workshop
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '9.0.x'
+
+      - name: Restore NuGet packages
+        run: dotnet restore easymode.sln
+
+      - name: Build mod
+        run: dotnet build easymode.sln --configuration Release --no-restore
+
+      - name: Install SteamCMD
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y lib32gcc-s1
+          mkdir -p "$HOME/steamcmd"
+          curl -sqL "https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz" \
+            | tar -C "$HOME/steamcmd" -xzf -
+
+      - name: Generate Steam Guard code (if shared secret provided)
+        id: steamguard
+        run: |
+          if [ -n "$STEAM_SHARED_SECRET" ]; then
+            CODE=$(python3 - << 'PYEOF'
+          import os, base64, time, struct, hmac, hashlib
+
+          secret = os.environ["STEAM_SHARED_SECRET"]
+          # Steam Guard secrets are standard base64-encoded; fix padding if needed
+          padding = (4 - len(secret) % 4) % 4
+          key = base64.b64decode(secret + "=" * padding)
+
+          # Steam TOTP: 30-second window, 5-char code from Steam charset
+          t = int(time.time()) // 30
+          msg = struct.pack(">Q", t)
+          mac = hmac.new(key, msg, hashlib.sha1).digest()
+          offset = mac[-1] & 0x0F
+          code_int = struct.unpack(">I", mac[offset:offset + 4])[0] & 0x7FFFFFFF
+          chars = "23456789BCDFGHJKMNPQRTVWXY"
+          code = ""
+          for _ in range(5):
+              code = chars[code_int % len(chars)] + code
+              code_int //= len(chars)
+          print(code)
+          PYEOF
+          )
+            echo "code=$CODE" >> "$GITHUB_OUTPUT"
+            echo "has_code=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_code=false" >> "$GITHUB_OUTPUT"
+          fi
+        env:
+          STEAM_SHARED_SECRET: ${{ secrets.STEAM_SHARED_SECRET }}
+
+      - name: Create Workshop VDF
+        run: |
+          cat > /tmp/workshop.vdf << 'VDFEOF'
+          "workshopitem"
+          {
+            "appid"             "294100"
+            "publishedfileid"   "3534843393"    # Steam Workshop item ID — update this if you re-publish as a new item
+            "contentfolder"     "CONTENT_FOLDER_PLACEHOLDER"
+            "previewfile"       "PREVIEW_PLACEHOLDER"
+            "visibility"        "1"
+            "title"             "轻松环世界 - easyrim"
+            "description"       "轻松环世界 - 超强特性模组 | EasyRim - Overpowered Traits Mod\n\n一个让环世界游戏变得更轻松的作弊模组，添加了强力的殖民者特性。\nA cheat mod that makes RimWorld significantly easier with powerful colonist traits.\n\n⚠️ **警告 Warning**: 这是一个作弊模组，会让游戏变得非常简单。请谨慎使用。\nThis is a cheat mod designed to make the game significantly easier. Use at your own discretion.\n\n**支持版本 Supported Version**: RimWorld 1.6 (Odyssey)\n**模组ID Mod ID**: sant.rimcheats\n**语言支持 Languages**: 中文简体 & English"
+            "changenote"        "Updated via GitHub Actions"
+            "tags"
+            {
+              "0"   "Mod"
+              "1"   "Traits"
+              "2"   "Cheats"
+              "3"   "Enhancement"
+              "4"   "Quality of Life"
+            }
+          }
+          VDFEOF
+          # Replace placeholders with actual paths
+          sed -i "s|CONTENT_FOLDER_PLACEHOLDER|$GITHUB_WORKSPACE|g" /tmp/workshop.vdf
+          sed -i "s|PREVIEW_PLACEHOLDER|$GITHUB_WORKSPACE/About/Preview.png|g" /tmp/workshop.vdf
+
+      - name: Upload to Steam Workshop
+        run: |
+          # Write SteamCMD script so credentials are not exposed in the process list
+          # Restrict permissions so the file is only readable by the current user
+          umask 077
+          SCRIPT_FILE=$(mktemp /tmp/steamcmd_XXXXXX.txt)
+          trap 'rm -f "$SCRIPT_FILE"' EXIT
+
+          if [ "$HAS_CODE" = "true" ] && [ -n "$GUARD_CODE" ]; then
+            cat > "$SCRIPT_FILE" << SCRIPTEOF
+          @NoPromptForPassword 1
+          login $STEAM_USERNAME $STEAM_PASSWORD $GUARD_CODE
+          workshop_build_item /tmp/workshop.vdf
+          quit
+          SCRIPTEOF
+          else
+            cat > "$SCRIPT_FILE" << SCRIPTEOF
+          @NoPromptForPassword 1
+          login $STEAM_USERNAME $STEAM_PASSWORD
+          workshop_build_item /tmp/workshop.vdf
+          quit
+          SCRIPTEOF
+          fi
+
+          "$HOME/steamcmd/steamcmd.sh" +runscript "$SCRIPT_FILE"
+        env:
+          STEAM_USERNAME: ${{ secrets.STEAM_USERNAME }}
+          STEAM_PASSWORD: ${{ secrets.STEAM_PASSWORD }}
+          HAS_CODE: ${{ steps.steamguard.outputs.has_code }}
+          GUARD_CODE: ${{ steps.steamguard.outputs.code }}
