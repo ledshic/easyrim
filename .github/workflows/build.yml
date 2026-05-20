@@ -22,7 +22,7 @@ jobs:
         uses: actions/setup-dotnet@v4
         with:
           # Source/EasyMode.csproj 是 SDK 风格 net472 项目，可由 dotnet+MSBuild 构建。
-          # 这里固定 8.0.x（LTS）并与仓库既有构建流程保持一致，降低 CI 环境漂移风险。
+          # 这里固定 8.0.x 并与仓库既有构建流程保持一致，降低 CI 环境漂移风险。
           dotnet-version: 8.0.x
 
       - name: Restore dependencies (Source)
