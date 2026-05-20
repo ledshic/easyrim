@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<AbilityDef>
+		<defName>WorkGuidance</defName>
+		<label>指导</label>
+		<description>指点目标的细节与步骤，提升其水平和学习能力</description>
+		<jobDef>CastAbilityOnThingMelee</jobDef>
+		<iconPath>UI/Abilities/WorkDrive</iconPath>
+		<warmupMoteSocialSymbol>UI/Abilities/WorkDrive</warmupMoteSocialSymbol>
+		<stunTargetWhileCasting>True</stunTargetWhileCasting>
+		<showPsycastEffects>False</showPsycastEffects>
+		<displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+		<showWhenDrafted>true</showWhenDrafted>
+		<cooldownTicksRange>10000</cooldownTicksRange>
+		<hotKey>Misc12</hotKey>
+		<uiOrder>1</uiOrder>
+		<warmupStartSound>WorkDrive_Warmup</warmupStartSound>
+		<hostile>false</hostile>
+		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+		<statBases>
+			<Ability_Duration>1000</Ability_Duration>
+		</statBases>
+		<verbProperties>
+			<verbClass>Verb_CastAbilityTouch</verbClass>
+			<drawAimPie>False</drawAimPie>
+			<range>-1</range>
+			<warmupTime>3.0</warmupTime>
+			<targetParams>
+				<canTargetAnimals>false</canTargetAnimals>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetMechs>false</canTargetMechs>
+				<onlyTargetColonists>true</onlyTargetColonists>
+				<canTargetSubhumans>false</canTargetSubhumans>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="CompProperties_AbilityGiveHediff">
+				<compClass>CompAbilityEffect_GiveHediff</compClass>
+				<hediffDef>WorkGuidance</hediffDef>
+				<onlyBrain>True</onlyBrain>
+				<applicableToMechs>False</applicableToMechs>
+				<canTargetBaby>False</canTargetBaby>
+			</li>
+		</comps>
+	</AbilityDef>
+</Defs>

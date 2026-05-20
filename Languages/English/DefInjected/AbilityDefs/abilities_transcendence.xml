@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <TranscendentDropPods.label>overmind drops</TranscendentDropPods.label>
+  <TranscendentDropPods.description>Simulates a mechanoid overmind control signal, ordering nearby logistics satellites to dispatch several single-use drop pods to the target area.</TranscendentDropPods.description>
+  <TranscendentSelfTeleport.label>serialized transit</TranscendentSelfTeleport.label>
+  <TranscendentSelfTeleport.description>Serializes the user into a higher-dimensional transit tunnel, then deserializes at the target spacetime coordinates.</TranscendentSelfTeleport.description>
+</LanguageData>

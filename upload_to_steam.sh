@@ -4,10 +4,12 @@
 # 用于上传轻松环世界 mod 到 Steam 创意工坊的脚本
 
 # 配置变量 / Configuration variables
-STEAM_USERNAME="vep16054"  # 请填入你的 Steam 用户名 / Enter your Steam username
-STEAM_PASSWORD="no6-uCT-XYs-Ku7"  # 请填入你的 Steam 密码 / Enter your Steam password (留空将提示输入 / leave empty for prompt)
+STEAM_USERNAME=""  # 请填入你的 Steam 用户名 / Enter your Steam username
+STEAM_PASSWORD=""  # 留空将提示输入 / leave empty for prompt
 MOD_PATH="/Users/dongxuli/Documents/workspace/easyrim"
 VDF_FILE="$MOD_PATH/easyrim.vdf"
+WORKSHOP_STAGING_PATH="$MOD_PATH/.workshop-upload"
+WORKSHOP_VDF_FILE="/tmp/easyrim_workshop_$(date +%s).vdf"
 STEAMCMD_PATH="/usr/local/bin/steamcmd"  # macOS 默认 SteamCMD 路径 / Default macOS SteamCMD path
 
 # 颜色输出 / Color output
@@ -86,6 +88,28 @@ validate_files() {
     log_success "文件验证完成 / File validation completed"
 }
 
+# 准备上传目录 / Prepare workshop content folder
+prepare_workshop_content() {
+    log_info "准备创意工坊上传内容... / Preparing Workshop upload content..."
+
+    rm -rf "$WORKSHOP_STAGING_PATH"
+    mkdir -p "$WORKSHOP_STAGING_PATH"
+
+    local required_dirs=("About" "Assemblies" "Defs" "Languages" "Patches")
+    for dir in "${required_dirs[@]}"; do
+        if [ -d "$MOD_PATH/$dir" ]; then
+            cp -R "$MOD_PATH/$dir" "$WORKSHOP_STAGING_PATH/"
+        fi
+    done
+
+    if [ -f "$MOD_PATH/readme.md" ]; then
+        cp "$MOD_PATH/readme.md" "$WORKSHOP_STAGING_PATH/"
+    fi
+
+    sed "s#\"contentfolder\"[[:space:]]*\"[^\"]*\"#\"contentfolder\"		\"$WORKSHOP_STAGING_PATH\"#" "$VDF_FILE" > "$WORKSHOP_VDF_FILE"
+    log_success "上传内容已准备到: $WORKSHOP_STAGING_PATH"
+}
+
 # 获取 Steam 凭据 / Get Steam credentials
 get_steam_credentials() {
     if [ -z "$STEAM_USERNAME" ]; then
@@ -112,7 +136,7 @@ create_upload_script() {
     cat > "$temp_script" << EOF
 @sSteamCmdForcePlatformType windows
 login $STEAM_USERNAME $STEAM_PASSWORD
-workshop_build_item "$VDF_FILE"
+workshop_build_item "$WORKSHOP_VDF_FILE"
 quit
 EOF
 
@@ -134,6 +158,7 @@ upload_to_steam() {
 
     # 清理临时文件 / Clean up temporary file
     rm -f "$upload_script"
+    rm -f "$WORKSHOP_VDF_FILE"
 
     if [ $exit_code -eq 0 ]; then
         log_success "Mod 上传成功! / Mod uploaded successfully!"
@@ -203,6 +228,9 @@ main() {
 
     # 验证文件 / Validate files
     validate_files
+
+    # 准备干净的上传内容 / Prepare clean upload content
+    prepare_workshop_content
 
     # 获取 Steam 凭据 / Get Steam credentials
     get_steam_credentials

@@ -1,241 +1,146 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
-  <AbilityDef ParentName="PsycastBaseSkip">
-    <defName>imbafarskip</defName>
-    <label>dimensional rift</label>
-    <description>Tear open a rift in spacetime to instantly transport the caster and nearby allies across vast distances. This powerful ability requires a willing ally at the destination to serve as an anchor point, guiding travelers through the void between worlds. Those who traverse the rift will emerge near a random allied pawn on the target map.</description>
-    <level>1</level>
-    <iconPath>UI/Abilities/Farskip</iconPath>
-    <hotKey>Misc12</hotKey>
-    <targetWorldCell>True</targetWorldCell>
-    <showGizmoOnWorldView>True</showGizmoOnWorldView>
-    <hostile>false</hostile>
-    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
-    <statBases>
-      <Ability_PsyfocusCost>-1</Ability_PsyfocusCost>
-      <Ability_EffectRadius>6</Ability_EffectRadius>
-    </statBases>
-    <verbProperties>
-      <warmupTime>5</warmupTime>
-      <range>6</range>
-      <drawAimPie>False</drawAimPie>
-      <requireLineOfSight>False</requireLineOfSight>
-    </verbProperties>
-    <comps>
-      <li Class="CompProperties_AbilityFarskip">
-        <stunTicks>18~60</stunTicks>
-        <clamorType>Ability</clamorType>
-        <clamorRadius>10</clamorRadius>
-      </li>
-    </comps>
-  </AbilityDef>
-
-  <AbilityDef>
-    <defName>MetalbloodSurge</defName>
-    <label>crimson steel infusion</label>
-    <description>Activate the metalblood heart implant to surge liquid metal through the bloodstream, creating a temporary fusion of flesh and steel. This enhancement dramatically reduces incoming damage as the body becomes partially mechanized, though the effect fades as the metallic compounds are naturally filtered out.</description>
-    <iconPath>UI/Abilities/MetalbloodInjection</iconPath>
-    <cooldownTicksRange>15000</cooldownTicksRange> <!-- 6 hours -->
-    <hostile>false</hostile>
-    <groupAbility>true</groupAbility>
-    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
-    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
-    <aiCanUse>true</aiCanUse>
-    <ai_IsOffensive>true</ai_IsOffensive>
-    <targetRequired>false</targetRequired>
-    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
-    <statBases>
-      <Ability_Duration>120</Ability_Duration>
-    </statBases>
-    <charges>6</charges>
-    <cooldownPerCharge>true</cooldownPerCharge>
-    <verbProperties>
-      <verbClass>Verb_CastAbility</verbClass>
-      <drawAimPie>false</drawAimPie>
-      <requireLineOfSight>false</requireLineOfSight>
-      <nonInterruptingSelfCast>true</nonInterruptingSelfCast>
-      <soundCast>Pawn_Ghoul_Frenzy</soundCast>
-      <targetable>false</targetable>
-      <targetParams>
-        <canTargetSelf>true</canTargetSelf>
-      </targetParams>
-    </verbProperties>
-    <comps>
-      <li Class="CompProperties_AbilityGiveHediff">
-        <compClass>CompAbilityEffect_GiveHediff</compClass>
-        <hediffDef>Metalblood</hediffDef>
-        <onlyApplyToSelf>True</onlyApplyToSelf>
-        <replaceExisting>true</replaceExisting>
-      </li>
-    </comps>
-  </AbilityDef>
-
-  <AbilityDef
-    ParentName="AbilityTouchBase">
-    <defName>BlessHealing</defName>
-    <label>forbidden restoration</label>
-    <description>Channel dark psychic forces to rapidly heal severe wounds and restore lost blood. This forbidden technique can mend even grievous injuries that would normally prove fatal, but the unnatural process may trigger unexpected mutations or psychological trauma in the subject.</description>
-    <iconPath>UI/Abilities/UnnaturalHealing</iconPath>
-    <cooldownTicksRange>6000</cooldownTicksRange> <!-- 6 days -->
-    <showPsycastEffects>false</showPsycastEffects>
-    <sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
-    <stunTargetWhileCasting>true</stunTargetWhileCasting>
-    <moteOffsetAmountTowardsTarget>0.5</moteOffsetAmountTowardsTarget>
-    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
-    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
-    <warmupMote>Mote_HoraxSmallSpellWarmup</warmupMote>
-    <warmupEffecter>HoraxianAbilityCasting</warmupEffecter>
-    <warmupSound>AnomalyAbilityWarmup</warmupSound>
-    <hostile>false</hostile>
-    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
-    <charges>7</charges>
-    <cooldownPerCharge>true</cooldownPerCharge>
-    <verbProperties>
-      <verbClass>Verb_CastAbilityTouch</verbClass>
-      <drawAimPie>false</drawAimPie>
-      <range>-1</range>
-      <warmupTime>4.5</warmupTime>
-      <targetParams>
-        <canTargetSelf>true</canTargetSelf>
-        <canTargetMechs>false</canTargetMechs>
-        <canTargetBuildings>false</canTargetBuildings>
-      </targetParams>
-    </verbProperties>
-    <comps>
-      <li Class="CompProperties_UnnaturalHealing" />
-    </comps>
-  </AbilityDef>
-
-  <AbilityDef
-    Name="ShapeFlesh">
-    <defName>ChaosCall</defName>
-    <label>flesh sculptor</label>
-    <description>Invoke a malevolent archotech intelligence to reanimate a corpse into a grotesque fleshbeast. The dark transformation twists dead tissue into a nightmarish creature driven by pure aggression. The resulting monstrosity will attack all living beings indiscriminately, including its creator.</description>
-    <iconPath>UI/Abilities/ShapeFlesh</iconPath>
-    <cooldownTicksRange>3600</cooldownTicksRange> <!-- 60 seconds -->
-    <charges>9</charges>
-    <cooldownPerCharge>true</cooldownPerCharge>
-    <showPsycastEffects>false</showPsycastEffects>
-    <sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
-    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
-    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
-    <moteOffsetAmountTowardsTarget>0.5</moteOffsetAmountTowardsTarget>
-    <warmupMote>Mote_HoraxSmallSpellWarmup</warmupMote>
-    <warmupEffecter>HoraxianAbilityCasting</warmupEffecter>
-    <warmupSound>AnomalyAbilityWarmup</warmupSound>
-    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
-    <verbProperties>
-      <verbClass>Verb_CastAbility</verbClass>
-      <warmupTime>2</warmupTime>
-      <range>99</range>
-      <requireLineOfSight>True</requireLineOfSight>
-      <drawHighlightWithLineOfSight>true</drawHighlightWithLineOfSight>
-      <targetParams>
-        <canTargetSelf>false</canTargetSelf>
-        <canTargetMechs>false</canTargetMechs>
-        <canTargetBuildings>false</canTargetBuildings>
-        <canTargetCorpses>true</canTargetCorpses>
-        <onlyTargetCorpses>true</onlyTargetCorpses>
-      </targetParams>
-    </verbProperties>
-    <comps>
-      <li Class="CompProperties_FleshbeastFromCorpse" />
-    </comps>
-  </AbilityDef>
-
-  <AbilityDef>
-    <defName>CommandSlaughter</defName>
-    <label>flesh dissolution</label>
-    <description>Unleash a devastating psychic assault that causes catastrophic cellular breakdown in living tissue. The target's flesh rapidly deteriorates and reforms into a twisted mass of organic matter, killing them instantly through horrific biological reconstruction. This ability represents the pinnacle of flesh manipulation techniques.</description>
-    <iconPath>UI/Abilities/Slaughter</iconPath>
-    <cooldownTicksRange>180000</cooldownTicksRange> <!-- 3 days -->
-    <showPsycastEffects>false</showPsycastEffects>
-    <sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
-    <stunTargetWhileCasting>true</stunTargetWhileCasting>
-    <moteOffsetAmountTowardsTarget>0.5</moteOffsetAmountTowardsTarget>
-    <warmupMote>Mote_HoraxSmallSpellWarmup</warmupMote>
-    <warmupEffecter>HoraxianAbilityCasting</warmupEffecter>
-    <warmupSound>AnomalyAbilityWarmup</warmupSound>
-    <writeCombatLog>true</writeCombatLog>
-    <charges>8</charges>
-    <cooldownPerCharge>true</cooldownPerCharge>
-    <verbProperties>
-      <verbClass>Verb_CastAbility</verbClass>
-      <warmupTime>2</warmupTime>
-      <range>99</range>
-      <requireLineOfSight>false</requireLineOfSight>
-      <drawHighlightWithLineOfSight>true</drawHighlightWithLineOfSight>
-      <targetParams>
-        <canTargetBuildings>false</canTargetBuildings>
-        <canTargetMechs>false</canTargetMechs>
-      </targetParams>
-    </verbProperties>
-    <comps>
-      <li Class="CompProperties_PsychicSlaughter" />
-    </comps>
-  </AbilityDef>
-
-  <AbilityDef ParentName="AbilityTouchBase">
-    <defName>ResurrectNoCost</defName>
-    <label>eternal revival</label>
-    <description>Harness advanced archite technology flowing through the bloodstream to restore life to the deceased. These microscopic machines repair cellular damage, restart vital functions, and reconstruct neural pathways. The success and quality of resurrection depends on the corpse's condition - fresher bodies retain more memories and physical integrity, while older remains may suffer permanent cognitive or physical impairments.</description>
-    <iconPath>UI/Abilities/Resurrect</iconPath>
-    <cooldownTicksRange>60000~120000</cooldownTicksRange> <!-- 1-2 days instead of years -->
-    <warmupMote>Mote_ResurrectAbility</warmupMote>
-    <warmupStartSound>Resurrect_Cast</warmupStartSound>
-    <displayOrder>600</displayOrder>
-    <hostile>false</hostile>
-    <sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
-    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
-    <charges>3</charges>
-    <cooldownPerCharge>true</cooldownPerCharge>
-    <verbProperties>
-      <verbClass>Verb_CastAbilityTouch</verbClass>
-      <drawAimPie>false</drawAimPie>
-      <range>-1</range>
-      <warmupTime>2</warmupTime>
-      <soundCast>Resurrect_Resolve</soundCast>
-      <targetParams>
-        <canTargetPawns>false</canTargetPawns>
-        <canTargetBuildings>false</canTargetBuildings>
-        <canTargetCorpses>true</canTargetCorpses>
-        <canTargetMechs>false</canTargetMechs>
-      </targetParams>
-    </verbProperties>
-    <comps>
-      <li Class="CompProperties_Resurrect" />
-    </comps>
-  </AbilityDef>
-
-  <AbilityDef>
-    <defName>TranscendentDropPods</defName>
-    <label>transcendent evacuation</label>
-    <description>Summon advanced drop pods that materialize through dimensional rifts. These ethereal vessels can transport you and your allies to distant locations with greatly reduced preparation time compared to conventional drop pod technology.</description>
-    <iconPath>UI/Commands/CallDropPods</iconPath>
-    <cooldownTicksRange>30000~45000</cooldownTicksRange> <!-- 0.5-0.75 days instead of 3 days -->
-    <displayOrder>300</displayOrder>
-    <sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
-    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
-    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
-    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
-    <charges>2</charges>
-    <cooldownPerCharge>true</cooldownPerCharge>
-    <verbProperties>
-      <verbClass>Verb_CastAbility</verbClass>
-      <range>500</range>
-      <warmupTime>0.5</warmupTime>
-      <soundCast>Ability_CallMechanoids</soundCast>
-      <useableInPocketMaps>false</useableInPocketMaps>
-      <targetParams>
-        <canTargetLocations>true</canTargetLocations>
-      </targetParams>
-    </verbProperties>
-    <comps>
-      <li Class="CompProperties_DropMechPods">
-        <numPods>3~4</numPods>
-      </li>
-    </comps>
-  </AbilityDef>
-
+	<AbilityDef>
+		<defName>MetalbloodSurge</defName>
+		<label>crimson steel infusion</label>
+		<description>Activate the metalblood heart implant to surge liquid metal through the bloodstream, creating a temporary fusion of flesh and steel. This enhancement dramatically reduces incoming damage as the body becomes partially mechanized, though the effect fades as the metallic compounds are naturally filtered out.</description>
+		<iconPath>UI/Abilities/MetalbloodInjection</iconPath>
+		<cooldownTicksRange>15000</cooldownTicksRange>
+		<!-- 6 hours -->
+		<hostile>false</hostile>
+		<groupAbility>true</groupAbility>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+		<aiCanUse>true</aiCanUse>
+		<ai_IsOffensive>true</ai_IsOffensive>
+		<targetRequired>false</targetRequired>
+		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+		<statBases>
+			<Ability_Duration>120</Ability_Duration>
+		</statBases>
+		<charges>6</charges>
+		<cooldownPerCharge>true</cooldownPerCharge>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<drawAimPie>false</drawAimPie>
+			<requireLineOfSight>false</requireLineOfSight>
+			<nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+			<soundCast>Pawn_Ghoul_Frenzy</soundCast>
+			<targetable>false</targetable>
+			<targetParams>
+				<canTargetSelf>true</canTargetSelf>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="CompProperties_AbilityGiveHediff">
+				<compClass>CompAbilityEffect_GiveHediff</compClass>
+				<hediffDef>Metalblood</hediffDef>
+				<onlyApplyToSelf>True</onlyApplyToSelf>
+				<replaceExisting>true</replaceExisting>
+			</li>
+		</comps>
+	</AbilityDef>
+	<AbilityDef ParentName="AbilityTouchBase">
+		<defName>BlessHealing</defName>
+		<label>forbidden restoration</label>
+		<description>Channel dark psychic forces to rapidly heal severe wounds and restore lost blood. This forbidden technique can mend even grievous injuries that would normally prove fatal, but the unnatural process may trigger unexpected mutations or psychological trauma in the subject.</description>
+		<iconPath>UI/Abilities/UnnaturalHealing</iconPath>
+		<cooldownTicksRange>6000</cooldownTicksRange>
+		<!-- 6 days -->
+		<showPsycastEffects>false</showPsycastEffects>
+		<sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
+		<stunTargetWhileCasting>true</stunTargetWhileCasting>
+		<moteOffsetAmountTowardsTarget>0.5</moteOffsetAmountTowardsTarget>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+		<warmupMote>Mote_HoraxSmallSpellWarmup</warmupMote>
+		<warmupEffecter>HoraxianAbilityCasting</warmupEffecter>
+		<warmupSound>AnomalyAbilityWarmup</warmupSound>
+		<hostile>false</hostile>
+		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+		<charges>7</charges>
+		<cooldownPerCharge>true</cooldownPerCharge>
+		<verbProperties>
+			<verbClass>Verb_CastAbilityTouch</verbClass>
+			<drawAimPie>false</drawAimPie>
+			<range>-1</range>
+			<warmupTime>4.5</warmupTime>
+			<targetParams>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetMechs>false</canTargetMechs>
+				<canTargetBuildings>false</canTargetBuildings>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="CompProperties_UnnaturalHealing" />
+		</comps>
+	</AbilityDef>
+	<AbilityDef Name="ShapeFlesh">
+		<defName>ChaosCall</defName>
+		<label>flesh sculptor</label>
+		<description>Invoke a malevolent archotech intelligence to reanimate a corpse into a grotesque fleshbeast. The dark transformation twists dead tissue into a nightmarish creature driven by pure aggression. The resulting monstrosity will attack all living beings indiscriminately, including its creator.</description>
+		<iconPath>UI/Abilities/ShapeFlesh</iconPath>
+		<cooldownTicksRange>3600</cooldownTicksRange>
+		<!-- 60 seconds -->
+		<charges>9</charges>
+		<cooldownPerCharge>true</cooldownPerCharge>
+		<showPsycastEffects>false</showPsycastEffects>
+		<sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+		<moteOffsetAmountTowardsTarget>0.5</moteOffsetAmountTowardsTarget>
+		<warmupMote>Mote_HoraxSmallSpellWarmup</warmupMote>
+		<warmupEffecter>HoraxianAbilityCasting</warmupEffecter>
+		<warmupSound>AnomalyAbilityWarmup</warmupSound>
+		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<warmupTime>2</warmupTime>
+			<range>99</range>
+			<requireLineOfSight>True</requireLineOfSight>
+			<drawHighlightWithLineOfSight>true</drawHighlightWithLineOfSight>
+			<targetParams>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetMechs>false</canTargetMechs>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetCorpses>true</canTargetCorpses>
+				<onlyTargetCorpses>true</onlyTargetCorpses>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="CompProperties_FleshbeastFromCorpse" />
+		</comps>
+	</AbilityDef>
+	<AbilityDef>
+		<defName>CommandSlaughter</defName>
+		<label>flesh dissolution</label>
+		<description>Unleash a devastating psychic assault that causes catastrophic cellular breakdown in living tissue. The target's flesh rapidly deteriorates and reforms into a twisted mass of organic matter, killing them instantly through horrific biological reconstruction. This ability represents the pinnacle of flesh manipulation techniques.</description>
+		<iconPath>UI/Abilities/Slaughter</iconPath>
+		<cooldownTicksRange>180000</cooldownTicksRange>
+		<!-- 3 days -->
+		<showPsycastEffects>false</showPsycastEffects>
+		<sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
+		<stunTargetWhileCasting>true</stunTargetWhileCasting>
+		<moteOffsetAmountTowardsTarget>0.5</moteOffsetAmountTowardsTarget>
+		<warmupMote>Mote_HoraxSmallSpellWarmup</warmupMote>
+		<warmupEffecter>HoraxianAbilityCasting</warmupEffecter>
+		<warmupSound>AnomalyAbilityWarmup</warmupSound>
+		<writeCombatLog>true</writeCombatLog>
+		<charges>8</charges>
+		<cooldownPerCharge>true</cooldownPerCharge>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<warmupTime>2</warmupTime>
+			<range>99</range>
+			<requireLineOfSight>false</requireLineOfSight>
+			<drawHighlightWithLineOfSight>true</drawHighlightWithLineOfSight>
+			<targetParams>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetMechs>false</canTargetMechs>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="CompProperties_PsychicSlaughter" />
+		</comps>
+	</AbilityDef>
 </Defs>

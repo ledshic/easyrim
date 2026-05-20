@@ -1,12 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LanguageData>
-  <nanocreate.degreeDatas.0.label>&lt;color=#C0C0C0&gt;纳米造物主&lt;/color&gt;</nanocreate.degreeDatas.0.label>
-  <nanocreate.degreeDatas.0.description>[PAWN_nameDef]
-    曾是闪耀文明的巅峰造物，体内流淌着无数纳米机械。虽被遗弃于边缘世界，但造物主的血统让其拥有超越凡人的一切能力。</nanocreate.degreeDatas.0.description>
-  <braveheart.degreeDatas.0.label>&lt;color=#00CED1&gt;不朽之魂&lt;/color&gt;</braveheart.degreeDatas.0.label>
-  <braveheart.degreeDatas.0.description>[PAWN_nameDef]
-    心中燃烧着永恒的战火，历经无数战场而不朽。死亡在其面前只是另一场需要征服的挑战，守护他人便是其存在的意义。</braveheart.degreeDatas.0.description>
-  <pathfinder.degreeDatas.0.label>&lt;color=#87CEEB&gt;星际先驱&lt;/color&gt;</pathfinder.degreeDatas.0.label>
-  <pathfinder.degreeDatas.0.description>[PAWN_nameDef]
-    天生便是探索未知的引路人，足迹遍布星海深处。每一个未知世界都在其指引下成为人类的新家园，开拓便是其宿命。</pathfinder.degreeDatas.0.description>
-</LanguageData>
+<LanguageData></LanguageData>

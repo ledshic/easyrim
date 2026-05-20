@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-	<transcendence.label>&lt;color=#C0C0C0&gt;超凡境界&lt;/color&gt;</transcendence.label>
+	<transcendence.label>&lt;color=#C0C0C0&gt;超凡融合&lt;/color&gt;</transcendence.label>
 	<transcendence.description>先进的闪耀科技机械体从根本上改造了身体，将其提升到超越凡人的境界。每一个生物系统都以巅峰效率运作，同时心智达到完美的清晰状态。</transcendence.description>
 	<!-- Transcendence Sub-Hediffs Translations -->
 	<transcendence_cognitive.label>认知强化</transcendence_cognitive.label>
@@ -15,10 +15,6 @@
 	<transcendence_psychic.description>机械体融合带来的灵能天赋增强。</transcendence_psychic.description>
 	<psylink_fullpower.label>&lt;color=#8000FF&gt;灵能链接&lt;/color&gt;</psylink_fullpower.label>
 	<psylink_fullpower.description>超越时代的闪耀科技杰作，将意识与宇宙灵能网络完美融合。纳米级的神经接口在大脑皮层中编织出复杂的量子回路，每一个思维脉冲都能引发现实的扭曲。掌握此等力量者已成为生物与机械、物质与精神的完美桥梁，能够操控最为强大的灵能法术，甚至重塑时空的基本法则。</psylink_fullpower.description>
-	<bravesoul.label>&lt;color=#00CED1&gt;不朽战魂&lt;/color&gt;</bravesoul.label>
-	<bravesoul.description>不朽战士的灵魂在体内燃烧，经历无数战场的洗礼而锻造成型。死亡本身也要向其不屈的意志低头，其战斗技艺已超越凡人的极限。血与火的考验化作永恒的力量，守护他人便是其存在的终极意义。</bravesoul.description>
-	<pioneerspirit.label>&lt;color=#87CEEB&gt;先驱之魂&lt;/color&gt;</pioneerspirit.label>
-	<pioneerspirit.description>探索与发现的本质在血管中流淌，天生便是未知领域的开拓者。拥有与荒野的超凡联系，以及对所有劳作和战斗形式的天赋掌握。每一个未知世界都在其指引下成为人类的新家园，开拓便是其与生俱来的宿命。</pioneerspirit.description>
 	<adaptive_armor.label>&lt;color=#646464&gt;适应性装甲&lt;/color&gt;</adaptive_armor.label>
 	<adaptive_armor.description>先进的自适应装甲系统，能够根据健康状况做出响应。随着健康状况的恶化，装甲变得更加防护但会限制移动。纳米级致动器分析威胁等级并自动调整防御参数。</adaptive_armor.description>
 	<adaptive_armor.stages.0.label>适应性装甲 (活跃)</adaptive_armor.stages.0.label>
@@ -26,4 +22,37 @@
 	<adaptive_armor.stages.2.label>适应性装甲 (防御)</adaptive_armor.stages.2.label>
 	<adaptive_armor.stages.3.label>适应性装甲 (紧急)</adaptive_armor.stages.3.label>
 	<adaptive_armor.stages.4.label>适应性装甲 (堡垒)</adaptive_armor.stages.4.label>
+	<!-- Brave Soul sub-hediffs -->
+	<bravesoul.label>&lt;color=#00CED1&gt;不朽之魂&lt;/color&gt;</bravesoul.label>
+	<bravesoul.description>不朽战士的灵魂在体内燃烧，经历无数战场的洗礼而锻造成型。死亡本身也要向其不屈的意志低头，其战斗技艺已超越凡人的极限。血与火的考验化作永恒的力量，守护他人便是其存在的终极意义。</bravesoul.description>
+	<bravesoul_cognitive.label>认知炽焰</bravesoul_cognitive.label>
+	<bravesoul_cognitive.description>战魂激发心智，锐化感知并提升学习能力。</bravesoul_cognitive.description>
+	<bravesoul_physical.label>体能强势</bravesoul_physical.label>
+	<bravesoul_physical.description>久经战阵锤炼的敏捷与掌控。</bravesoul_physical.description>
+	<bravesoul_vitals.label>生命升华</bravesoul_vitals.label>
+	<bravesoul_vitals.description>器官强化与加速复原。</bravesoul_vitals.description>
+	<!-- 生命升华阶段命名 -->
+	<bravesoul_vitals.stages.0.label>生命升华（稳态）</bravesoul_vitals.stages.0.label>
+	<bravesoul_vitals.stages.1.label>生命升华（激活）</bravesoul_vitals.stages.1.label>
+	<bravesoul_vitals.stages.2.label>生命升华（涌动）</bravesoul_vitals.stages.2.label>
+	<bravesoul_vitals.stages.3.label>生命升华（狂热）</bravesoul_vitals.stages.3.label>
+	<bravesoul_vitals.stages.4.label>生命升华（不灭）</bravesoul_vitals.stages.4.label>
+	<bravesoul_combat.label>战斗精通</bravesoul_combat.label>
+	<bravesoul_combat.description>至高武艺与自适应防御。</bravesoul_combat.description>
+	<bravesoul_spirit.label>不屈意志</bravesoul_spirit.label>
+	<bravesoul_spirit.description>在死亡面前也稳固心神的决心。</bravesoul_spirit.description>
+	<!-- Pioneer Spirit sub-hediffs -->
+	<pioneerspirit.label>&lt;color=#87CEEB&gt;先驱意志&lt;/color&gt;</pioneerspirit.label>
+	<pioneerspirit.description>探索与发现的本质在血管中流淌，天生便是未知领域的开拓者。拥有与荒野的超凡联系，以及对所有劳作和战斗形式的天赋掌握。每一个未知世界都在其指引下成为人类的新家园，开拓便是其与生俱来的宿命。</pioneerspirit.description>
+	<pioneerspirit_physical.label>千锤百炼</pioneerspirit_physical.label>
+	<pioneerspirit_physical.description>为探索与搬运而精炼的体能。</pioneerspirit_physical.description>
+	<pioneerspirit_industry.label>先驱工艺</pioneerspirit_industry.label>
+	<pioneerspirit_industry.description>对劳作与生产的精通。</pioneerspirit_industry.description>
+	<pioneerspirit_combat.label>边境战术</pioneerspirit_combat.label>
+	<pioneerspirit_combat.description>战场上的战术优势与随时待战。</pioneerspirit_combat.description>
+	<pioneerspirit_resilience.label>求生本能</pioneerspirit_resilience.label>
+	<pioneerspirit_resilience.description>耐力、复原与不动如山的意志。</pioneerspirit_resilience.description>
+	<!-- Work Guidance hediff -->
+	<WorkGuidance.label>工作指点</WorkGuidance.label>
+	<WorkGuidance.description>被指点了工作细节与步骤，短时间内工作熟练度明显提升，学习速度显著加快。</WorkGuidance.description>
 </LanguageData>

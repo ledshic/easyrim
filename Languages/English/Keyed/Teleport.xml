@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CannotTeleportHere>Cannot teleport here.</CannotTeleportHere>
+  <MustPlaceOnStandable>Cannot teleport: Target cell is not standable.</MustPlaceOnStandable>
+  <AbilityInvalidTarget>Invalid target.</AbilityInvalidTarget>
+  <TeleportVisit>Visit</TeleportVisit>
+  <TeleportAttack>Attack</TeleportAttack>
+</LanguageData>

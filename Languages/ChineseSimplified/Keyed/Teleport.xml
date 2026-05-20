@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CannotTeleportHere>不能在此处传送。</CannotTeleportHere>
+  <MustPlaceOnStandable>无法传送：目标格不可站立。</MustPlaceOnStandable>
+  <AbilityInvalidTarget>无效的目标。</AbilityInvalidTarget>
+  <TeleportVisit>访问</TeleportVisit>
+  <TeleportAttack>进攻</TeleportAttack>
+</LanguageData>
