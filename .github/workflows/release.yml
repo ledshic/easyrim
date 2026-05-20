@@ -22,7 +22,7 @@ jobs:
         uses: actions/setup-dotnet@v4
         with:
           # Source/EasyMode.csproj 是 SDK 风格 net472 项目，可由 dotnet+MSBuild 构建。
-          # 这里固定 8.0.x 并与仓库既有构建流程保持一致，降低 CI 环境漂移风险。
+          # 使用 8.0.x 以保持主版本稳定，同时自动获取 8.0 补丁更新（安全/稳定性修复）。
           dotnet-version: 8.0.x
 
       - name: Restore dependencies (Source)
@@ -109,7 +109,7 @@ jobs:
         uses: weilbyte/steam-workshop-upload@v1
         with:
           # RimWorld 固定 AppID
-          appid: 294100
+          appid: 294100 # RimWorld Steam AppID
           # 从上一步提取的 Workshop Item ID
           itemid: ${{ steps.workshop_id.outputs.workshop_id }}
           # 发布内容目录
