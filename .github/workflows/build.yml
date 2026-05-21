@@ -4,6 +4,7 @@ on:
   # Build CI: push 到 main 或 PR 时触发
   push:
     branches:
+      - master
       - main
   pull_request:
 
