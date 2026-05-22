@@ -2,8 +2,8 @@
 {
 	"appid"		"294100"
 	"publishedfileid"		"3534843393"
-	"contentfolder"		"/Users/dongxuli/Documents/workspace/easyrim"
-	"previewfile"		"/Users/dongxuli/Documents/workspace/easyrim/About/Preview.png"
+	"contentfolder"		"."
+	"previewfile"		"./About/Preview.png"
 	"visibility"		"1"
 	"title"		"轻松环世界 - easyrim"
 	"description"		"轻松环世界 - 超强特性模组 | EasyRim - Overpowered Traits Mod
