@@ -6,4 +6,12 @@
   <TeleportMultiplayerSyncUnavailable>多人联机同步注册失败，无法使用世界地图传送。</TeleportMultiplayerSyncUnavailable>
   <TeleportVisit>访问</TeleportVisit>
   <TeleportAttack>进攻</TeleportAttack>
+  <TeleportModeGizmoLabel>传送模式：{0}</TeleportModeGizmoLabel>
+  <TeleportModeGizmoDesc>选择该能力是用于当前地图传送，还是远距离世界地图传送。</TeleportModeGizmoDesc>
+  <TeleportModeCurrentMap>当前地图传送</TeleportModeCurrentMap>
+  <TeleportModeLongRange>远距离传送</TeleportModeLongRange>
+  <TeleportSwitchedCurrentMap>传送模式已切换为当前地图传送。</TeleportSwitchedCurrentMap>
+  <TeleportSwitchedLongRange>传送模式已切换为远距离世界地图传送。</TeleportSwitchedLongRange>
+  <TeleportModeRequiresMapTarget>该模式仅支持当前地图目标。</TeleportModeRequiresMapTarget>
+  <TeleportModeRequiresWorldTarget>该模式仅支持世界地图远距离目标。</TeleportModeRequiresWorldTarget>
 </LanguageData>

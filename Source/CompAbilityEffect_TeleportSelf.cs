@@ -11,6 +11,12 @@ using Verse.Sound;
 
 namespace EasyMode
 {
+    internal enum TeleportTargetMode
+    {
+        CurrentMap = 0,
+        LongRangeWorld = 1
+    }
+
     public class CompProperties_AbilityTeleportSelf : CompProperties_AbilityEffect
     {
         public CompProperties_AbilityTeleportSelf()
@@ -26,8 +32,110 @@ namespace EasyMode
     {
         public new CompProperties_AbilityTeleportSelf Props => (CompProperties_AbilityTeleportSelf)props;
 
+        private static GameComponent_TeleportModeMemory ModeMemory => Current.Game?.GetComponent<GameComponent_TeleportModeMemory>();
+
+        private TeleportTargetMode CurrentMode
+        {
+            get
+            {
+                Pawn pawn = parent?.pawn;
+                if (pawn == null)
+                {
+                    return TeleportTargetMode.CurrentMap;
+                }
+
+                GameComponent_TeleportModeMemory memory = ModeMemory;
+                if (memory != null)
+                {
+                    return memory.GetModeForPawn(pawn);
+                }
+
+                return TeleportTargetMode.CurrentMap;
+            }
+        }
+
+        public override IEnumerable<Gizmo> CompGetGizmosExtra()
+        {
+            foreach (Gizmo gizmo in base.CompGetGizmosExtra())
+            {
+                yield return gizmo;
+            }
+
+            Pawn pawn = parent?.pawn;
+            if (pawn == null)
+            {
+                yield break;
+            }
+
+            string modeKey = CurrentMode == TeleportTargetMode.CurrentMap
+                ? "TeleportModeCurrentMap"
+                : "TeleportModeLongRange";
+
+            yield return new Command_Action
+            {
+                defaultLabel = "TeleportModeGizmoLabel".Translate(modeKey.Translate()),
+                defaultDesc = "TeleportModeGizmoDesc".Translate(),
+                action = () =>
+                {
+                    var options = new List<FloatMenuOption>
+                    {
+                        new FloatMenuOption("TeleportModeCurrentMap".Translate(), () => SetModeWithSync(TeleportTargetMode.CurrentMap)),
+                        new FloatMenuOption("TeleportModeLongRange".Translate(), () => SetModeWithSync(TeleportTargetMode.LongRangeWorld))
+                    };
+
+                    Find.WindowStack.Add(new FloatMenu(options));
+                }
+            };
+        }
+
+        private void SetModeWithSync(TeleportTargetMode mode)
+        {
+            Pawn pawn = parent?.pawn;
+            if (pawn == null)
+            {
+                return;
+            }
+
+            if (MultiplayerCompatibility.MultiplayerActive)
+            {
+                SyncedSetTeleportMode(pawn, (int)mode);
+            }
+            else
+            {
+                SetTeleportMode(pawn, mode);
+            }
+        }
+
+        private static void SyncedSetTeleportMode(Pawn pawn, int mode)
+        {
+            SetTeleportMode(pawn, (TeleportTargetMode)mode);
+        }
+
+        private static void SetTeleportMode(Pawn pawn, TeleportTargetMode mode)
+        {
+            if (pawn == null)
+            {
+                return;
+            }
+
+            ModeMemory?.SetModeForPawn(pawn, mode);
+            string messageKey = mode == TeleportTargetMode.CurrentMap
+                ? "TeleportSwitchedCurrentMap"
+                : "TeleportSwitchedLongRange";
+            Messages.Message(messageKey.Translate(), pawn, MessageTypeDefOf.TaskCompletion, historical: false);
+        }
+
         public override bool Valid(LocalTargetInfo target, bool throwMessages = false)
         {
+            if (CurrentMode != TeleportTargetMode.CurrentMap)
+            {
+                if (throwMessages)
+                {
+                    Messages.Message("TeleportModeRequiresWorldTarget".Translate(), MessageTypeDefOf.RejectInput, historical: false);
+                }
+                return false;
+            }
+
             var pawn = parent.pawn;
             if (pawn == null || pawn.Map == null)
             {
@@ -72,6 +180,12 @@ namespace EasyMode
 
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
+            if (CurrentMode != TeleportTargetMode.CurrentMap)
+            {
+                Messages.Message("TeleportModeRequiresWorldTarget".Translate(), MessageTypeDefOf.RejectInput, historical: false);
+                return;
+            }
+
             var pawn = parent.pawn;
             if (pawn == null || pawn.Map == null || !target.IsValid)
             {
@@ -153,6 +267,15 @@ namespace EasyMode
         // - Else (empty tile): form a new player caravan at that tile consisting of the caster.
         public override bool Valid(GlobalTargetInfo target, bool throwMessages = false)
         {
+            if (CurrentMode != TeleportTargetMode.LongRangeWorld)
+            {
+                if (throwMessages)
+                {
+                    Messages.Message("TeleportModeRequiresMapTarget".Translate(), MessageTypeDefOf.RejectInput, historical: false);
+                }
+                return false;
+            }
+
             var pawn = parent.pawn;
             if (pawn == null || !target.IsValid)
             {
@@ -197,6 +320,12 @@ namespace EasyMode
 
         public override void Apply(GlobalTargetInfo target)
         {
+            if (CurrentMode != TeleportTargetMode.LongRangeWorld)
+            {
+                Messages.Message("TeleportModeRequiresMapTarget".Translate(), MessageTypeDefOf.RejectInput, historical: false);
+                return;
+            }
+
             var pawn = parent.pawn;
             if (pawn == null || !target.IsValid)
             {
@@ -640,6 +769,7 @@ namespace EasyMode
                 Type teleportType = typeof(CompAbilityEffect_TeleportSelf);
                 string[] methodNames =
                 {
+                    "SyncedSetTeleportMode",
                     "SyncedTeleportToPlayerCaravan",
                     "SyncedTeleportVisitHostile",
                     "SyncedTeleportToEmptyTile",
