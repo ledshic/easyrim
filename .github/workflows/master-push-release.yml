@@ -1,0 +1,98 @@
+name: Master Push Release
+
+on:
+  push:
+    branches:
+      - master
+
+permissions:
+  contents: write
+
+concurrency:
+  group: master-push-release-${{ github.sha }}
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup .NET SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Restore dependencies (Source)
+        run: dotnet restore ./Source/EasyMode.csproj
+
+      - name: Build project (Source)
+        run: dotnet build ./Source/EasyMode.csproj --configuration Release --no-restore
+
+      - name: Build release metadata
+        id: meta
+        run: |
+          set -euo pipefail
+
+          SHORT_SHA="${GITHUB_SHA::7}"
+          BUILD_TIME="$(date -u +'%Y-%m-%d %H:%M UTC')"
+          TAG="master-${GITHUB_RUN_NUMBER}-${SHORT_SHA}"
+          TITLE="Master Build ${GITHUB_RUN_NUMBER} (${SHORT_SHA})"
+
+          echo "short_sha=$SHORT_SHA" >> "$GITHUB_OUTPUT"
+          echo "build_time=$BUILD_TIME" >> "$GITHUB_OUTPUT"
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+          echo "title=$TITLE" >> "$GITHUB_OUTPUT"
+
+      - name: Package full mod structure
+        id: pack
+        run: |
+          set -euo pipefail
+
+          ARTIFACT_ROOT="$RUNNER_TEMP/release-package"
+          RELEASE_DIR="$ARTIFACT_ROOT/easyrim"
+          ZIP_PATH="$ARTIFACT_ROOT/easyrim-${{ steps.meta.outputs.tag }}.zip"
+
+          rm -rf "$ARTIFACT_ROOT"
+          mkdir -p "$RELEASE_DIR"
+
+          for dir in About Assemblies Defs Languages Patches Textures Sounds; do
+            if [ -d "$dir" ]; then
+              cp -a "$dir" "$RELEASE_DIR/"
+            fi
+          done
+
+          mkdir -p "$RELEASE_DIR/Assemblies"
+          cp -f ./Source/bin/Release/net472/*.dll "$RELEASE_DIR/Assemblies/"
+
+          for file in LoadFolders.xml loadfolders.xml easyrim.vdf readme.md; do
+            if [ -f "$file" ]; then
+              cp -f "$file" "$RELEASE_DIR/"
+            fi
+          done
+
+          (
+            cd "$ARTIFACT_ROOT"
+            zip -r "$ZIP_PATH" easyrim
+          )
+
+          echo "zip_path=$ZIP_PATH" >> "$GITHUB_OUTPUT"
+
+      - name: Create release
+        uses: ncipollo/release-action@v1
+        with:
+          tag: ${{ steps.meta.outputs.tag }}
+          commit: ${{ github.sha }}
+          name: ${{ steps.meta.outputs.title }}
+          body: |
+            Automated release generated from a push to master.
+
+            - Commit: ${{ github.sha }}
+            - Built at: ${{ steps.meta.outputs.build_time }}
+            - Artifact: easyrim-${{ steps.meta.outputs.tag }}.zip
+          artifact: ${{ steps.pack.outputs.zip_path }}
+          artifactContentType: application/zip
+          generateReleaseNotes: true
+          prerelease: false
