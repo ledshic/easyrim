@@ -5,6 +5,9 @@ on:
     branches:
       - master
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 permissions:
   contents: write
 
@@ -104,7 +107,7 @@ jobs:
             - Commit: ${{ github.sha }}
             - Built at: ${{ steps.meta.outputs.build_time }}
             - Artifact: easyrim-${{ steps.meta.outputs.tag }}.zip
-          artifact: ${{ steps.pack.outputs.zip_path }}
+          artifacts: ${{ steps.pack.outputs.zip_path }}
           artifactContentType: application/zip
           generateReleaseNotes: true
           prerelease: false
