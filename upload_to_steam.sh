@@ -6,11 +6,18 @@
 # 配置变量 / Configuration variables
 STEAM_USERNAME=""  # 请填入你的 Steam 用户名 / Enter your Steam username
 STEAM_PASSWORD=""  # 留空将提示输入 / leave empty for prompt
-MOD_PATH="/Users/dongxuli/Documents/workspace/easyrim"
-VDF_FILE="$MOD_PATH/easyrim.vdf"
-WORKSHOP_STAGING_PATH="$MOD_PATH/.workshop-upload"
+
+# 自动推断路径，兼容 repo 根目录和 release zip (easyrim/ 子目录) 两种布局
+# Auto-detect paths: works both from repo root and release zip layout (easyrim/ subdir)
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+if [ -d "$SCRIPT_DIR/easyrim" ]; then
+    MOD_PATH="$SCRIPT_DIR/easyrim"
+else
+    MOD_PATH="$SCRIPT_DIR"
+fi
+VDF_FILE="$SCRIPT_DIR/easyrim.vdf"
+WORKSHOP_STAGING_PATH="$SCRIPT_DIR/.workshop-upload"
 WORKSHOP_VDF_FILE="/tmp/easyrim_workshop_$(date +%s).vdf"
-STEAMCMD_PATH="/usr/local/bin/steamcmd"  # macOS 默认 SteamCMD 路径 / Default macOS SteamCMD path
 
 # 颜色输出 / Color output
 RED='\033[0;31m'

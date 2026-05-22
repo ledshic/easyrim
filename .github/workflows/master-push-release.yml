@@ -67,15 +67,27 @@ jobs:
           mkdir -p "$RELEASE_DIR/Assemblies"
           cp -f ./Source/bin/Release/net472/*.dll "$RELEASE_DIR/Assemblies/"
 
-          for file in LoadFolders.xml loadfolders.xml easyrim.vdf readme.md; do
+          for file in LoadFolders.xml loadfolders.xml readme.md; do
             if [ -f "$file" ]; then
               cp -f "$file" "$RELEASE_DIR/"
             fi
           done
 
+          # easyrim.vdf and upload_to_steam.sh go to zip root (not inside mod folder)
+          # so they are never accidentally published to Steam Workshop
+          for tool in easyrim.vdf upload_to_steam.sh; do
+            if [ -f "$tool" ]; then
+              cp -f "$tool" "$ARTIFACT_ROOT/"
+            fi
+          done
+
           (
             cd "$ARTIFACT_ROOT"
-            zip -r "$ZIP_PATH" easyrim
+            items=(easyrim)
+            for tool in easyrim.vdf upload_to_steam.sh; do
+              [ -f "$tool" ] && items+=("$tool")
+            done
+            zip -r "$ZIP_PATH" "${items[@]}"
           )
 
           echo "zip_path=$ZIP_PATH" >> "$GITHUB_OUTPUT"
