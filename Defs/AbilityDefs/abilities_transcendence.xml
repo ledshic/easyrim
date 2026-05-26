@@ -60,33 +60,4 @@
 			</li>
 		</comps>
 	</AbilityDef>
-	<AbilityDef>
-		<defName>TranscendentSelfTeleport</defName>
-		<label>serialized transit</label>
-		<description>Serializes the user into a higher-dimensional transit tunnel, then deserializes at the target spacetime coordinates.</description>
-		<iconPath>UI/Commands/CallDropPods</iconPath>
-		<cooldownTicksRange>450</cooldownTicksRange>
-		<hostile>false</hostile>
-		<targetWorldCell>True</targetWorldCell>
-		<showGizmoOnWorldView>True</showGizmoOnWorldView>
-		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
-		<displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
-		<disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
-		<showWhenDrafted>true</showWhenDrafted>
-		<verbProperties>
-			<verbClass>Verb_CastAbility</verbClass>
-			<range>999</range>
-			<warmupTime>0</warmupTime>
-			<requireLineOfSight>false</requireLineOfSight>
-			<drawAimPie>false</drawAimPie>
-			<targetParams>
-				<canTargetSelf>false</canTargetSelf>
-				<canTargetPawns>false</canTargetPawns>
-				<canTargetLocations>true</canTargetLocations>
-			</targetParams>
-		</verbProperties>
-		<comps>
-			<li Class="EasyMode.CompProperties_AbilityTeleportSelf" />
-		</comps>
-	</AbilityDef>
 </Defs>
