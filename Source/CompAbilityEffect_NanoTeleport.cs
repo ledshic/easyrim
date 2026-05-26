@@ -17,11 +17,11 @@ namespace EasyMode
         {
             Pawn pawn = parent.pawn;
             Map map = pawn.Map;
-            IntVec3 cell = target.Cell;
+            IntVec3 destPos = target.Cell;
 
-            ActiveDropPodInfo podInfo = new ActiveDropPodInfo();
-            podInfo.innerContainer.TryAdd(pawn);
-            DropPodUtility.MakeDropPodAt(cell, map, podInfo);
+            pawn.DeSpawn(DestroyMode.Vanish);
+            GenSpawn.Spawn(pawn, destPos, map);
+            pawn.Notify_Teleported(false, true);
         }
 
         public override bool Valid(LocalTargetInfo target, bool throwMessages = false)
