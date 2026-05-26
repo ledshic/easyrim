@@ -32,6 +32,33 @@
 		</comps>
 	</AbilityDef>
 	<AbilityDef>
+		<defName>NanoDisassemblyTransit</defName>
+		<label>nano disassembly transit</label>
+		<description>Activate the integrated nano-transit matrix to disassemble your body into a compressed data stream at the subatomic level. Trillions of nanomachines encode every molecule and neural pattern, broadcast the data packet via synchronized orbital relay, then reconstruct the physical form with atomic precision at the designated coordinates. Unlike primitive transport pods, no physical container is required - the body itself becomes the signal.</description>
+		<iconPath>UI/Abilities/Skip</iconPath>
+		<cooldownTicksRange>5000</cooldownTicksRange>
+		<!-- 2 in-game hours -->
+		<showPsycastEffects>false</showPsycastEffects>
+		<sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<range>9999</range>
+			<warmupTime>1.5</warmupTime>
+			<soundCast>DropPod_Open</soundCast>
+			<useableInPocketMaps>false</useableInPocketMaps>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+				<canTargetPawns>false</canTargetPawns>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="EasyMode.CompProperties_NanoTeleport" />
+		</comps>
+	</AbilityDef>
+	<AbilityDef>
 		<defName>TranscendentDropPods</defName>
 		<label>overmind drops</label>
 		<description>Simulates a mechanoid overmind control signal, ordering nearby logistics satellites to dispatch several single-use drop pods to the target area.</description>

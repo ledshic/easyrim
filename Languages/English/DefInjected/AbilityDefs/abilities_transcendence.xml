@@ -2,4 +2,6 @@
 <LanguageData>
   <TranscendentDropPods.label>overmind drops</TranscendentDropPods.label>
   <TranscendentDropPods.description>Simulates a mechanoid overmind control signal, ordering nearby logistics satellites to dispatch several single-use drop pods to the target area.</TranscendentDropPods.description>
+  <NanoDisassemblyTransit.label>nano disassembly transit</NanoDisassemblyTransit.label>
+  <NanoDisassemblyTransit.description>Activate the integrated nano-transit matrix to disassemble your body into a compressed data stream at the subatomic level. Trillions of nanomachines encode every molecule and neural pattern, broadcast the data packet via synchronized orbital relay, then reconstruct the physical form with atomic precision at the designated coordinates. Unlike primitive transport pods, no physical container is required - the body itself becomes the signal.</NanoDisassemblyTransit.description>
 </LanguageData>

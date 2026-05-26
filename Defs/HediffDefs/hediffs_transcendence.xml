@@ -135,7 +135,8 @@
 			<li Class="HediffCompProperties_GiveAbility">
 				<abilityDefs>
 					<li>ResurrectNoCost</li>
-						<li>TranscendentDropPods</li>
+					<li>TranscendentDropPods</li>
+					<li>NanoDisassemblyTransit</li>
 				</abilityDefs>
 			</li>
 			<li Class="HediffCompProperties_HealPermanentWounds" />

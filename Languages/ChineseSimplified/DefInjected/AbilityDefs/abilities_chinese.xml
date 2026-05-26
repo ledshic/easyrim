@@ -12,6 +12,8 @@
 	<ResurrectNoCost.description>利用血流中的机械单元为死者恢复生命。这些微观机器修复细胞损伤，重启生命功能，重建神经通路。复活的成功和质量取决于尸体的状况——新鲜的身体保留更多记忆和身体完整性，而老旧遗骸可能遭受永久的认知或身体损伤。</ResurrectNoCost.description>
 	<TranscendentDropPods.label>主脑投送</TranscendentDropPods.label>
 	<TranscendentDropPods.description>模拟机械主脑的控制信号，命令近地物资投送卫星向目标区域投下数个一次性投送舱。</TranscendentDropPods.description>
+	<NanoDisassemblyTransit.label>纳米解析传送</NanoDisassemblyTransit.label>
+	<NanoDisassemblyTransit.description>激活集成纳米传送矩阵，将你的身体在亚原子层面解析为压缩数据流。数万亿纳米机械对每一个分子和神经模式进行编码，通过同步轨道中继站广播数据包，随后以原子级精度在指定坐标重建物质形态。与原始的运输舱不同，无需任何物理容器——身体本身即成为传输信号。</NanoDisassemblyTransit.description>
 	<!-- WorkGuidance ability -->
 	<WorkGuidance.label>工作指导</WorkGuidance.label>
 	<WorkGuidance.description>呼吁目标在一段时间内更加努力工作，提升生产效率。</WorkGuidance.description>
