@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+  workflow_dispatch:
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
@@ -22,6 +23,10 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          # For manual runs, always build from latest master.
+          ref: ${{ github.event_name == 'workflow_dispatch' && 'refs/heads/master' || github.sha }}
+          fetch-depth: 0
 
       - name: Setup .NET SDK
         uses: actions/setup-dotnet@v4
@@ -39,11 +44,13 @@ jobs:
         run: |
           set -euo pipefail
 
-          SHORT_SHA="${GITHUB_SHA::7}"
+          CHECKED_OUT_SHA="$(git rev-parse HEAD)"
+          SHORT_SHA="${CHECKED_OUT_SHA::7}"
           BUILD_TIME="$(date -u +'%Y-%m-%d %H:%M UTC')"
           TAG="master-${GITHUB_RUN_NUMBER}-${SHORT_SHA}"
           TITLE="Master Build ${GITHUB_RUN_NUMBER} (${SHORT_SHA})"
 
+          echo "commit_sha=$CHECKED_OUT_SHA" >> "$GITHUB_OUTPUT"
           echo "short_sha=$SHORT_SHA" >> "$GITHUB_OUTPUT"
           echo "build_time=$BUILD_TIME" >> "$GITHUB_OUTPUT"
           echo "tag=$TAG" >> "$GITHUB_OUTPUT"
@@ -99,12 +106,12 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           tag: ${{ steps.meta.outputs.tag }}
-          commit: ${{ github.sha }}
+          commit: ${{ steps.meta.outputs.commit_sha }}
           name: ${{ steps.meta.outputs.title }}
           body: |
-            Automated release generated from a push to master.
+            Automated release generated from a push to master or manual dispatch.
 
-            - Commit: ${{ github.sha }}
+            - Commit: ${{ steps.meta.outputs.commit_sha }}
             - Built at: ${{ steps.meta.outputs.build_time }}
             - Artifact: easyrim-${{ steps.meta.outputs.tag }}.zip
           artifacts: ${{ steps.pack.outputs.zip_path }}
