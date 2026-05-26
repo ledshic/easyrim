@@ -46,14 +46,16 @@ namespace EasyMode
 
         // ── World-tile teleport ───────────────────────────────────────────────
         //
-        // Called by Verb_CastAbility when verbProperties.targetWorldCell == true.
+        // Called by Verb_CastAbility for world targets when
+        // verbProperties.targetWorldCell == true.
         //
         // Decision matrix (no FloatMenu — avoids potential MP desync):
         //   • Own colony tile  → enter map, spawn near centre
         //   • Everything else  → form a solo caravan at that tile
 
-        public override void CastAbilityOnWorldTile(int tile)
+        public override void Apply(GlobalTargetInfo target)
         {
+            int tile = target.Tile;
             Pawn pawn = parent.pawn;
             MapParent mapParent = Find.WorldObjects.MapParentAt(tile);
 
