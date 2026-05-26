@@ -18,12 +18,22 @@
 		<Reference Include="UnityEngine.CoreModule" Condition="Exists('../../../RimWorldWin64_Data/Managed/UnityEngine.CoreModule.dll')">
 			<HintPath>../../../RimWorldWin64_Data/Managed/UnityEngine.CoreModule.dll</HintPath>
 		</Reference>
-		<Reference Include="Assembly-CSharp-mac" Condition="Exists('../../../../Contents/Resources/Data/Managed/Assembly-CSharp.dll')">
+		<!-- Mac: inside app bundle (mod installed in Mods/) -->
+		<Reference Include="Assembly-CSharp-mac" Condition="'$(RimWorldMacManagedDir)' == '' And Exists('../../../../Contents/Resources/Data/Managed/Assembly-CSharp.dll')">
 			<HintPath>../../../../Contents/Resources/Data/Managed/Assembly-CSharp.dll</HintPath>
 			<Aliases>mac</Aliases>
 		</Reference>
-		<Reference Include="UnityEngine.CoreModule-mac" Condition="Exists('../../../../Contents/Resources/Data/Managed/UnityEngine.CoreModule.dll')">
+		<Reference Include="UnityEngine.CoreModule-mac" Condition="'$(RimWorldMacManagedDir)' == '' And Exists('../../../../Contents/Resources/Data/Managed/UnityEngine.CoreModule.dll')">
 			<HintPath>../../../../Contents/Resources/Data/Managed/UnityEngine.CoreModule.dll</HintPath>
+			<Aliases>mac</Aliases>
+		</Reference>
+		<!-- Mac: Steam installation detected via Directory.Build.props -->
+		<Reference Include="Assembly-CSharp-mac-steam" Condition="'$(RimWorldMacManagedDir)' != '' And Exists('$(RimWorldMacManagedDir)/Assembly-CSharp.dll')">
+			<HintPath>$(RimWorldMacManagedDir)/Assembly-CSharp.dll</HintPath>
+			<Aliases>mac</Aliases>
+		</Reference>
+		<Reference Include="UnityEngine.CoreModule-mac-steam" Condition="'$(RimWorldMacManagedDir)' != '' And Exists('$(RimWorldMacManagedDir)/UnityEngine.CoreModule.dll')">
+			<HintPath>$(RimWorldMacManagedDir)/UnityEngine.CoreModule.dll</HintPath>
 			<Aliases>mac</Aliases>
 		</Reference>
 	</ItemGroup>

@@ -1,0 +1,7 @@
+<Project>
+  <PropertyGroup>
+    <!-- Auto-detect RimWorld Mac installation (Steam default path) -->
+    <RimWorldMacApp Condition="'$(RimWorldMacApp)' == '' And Exists('$(HOME)/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app')">$(HOME)/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app</RimWorldMacApp>
+    <RimWorldMacManagedDir Condition="'$(RimWorldMacApp)' != ''">$(RimWorldMacApp)/Contents/Resources/Data/Managed</RimWorldMacManagedDir>
+  </PropertyGroup>
+</Project>
