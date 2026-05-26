@@ -3,7 +3,7 @@
   <ThingDef ParentName="BuildingBase">
     <defName>AutoDrill</defName>
     <label>auto drill</label>
-    <description>An automated deep-crust drilling rig that extracts minerals without requiring manual labor. Automatically drills resources from deep underground and outputs them directly. Use a ground-penetrating scanner to detect the best resources. This drill will yield stone chunks if no resources are present. Can be repositioned freely.</description>
+    <description>An old-generation deep-crust auto drill designed for long-term unmanned operation. It continuously mines underground veins based on ground-penetrating scanner results and ejects processed ore directly. Because its legacy drilling algorithm cannot precisely strip fine mineral veins, unattended operation suffers significant material loss. If no deep vein is available, it will extract stone chunks instead. Can be repositioned freely.</description>
     <graphicData>
       <graphicClass>Graphic_Single</graphicClass>
       <texPath>Things/Building/Production/DeepDrill</texPath>
@@ -68,9 +68,11 @@
         <basePowerConsumption>300</basePowerConsumption>
       </li>
       <li Class="CompProperties_DeepDrill" />
+      <li Class="CompProperties_CreatesInfestations" />
       <li Class="EasyMode.CompProperties_AutoDrill">
         <drillTicksPerWork>120</drillTicksPerWork>
-        <resourceOutputMultiplier>1</resourceOutputMultiplier>
+        <resourceOutputMultiplier>0.35</resourceOutputMultiplier>
+        <detectionRadius>2.6</detectionRadius>
         <spawnIntervalRange>
           <min>600</min>
           <max>1200</max>

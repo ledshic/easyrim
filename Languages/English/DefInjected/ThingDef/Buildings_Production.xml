@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
-  
+
   <AutoDrill.label>auto drill</AutoDrill.label>
-  <AutoDrill.description>An automated deep-crust drilling rig that extracts minerals without requiring manual labor. Automatically drills resources from deep underground and outputs them directly. Use a ground-penetrating scanner to detect the best resources. This drill will yield stone chunks if no resources are present. Can be repositioned freely.</AutoDrill.description>
-  
+  <AutoDrill.description>An old-generation deep-crust auto drill designed for long-term unmanned operation. It continuously mines underground veins based on ground-penetrating scanner results and ejects processed ore directly. Because its legacy drilling algorithm cannot precisely strip fine mineral veins, unattended operation suffers significant material loss. If no deep vein is available, it will extract stone chunks instead. Can be repositioned freely.</AutoDrill.description>
+
 </LanguageData>

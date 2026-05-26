@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
-  
+
   <AutoDrill.label>自动钻探机</AutoDrill.label>
-  <AutoDrill.description>一个自动化的深层地壳钻探设备，无需人工操作即可提取矿物。自动从地下深处钻探资源并直接输出。使用地面穿透扫描仪来检测最佳资源。如果没有资源，此钻探机将产出石块。可以自由重新定位。</AutoDrill.description>
-  
+  <AutoDrill.description>这是一台可长期无人值守的深层地壳自动钻机。它会根据地面穿透扫描结果持续开采地下矿脉，并将处理后的矿物直接排出。由于老旧的钻探算法无法精确的剥离细小矿脉，因此自动工作会存在大量损耗。若地下无可用矿脉，则会改为挖出石块。可自由重新部署。</AutoDrill.description>
+
 </LanguageData>

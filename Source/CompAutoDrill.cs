@@ -1,4 +1,5 @@
 using System;
+using System.Reflection;
 using RimWorld;
 using Verse;
 
@@ -6,10 +7,10 @@ namespace EasyMode
 {
     public class CompProperties_AutoDrill : CompProperties
     {
-        public int drillTicksPerWork = 120; // Time between drill attempts (in ticks)
+        public int drillTicksPerWork = 120; // Tick batch size used for drill work updates
         public float resourceOutputMultiplier = 1f; // Multiplier for resource output
         public IntRange spawnIntervalRange = new IntRange(600, 1200); // Interval between spawns (in ticks)
-        public float detectionRadius = 5f; // 检测半径
+        public float detectionRadius = 5f; // Search radius for deep resources
 
         public CompProperties_AutoDrill()
         {
@@ -19,7 +20,18 @@ namespace EasyMode
 
     public class CompAutoDrill : ThingComp
     {
+        private const bool EnableDebugLog = false;
+        private const int ResourceCacheDurationTicks = 30;
+        private static readonly FieldInfo CompDeepDrillLastUsedTickField = typeof(CompDeepDrill).GetField("lastUsedTick", BindingFlags.Instance | BindingFlags.NonPublic);
+
         private int ticksUntilSpawn;
+        private int workTickAccumulator;
+
+        private int cachedResourceTick = -1;
+        private bool cachedHasResource;
+        private ThingDef cachedResDef;
+        private int cachedCountPresent;
+        private IntVec3 cachedCell;
 
         public CompProperties_AutoDrill Props => (CompProperties_AutoDrill)props;
 
@@ -34,19 +46,16 @@ namespace EasyMode
 
         public bool ValuableResourcesPresent()
         {
-            ThingDef resDef;
-            int countPresent;
-            IntVec3 cell;
-            return GetNextResource(out resDef, out countPresent, out cell);
+            return GetNextResource(out _, out _, out _);
         }
 
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {
             base.PostSpawnSetup(respawningAfterLoad);
 
-            Log.Message("[AutoDrill] PostSpawnSetup called. Parent: " + parent.def.defName);
-            Log.Message("[AutoDrill] Parent spawned: " + parent.Spawned);
-            Log.Message("[AutoDrill] TickerType: " + parent.def.tickerType);
+            DebugLog("PostSpawnSetup called. Parent: " + parent.def.defName);
+            DebugLog("Parent spawned: " + parent.Spawned);
+            DebugLog("TickerType: " + parent.def.tickerType);
 
             if (!respawningAfterLoad)
             {
@@ -80,43 +89,77 @@ namespace EasyMode
 
         private bool GetNextResource(out ThingDef resDef, out int countPresent, out IntVec3 cell)
         {
-            for (int i = 0; i < GenRadial.NumCellsInRadius(Math.Max(0f, ((BuildableDef)((Thing)base.parent).def).specialDisplayRadius)); i++)
+            if (parent.Map == null)
             {
-                IntVec3 val = ((Thing)base.parent).Position + GenRadial.RadialPattern[i];
-                if (GenGrid.InBounds(val, ((Thing)base.parent).Map))
+                resDef = null;
+                countPresent = 0;
+                cell = IntVec3.Invalid;
+                return false;
+            }
+
+            int currentTick = Find.TickManager?.TicksGame ?? 0;
+            bool cacheValid = cachedResourceTick >= 0 && currentTick - cachedResourceTick <= ResourceCacheDurationTicks;
+
+            if (!cacheValid)
+            {
+                cachedHasResource = ScanNextResource(out cachedResDef, out cachedCountPresent, out cachedCell);
+                cachedResourceTick = currentTick;
+            }
+
+            resDef = cachedResDef;
+            countPresent = cachedCountPresent;
+            cell = cachedCell;
+            return cachedHasResource;
+        }
+
+        private bool ScanNextResource(out ThingDef resDef, out int countPresent, out IntVec3 cell)
+        {
+            float radius = Props.detectionRadius > 0f
+                ? Props.detectionRadius
+                : Math.Max(0f, ((BuildableDef)parent.def).specialDisplayRadius);
+
+            for (int i = 0; i < GenRadial.NumCellsInRadius(radius); i++)
+            {
+                IntVec3 val = parent.Position + GenRadial.RadialPattern[i];
+                if (GenGrid.InBounds(val, parent.Map))
                 {
-                    ThingDef val2 = ((Thing)base.parent).Map.deepResourceGrid.ThingDefAt(val);
+                    ThingDef val2 = parent.Map.deepResourceGrid.ThingDefAt(val);
                     if (val2 != null && val2.thingCategories.Contains(ThingCategoryDefOf.ResourcesRaw))
                     {
                         resDef = val2;
-                        countPresent = ((Thing)base.parent).Map.deepResourceGrid.CountAt(val);
+                        countPresent = parent.Map.deepResourceGrid.CountAt(val);
                         cell = val;
                         return true;
                     }
                 }
             }
-            resDef = DeepDrillUtility.GetBaseResource(((Thing)base.parent).Map, ((Thing)base.parent).Position);
+
+            resDef = DeepDrillUtility.GetBaseResource(parent.Map, parent.Position);
             countPresent = int.MaxValue;
-            cell = ((Thing)base.parent).Position;
+            cell = parent.Position;
             return false;
+        }
+
+        private void InvalidateResourceCache()
+        {
+            cachedResourceTick = -1;
         }
 
         private void SpawnResource(ThingDef resDef, int countPresent, IntVec3 cell)
         {
             int num = Math.Min(countPresent, resDef.deepCountPerPortion);
+            parent.Map.deepResourceGrid.SetAt(cell, resDef, Math.Max(0, countPresent - num));
 
-            ((Thing)base.parent).Map.deepResourceGrid.SetAt(cell, resDef, Math.Max(0, countPresent - GenMath.RoundRandom((float)num)));
-
+            float adjustedYield = (float)num * Props.resourceOutputMultiplier * Find.Storyteller.difficulty.mineYieldFactor;
             Thing obj = ThingMaker.MakeThing(resDef, (ThingDef)null);
-            obj.stackCount = Math.Max(1, GenMath.RoundRandom((float)num * Find.Storyteller.difficulty.mineYieldFactor));
-            GenPlace.TryPlaceThing(obj, ((Thing)base.parent).Position, ((Thing)base.parent).Map, (ThingPlaceMode)1, (Action<Thing, int>)null, (Predicate<IntVec3>)null, (Rot4?)null, 1);
+            obj.stackCount = Math.Max(1, GenMath.RoundRandom(adjustedYield));
+            GenPlace.TryPlaceThing(obj, parent.Position, parent.Map, ThingPlaceMode.Near, null, null, null, 1);
 
+            InvalidateResourceCache();
         }
 
         public void TrySpawn()
         {
-            //IL_0017: Unknown result type (might be due to invalid IL or missing references)
-            //IL_001e: Unknown result type (might be due to invalid IL or missing references)
             ThingDef resDef;
             int countPresent;
             IntVec3 cell;
@@ -134,7 +177,15 @@ namespace EasyMode
         public void ResetTimer()
         {
             ticksUntilSpawn = Props.spawnIntervalRange.RandomInRange;
-            Log.Message("[AutoDrill] Timer reset. Next spawn in " + ticksUntilSpawn + " ticks.");
+            DebugLog("Timer reset. Next spawn in " + ticksUntilSpawn + " ticks.");
+        }
+
+        private static void DebugLog(string message)
+        {
+            if (EnableDebugLog)
+            {
+                Log.Message("[AutoDrill] " + message);
+            }
         }
 
         private bool CanDrillNow()
@@ -172,18 +223,26 @@ namespace EasyMode
         {
             base.CompTick();
 
-            // Debugging log to ensure this function is called every tick
-            // Log.Message("[AutoDrill] CompTick called.");
-
             if (!CanDrillNow())
+            {
+                workTickAccumulator = 0;
+                return;
+            }
+
+            // Keep vanilla deep drill infestation eligibility in sync with auto-drill activity.
+            MarkVanillaDeepDrillUsedThisTick();
+
+            workTickAccumulator++;
+            int workTicks = Math.Max(1, Props.drillTicksPerWork);
+            if (workTickAccumulator < workTicks)
                 return;
 
-            ticksUntilSpawn--;
-            // Log.Message("[AutoDrill] ticksUntilSpawn: " + ticksUntilSpawn);  // Added log to track ticks until spawn
+            // Reduce by elapsed batched ticks to preserve the same overall timing as per-tick updates.
+            ticksUntilSpawn -= workTickAccumulator;
+            workTickAccumulator = 0;
 
             if (ticksUntilSpawn <= 0)
             {
-                // Log.Message("[AutoDrill] Spawning resource...");
                 TrySpawn();
                 ResetTimer();
             }
@@ -193,6 +252,23 @@ namespace EasyMode
         {
             base.PostExposeData();
             Scribe_Values.Look(ref ticksUntilSpawn, "ticksUntilSpawn", 0);
+            Scribe_Values.Look(ref workTickAccumulator, "workTickAccumulator", 0);
+        }
+
+        private void MarkVanillaDeepDrillUsedThisTick()
+        {
+            if (CompDeepDrillLastUsedTickField == null)
+            {
+                return;
+            }
+
+            CompDeepDrill deepDrill = parent.GetComp<CompDeepDrill>();
+            if (deepDrill == null)
+            {
+                return;
+            }
+
+            CompDeepDrillLastUsedTickField.SetValue(deepDrill, Find.TickManager.TicksGame);
         }
 
         public override string CompInspectStringExtra()
@@ -201,24 +277,24 @@ namespace EasyMode
                 return null;
 
             if (!PowerOn)
-                return "NoPower".Translate();
+                return "AutoDrillStopped".Translate();
 
             CompFlickable flickable = parent.GetComp<CompFlickable>();
             if (flickable != null && !flickable.SwitchIsOn)
-                return "SwitchedOff".Translate();
+                return "AutoDrillStopped".Translate();
 
             CompForbiddable forbiddable = parent.GetComp<CompForbiddable>();
             if (forbiddable != null && forbiddable.Forbidden)
-                return "Forbidden".Translate();
+                return "AutoDrillStopped".Translate();
 
             if (GetNextResource(out ThingDef resDef, out _, out _))
             {
-                return "ResourceBelow".Translate() + ": " + resDef.LabelCap + "\n" +
+                return "AutoDrillWorking".Translate() + "\n" +
                        "NextSpawnedItemIn".Translate(resDef.label) + " " +
                        GenDate.ToStringTicksToPeriod(ticksUntilSpawn, allowSeconds: true, shortForm: false);
             }
 
-            return "DeepDrillNoResources".Translate();
+            return "AutoDrillStopped".Translate();
         }
     }
 }
