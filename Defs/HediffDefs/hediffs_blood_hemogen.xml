@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<!--
+		血原质共鸣 (Blood Essence Resonance)
+		Tracks the host's hemogen (血原质) level and applies a matching stage:
+		  Severity 1 (hemogen >= 80%) : 血原质鼎盛 – strong buffs
+		  Severity 2 (hemogen >= 60%) : 血原质充沛 – moderate buffs
+		  Severity 3 (hemogen >= 40%) : 血原质均衡 – neutral / minor
+		  Severity 4 (hemogen >= 20%) : 血原质不足 – mild penalties
+		  Severity 5 (hemogen  < 20%) : 血原质匮乏 – harsh penalties
+	-->
+	<HediffDef>
+		<defName>bloodhemogen_resonance</defName>
+		<hediffClass>Hediff_High</hediffClass>
+		<label>blood essence resonance</label>
+		<description>The host's vitality ebbs and flows with their blood essence reserves. When blood essence runs high, the body surges with power; when it runs low, weakness and pain set in.</description>
+		<defaultLabelColor>(180,40,40)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<initialSeverity>3</initialSeverity>
+		<maxSeverity>5.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="EasyMode.HediffCompProperties_BloodHemogenStage">
+				<!-- thresholds are descending; severity = 1-based index of first matched threshold -->
+				<!-- index 0 (sev 1) = hemogen >= 80%, index 4 (sev 5) = hemogen < 20% -->
+				<thresholds>
+					<li>0.8</li>
+					<li>0.6</li>
+					<li>0.4</li>
+					<li>0.2</li>
+					<li>0.0</li>
+				</thresholds>
+				<tickInterval>60</tickInterval>
+			</li>
+		</comps>
+		<stages>
+
+			<!-- Severity 1: hemogen >= 80% — 血原质鼎盛 (Sanguine Apex) -->
+			<li>
+				<minSeverity>1</minSeverity>
+				<label>blood essence apex</label>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.30</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.30</offset>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>0.25</offset>
+					</li>
+				</capMods>
+				<statOffsets>
+					<MoveSpeed>0.8</MoveSpeed>
+				</statOffsets>
+				<statFactors>
+					<MeleeDamageFactor>1.6</MeleeDamageFactor>
+					<MeleeHitChance>1.5</MeleeHitChance>
+					<MeleeArmorPenetration>1.4</MeleeArmorPenetration>
+					<MeleeCooldownFactor>0.6</MeleeCooldownFactor>
+					<ShootingAccuracyPawn>1.3</ShootingAccuracyPawn>
+					<GlobalLearningFactor>1.5</GlobalLearningFactor>
+				</statFactors>
+				<regeneration>4</regeneration>
+				<painFactor>0.5</painFactor>
+			</li>
+
+			<!-- Severity 2: hemogen >= 60% — 血原质充沛 (Sanguine Flow) -->
+			<li>
+				<minSeverity>2</minSeverity>
+				<label>blood essence flow</label>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.15</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.15</offset>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>0.10</offset>
+					</li>
+				</capMods>
+				<statOffsets>
+					<MoveSpeed>0.3</MoveSpeed>
+				</statOffsets>
+				<statFactors>
+					<MeleeDamageFactor>1.25</MeleeDamageFactor>
+					<MeleeHitChance>1.2</MeleeHitChance>
+					<ShootingAccuracyPawn>1.15</ShootingAccuracyPawn>
+				</statFactors>
+				<regeneration>1</regeneration>
+				<painFactor>0.75</painFactor>
+			</li>
+
+			<!-- Severity 3: hemogen >= 40% — 血原质均衡 (Sanguine Balance) -->
+			<li>
+				<minSeverity>3</minSeverity>
+				<label>blood essence balance</label>
+				<!-- Neutral — no significant modifiers -->
+			</li>
+
+			<!-- Severity 4: hemogen >= 20% — 血原质不足 (Sanguine Ebb) -->
+			<li>
+				<minSeverity>4</minSeverity>
+				<label>blood essence ebb</label>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.15</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.15</offset>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.10</offset>
+					</li>
+				</capMods>
+				<statOffsets>
+					<MoveSpeed>-0.3</MoveSpeed>
+				</statOffsets>
+				<statFactors>
+					<MeleeDamageFactor>0.8</MeleeDamageFactor>
+					<ShootingAccuracyPawn>0.85</ShootingAccuracyPawn>
+				</statFactors>
+				<painOffset>0.10</painOffset>
+				<mentalBreakMtbDays>20</mentalBreakMtbDays>
+			</li>
+
+			<!-- Severity 5: hemogen < 20% — 血原质匮乏 (Sanguine Famine) -->
+			<li>
+				<minSeverity>5</minSeverity>
+				<label>blood essence famine</label>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.40</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.35</offset>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.30</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>-0.25</offset>
+					</li>
+				</capMods>
+				<statOffsets>
+					<MoveSpeed>-0.8</MoveSpeed>
+				</statOffsets>
+				<statFactors>
+					<MeleeDamageFactor>0.5</MeleeDamageFactor>
+					<MeleeHitChance>0.6</MeleeHitChance>
+					<ShootingAccuracyPawn>0.6</ShootingAccuracyPawn>
+					<WorkSpeedGlobal>0.6</WorkSpeedGlobal>
+				</statFactors>
+				<painOffset>0.35</painOffset>
+				<mentalBreakMtbDays>5</mentalBreakMtbDays>
+			</li>
+
+		</stages>
+	</HediffDef>
+
+</Defs>

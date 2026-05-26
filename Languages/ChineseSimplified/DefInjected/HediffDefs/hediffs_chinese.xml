@@ -22,6 +22,14 @@
 	<adaptive_armor.stages.2.label>适应性装甲 (防御)</adaptive_armor.stages.2.label>
 	<adaptive_armor.stages.3.label>适应性装甲 (紧急)</adaptive_armor.stages.3.label>
 	<adaptive_armor.stages.4.label>适应性装甲 (堡垒)</adaptive_armor.stages.4.label>
+	<!-- Blood Hemogen Hediffs -->
+	<bloodhemogen_resonance.label>血原质共鸣</bloodhemogen_resonance.label>
+	<bloodhemogen_resonance.description>宿主的活力随血原质储量的起伏而消长。当血原质充盈时，身体迸发出强大的力量；当血原质耗尽时，虚弱与痛苦便随之而来。</bloodhemogen_resonance.description>
+	<bloodhemogen_resonance.stages.0.label>血原质鼎盛</bloodhemogen_resonance.stages.0.label>
+	<bloodhemogen_resonance.stages.1.label>血原质充沛</bloodhemogen_resonance.stages.1.label>
+	<bloodhemogen_resonance.stages.2.label>血原质均衡</bloodhemogen_resonance.stages.2.label>
+	<bloodhemogen_resonance.stages.3.label>血原质不足</bloodhemogen_resonance.stages.3.label>
+	<bloodhemogen_resonance.stages.4.label>血原质匮乏</bloodhemogen_resonance.stages.4.label>
 	<!-- Brave Soul sub-hediffs -->
 	<bravesoul.label>&lt;color=#00CED1&gt;不朽之魂&lt;/color&gt;</bravesoul.label>
 	<bravesoul.description>不朽战士的灵魂在体内燃烧，经历无数战场的洗礼而锻造成型。死亡本身也要向其不屈的意志低头，其战斗技艺已超越凡人的极限。血与火的考验化作永恒的力量，守护他人便是其存在的终极意义。</bravesoul.description>
