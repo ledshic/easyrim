@@ -1,4 +1,5 @@
 using RimWorld;
+using RimWorld.Planet;
 using Verse;
 
 namespace EasyMode
@@ -13,20 +14,86 @@ namespace EasyMode
 
     public class CompAbilityEffect_NanoTeleport : CompAbilityEffect
     {
+        // ── Local-map teleport ────────────────────────────────────────────────
+
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
             Pawn pawn = parent.pawn;
-            Map map = pawn.Map;
-            IntVec3 destPos = target.Cell;
 
-            pawn.DeSpawn(DestroyMode.Vanish);
-            GenSpawn.Spawn(pawn, destPos, map);
+            // Use vanilla position-change approach (same as SkipUtility.SkipTo) instead of
+            // DeSpawn + GenSpawn.Spawn, which triggers extra RNG-dependent callbacks and
+            // side effects that can desync RWMT Multiplayer clients.
+            pawn.Position = target.Cell;
             pawn.Notify_Teleported(false, true);
         }
 
         public override bool Valid(LocalTargetInfo target, bool throwMessages = false)
         {
-            return target.IsValid && target.Cell.InBounds(parent.pawn.Map);
+            if (!target.IsValid || !target.Cell.InBounds(parent.pawn.Map))
+                return false;
+
+            // Reject impassable terrain / cells occupied by walls or buildings.
+            if (!target.Cell.Walkable(parent.pawn.Map))
+            {
+                if (throwMessages)
+                    Messages.Message("AbilityNotValidUnwalkable".Translate(),
+                        MessageTypeDefOf.RejectInput, historical: false);
+                return false;
+            }
+
+            return true;
+        }
+
+        // ── World-tile teleport ───────────────────────────────────────────────
+        //
+        // Called by Verb_CastAbility when verbProperties.targetWorldCell == true.
+        //
+        // Decision matrix (no FloatMenu — avoids potential MP desync):
+        //   • Own colony tile  → enter map, spawn near centre
+        //   • Everything else  → form a solo caravan at that tile
+
+        public override void CastAbilityOnWorldTile(int tile)
+        {
+            Pawn pawn = parent.pawn;
+            MapParent mapParent = Find.WorldObjects.MapParentAt(tile);
+
+            if (mapParent?.Faction == Faction.OfPlayer)
+            {
+                DoEnterOwnMap(pawn, tile, mapParent);
+            }
+            else
+            {
+                DoFormCaravan(pawn, tile);
+            }
+        }
+
+        // Enter an owned colony map, generating it first if it hasn't been loaded.
+        private void DoEnterOwnMap(Pawn pawn, int tile, MapParent mapParent)
+        {
+            Map destMap = GetOrGenerateMapUtility.GetOrGenerateMap(
+                tile, mapParent.def.mapSize, null);
+
+            if (destMap == null)
+            {
+                Messages.Message("EasyMode_TeleportMapGenFailed".Translate(),
+                    MessageTypeDefOf.RejectInput, historical: false);
+                return;
+            }
+
+            if (!RCellFinder.TryFindRandomSpawnCellForPawnNear(destMap.Center, destMap, out IntVec3 landingCell))
+                landingCell = destMap.Center;
+
+            pawn.DeSpawn(DestroyMode.Vanish);
+            GenSpawn.Spawn(pawn, landingCell, destMap);
+            pawn.Notify_Teleported(endCurrentJob: true, resetTweenedPos: false);
+        }
+
+        // Leave the current map and form a solo caravan at the destination tile.
+        private void DoFormCaravan(Pawn pawn, int tile)
+        {
+            pawn.DeSpawn(DestroyMode.Vanish);
+            CaravanMaker.MakeCaravan(Gen.YieldSingle(pawn), Faction.OfPlayer, tile,
+                addToWorldPawnsIfNotAlready: true);
         }
     }
 }

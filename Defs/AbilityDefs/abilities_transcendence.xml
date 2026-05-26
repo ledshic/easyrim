@@ -49,6 +49,8 @@
 			<warmupTime>1.5</warmupTime>
 			<soundCast>Psycast_Skip_Entry</soundCast>
 			<useableInPocketMaps>true</useableInPocketMaps>
+			<!-- targetWorldCell enables world-tile targeting (drop-pod style) -->
+			<targetWorldCell>true</targetWorldCell>
 			<targetParams>
 				<canTargetLocations>true</canTargetLocations>
 				<canTargetPawns>false</canTargetPawns>
