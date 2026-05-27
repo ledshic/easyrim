@@ -65,7 +65,7 @@
 					<ShootingAccuracyPawn>1.3</ShootingAccuracyPawn>
 					<GlobalLearningFactor>1.5</GlobalLearningFactor>
 				</statFactors>
-				<regeneration>4</regeneration>
+				<regeneration>120</regeneration>
 				<painFactor>0.5</painFactor>
 			</li>
 
@@ -95,7 +95,7 @@
 					<MeleeHitChance>1.2</MeleeHitChance>
 					<ShootingAccuracyPawn>1.15</ShootingAccuracyPawn>
 				</statFactors>
-				<regeneration>1</regeneration>
+				<regeneration>30</regeneration>
 				<painFactor>0.75</painFactor>
 			</li>
 
