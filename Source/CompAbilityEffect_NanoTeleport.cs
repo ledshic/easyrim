@@ -73,7 +73,7 @@ namespace EasyMode
         private void DoEnterOwnMap(Pawn pawn, int tile, MapParent mapParent)
         {
             Map destMap = GetOrGenerateMapUtility.GetOrGenerateMap(
-                tile, mapParent.def.mapSize, null);
+                tile, mapParent.def, null);
 
             if (destMap == null)
             {
@@ -82,7 +82,13 @@ namespace EasyMode
                 return;
             }
 
-            if (!RCellFinder.TryFindRandomSpawnCellForPawnNear(destMap.Center, destMap, out IntVec3 landingCell))
+            if (!RCellFinder.TryFindRandomCellNearWith(
+                destMap.Center,
+                c => c.Walkable(destMap),
+                destMap,
+                out IntVec3 landingCell,
+                1,
+                10))
                 landingCell = destMap.Center;
 
             pawn.DeSpawn(DestroyMode.Vanish);
