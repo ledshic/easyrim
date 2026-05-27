@@ -8,7 +8,7 @@
         <!-- 工作时显示的描述 -->
         <jobString>Making Neutroamine.</jobString>
         <!-- 定义制造此物品所需的工作量 -->
-        <workAmount>3000</workAmount>
+        <workAmount>600</workAmount>
         <!-- 使用的工作速度统计项 -->
         <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
         <!-- 工作时播放的特效名称 -->

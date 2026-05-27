@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<AbilityDef ParentName="Bloodfeed">
+		<defName>BloodfeedUniverse</defName>
+		<label>bloodfeed universe</label>
+		<description>Drain blood from any living nearby pawn, including hostile targets. The bite causes heavier blood loss and yields significantly more hemogen.</description>
+		<cooldownTicksRange>60000</cooldownTicksRange>
+		<sendMessageOnCooldownComplete>false</sendMessageOnCooldownComplete>
+		<charges>3</charges>
+		<cooldownPerCharge>true</cooldownPerCharge>
+		<hostile>true</hostile>
+		<verbProperties>
+			<verbClass>Verb_CastAbilityTouch</verbClass>
+			<drawAimPie>false</drawAimPie>
+			<range>-1</range>
+			<warmupTime>2</warmupTime>
+			<targetParams>
+				<canTargetAnimals>true</canTargetAnimals>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetMechs>false</canTargetMechs>
+				<canTargetBloodfeeders>true</canTargetBloodfeeders>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="EasyMode.CompProperties_AbilityUniversalBloodfeed">
+				<hemogenGain>1</hemogenGain>
+				<targetBloodLoss>0.95</targetBloodLoss>
+				<bloodFilthToSpawnRange>2~4</bloodFilthToSpawnRange>
+				<thoughtDefToGiveTarget>FedOn</thoughtDefToGiveTarget>
+				<opinionThoughtDefToGiveTarget>FedOn_Social</opinionThoughtDefToGiveTarget>
+				<resistanceGain>1</resistanceGain>
+			</li>
+			<li Class="CompProperties_AbilityFleckOnTarget">
+				<fleckDef>BloodSplash</fleckDef>
+			</li>
+			<li Class="CompProperties_AbilityRequiresCapacity">
+				<capacity>Eating</capacity>
+			</li>
+		</comps>
+	</AbilityDef>
+</Defs>

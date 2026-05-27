@@ -45,4 +45,38 @@
 			</li>
 		</comps>
 	</AbilityDef>
+	<!-- Targetless mobilization ability: grants ColonyMotivated (+24 mood) and WorkMotivation hediff
+       to every free colonist on the current map. Cooldown 5 in-game days (300000 ticks). -->
+	<AbilityDef>
+		<defName>ColonyRally</defName>
+		<label>colony mobilization</label>
+		<description>Deliver a rousing speech to galvanize every colonist on the map. Each member of the colony will be filled with renewed purpose, boosting their mood and working speed for a full day. A leader who knows when to rally the troops can turn the tide of even the darkest times.</description>
+		<iconPath>UI/Abilities/WorkDrive</iconPath>
+		<cooldownTicksRange>300000</cooldownTicksRange>
+		<!-- 5 in-game days -->
+		<hostile>false</hostile>
+		<targetRequired>false</targetRequired>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+		<sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
+		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<drawAimPie>false</drawAimPie>
+			<warmupTime>3.0</warmupTime>
+			<warmupStartSound>WorkDrive_Warmup</warmupStartSound>
+			<requireLineOfSight>false</requireLineOfSight>
+			<nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+			<targetable>false</targetable>
+			<targetParams>
+				<canTargetSelf>true</canTargetSelf>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="EasyMode.CompProperties_ColonyRally">
+				<thoughtDef>ColonyMotivated</thoughtDef>
+				<hediffDef>WorkMotivation</hediffDef>
+			</li>
+		</comps>
+	</AbilityDef>
 </Defs>
