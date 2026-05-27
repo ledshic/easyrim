@@ -1,9 +1,6 @@
 name: Master Push Release
 
 on:
-  push:
-    branches:
-      - master
   workflow_dispatch:
 
 env:
@@ -109,7 +106,7 @@ jobs:
           commit: ${{ steps.meta.outputs.commit_sha }}
           name: ${{ steps.meta.outputs.title }}
           body: |
-            Automated release generated from a push to master or manual dispatch.
+            Automated release generated from a manual workflow dispatch.
 
             - Commit: ${{ steps.meta.outputs.commit_sha }}
             - Built at: ${{ steps.meta.outputs.build_time }}
