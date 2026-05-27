@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Memory thought granted by ColonyRally ability; lasts 1 in-game day (+24 mood) -->
+  <ThoughtDef>
+    <defName>ColonyMotivated</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>1</durationDays>
+    <stackLimit>1</stackLimit>
+    <stackedEffectMultiplier>1</stackedEffectMultiplier>
+    <stages>
+      <li>
+        <label>united as one</label>
+        <description>Our leader's rallying call has ignited a fire in me. We are capable of great things.</description>
+        <baseMoodEffect>24</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+</Defs>

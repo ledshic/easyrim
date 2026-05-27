@@ -13,7 +13,7 @@
 		<comps>
 			<li Class="HediffCompProperties_GiveAbility">
 				<abilityDefs>
-					<li>WorkGuidance</li>
+					<li>ColonyRally</li>
 				</abilityDefs>
 			</li>
 			<li Class="EasyMode.HediffCompProperties_GiveMultipleHediffs">
@@ -100,13 +100,13 @@
 				</statOffsets>
 				<statFactors>
 					<!-- pathfinder + pioneer yields and work speed -->
-					<WorkSpeedGlobal>2</WorkSpeedGlobal>
+					<WorkSpeedGlobal>1.2</WorkSpeedGlobal>
 					<GlobalLearningFactor>3</GlobalLearningFactor>
 					<MiningYield>2</MiningYield>
 					<PlantHarvestYield>2</PlantHarvestYield>
 					<DrugHarvestYield>2</DrugHarvestYield>
 					<MedicalTendQuality>2</MedicalTendQuality>
-					<ResearchSpeed>2</ResearchSpeed>
+					<ResearchSpeed>1.2</ResearchSpeed>
 					<!-- Pioneer ranged aim bonus stacks across hediffs -->
 					<RangedCooldownFactor>0.15</RangedCooldownFactor>
 				</statFactors>

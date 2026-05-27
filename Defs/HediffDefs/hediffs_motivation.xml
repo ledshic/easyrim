@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Temporary work-speed buff applied by ColonyRally ability; lasts 1 in-game day -->
+  <HediffDef>
+    <defName>WorkMotivation</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>united as one</label>
+    <description>Inspired by a rallying call, this pawn works with exceptional drive and focus. All tasks are performed faster while the motivation holds.</description>
+    <defaultLabelColor>(255,215,0)</defaultLabelColor>
+    <isBad>false</isBad>
+    <maxSeverity>1.0</maxSeverity>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>60000</disappearsAfterTicks>
+        <!-- 1 in-game day -->
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <statOffsets>
+          <WorkSpeedGlobal>0.75</WorkSpeedGlobal>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+</Defs>

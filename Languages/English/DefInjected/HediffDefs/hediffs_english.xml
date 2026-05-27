@@ -59,4 +59,7 @@
   <!-- Work Guidance hediff -->
   <WorkGuidance.label>work guidance</WorkGuidance.label>
   <WorkGuidance.description>After receiving precise guidance on work details and steps, work proficiency improves noticeably and learning accelerates sharply for a short time.</WorkGuidance.description>
+  <!-- Work Motivation hediff -->
+  <WorkMotivation.label>united as one</WorkMotivation.label>
+  <WorkMotivation.description>Galvanized by the colony mobilization call, this pawn works shoulder to shoulder with their comrades, throwing themselves into every task with exceptional drive and focus. The effect fades after one day.</WorkMotivation.description>
 </LanguageData>
