@@ -49,7 +49,6 @@
             <Crafting>4</Crafting>
             <Intellectual>4</Intellectual>
         </skillRequirements>
-        <bulkRecipeCount>4</bulkRecipeCount>
         <displayPriority>2000</displayPriority>
     </RecipeDef>
 

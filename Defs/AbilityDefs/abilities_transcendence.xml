@@ -37,7 +37,6 @@
 		<description>Activate the integrated nano-transit matrix to disassemble your body into a compressed data stream at the subatomic level. Trillions of nanomachines encode every molecule and neural pattern, broadcast the data packet via synchronized orbital relay, then reconstruct the physical form with atomic precision at the designated coordinates. Unlike primitive transport pods, no physical container is required - the body itself becomes the signal.</description>
 		<iconPath>UI/Abilities/Skip</iconPath>
 		<cooldownTicksRange>5000</cooldownTicksRange>
-		<!-- 2 in-game hours -->
 		<showPsycastEffects>false</showPsycastEffects>
 		<sendMessageOnCooldownComplete>false</sendMessageOnCooldownComplete>
 		<targetWorldCell>true</targetWorldCell>
@@ -59,17 +58,12 @@
 			</targetParams>
 		</verbProperties>
 		<comps>
-			<!-- Entry flash at caster's position when teleport begins -->
 			<li Class="CompProperties_AbilityEffecterOnCaster">
 				<effecterDef>Skip_EntryNoDelay</effecterDef>
-				<maintainForTicks>60</maintainForTicks>
 			</li>
-			<!-- Actual teleport logic -->
 			<li Class="EasyMode.CompProperties_NanoTeleport" />
-			<!-- Exit flash at destination -->
 			<li Class="CompProperties_AbilityEffecterOnTarget">
 				<effecterDef>Skip_Exit</effecterDef>
-				<maintainForTicks>60</maintainForTicks>
 			</li>
 			<li Class="CompProperties_AbilityFleckOnTarget">
 				<fleckDefs>

@@ -6,7 +6,6 @@
 		<description>Activate the metalblood heart implant to surge liquid metal through the bloodstream, creating a temporary fusion of flesh and steel. This enhancement dramatically reduces incoming damage as the body becomes partially mechanized, though the effect fades as the metallic compounds are naturally filtered out.</description>
 		<iconPath>UI/Abilities/MetalbloodInjection</iconPath>
 		<cooldownTicksRange>15000</cooldownTicksRange>
-		<!-- 6 hours -->
 		<hostile>false</hostile>
 		<groupAbility>true</groupAbility>
 		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
@@ -46,7 +45,6 @@
 		<description>Channel dark psychic forces to rapidly heal severe wounds and restore lost blood. This forbidden technique can mend even grievous injuries that would normally prove fatal, but the unnatural process may trigger unexpected mutations or psychological trauma in the subject.</description>
 		<iconPath>UI/Abilities/UnnaturalHealing</iconPath>
 		<cooldownTicksRange>6000</cooldownTicksRange>
-		<!-- 6 days -->
 		<showPsycastEffects>false</showPsycastEffects>
 		<sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
 		<stunTargetWhileCasting>true</stunTargetWhileCasting>
@@ -81,7 +79,6 @@
 		<description>Invoke a malevolent archotech intelligence to reanimate a corpse into a grotesque fleshbeast. The dark transformation twists dead tissue into a nightmarish creature driven by pure aggression. The resulting monstrosity will attack all living beings indiscriminately, including its creator.</description>
 		<iconPath>UI/Abilities/ShapeFlesh</iconPath>
 		<cooldownTicksRange>3600</cooldownTicksRange>
-		<!-- 60 seconds -->
 		<charges>9</charges>
 		<cooldownPerCharge>true</cooldownPerCharge>
 		<showPsycastEffects>false</showPsycastEffects>
