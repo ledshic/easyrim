@@ -1,24 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
     <RecipeDef>
-        <!-- 配方的唯一标识 -->
         <defName>Make_Neutroamine</defName>
-        <!-- 显示名称，可在游戏中看到 -->
         <label>make neutroamine</label>
-        <!-- 工作时显示的描述 -->
         <jobString>Making Neutroamine.</jobString>
-        <!-- 定义制造此物品所需的工作量 -->
         <workAmount>600</workAmount>
-        <!-- 使用的工作速度统计项 -->
-        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
-        <!-- 工作时播放的特效名称 -->
+        <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+        <workSkill>Intellectual</workSkill>
         <effectWorking>Cook</effectWorking>
-        <!-- 工作时播放的声音 -->
         <soundWorking>Recipe_Machining</soundWorking>
 
-        <!-- 所需原料列表 -->
         <ingredients>
-            <!-- 20 化学燃料 -->
             <li>
                 <filter>
                     <thingDefs>
@@ -27,16 +19,14 @@
                 </filter>
                 <count>20</count>
             </li>
-            <!-- 5 草药 -->
             <li>
                 <filter>
                     <thingDefs>
-                        <li>Herb</li>
+                        <li>MedicineHerbal</li>
                     </thingDefs>
                 </filter>
                 <count>5</count>
             </li>
-            <!-- 5 精神叶片 -->
             <li>
                 <filter>
                     <thingDefs>
@@ -47,26 +37,20 @@
             </li>
         </ingredients>
 
-        <!-- 制造出的产品 -->
         <products>
-            <!-- 产出 10 中性胺 -->
             <Neutroamine>10</Neutroamine>
         </products>
 
-        <!-- 指定哪些工作台可以使用此配方 -->
         <recipeUsers>
-            <li>MedicalSynthesizer</li>
+            <li>DrugLab</li>
         </recipeUsers>
-
-        <!-- 研究前置要求 -->
-        <researchPrerequisite>SterileTechnique</researchPrerequisite>
-
-        <!-- 需要医学技能 -->
+        <researchPrerequisite>MedicineProduction</researchPrerequisite>
         <skillRequirements>
-            <Medicine>8</Medicine>
+            <Crafting>4</Crafting>
+            <Intellectual>4</Intellectual>
         </skillRequirements>
-
-        <workSkill>Medicine</workSkill>
+        <bulkRecipeCount>4</bulkRecipeCount>
+        <displayPriority>2000</displayPriority>
     </RecipeDef>
 
 </Defs>
