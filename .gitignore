@@ -6,3 +6,7 @@ Source/obj/
 
 # Local workshop upload staging.
 .workshop-upload/
+
+# Local RimWorld install links.
+RimWorld-Data
+RimWorld-XMLs
