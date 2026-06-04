@@ -36,7 +36,6 @@
 		<label>nano disassembly transit</label>
 		<description>Activate the integrated nano-transit matrix to disassemble your body into a compressed data stream at the subatomic level. Trillions of nanomachines encode every molecule and neural pattern, broadcast the data packet via synchronized orbital relay, then reconstruct the physical form with atomic precision at the designated coordinates. Unlike primitive transport pods, no physical container is required - the body itself becomes the signal.</description>
 		<iconPath>UI/Abilities/Skip</iconPath>
-		<cooldownTicksRange>5000</cooldownTicksRange>
 		<showPsycastEffects>false</showPsycastEffects>
 		<sendMessageOnCooldownComplete>false</sendMessageOnCooldownComplete>
 		<targetWorldCell>true</targetWorldCell>
@@ -44,8 +43,6 @@
 		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
 		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
 		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
-		<charges>5</charges>
-		<cooldownPerCharge>true</cooldownPerCharge>
 		<verbProperties>
 			<verbClass>Verb_CastAbility</verbClass>
 			<range>9999</range>
