@@ -99,7 +99,12 @@ namespace EasyMode
         // Leave the current map and form a solo caravan at the destination tile.
         private void DoFormCaravan(Pawn pawn, int tile)
         {
-            pawn.DeSpawn(DestroyMode.Vanish);
+            // Only despawn if the pawn is currently in a map. If already on world map
+            // (e.g., in a caravan), they won't be spawned in any map.
+            if (pawn.Map != null)
+            {
+                pawn.DeSpawn(DestroyMode.Vanish);
+            }
             CaravanMaker.MakeCaravan(Gen.YieldSingle(pawn), Faction.OfPlayer, tile,
                 addToWorldPawnsIfNotAlready: true);
         }
