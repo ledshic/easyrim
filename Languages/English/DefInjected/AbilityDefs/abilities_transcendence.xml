@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-  <TranscendentDropPods.label>overmind drops</TranscendentDropPods.label>
-  <TranscendentDropPods.description>Simulates a mechanoid overmind control signal, ordering nearby logistics satellites to dispatch several single-use drop pods to the target area.</TranscendentDropPods.description>
+  <TranscendentDropPods.label>nano relay drop</TranscendentDropPods.label>
+  <TranscendentDropPods.description>Broadcast a forged nano-command uplink that hijacks nearby logistics satellites, forcing rapid deployment of several single-use strike pods onto the selected zone.</TranscendentDropPods.description>
   <BloodfeedUniverse.label>bloodfeed universe</BloodfeedUniverse.label>
   <BloodfeedUniverse.description>Drain blood from any living nearby pawn, including hostile targets. Causes heavier blood loss and grants more hemogen than normal bloodfeed.</BloodfeedUniverse.description>
   <NanoDisassemblyTransit.label>nano disassembly transit</NanoDisassemblyTransit.label>
-  <NanoDisassemblyTransit.description>Activate the integrated nano-transit matrix to disassemble your body into a compressed data stream at the subatomic level. Trillions of nanomachines encode every molecule and neural pattern, broadcast the data packet via synchronized orbital relay, then reconstruct the physical form with atomic precision at the designated coordinates. Unlike primitive transport pods, no physical container is required - the body itself becomes the signal.</NanoDisassemblyTransit.description>
+  <NanoDisassemblyTransit.description>Initiate the integrated nano-transit matrix and convert the body into a compressed subatomic data stream. Trillions of nanomachines encode molecular and neural states, relay the packet through synchronized orbital nodes, then reassemble matter at the destination with atomic precision.</NanoDisassemblyTransit.description>
 </LanguageData>

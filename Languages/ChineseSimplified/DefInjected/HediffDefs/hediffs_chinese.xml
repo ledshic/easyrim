@@ -22,6 +22,13 @@
 	<adaptive_armor.stages.2.label>适应性装甲 (防御)</adaptive_armor.stages.2.label>
 	<adaptive_armor.stages.3.label>适应性装甲 (紧急)</adaptive_armor.stages.3.label>
 	<adaptive_armor.stages.4.label>适应性装甲 (堡垒)</adaptive_armor.stages.4.label>
+	<!-- 超越格斗子部位负面状态（纳米风格） -->
+	<transcendence_melee_arms.label>纳米打击矩阵（手臂）</transcendence_melee_arms.label>
+	<transcendence_melee_arms.description>隐藏式纳米锻造网格沿手臂展开，将每一次挥击转化为高速剪切打击，以精确破甲轨迹撕开防护。</transcendence_melee_arms.description>
+	<transcendence_melee_hands.label>纳米精确矩阵（双手）</transcendence_melee_hands.label>
+	<transcendence_melee_hands.description>双手中的纳米级致动阵列会实时修正握持、节奏与着力点，使近战接触具备外科手术般的致命精度。</transcendence_melee_hands.description>
+	<transcendence_melee_legs.label>纳米机动矩阵（双腿）</transcendence_melee_legs.label>
+	<transcendence_melee_legs.description>腿部的反应式纳米肌束大幅强化闪避步法与爆发加速，让位移本身持续转化为战斗优势。</transcendence_melee_legs.description>
 	<!-- Blood Hemogen Hediffs -->
 	<bloodhemogen_resonance.label>血原质共鸣</bloodhemogen_resonance.label>
 	<bloodhemogen_resonance.description>宿主的活力随血原质储量的起伏而消长。当血原质充盈时，身体迸发出强大的力量；当血原质耗尽时，虚弱与痛苦便随之而来。</bloodhemogen_resonance.description>
