@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
-  <!-- Auto drill status messages -->
   <AutoDrillProgress>进度: {0}</AutoDrillProgress>
   <AutoDrillStopped>已停止</AutoDrillStopped>
   <AutoDrillWorking>自动钻探中</AutoDrillWorking>
-  
-  <!-- Power and status messages -->
   <NoPower>无电力</NoPower>
   <SwitchedOff>已关闭</SwitchedOff>
   <DeepDrillNoResources>无资源</DeepDrillNoResources>
-  
-  <!-- Debug messages -->
   <AutoDrillDebugNoPower>调试: 无电力组件</AutoDrillDebugNoPower>
 </LanguageData>

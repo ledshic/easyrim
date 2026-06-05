@@ -34,7 +34,6 @@ namespace EasyMode
 
                 if (Props.hediffDef != null && pawn.health != null)
                 {
-                    // Refresh duration by removing existing instance first
                     Hediff existing = pawn.health.hediffSet.GetFirstHediffOfDef(Props.hediffDef);
                     if (existing != null)
                         pawn.health.RemoveHediff(existing);

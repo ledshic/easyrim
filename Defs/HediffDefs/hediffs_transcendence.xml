@@ -346,8 +346,6 @@
 			</li>
 		</stages>
 	</HediffDef>
-	<!-- Invisible sub-part hediffs for transcendent melee combat -->
-	<!-- These hediffs provide T-1000 style relentless melee with monosword AP and 35% damage -->
 	<HediffDef>
 		<defName>transcendence_melee_arms</defName>
 		<hediffClass>Hediff_High</hediffClass>

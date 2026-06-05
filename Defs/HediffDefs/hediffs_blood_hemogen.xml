@@ -1,15 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
-	<!--
-		血原质共鸣 (Blood Essence Resonance)
-		Tracks the host's hemogen (血原质) level and applies a matching stage:
-		  Severity 1 (hemogen >= 80%) : 血原质鼎盛 – strong buffs
-		  Severity 2 (hemogen >= 60%) : 血原质充沛 – moderate buffs
-		  Severity 3 (hemogen >= 40%) : 血原质均衡 – neutral / minor
-		  Severity 4 (hemogen >= 20%) : 血原质不足 – mild penalties
-		  Severity 5 (hemogen  < 20%) : 血原质匮乏 – harsh penalties
-	-->
 	<HediffDef>
 		<defName>bloodhemogen_resonance</defName>
 		<hediffClass>Hediff_High</hediffClass>
@@ -22,8 +12,6 @@
 		<isBad>false</isBad>
 		<comps>
 			<li Class="EasyMode.HediffCompProperties_BloodHemogenStage">
-				<!-- thresholds are descending; severity = 1-based index of first matched threshold -->
-				<!-- index 0 (sev 1) = hemogen >= 80%, index 4 (sev 5) = hemogen < 20% -->
 				<thresholds>
 					<li>0.8</li>
 					<li>0.6</li>
@@ -35,8 +23,6 @@
 			</li>
 		</comps>
 		<stages>
-
-			<!-- Severity 1: hemogen >= 80% — 血原质鼎盛 (Sanguine Apex) -->
 			<li>
 				<minSeverity>1</minSeverity>
 				<label>blood essence apex</label>
@@ -68,8 +54,6 @@
 				<regeneration>120</regeneration>
 				<painFactor>0.5</painFactor>
 			</li>
-
-			<!-- Severity 2: hemogen >= 60% — 血原质充沛 (Sanguine Flow) -->
 			<li>
 				<minSeverity>2</minSeverity>
 				<label>blood essence flow</label>
@@ -98,15 +82,10 @@
 				<regeneration>30</regeneration>
 				<painFactor>0.75</painFactor>
 			</li>
-
-			<!-- Severity 3: hemogen >= 40% — 血原质均衡 (Sanguine Balance) -->
 			<li>
 				<minSeverity>3</minSeverity>
 				<label>blood essence balance</label>
-				<!-- Neutral — no significant modifiers -->
 			</li>
-
-			<!-- Severity 4: hemogen >= 20% — 血原质不足 (Sanguine Ebb) -->
 			<li>
 				<minSeverity>4</minSeverity>
 				<label>blood essence ebb</label>
@@ -134,8 +113,6 @@
 				<painOffset>0.10</painOffset>
 				<mentalBreakMtbDays>20</mentalBreakMtbDays>
 			</li>
-
-			<!-- Severity 5: hemogen < 20% — 血原质匮乏 (Sanguine Famine) -->
 			<li>
 				<minSeverity>5</minSeverity>
 				<label>blood essence famine</label>

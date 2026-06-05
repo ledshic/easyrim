@@ -23,7 +23,7 @@
     <hasInteractionCell>false</hasInteractionCell>
     <designationCategory>Production</designationCategory>
     <designationHotKey>Misc11</designationHotKey>
-    <specialDisplayRadius>2.6</specialDisplayRadius> <!-- 21 closest cells, must be in sync with CompDeepDrill -->
+    <specialDisplayRadius>2.6</specialDisplayRadius>
     <rotatable>true</rotatable>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <constructionSkillPrerequisite>6</constructionSkillPrerequisite>

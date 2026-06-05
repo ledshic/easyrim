@@ -14,6 +14,5 @@ namespace EasyMode
 
     public class HediffComp_AdaptiveArmor : HediffComp_StageByHealthBase
     {
-        public HediffCompProperties_AdaptiveArmor PropsAA => (HediffCompProperties_AdaptiveArmor)this.props;
     }
 }

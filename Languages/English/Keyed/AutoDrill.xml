@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
-  <!-- Auto drill status messages -->
   <AutoDrillProgress>Progress: {0}</AutoDrillProgress>
   <AutoDrillStopped>Stopped</AutoDrillStopped>
   <AutoDrillWorking>Auto drilling</AutoDrillWorking>
-  
-  <!-- Power and status messages -->
   <NoPower>No power</NoPower>
   <SwitchedOff>Switched off</SwitchedOff>
   <DeepDrillNoResources>No resources</DeepDrillNoResources>
-  
-  <!-- Debug messages -->
   <AutoDrillDebugNoPower>Debug: No power component</AutoDrillDebugNoPower>
 </LanguageData>

@@ -114,7 +114,6 @@
 		<description>Unleash a devastating psychic assault that causes catastrophic cellular breakdown in living tissue. The target's flesh rapidly deteriorates and reforms into a twisted mass of organic matter, killing them instantly through horrific biological reconstruction. This ability represents the pinnacle of flesh manipulation techniques.</description>
 		<iconPath>UI/Abilities/Slaughter</iconPath>
 		<cooldownTicksRange>180000</cooldownTicksRange>
-		<!-- 3 days -->
 		<showPsycastEffects>false</showPsycastEffects>
 		<sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
 		<stunTargetWhileCasting>true</stunTargetWhileCasting>

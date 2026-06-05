@@ -20,8 +20,6 @@
   <adaptive_armor.stages.2.label>adaptive armor (defensive)</adaptive_armor.stages.2.label>
   <adaptive_armor.stages.3.label>adaptive armor (emergency)</adaptive_armor.stages.3.label>
   <adaptive_armor.stages.4.label>adaptive armor (fortress)</adaptive_armor.stages.4.label>
-
-  <!-- Transcendent melee sub-part hediffs (Nano style) -->
   <transcendence_melee_arms.label>nano strike lattice (arms)</transcendence_melee_arms.label>
   <transcendence_melee_arms.description>A hidden nanoforge mesh woven through the arms, converting each swing into a high-velocity shear strike with precision armor-cutting vectors.</transcendence_melee_arms.description>
 
@@ -30,8 +28,6 @@
 
   <transcendence_melee_legs.label>nano mobility lattice (legs)</transcendence_melee_legs.label>
   <transcendence_melee_legs.description>Reactive nanomuscle strands in the legs amplify evasive footwork and burst acceleration, turning movement into continuous combat advantage.</transcendence_melee_legs.description>
-
-  <!-- Brave Soul sub-hediffs -->
   <bravesoul_cognitive.label>cognitive fervor</bravesoul_cognitive.label>
   <bravesoul_cognitive.description>Sharpened mind and heightened perception fueled by warrior spirit.</bravesoul_cognitive.description>
 
@@ -40,7 +36,6 @@
 
   <bravesoul_vitals.label>vital ascendance</bravesoul_vitals.label>
   <bravesoul_vitals.description>Reinforced organs and accelerated recovery.</bravesoul_vitals.description>
-  <!-- Vital ascendance stage names -->
   <bravesoul_vitals.stages.0.label>vital ascendance (stable)</bravesoul_vitals.stages.0.label>
   <bravesoul_vitals.stages.1.label>vital ascendance (awakened)</bravesoul_vitals.stages.1.label>
   <bravesoul_vitals.stages.2.label>vital ascendance (surging)</bravesoul_vitals.stages.2.label>
@@ -52,8 +47,6 @@
 
   <bravesoul_spirit.label>indomitable spirit</bravesoul_spirit.label>
   <bravesoul_spirit.description>Unbreakable resolve that steadies the mind in the face of death.</bravesoul_spirit.description>
-
-  <!-- Pioneer Spirit sub-hediffs -->
   <pioneerspirit_physical.label>frontier vigor</pioneerspirit_physical.label>
   <pioneerspirit_physical.description>Refined physicality for exploration and hauling.</pioneerspirit_physical.description>
 
@@ -65,11 +58,8 @@
 
   <pioneerspirit_resilience.label>survival instinct</pioneerspirit_resilience.label>
   <pioneerspirit_resilience.description>Endurance, recovery, and unshakable resolve.</pioneerspirit_resilience.description>
-
-  <!-- Work Guidance hediff -->
   <WorkGuidance.label>work guidance</WorkGuidance.label>
   <WorkGuidance.description>After receiving precise guidance on work details and steps, work proficiency improves noticeably and learning accelerates sharply for a short time.</WorkGuidance.description>
-  <!-- Work Motivation hediff -->
   <WorkMotivation.label>united as one</WorkMotivation.label>
   <WorkMotivation.description>Galvanized by the colony mobilization call, this pawn works shoulder to shoulder with their comrades, throwing themselves into every task with exceptional drive and focus. The effect fades after one day.</WorkMotivation.description>
 </LanguageData>

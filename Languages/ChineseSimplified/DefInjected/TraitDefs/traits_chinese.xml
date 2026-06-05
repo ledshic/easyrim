@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-	<!-- ShootingAccuracy degree -1: 原"乱开枪"，现扩展为涵盖近战鲁莽行为 -->
 	<ShootingAccuracy.degreeDatas.1.label>莽夫</ShootingAccuracy.degreeDatas.1.label>
 	<ShootingAccuracy.degreeDatas.1.description>冲！冲！冲！[PAWN_nameDef]无论远近，总是不顾一切地冲入战斗。[PAWN_pronoun]的枪法和近战都比旁人更快，但精准度同样差人一截。</ShootingAccuracy.degreeDatas.1.description>
 </LanguageData>

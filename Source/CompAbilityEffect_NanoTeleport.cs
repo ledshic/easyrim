@@ -14,8 +14,6 @@ namespace EasyMode
 
     public class CompAbilityEffect_NanoTeleport : CompAbilityEffect
     {
-        // ── Local-map teleport ────────────────────────────────────────────────
-
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
             Pawn pawn = parent.pawn;
@@ -43,15 +41,6 @@ namespace EasyMode
 
             return true;
         }
-
-        // ── World-tile teleport ───────────────────────────────────────────────
-        //
-        // Called by Verb_CastAbility for world targets when
-        // verbProperties.targetWorldCell == true.
-        //
-        // Decision matrix (no FloatMenu — avoids potential MP desync):
-        //   • Own colony tile  → enter map, spawn near centre
-        //   • Everything else  → form a solo caravan at that tile
 
         public override void Apply(GlobalTargetInfo target)
         {

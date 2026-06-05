@@ -4,13 +4,6 @@ using System.Collections.Generic;
 
 namespace EasyMode
 {
-    /// <summary>
-    /// Tracks the pawn's 血原质 (hemogen) level and maps it to hediff severity.
-    /// High hemogen → high severity → buff stages.
-    /// Low hemogen  → low severity  → penalty stages.
-    /// Thresholds are descending lower-bounds; index 0 = best stage.
-    /// Default: [0.8, 0.6, 0.4, 0.2, 0.0] → 5 stages.
-    /// </summary>
     public class HediffCompProperties_BloodHemogenStage : HediffCompProperties
     {
         public int tickInterval = 60;

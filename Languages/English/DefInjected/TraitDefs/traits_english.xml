@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-	<!-- ShootingAccuracy degree -1: formerly "trigger-happy", now covers melee recklessness too -->
 	<ShootingAccuracy.degreeDatas.1.label>reckless combatant</ShootingAccuracy.degreeDatas.1.label>
 	<ShootingAccuracy.degreeDatas.1.description>Reckless! Reckless! Reckless! [PAWN_nameDef] charges into every fight without restraint. [PAWN_pronoun] attacks faster in both ranged and melee, but hits less precisely in both.</ShootingAccuracy.degreeDatas.1.description>
 </LanguageData>

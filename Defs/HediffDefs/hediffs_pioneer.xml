@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<!-- Parent container: now splits into multiple specialized sub-hediffs -->
 	<HediffDef>
 		<defName>pioneerspirit</defName>
 		<hediffClass>Hediff_High</hediffClass>
@@ -40,7 +39,6 @@
 			</li>
 		</comps>
 	</HediffDef>
-	<!-- Physical/mobility & logistics (movement, manipulation, hauling) -->
 	<HediffDef>
 		<defName>pioneerspirit_physical</defName>
 		<hediffClass>Hediff_High</hediffClass>
@@ -70,20 +68,17 @@
 					</li>
 				</capMods>
 				<statOffsets>
-					<!-- pathfinder + pioneerspirit movement/carry -->
 					<MoveSpeed>1.3</MoveSpeed>
 					<CarryingCapacity>325</CarryingCapacity>
 				</statOffsets>
 				<statFactors>
 					<MoveSpeed>1.5</MoveSpeed>
 					<CarryingCapacity>2</CarryingCapacity>
-					<!-- Stack with industry to reach 4x global work speed total (2x here, 2x there) -->
 					<WorkSpeedGlobal>2</WorkSpeedGlobal>
 				</statFactors>
 			</li>
 		</stages>
 	</HediffDef>
-	<!-- Labor/industry & research yields/speeds -->
 	<HediffDef>
 		<defName>pioneerspirit_industry</defName>
 		<hediffClass>Hediff_High</hediffClass>
@@ -95,11 +90,9 @@
 		<stages>
 			<li>
 				<statOffsets>
-					<!-- Mining speed offset from original pioneer -->
 					<MiningSpeed>2.0</MiningSpeed>
 				</statOffsets>
 				<statFactors>
-					<!-- pathfinder + pioneer yields and work speed -->
 					<WorkSpeedGlobal>1.2</WorkSpeedGlobal>
 					<GlobalLearningFactor>3</GlobalLearningFactor>
 					<MiningYield>2</MiningYield>
@@ -107,13 +100,11 @@
 					<DrugHarvestYield>2</DrugHarvestYield>
 					<MedicalTendQuality>2</MedicalTendQuality>
 					<ResearchSpeed>1.2</ResearchSpeed>
-					<!-- Pioneer ranged aim bonus stacks across hediffs -->
 					<RangedCooldownFactor>0.15</RangedCooldownFactor>
 				</statFactors>
 			</li>
 		</stages>
 	</HediffDef>
-	<!-- Combat proficiency & battlefield awareness -->
 	<HediffDef>
 		<defName>pioneerspirit_combat</defName>
 		<hediffClass>Hediff_High</hediffClass>
@@ -138,7 +129,6 @@
 			</li>
 		</stages>
 	</HediffDef>
-	<!-- Survival, recovery, and mental steadiness -->
 	<HediffDef>
 		<defName>pioneerspirit_resilience</defName>
 		<hediffClass>Hediff_High</hediffClass>
@@ -176,9 +166,7 @@
 					<RestRateMultiplier>2</RestRateMultiplier>
 					<ImmunityGainSpeed>2</ImmunityGainSpeed>
 					<InjuryHealingFactor>2</InjuryHealingFactor>
-					<!-- pathfinder learning factor -->
 					<GlobalLearningFactor>2</GlobalLearningFactor>
-					<!-- Stack with combat to reach pioneer+pathfinder targeting -->
 					<AimingDelayFactor>0.2</AimingDelayFactor>
 					<IncomingDamageFactor>0.5</IncomingDamageFactor>
 				</statFactors>

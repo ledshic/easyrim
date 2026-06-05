@@ -2,7 +2,6 @@
 <LanguageData>
 	<transcendence.label>&lt;color=#C0C0C0&gt;超凡融合&lt;/color&gt;</transcendence.label>
 	<transcendence.description>先进的闪耀科技机械体从根本上改造了身体，将其提升到超越凡人的境界。每一个生物系统都以巅峰效率运作，同时心智达到完美的清晰状态。</transcendence.description>
-	<!-- Transcendence Sub-Hediffs Translations -->
 	<transcendence_cognitive.label>认知强化</transcendence_cognitive.label>
 	<transcendence_cognitive.description>机械体融合带来的精神能力增强。</transcendence_cognitive.description>
 	<transcendence_physical.label>身体强化</transcendence_physical.label>
@@ -22,14 +21,12 @@
 	<adaptive_armor.stages.2.label>适应性装甲 (防御)</adaptive_armor.stages.2.label>
 	<adaptive_armor.stages.3.label>适应性装甲 (紧急)</adaptive_armor.stages.3.label>
 	<adaptive_armor.stages.4.label>适应性装甲 (堡垒)</adaptive_armor.stages.4.label>
-	<!-- 超越格斗子部位负面状态（纳米风格） -->
 	<transcendence_melee_arms.label>纳米打击矩阵（手臂）</transcendence_melee_arms.label>
 	<transcendence_melee_arms.description>隐藏式纳米锻造网格沿手臂展开，将每一次挥击转化为高速剪切打击，以精确破甲轨迹撕开防护。</transcendence_melee_arms.description>
 	<transcendence_melee_hands.label>纳米精确矩阵（双手）</transcendence_melee_hands.label>
 	<transcendence_melee_hands.description>双手中的纳米级致动阵列会实时修正握持、节奏与着力点，使近战接触具备外科手术般的致命精度。</transcendence_melee_hands.description>
 	<transcendence_melee_legs.label>纳米机动矩阵（双腿）</transcendence_melee_legs.label>
 	<transcendence_melee_legs.description>腿部的反应式纳米肌束大幅强化闪避步法与爆发加速，让位移本身持续转化为战斗优势。</transcendence_melee_legs.description>
-	<!-- Blood Hemogen Hediffs -->
 	<bloodhemogen_resonance.label>血原质共鸣</bloodhemogen_resonance.label>
 	<bloodhemogen_resonance.description>宿主的活力随血原质储量的起伏而消长。当血原质充盈时，身体迸发出强大的力量；当血原质耗尽时，虚弱与痛苦便随之而来。</bloodhemogen_resonance.description>
 	<bloodhemogen_resonance.stages.0.label>血原质鼎盛</bloodhemogen_resonance.stages.0.label>
@@ -37,7 +34,6 @@
 	<bloodhemogen_resonance.stages.2.label>血原质均衡</bloodhemogen_resonance.stages.2.label>
 	<bloodhemogen_resonance.stages.3.label>血原质不足</bloodhemogen_resonance.stages.3.label>
 	<bloodhemogen_resonance.stages.4.label>血原质匮乏</bloodhemogen_resonance.stages.4.label>
-	<!-- Brave Soul sub-hediffs -->
 	<bravesoul.label>&lt;color=#00CED1&gt;不朽之魂&lt;/color&gt;</bravesoul.label>
 	<bravesoul.description>不朽战士的灵魂在体内燃烧，经历无数战场的洗礼而锻造成型。死亡本身也要向其不屈的意志低头，其战斗技艺已超越凡人的极限。血与火的考验化作永恒的力量，守护他人便是其存在的终极意义。</bravesoul.description>
 	<bravesoul_cognitive.label>认知炽焰</bravesoul_cognitive.label>
@@ -46,7 +42,6 @@
 	<bravesoul_physical.description>久经战阵锤炼的敏捷与掌控。</bravesoul_physical.description>
 	<bravesoul_vitals.label>生命升华</bravesoul_vitals.label>
 	<bravesoul_vitals.description>器官强化与加速复原。</bravesoul_vitals.description>
-	<!-- 生命升华阶段命名 -->
 	<bravesoul_vitals.stages.0.label>生命升华（稳态）</bravesoul_vitals.stages.0.label>
 	<bravesoul_vitals.stages.1.label>生命升华（激活）</bravesoul_vitals.stages.1.label>
 	<bravesoul_vitals.stages.2.label>生命升华（涌动）</bravesoul_vitals.stages.2.label>
@@ -56,7 +51,6 @@
 	<bravesoul_combat.description>至高武艺与自适应防御。</bravesoul_combat.description>
 	<bravesoul_spirit.label>不屈意志</bravesoul_spirit.label>
 	<bravesoul_spirit.description>在死亡面前也稳固心神的决心。</bravesoul_spirit.description>
-	<!-- Pioneer Spirit sub-hediffs -->
 	<pioneerspirit.label>&lt;color=#87CEEB&gt;先驱意志&lt;/color&gt;</pioneerspirit.label>
 	<pioneerspirit.description>探索与发现的本质在血管中流淌，天生便是未知领域的开拓者。拥有与荒野的超凡联系，以及对所有劳作和战斗形式的天赋掌握。每一个未知世界都在其指引下成为人类的新家园，开拓便是其与生俱来的宿命。</pioneerspirit.description>
 	<pioneerspirit_physical.label>千锤百炼</pioneerspirit_physical.label>
@@ -67,10 +61,8 @@
 	<pioneerspirit_combat.description>战场上的战术优势与随时待战。</pioneerspirit_combat.description>
 	<pioneerspirit_resilience.label>求生本能</pioneerspirit_resilience.label>
 	<pioneerspirit_resilience.description>耐力、复原与不动如山的意志。</pioneerspirit_resilience.description>
-	<!-- Work Guidance hediff -->
 	<WorkGuidance.label>工作指点</WorkGuidance.label>
 	<WorkGuidance.description>被指点了工作细节与步骤，短时间内工作熟练度明显提升，学习速度显著加快。</WorkGuidance.description>
-	<!-- Work Motivation hediff -->
 	<WorkMotivation.label>万众一心</WorkMotivation.label>
 	<WorkMotivation.description>受到殖民地动员令的激励，与同伴同仇敌忾、全力以赴，干劲十足地投入手头的每一项工作。效果将在一天内消退。</WorkMotivation.description>
 </LanguageData>

@@ -16,10 +16,8 @@
 	<TranscendentDropPods.description>广播伪造的纳米指挥链路，劫持近地物资投送卫星，向目标区域快速投下数个一次性打击投送舱。</TranscendentDropPods.description>
 	<NanoDisassemblyTransit.label>纳米解析传送</NanoDisassemblyTransit.label>
 	<NanoDisassemblyTransit.description>启动集成纳米传送矩阵，将身体转换为亚原子级压缩数据流。数万亿纳米机械会编码分子结构与神经状态，经由同步轨道节点中继传输，并在目标位置以原子级精度重构实体。</NanoDisassemblyTransit.description>
-	<!-- WorkGuidance ability -->
 	<WorkGuidance.label>工作指导</WorkGuidance.label>
 	<WorkGuidance.description>呼吁目标在一段时间内更加努力工作，提升生产效率。</WorkGuidance.description>
-	<!-- ColonyRally ability -->
 	<ColonyRally.label>殖民地动员</ColonyRally.label>
 	<ColonyRally.description>向殖民地所有成员发表慷慨激昂的动员令，唤起众人的斗志与使命感，令全体殖民者万众一心。地图上每一位殖民者都将获得心情鼓舞，并在接下来的一天内以更高的热情投入工作。真正的领袖懂得在最艰难的时刻凝聚人心，将绝望化为前进的动力。</ColonyRally.description>
 </languageData>

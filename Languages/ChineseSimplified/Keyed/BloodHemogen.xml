@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
-  <!-- Blood Hemogen bracket label shown in hediff tooltip -->
   <BloodHemogen_Bracket>血原质 {0}%</BloodHemogen_Bracket>
 </LanguageData>

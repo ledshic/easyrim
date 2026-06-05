@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
-  <!-- Batch Industrial Component Recipe -->
   <RecipeDef>
     <defName>Make_ComponentIndustrialBatch</defName>
     <label>make components (batch)</label>
@@ -39,8 +37,6 @@
       <li>TableMachining</li>
     </recipeUsers>
   </RecipeDef>
-
-  <!-- Batch Spacer Component Recipe -->
   <RecipeDef>
     <defName>Make_ComponentSpacerBatch</defName>
     <label>make advanced components (batch)</label>

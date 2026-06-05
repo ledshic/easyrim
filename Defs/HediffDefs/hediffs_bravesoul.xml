@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<!-- Parent hediff that grants all Brave Soul sub-hediffs -->
 	<HediffDef>
 		<defName>bravesoul</defName>
 		<hediffClass>Hediff_High</hediffClass>
@@ -39,7 +38,6 @@
 			</li>
 		</comps>
 	</HediffDef>
-	<!-- Mind and perception enhancements -->
 	<HediffDef>
 		<defName>bravesoul_cognitive</defName>
 		<hediffClass>Hediff_High</hediffClass>
@@ -66,7 +64,6 @@
 			</li>
 		</stages>
 	</HediffDef>
-	<!-- Movement and manipulation power -->
 	<HediffDef>
 		<defName>bravesoul_physical</defName>
 		<hediffClass>Hediff_High</hediffClass>
@@ -97,7 +94,6 @@
 			</li>
 		</stages>
 	</HediffDef>
-	<!-- Vital systems resilience and regeneration -->
 	<HediffDef>
 		<defName>bravesoul_vitals</defName>
 		<hediffClass>Hediff_High</hediffClass>
@@ -107,7 +103,6 @@
 		<maxSeverity>5.0</maxSeverity>
 		<isBad>false</isBad>
 		<comps>
-			<!-- 狂战士之血：生命值越低，阶段越高，从而提升回复能力 -->
 			<li Class="EasyMode.HediffCompProperties_BerserkerBlood"></li>
 		</comps>
 		<stages>
@@ -266,7 +261,6 @@
 			</li>
 		</stages>
 	</HediffDef>
-	<!-- Combat mastery and damage mitigation -->
 	<HediffDef>
 		<defName>bravesoul_combat</defName>
 		<hediffClass>Hediff_High</hediffClass>
@@ -294,7 +288,6 @@
 			</li>
 		</stages>
 	</HediffDef>
-	<!-- Indomitable spirit and mental fortitude -->
 	<HediffDef>
 		<defName>bravesoul_spirit</defName>
 		<hediffClass>Hediff_High</hediffClass>

@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-	<!-- Add melee modifiers to trigger-happy (ShootingAccuracy degree -1) -->
-	<!-- Mirrors the ranged trade-off: faster attacks but less precision -->
 	<Operation Class="PatchOperationAdd">
 		<xpath>/Defs/TraitDef[defName="ShootingAccuracy"]/degreeDatas/li[degree="-1"]/statOffsets</xpath>
 		<value>

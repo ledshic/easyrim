@@ -7,10 +7,10 @@ namespace EasyMode
 {
     public class CompProperties_AutoDrill : CompProperties
     {
-        public int drillTicksPerWork = 120; // Tick batch size used for drill work updates
-        public float resourceOutputMultiplier = 1f; // Multiplier for resource output
-        public IntRange spawnIntervalRange = new IntRange(600, 1200); // Interval between spawns (in ticks)
-        public float detectionRadius = 5f; // Search radius for deep resources
+        public int drillTicksPerWork = 120;
+        public float resourceOutputMultiplier = 1f;
+        public IntRange spawnIntervalRange = new IntRange(600, 1200);
+        public float detectionRadius = 5f;
 
         public CompProperties_AutoDrill()
         {
@@ -20,7 +20,6 @@ namespace EasyMode
 
     public class CompAutoDrill : ThingComp
     {
-        private const bool EnableDebugLog = false;
         private const int ResourceCacheDurationTicks = 30;
         private static readonly FieldInfo CompDeepDrillLastUsedTickField = typeof(CompDeepDrill).GetField("lastUsedTick", BindingFlags.Instance | BindingFlags.NonPublic);
 
@@ -52,10 +51,6 @@ namespace EasyMode
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {
             base.PostSpawnSetup(respawningAfterLoad);
-
-            DebugLog("PostSpawnSetup called. Parent: " + parent.def.defName);
-            DebugLog("Parent spawned: " + parent.Spawned);
-            DebugLog("TickerType: " + parent.def.tickerType);
 
             if (!respawningAfterLoad)
             {
@@ -177,44 +172,23 @@ namespace EasyMode
         public void ResetTimer()
         {
             ticksUntilSpawn = Props.spawnIntervalRange.RandomInRange;
-            DebugLog("Timer reset. Next spawn in " + ticksUntilSpawn + " ticks.");
-        }
-
-        private static void DebugLog(string message)
-        {
-            if (EnableDebugLog)
-            {
-                Log.Message("[AutoDrill] " + message);
-            }
         }
 
         private bool CanDrillNow()
         {
             if (!parent.Spawned || !PowerOn)
-            {
-                // Log.Message("[AutoDrill] Cannot work: No power.");
                 return false;
-            }
 
             CompFlickable flickable = parent.GetComp<CompFlickable>();
             if (flickable != null && !flickable.SwitchIsOn)
-            {
-                // Log.Message("[AutoDrill] Cannot work: Switch is off.");
                 return false;
-            }
 
             CompForbiddable forbiddable = parent.GetComp<CompForbiddable>();
             if (forbiddable != null && forbiddable.Forbidden)
-            {
-                // Log.Message("[AutoDrill] Cannot work: Forbidden.");
                 return false;
-            }
 
             if (!GetNextResource(out _, out _, out _))
-            {
-                // Log.Message("[AutoDrill] Cannot work: No resources found.");
                 return false;
-            }
 
             return true;
         }
