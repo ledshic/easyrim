@@ -42,6 +42,27 @@ namespace EasyMode
             return true;
         }
 
+        public override bool Valid(GlobalTargetInfo target, bool throwMessages = false)
+        {
+            if (!target.IsValid || target.Tile < 0)
+                return false;
+
+            Pawn pawn = parent.pawn;
+            if (pawn != null)
+            {
+                int currentTile = -1;
+                Caravan c = pawn.GetCaravan();
+                if (c != null)
+                    currentTile = c.Tile;
+                else if (pawn.Spawned)
+                    currentTile = pawn.Map.Tile;
+                if (target.Tile == currentTile)
+                    return false;
+            }
+
+            return true;
+        }
+
         public override void Apply(GlobalTargetInfo target)
         {
             int tile = target.Tile;
@@ -58,9 +79,45 @@ namespace EasyMode
             }
         }
 
+        // Safely extract pawn from any current caravan (when on world map) and/or
+        // despawn from current map before performing a world-level teleport.
+        // This prevents orphaned caravan references, duplicate caravan membership,
+        // and "tried to despawn but not spawned" errors.
+        private void ExitCurrentCaravanOrMap(Pawn pawn)
+        {
+            if (pawn == null || pawn.Destroyed)
+                return;
+
+            Caravan caravan = pawn.GetCaravan();
+            if (caravan != null && !caravan.Destroyed)
+            {
+                bool shouldDestroy = caravan.PawnsListForReading.Count == 1 &&
+                                     caravan.PawnsListForReading[0] == pawn;
+                caravan.RemovePawn(pawn);
+                if (shouldDestroy && caravan.PawnsListForReading.Count == 0)
+                {
+                    caravan.Destroy();
+                }
+            }
+
+            if (pawn.Spawned)
+            {
+                pawn.DeSpawn(DestroyMode.Vanish);
+            }
+
+            // Stop any active map pathing or stances (safe when on world/caravan too).
+            pawn.pather?.StopDead();
+            pawn.stances?.CancelBusyStanceSoft();
+        }
+
         // Enter an owned colony map, generating it first if it hasn't been loaded.
         private void DoEnterOwnMap(Pawn pawn, int tile, MapParent mapParent)
         {
+            if (pawn == null || pawn.Destroyed)
+                return;
+
+            ExitCurrentCaravanOrMap(pawn);
+
             Map destMap = GetOrGenerateMapUtility.GetOrGenerateMap(
                 tile, mapParent.def, null);
 
@@ -80,20 +137,17 @@ namespace EasyMode
                 10))
                 landingCell = destMap.Center;
 
-            pawn.DeSpawn(DestroyMode.Vanish);
             GenSpawn.Spawn(pawn, landingCell, destMap);
             pawn.Notify_Teleported(endCurrentJob: true, resetTweenedPos: false);
         }
 
-        // Leave the current map and form a solo caravan at the destination tile.
+        // Leave the current map/caravan and form a solo caravan at the destination tile.
         private void DoFormCaravan(Pawn pawn, int tile)
         {
-            // Only despawn if the pawn is currently in a map. If already on world map
-            // (e.g., in a caravan), they won't be spawned in any map.
-            if (pawn.Map != null)
-            {
-                pawn.DeSpawn(DestroyMode.Vanish);
-            }
+            if (pawn == null || pawn.Destroyed)
+                return;
+
+            ExitCurrentCaravanOrMap(pawn);
             CaravanMaker.MakeCaravan(Gen.YieldSingle(pawn), Faction.OfPlayer, tile,
                 addToWorldPawnsIfNotAlready: true);
         }
