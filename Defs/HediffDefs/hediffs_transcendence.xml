@@ -153,6 +153,11 @@
 				</abilityDefs>
 			</li>
 			<li Class="HediffCompProperties_HealPermanentWounds" />
+			<li Class="EasyMode.HediffCompProperties_NanoWatch">
+				<tickInterval>60</tickInterval>
+				<minRespawnDays>3</minRespawnDays>
+				<maxRespawnDays>5</maxRespawnDays>
+			</li>
 		</comps>
 		<preventsDeath>true</preventsDeath>
 		<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>

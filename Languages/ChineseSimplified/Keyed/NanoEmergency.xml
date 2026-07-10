@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <EasyMode_NanoEmergencyDespawn>{PAWN_nameDef}身受重伤，纳米机械已将身体解析并转入紧急重构程序（{0}天后完成）。</EasyMode_NanoEmergencyDespawn>
+  <EasyMode_NanoEmergencyRespawn>{PAWN_nameDef}已被纳米机械重构完成，以满状态重返战场。</EasyMode_NanoEmergencyRespawn>
+  <EasyMode_NanoDebugAlreadyPending>{PAWN_nameDef}已在纳米重构队列中。</EasyMode_NanoDebugAlreadyPending>
+  <EasyMode_NanoDebugNotPending>{PAWN_nameDef}不在纳米重构队列中。</EasyMode_NanoDebugNotPending>
+  <EasyMode_NanoDebugInvalidPawn>无效目标，无法执行纳米解析。</EasyMode_NanoDebugInvalidPawn>
+  <EasyMode_NanoDebugNoComponent>纳米重生组件不可用。</EasyMode_NanoDebugNoComponent>
+  <EasyMode_NanoDebugRespawnAll>已强制重生 {0} 名排队中的纳米宿主。</EasyMode_NanoDebugRespawnAll>
+</LanguageData>
