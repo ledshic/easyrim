@@ -1,7 +1,7 @@
 MOD ID: 3418717349
 
 GitHub: https://github.com/ledshic/easyrim
-Steam Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=3534843393
+Steam Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=3761671600
 
 # EasyRim / 轻松环世界
 
