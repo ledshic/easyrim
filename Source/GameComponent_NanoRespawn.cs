@@ -142,6 +142,7 @@ namespace EasyMode
         private bool BeginEmergencyInternal(Pawn pawn, int days)
         {
             int respawnTick = Find.TickManager.TicksGame + days * GenDate.TicksPerDay;
+            bool shouldNotify = PawnUtility.ShouldSendNotificationAbout(pawn);
 
             Map mapHeld = pawn.MapHeld;
             // PlanetTile implicitly converts to int (surface tile id).
@@ -155,19 +156,20 @@ namespace EasyMode
                 tileId = tileId,
                 preferredCell = cell,
                 originalFaction = pawn.Faction,
+                sendNotification = shouldNotify,
                 days = days
             };
             pending.Add(entry);
 
-            DespawnForReconstruction(pawn);
-
-            if (PawnUtility.ShouldSendNotificationAbout(pawn))
+            if (shouldNotify)
             {
                 Messages.Message(
                     "EasyMode_NanoEmergencyDespawn".Translate(pawn.Named("PAWN"), days),
                     new LookTargets(pawn),
                     MessageTypeDefOf.NegativeEvent);
             }
+
+            DespawnForReconstruction(pawn);
 
             return true;
         }
@@ -276,7 +278,7 @@ namespace EasyMode
                 pawn.SetFaction(targetFaction);
             pawn.Notify_Teleported(endCurrentJob: true, resetTweenedPos: true);
 
-            if (PawnUtility.ShouldSendNotificationAbout(pawn))
+            if (entry.sendNotification)
             {
                 Messages.Message(
                     "EasyMode_NanoEmergencyRespawn".Translate(pawn.Named("PAWN")),
@@ -376,6 +378,7 @@ namespace EasyMode
     {
         public Pawn pawn;
         public Faction originalFaction;
+        public bool sendNotification;
         public int respawnTick;
         public int tileId = -1;
         public IntVec3 preferredCell = IntVec3.Invalid;
@@ -385,6 +388,7 @@ namespace EasyMode
         {
             Scribe_References.Look(ref pawn, "pawn");
             Scribe_References.Look(ref originalFaction, "originalFaction");
+            Scribe_Values.Look(ref sendNotification, "sendNotification", false);
             Scribe_Values.Look(ref respawnTick, "respawnTick", 0);
             Scribe_Values.Look(ref tileId, "tileId", -1);
             Scribe_Values.Look(ref preferredCell, "preferredCell", IntVec3.Invalid);
