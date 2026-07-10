@@ -154,6 +154,7 @@ namespace EasyMode
                 respawnTick = respawnTick,
                 tileId = tileId,
                 preferredCell = cell,
+                originalFaction = pawn.Faction,
                 days = days
             };
             pending.Add(entry);
@@ -249,6 +250,11 @@ namespace EasyMode
             if (pawn == null || pawn.Destroyed || pawn.Dead)
                 return true; // drop dead/destroyed entries
 
+            // Keep reconstructed pawn aligned with its original faction.
+            Faction targetFaction = entry.originalFaction ?? pawn.Faction;
+            if (targetFaction != null && pawn.Faction != targetFaction)
+                pawn.SetFaction(targetFaction);
+
             FullyHeal(pawn);
 
             Map map = ResolveRespawnMap(entry);
@@ -266,6 +272,8 @@ namespace EasyMode
                 Find.WorldPawns.RemovePawn(pawn);
 
             GenSpawn.Spawn(pawn, cell, map);
+            if (targetFaction != null && pawn.Faction != targetFaction)
+                pawn.SetFaction(targetFaction);
             pawn.Notify_Teleported(endCurrentJob: true, resetTweenedPos: true);
 
             if (PawnUtility.ShouldSendNotificationAbout(pawn))
@@ -367,6 +375,7 @@ namespace EasyMode
     public class NanoRespawnEntry : IExposable
     {
         public Pawn pawn;
+        public Faction originalFaction;
         public int respawnTick;
         public int tileId = -1;
         public IntVec3 preferredCell = IntVec3.Invalid;
@@ -375,6 +384,7 @@ namespace EasyMode
         public void ExposeData()
         {
             Scribe_References.Look(ref pawn, "pawn");
+            Scribe_References.Look(ref originalFaction, "originalFaction");
             Scribe_Values.Look(ref respawnTick, "respawnTick", 0);
             Scribe_Values.Look(ref tileId, "tileId", -1);
             Scribe_Values.Look(ref preferredCell, "preferredCell", IntVec3.Invalid);
