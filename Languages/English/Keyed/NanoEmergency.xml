@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <EasyMode_NanoEmergencyDespawn>{PAWN_nameDef} was critically wounded. Nanomachines disassembled the body for emergency reconstruction ({0} days).</EasyMode_NanoEmergencyDespawn>
+  <EasyMode_NanoEmergencyRespawn>{PAWN_nameDef} has been reconstructed by nanomachines and returned at full health.</EasyMode_NanoEmergencyRespawn>
+  <EasyMode_NanoDebugAlreadyPending>{PAWN_nameDef} is already pending nano reconstruction.</EasyMode_NanoDebugAlreadyPending>
+  <EasyMode_NanoDebugNotPending>{PAWN_nameDef} is not pending nano reconstruction.</EasyMode_NanoDebugNotPending>
+  <EasyMode_NanoDebugInvalidPawn>Invalid pawn for nano despawn.</EasyMode_NanoDebugInvalidPawn>
+  <EasyMode_NanoDebugNoComponent>Nano respawn component is not available.</EasyMode_NanoDebugNoComponent>
+  <EasyMode_NanoDebugRespawnAll>Force-respawned {0} pending nano host(s).</EasyMode_NanoDebugRespawnAll>
+</LanguageData>
