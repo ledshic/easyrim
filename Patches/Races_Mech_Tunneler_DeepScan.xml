@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="Mech_Tunneler"]/comps</xpath>
+        <value>
+            <li Class="EasyMode.CompProperties_TunnelerDeepScan">
+                <scanIntervalTicks>
+                    <min>45000</min>
+                    <max>90000</max>
+                </scanIntervalTicks>
+                <lumpCellCountRange>
+                    <min>8</min>
+                    <max>18</max>
+                </lumpCellCountRange>
+                <minDistanceFromEdge>10</minDistanceFromEdge>
+                <deepCountMultiplier>1.0</deepCountMultiplier>
+                <playerFactionOnly>true</playerFactionOnly>
+            </li>
+        </value>
+    </Operation>
+
+</Patch>

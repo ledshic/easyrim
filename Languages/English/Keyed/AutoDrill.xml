@@ -3,6 +3,7 @@
   <AutoDrillProgress>Progress: {0}</AutoDrillProgress>
   <AutoDrillStopped>Stopped</AutoDrillStopped>
   <AutoDrillWorking>Auto drilling</AutoDrillWorking>
+  <EasyMode_TunnelerDeepScanNext>Deep scan in: {0}</EasyMode_TunnelerDeepScanNext>
   <NoPower>No power</NoPower>
   <SwitchedOff>Switched off</SwitchedOff>
   <DeepDrillNoResources>No resources</DeepDrillNoResources>

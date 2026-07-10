@@ -3,6 +3,7 @@
   <AutoDrillProgress>进度: {0}</AutoDrillProgress>
   <AutoDrillStopped>已停止</AutoDrillStopped>
   <AutoDrillWorking>自动钻探中</AutoDrillWorking>
+  <EasyMode_TunnelerDeepScanNext>地下扫描冷却: {0}</EasyMode_TunnelerDeepScanNext>
   <NoPower>无电力</NoPower>
   <SwitchedOff>已关闭</SwitchedOff>
   <DeepDrillNoResources>无资源</DeepDrillNoResources>
