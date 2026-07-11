@@ -153,6 +153,37 @@ namespace EasyMode
             InvalidateResourceCache();
         }
 
+        private void TryMarkUninstallDesignation()
+        {
+            if (parent?.Map == null || !parent.Spawned)
+            {
+                return;
+            }
+
+            if (parent.Map.designationManager.DesignationOn(parent, DesignationDefOf.Uninstall) != null)
+            {
+                return;
+            }
+
+            if (parent.Map.designationManager.DesignationOn(parent, DesignationDefOf.Deconstruct) != null)
+            {
+                return;
+            }
+
+            Building building = parent as Building;
+            if (building == null || building.def.category != ThingCategory.Building || !building.def.Minifiable)
+            {
+                return;
+            }
+
+            if (building.Faction != Faction.OfPlayer && (building.def.building == null || !building.def.building.alwaysUninstallable))
+            {
+                return;
+            }
+
+            parent.Map.designationManager.AddDesignation(new Designation(parent, DesignationDefOf.Uninstall));
+        }
+
         public void TrySpawn()
         {
             ThingDef resDef;
@@ -165,6 +196,11 @@ namespace EasyMode
                 {
                     SpawnResource(resDef, countPresent, cell);
                     FlickCheckResourceExhaustion(cell);
+
+                    if (!ValuableResourcesPresent())
+                    {
+                        TryMarkUninstallDesignation();
+                    }
                 }
             }
         }
