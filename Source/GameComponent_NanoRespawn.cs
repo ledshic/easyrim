@@ -164,7 +164,7 @@ namespace EasyMode
             if (shouldNotify)
             {
                 Messages.Message(
-                    "EasyMode_NanoEmergencyDespawn".Translate(pawn.Named("PAWN"), days),
+                    "EasyMode_NanoEmergencyDespawn".Translate(days, pawn.Named("PAWN")),
                     new LookTargets(pawn),
                     MessageTypeDefOf.NegativeEvent);
             }
