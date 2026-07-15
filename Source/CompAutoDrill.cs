@@ -74,9 +74,27 @@ namespace EasyMode
         {
             base.PostSpawnSetup(respawningAfterLoad);
 
+            // Recompute deep resource state for the new position after reinstall/redeploy.
+            InvalidateResourceCache();
+
             if (!respawningAfterLoad)
             {
                 ResetTimer();
+                TryRearmAfterRedeploy();
+            }
+        }
+
+        private void TryRearmAfterRedeploy()
+        {
+            CompFlickable flickable = parent.GetComp<CompFlickable>();
+            if (flickable == null || flickable.SwitchIsOn)
+            {
+                return;
+            }
+
+            if (ValuableResourcesPresent())
+            {
+                flickable.SwitchIsOn = true;
             }
         }
 

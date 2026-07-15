@@ -3,7 +3,7 @@
   <ThingDef ParentName="BuildingBase">
     <defName>AutoDrill</defName>
     <label>auto drill</label>
-    <description>An old-generation deep-crust auto drill designed for long-term unmanned operation. It continuously mines underground veins based on ground-penetrating scanner results and ejects processed ore directly. Because its legacy drilling algorithm cannot precisely strip fine mineral veins, unattended operation suffers significant material loss. If no deep vein is available, it will extract stone chunks instead. Can be repositioned freely.</description>
+    <description>An old-generation deep-crust auto drill designed for long-term unmanned operation. It runs on solar power, continuously mines underground veins based on ground-penetrating scanner results, and ejects processed ore directly. Because its legacy drilling algorithm cannot precisely strip fine mineral veins, unattended operation suffers significant material loss. When local deep resources are exhausted, it automatically powers down. Can be repositioned freely.</description>
     <graphicData>
       <graphicClass>Graphic_Single</graphicClass>
       <texPath>Things/Building/Production/DeepDrill</texPath>
