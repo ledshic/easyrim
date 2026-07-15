@@ -63,10 +63,6 @@
     <comps>
       <li Class="CompProperties_Forbiddable"/>
       <li Class="CompProperties_Flickable"/>
-      <li Class="CompProperties_Power">
-        <compClass>CompPowerTrader</compClass>
-        <basePowerConsumption>300</basePowerConsumption>
-      </li>
       <li Class="CompProperties_DeepDrill" />
       <li Class="CompProperties_CreatesInfestations" />
       <li Class="EasyMode.CompProperties_AutoDrill">

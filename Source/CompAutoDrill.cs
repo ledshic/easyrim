@@ -34,13 +34,35 @@ namespace EasyMode
 
         public CompProperties_AutoDrill Props => (CompProperties_AutoDrill)props;
 
-        private bool PowerOn
+        private float RoofedPowerOutputFactor
         {
             get
             {
-                CompPowerTrader comp = parent.GetComp<CompPowerTrader>();
-                return comp?.PowerOn ?? true; // If no power comp, assume powered
+                int total = 0;
+                int roofed = 0;
+                foreach (IntVec3 cell in parent.OccupiedRect())
+                {
+                    total++;
+                    if (parent.Map.roofGrid.Roofed(cell))
+                    {
+                        roofed++;
+                    }
+                }
+
+                return total > 0 ? (float)(total - roofed) / total : 0f;
             }
+        }
+
+        private bool HasSolarPowerNow()
+        {
+            if (parent.Map == null)
+            {
+                return false;
+            }
+
+            // Match vanilla solar plant detection: CurSkyGlow multiplied by unroofed coverage.
+            float solarFactor = parent.Map.skyManager.CurSkyGlow * RoofedPowerOutputFactor;
+            return solarFactor > 0f;
         }
 
         public bool ValuableResourcesPresent()
@@ -212,7 +234,7 @@ namespace EasyMode
 
         private bool CanDrillNow()
         {
-            if (!parent.Spawned || !PowerOn)
+            if (!parent.Spawned || !HasSolarPowerNow())
                 return false;
 
             CompFlickable flickable = parent.GetComp<CompFlickable>();
@@ -286,7 +308,7 @@ namespace EasyMode
             if (!parent.Spawned)
                 return null;
 
-            if (!PowerOn)
+            if (!HasSolarPowerNow())
                 return "AutoDrillStopped".Translate();
 
             CompFlickable flickable = parent.GetComp<CompFlickable>();
