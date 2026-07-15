@@ -26,14 +26,11 @@ namespace EasyMode
         private static List<ThingDef> cachedDeepMineables;
 
         private int ticksUntilNextScan;
-        private CompCanBeDormant dormantComp;
-
         public CompProperties_TunnelerDeepScan Props => (CompProperties_TunnelerDeepScan)props;
 
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {
             base.PostSpawnSetup(respawningAfterLoad);
-            dormantComp = parent.GetComp<CompCanBeDormant>();
 
             if (!respawningAfterLoad || ticksUntilNextScan <= 0)
             {
@@ -101,16 +98,6 @@ namespace EasyMode
             }
 
             if (Props.playerFactionOnly && pawn.Faction != Faction.OfPlayer)
-            {
-                return false;
-            }
-
-            if (dormantComp == null)
-            {
-                dormantComp = parent.GetComp<CompCanBeDormant>();
-            }
-
-            if (dormantComp != null && !dormantComp.Awake)
             {
                 return false;
             }
