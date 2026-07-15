@@ -21,12 +21,14 @@
 	<adaptive_armor.stages.2.label>适应性装甲 (防御)</adaptive_armor.stages.2.label>
 	<adaptive_armor.stages.3.label>适应性装甲 (紧急)</adaptive_armor.stages.3.label>
 	<adaptive_armor.stages.4.label>适应性装甲 (堡垒)</adaptive_armor.stages.4.label>
-	<transcendence_melee_arms.label>纳米打击矩阵（手臂）</transcendence_melee_arms.label>
-	<transcendence_melee_arms.description>隐藏式纳米锻造网格沿手臂展开，将每一次挥击转化为高速剪切打击，以精确破甲轨迹撕开防护。</transcendence_melee_arms.description>
-	<transcendence_melee_hands.label>纳米精确矩阵（双手）</transcendence_melee_hands.label>
-	<transcendence_melee_hands.description>双手中的纳米级致动阵列会实时修正握持、节奏与着力点，使近战接触具备外科手术般的致命精度。</transcendence_melee_hands.description>
-	<transcendence_melee_legs.label>纳米机动矩阵（双腿）</transcendence_melee_legs.label>
-	<transcendence_melee_legs.description>腿部的反应式纳米肌束大幅强化闪避步法与爆发加速，让位移本身持续转化为战斗优势。</transcendence_melee_legs.description>
+	<transcendence_battle_morph_verbs.label>纳米作战协议</transcendence_battle_morph_verbs.label>
+	<transcendence_battle_morph_verbs.description>模拟作战义体动作库提供六种近战动作：相位劈斩、动能冲槌、矢量突刺、针幕掠袭、足跟刺突与横扫踢击。</transcendence_battle_morph_verbs.description>
+	<transcendence_battle_morph_verbs.comps.0.tools.0.label>相位劈斩</transcendence_battle_morph_verbs.comps.0.tools.0.label>
+	<transcendence_battle_morph_verbs.comps.0.tools.1.label>动能冲槌</transcendence_battle_morph_verbs.comps.0.tools.1.label>
+	<transcendence_battle_morph_verbs.comps.0.tools.2.label>矢量突刺</transcendence_battle_morph_verbs.comps.0.tools.2.label>
+	<transcendence_battle_morph_verbs.comps.0.tools.3.label>针幕掠袭</transcendence_battle_morph_verbs.comps.0.tools.3.label>
+	<transcendence_battle_morph_verbs.comps.0.tools.4.label>足跟刺突</transcendence_battle_morph_verbs.comps.0.tools.4.label>
+	<transcendence_battle_morph_verbs.comps.0.tools.5.label>横扫踢击</transcendence_battle_morph_verbs.comps.0.tools.5.label>
 	<bloodhemogen_resonance.label>血原质共鸣</bloodhemogen_resonance.label>
 	<bloodhemogen_resonance.description>宿主的活力随血原质储量的起伏而消长。当血原质充盈时，身体迸发出强大的力量；当血原质耗尽时，虚弱与痛苦便随之而来。</bloodhemogen_resonance.description>
 	<bloodhemogen_resonance.stages.0.label>血原质鼎盛</bloodhemogen_resonance.stages.0.label>

@@ -20,14 +20,14 @@
   <adaptive_armor.stages.2.label>adaptive armor (defensive)</adaptive_armor.stages.2.label>
   <adaptive_armor.stages.3.label>adaptive armor (emergency)</adaptive_armor.stages.3.label>
   <adaptive_armor.stages.4.label>adaptive armor (fortress)</adaptive_armor.stages.4.label>
-  <transcendence_melee_arms.label>nano strike lattice (arms)</transcendence_melee_arms.label>
-  <transcendence_melee_arms.description>A hidden nanoforge mesh woven through the arms, converting each swing into a high-velocity shear strike with precision armor-cutting vectors.</transcendence_melee_arms.description>
-
-  <transcendence_melee_hands.label>nano precision lattice (hands)</transcendence_melee_hands.label>
-  <transcendence_melee_hands.description>Nanoscale actuator arrays in the hands refine grip, timing, and impact alignment, enabling surgical close-quarters lethality in every contact.</transcendence_melee_hands.description>
-
-  <transcendence_melee_legs.label>nano mobility lattice (legs)</transcendence_melee_legs.label>
-  <transcendence_melee_legs.description>Reactive nanomuscle strands in the legs amplify evasive footwork and burst acceleration, turning movement into continuous combat advantage.</transcendence_melee_legs.description>
+  <transcendence_battle_morph_verbs.label>nanite battle protocol</transcendence_battle_morph_verbs.label>
+  <transcendence_battle_morph_verbs.description>A standing nanite combat protocol derived from glitterworld battlefield doctrine. It does not replace natural limbs; instead, it overlays battle-prosthetic motion patterns through the neural lattice and continuously grants six melee maneuvers: phase cleave, kinetic ram, vector thrust, needle rake, heel spike, and sweeping kick.</transcendence_battle_morph_verbs.description>
+  <transcendence_battle_morph_verbs.comps.0.tools.0.label>phase cleave</transcendence_battle_morph_verbs.comps.0.tools.0.label>
+  <transcendence_battle_morph_verbs.comps.0.tools.1.label>kinetic ram</transcendence_battle_morph_verbs.comps.0.tools.1.label>
+  <transcendence_battle_morph_verbs.comps.0.tools.2.label>vector thrust</transcendence_battle_morph_verbs.comps.0.tools.2.label>
+  <transcendence_battle_morph_verbs.comps.0.tools.3.label>needle rake</transcendence_battle_morph_verbs.comps.0.tools.3.label>
+  <transcendence_battle_morph_verbs.comps.0.tools.4.label>heel spike</transcendence_battle_morph_verbs.comps.0.tools.4.label>
+  <transcendence_battle_morph_verbs.comps.0.tools.5.label>sweeping kick</transcendence_battle_morph_verbs.comps.0.tools.5.label>
   <bravesoul_cognitive.label>cognitive fervor</bravesoul_cognitive.label>
   <bravesoul_cognitive.description>Sharpened mind and heightened perception fueled by warrior spirit.</bravesoul_cognitive.description>
 

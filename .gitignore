@@ -11,3 +11,6 @@ _workshop/
 # Local RimWorld install links.
 RimWorld-Data
 RimWorld-XMLs
+
+# Local deployment helper script.
+deploy.ps1
