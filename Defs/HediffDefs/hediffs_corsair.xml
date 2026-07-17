@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<HediffDef>
+		<defName>corsaircreed</defName>
+		<hediffClass>Hediff_High</hediffClass>
+		<label>corsair creed</label>
+		<description>Life under the black signal has burned a ruthless doctrine into bone and nerve. The host strikes fast, fights dirty, and turns every wreck and battlefield into profit for the crew.</description>
+		<defaultLabelColor>(183,65,14)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_GiveAbility">
+				<abilityDefs>
+					<li>CorsairBroadside</li>
+					<li>CorsairPlunderMark</li>
+				</abilityDefs>
+			</li>
+			<li Class="EasyMode.HediffCompProperties_GiveMultipleHediffs">
+				<atSeverity>0</atSeverity>
+				<disappearsAfterGiving>false</disappearsAfterGiving>
+				<hediffsToGive>
+					<li>
+						<hediffDef>corsaircreed_boarder</hediffDef>
+						<severity>1.0</severity>
+					</li>
+					<li>
+						<hediffDef>corsaircreed_gunner</hediffDef>
+						<severity>1.0</severity>
+					</li>
+					<li>
+						<hediffDef>corsaircreed_scavenger</hediffDef>
+						<severity>1.0</severity>
+					</li>
+					<li>
+						<hediffDef>corsaircreed_blackflag</hediffDef>
+						<severity>1.0</severity>
+					</li>
+				</hediffsToGive>
+			</li>
+		</comps>
+	</HediffDef>
+	<HediffDef>
+		<defName>corsaircreed_boarder</defName>
+		<hediffClass>Hediff_High</hediffClass>
+		<label>boarding momentum</label>
+		<description>Close-quarters boarding drills amplify speed, control, and brutal follow-through.</description>
+		<defaultLabelColor>(183,65,14)</defaultLabelColor>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.25</offset>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>0.20</offset>
+					</li>
+				</capMods>
+				<statFactors>
+					<MeleeCooldownFactor>0.65</MeleeCooldownFactor>
+					<MeleeDamageFactor>1.5</MeleeDamageFactor>
+					<MeleeDodgeChance>1.3</MeleeDodgeChance>
+					<MoveSpeed>1.2</MoveSpeed>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+	<HediffDef>
+		<defName>corsaircreed_gunner</defName>
+		<hediffClass>Hediff_High</hediffClass>
+		<label>deck gunner's eye</label>
+		<description>Predatory timing and recoil control sharpen ranged lethality.</description>
+		<defaultLabelColor>(183,65,14)</defaultLabelColor>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.18</offset>
+					</li>
+				</capMods>
+				<statOffsets>
+					<ShootingAccuracyPawn>6</ShootingAccuracyPawn>
+				</statOffsets>
+				<statFactors>
+					<ShootingAccuracyPawn>1.5</ShootingAccuracyPawn>
+					<RangedCooldownFactor>0.55</RangedCooldownFactor>
+					<AimingDelayFactor>0.55</AimingDelayFactor>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+	<HediffDef>
+		<defName>corsaircreed_scavenger</defName>
+		<hediffClass>Hediff_High</hediffClass>
+		<label>wreck scavenger instinct</label>
+		<description>Loot-minded reflexes improve hauling, stripping, and rapid battlefield recovery.</description>
+		<defaultLabelColor>(183,65,14)</defaultLabelColor>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<statOffsets>
+					<CarryingCapacity>90</CarryingCapacity>
+				</statOffsets>
+				<statFactors>
+					<CarryingCapacity>1.7</CarryingCapacity>
+					<WorkSpeedGlobal>1.2</WorkSpeedGlobal>
+					<GeneralLaborSpeed>1.4</GeneralLaborSpeed>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+	<HediffDef>
+		<defName>corsaircreed_blackflag</defName>
+		<hediffClass>Hediff_High</hediffClass>
+		<label>blackflag audacity</label>
+		<description>A raider's nerve dulls fear and pain, keeping the host aggressive when others would fold.</description>
+		<defaultLabelColor>(183,65,14)</defaultLabelColor>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<painFactor>0.6</painFactor>
+				<statOffsets>
+					<MentalBreakThreshold>-0.25</MentalBreakThreshold>
+				</statOffsets>
+				<statFactors>
+					<SocialImpact>1.35</SocialImpact>
+					<IncomingDamageFactor>0.8</IncomingDamageFactor>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>corsair_broadside_overdrive</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>broadside overdrive</label>
+		<description>An all-in firing rhythm tuned for short violent exchanges. Accuracy cadence rises, but exposure risk increases.</description>
+		<defaultLabelColor>(183,65,14)</defaultLabelColor>
+		<isBad>false</isBad>
+		<maxSeverity>1.0</maxSeverity>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>1800</disappearsAfterTicks>
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<statFactors>
+					<ShootingAccuracyPawn>1.35</ShootingAccuracyPawn>
+					<RangedCooldownFactor>0.55</RangedCooldownFactor>
+					<AimingDelayFactor>0.55</AimingDelayFactor>
+					<MoveSpeed>1.15</MoveSpeed>
+					<IncomingDamageFactor>1.15</IncomingDamageFactor>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+	<HediffDef>
+		<defName>corsair_plunder_marked</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>marked for plunder</label>
+		<description>The target is highlighted as easy loot, disrupting footing and composure under fire.</description>
+		<defaultLabelColor>(183,65,14)</defaultLabelColor>
+		<isBad>true</isBad>
+		<maxSeverity>1.0</maxSeverity>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>2400</disappearsAfterTicks>
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<statFactors>
+					<MoveSpeed>0.75</MoveSpeed>
+					<MeleeDodgeChance>0.7</MeleeDodgeChance>
+					<IncomingDamageFactor>1.2</IncomingDamageFactor>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+</Defs>

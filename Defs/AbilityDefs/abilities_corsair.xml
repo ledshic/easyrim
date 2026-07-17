@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<AbilityDef>
+		<defName>CorsairBroadside</defName>
+		<label>broadside overdrive</label>
+		<description>Force your combat rhythm into a short broadside burst. Fire faster and aim quicker, but incoming fire becomes harder to shrug off.</description>
+		<iconPath>UI/Abilities/MarksmanCommand</iconPath>
+		<showPsycastEffects>false</showPsycastEffects>
+		<hostile>false</hostile>
+		<targetRequired>false</targetRequired>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+		<cooldownTicksRange>18000</cooldownTicksRange>
+		<sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<drawAimPie>false</drawAimPie>
+			<warmupTime>1.2</warmupTime>
+			<targetable>false</targetable>
+			<targetParams>
+				<canTargetSelf>true</canTargetSelf>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="CompProperties_AbilityGiveHediff">
+				<compClass>CompAbilityEffect_GiveHediff</compClass>
+				<hediffDef>corsair_broadside_overdrive</hediffDef>
+				<onlyApplyToSelf>true</onlyApplyToSelf>
+				<applicableToMechs>false</applicableToMechs>
+				<canTargetBaby>false</canTargetBaby>
+			</li>
+		</comps>
+	</AbilityDef>
+	<AbilityDef>
+		<defName>CorsairPlunderMark</defName>
+		<label>plunder mark</label>
+		<description>Tag a target as ripe salvage, slowing their movement and making them easier to finish.</description>
+		<iconPath>UI/Abilities/LeaderSpeech</iconPath>
+		<showPsycastEffects>false</showPsycastEffects>
+		<hostile>true</hostile>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+		<cooldownTicksRange>24000</cooldownTicksRange>
+		<sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<drawAimPie>false</drawAimPie>
+			<range>24.9</range>
+			<warmupTime>1.5</warmupTime>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetAnimals>true</canTargetAnimals>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetMechs>false</canTargetMechs>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="CompProperties_AbilityGiveHediff">
+				<compClass>CompAbilityEffect_GiveHediff</compClass>
+				<hediffDef>corsair_plunder_marked</hediffDef>
+				<onlyBrain>false</onlyBrain>
+				<applicableToMechs>false</applicableToMechs>
+				<canTargetBaby>false</canTargetBaby>
+			</li>
+		</comps>
+	</AbilityDef>
+</Defs>

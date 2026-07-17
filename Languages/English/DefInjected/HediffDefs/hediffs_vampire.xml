@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <crimsondynasty.label>&lt;color=#B22222&gt;crimson dynasty&lt;/color&gt;</crimsondynasty.label>
+  <crimsondynasty.description>An ancient hemogenic lineage has awakened in the host. Hunger sharpens instinct, aristocratic poise bends weaker wills, and each battle feeds a body that refuses to die quietly.</crimsondynasty.description>
+  <crimsondynasty_predator.label>predator grace</crimsondynasty_predator.label>
+  <crimsondynasty_predator.description>Predatory reflexes grant fast closes, clean strikes, and precise body control.</crimsondynasty_predator.description>
+  <crimsondynasty_hemogenic.label>hemogenic vigor</crimsondynasty_hemogenic.label>
+  <crimsondynasty_hemogenic.description>Blood chemistry turns preternaturally efficient, accelerating recovery and resistance.</crimsondynasty_hemogenic.description>
+  <crimsondynasty_mesmer.label>mesmeric authority</crimsondynasty_mesmer.label>
+  <crimsondynasty_mesmer.description>A cold aristocratic presence unsettles rivals and compels obedience in conversation.</crimsondynasty_mesmer.description>
+  <crimsondynasty_dreadguard.label>dreadguard resilience</crimsondynasty_dreadguard.label>
+  <crimsondynasty_dreadguard.description>Battle-hardened bloodline resilience dampens pain and keeps the host fighting through mortal wounds, but open flame remains dangerous.</crimsondynasty_dreadguard.description>
+</LanguageData>

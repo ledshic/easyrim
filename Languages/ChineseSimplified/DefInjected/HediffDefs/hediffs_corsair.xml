@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+	<corsaircreed.label>&lt;color=#B7410E&gt;星匪信条&lt;/color&gt;</corsaircreed.label>
+	<corsaircreed.description>在黑色信标下讨生的岁月，将一套冷酷法则烙进了骨与神经。宿主出手更快、手段更狠，并能把每一处残骸与战场都变成船队的收益。</corsaircreed.description>
+	<corsaircreed_boarder.label>接舷冲势</corsaircreed_boarder.label>
+	<corsaircreed_boarder.description>高强度接舷训练显著提升近距突入时的速度、控制与连击压迫。</corsaircreed_boarder.description>
+	<corsaircreed_gunner.label>甲板枪手之眼</corsaircreed_gunner.label>
+	<corsaircreed_gunner.description>掠食式时机判断与后坐控制强化了远程致命效率。</corsaircreed_gunner.description>
+	<corsaircreed_scavenger.label>废舰拾荒本能</corsaircreed_scavenger.label>
+	<corsaircreed_scavenger.description>以战利品为导向的本能提升了负重搬运、搜刮效率与战后回收速度。</corsaircreed_scavenger.description>
+	<corsaircreed_blackflag.label>黑旗悍意</corsaircreed_blackflag.label>
+	<corsaircreed_blackflag.description>掠夺者的胆魄会钝化恐惧与痛感，使宿主在他人退缩时依旧维持侵略性。</corsaircreed_blackflag.description>
+	<corsair_broadside_overdrive.label>舷炮过载</corsair_broadside_overdrive.label>
+	<corsair_broadside_overdrive.description>将作战节奏强行压入短时高烈度齐射循环。射击节奏与瞄准速度显著提升，但暴露风险也会同步上升。</corsair_broadside_overdrive.description>
+	<corsair_plunder_marked.label>掠夺标记</corsair_plunder_marked.label>
+	<corsair_plunder_marked.description>目标被标注为优先战利品，行动与临战姿态受到扰乱，更易被迅速击倒。</corsair_plunder_marked.description>
+</LanguageData>

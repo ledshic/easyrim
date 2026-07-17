@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+	<archotechoath.label>&lt;color=#D4AF37&gt;远古机誓&lt;/color&gt;</archotechoath.label>
+	<archotechoath.description>一段残缺的远古机械协议已在宿主神经系统中扎根。它并不赐予神性，却会持续驱动心智、工艺、统御与生存力的极限打磨。</archotechoath.description>
+	<archotechoath_cognition.label>谕算心智</archotechoath_cognition.label>
+	<archotechoath_cognition.description>由模式预判与严谨思维构成的认知框架，显著提升学习与研究效率。</archotechoath_cognition.description>
+	<archotechoath_industry.label>锻律执持</archotechoath_industry.label>
+	<archotechoath_industry.description>精细操作与不倦节律将劳作转化为近乎工坊级的精密流程。</archotechoath_industry.description>
+	<archotechoath_command.label>执政节律</archotechoath_command.label>
+	<archotechoath_command.description>沉着措辞与稳定气场能安定同伴，并在交涉中逐步占据主动。</archotechoath_command.description>
+	<archotechoath_aegis.label>自修护壁</archotechoath_aegis.label>
+	<archotechoath_aegis.description>微型机械体优先维持结构完整，在高压环境下加速恢复并强化防护。</archotechoath_aegis.description>
+
+	<frontierwarden.label>&lt;color=#6B8E23&gt;边疆守望&lt;/color&gt;</frontierwarden.label>
+	<frontierwarden.description>在严酷边地与更严酷职责中淬炼而成，此道统将宿主塑造成殖民地的屏障。其侦察更远、射击更稳、救治更快，并能在防线将崩之处稳住全局。</frontierwarden.description>
+	<frontierwarden_pathfinder.label>踏荒行军</frontierwarden_pathfinder.label>
+	<frontierwarden_pathfinder.description>长期远行训练强化机动、负重与野外态势感知。</frontierwarden_pathfinder.description>
+	<frontierwarden_fireline.label>火线教范</frontierwarden_fireline.label>
+	<frontierwarden_fireline.description>战场操典磨炼瞄准纪律与压制下的目标捕获能力。</frontierwarden_fireline.description>
+	<frontierwarden_fieldsurgeon.label>战地稳术</frontierwarden_fieldsurgeon.label>
+	<frontierwarden_fieldsurgeon.description>分诊直觉与稳定手法让宿主在漫长战役中持续维系队伍战力。</frontierwarden_fieldsurgeon.description>
+	<frontierwarden_breachfighter.label>破阵意志</frontierwarden_breachfighter.label>
+	<frontierwarden_breachfighter.description>近距突击的凶猛与顽强抗压能力，使其能在混战中牢牢顶住战线。</frontierwarden_breachfighter.description>
+</LanguageData>

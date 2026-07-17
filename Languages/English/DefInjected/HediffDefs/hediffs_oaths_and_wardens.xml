@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <archotechoath.label>&lt;color=#D4AF37&gt;archotech oath&lt;/color&gt;</archotechoath.label>
+  <archotechoath.description>A fragmentary archotech protocol has taken root in the host's nervous system. It does not grant divinity, but it compels relentless refinement of thought, craft, leadership, and endurance.</archotechoath.description>
+  <archotechoath_cognition.label>oracle cognition</archotechoath_cognition.label>
+  <archotechoath_cognition.description>Pattern prediction and disciplined thought elevate learning and research.</archotechoath_cognition.description>
+  <archotechoath_industry.label>forgebound discipline</archotechoath_industry.label>
+  <archotechoath_industry.description>Fine motor control and tireless routine turn labor into precision craft.</archotechoath_industry.description>
+  <archotechoath_command.label>governor cadence</archotechoath_command.label>
+  <archotechoath_command.description>Measured speech and composure steady allies and bend negotiations.</archotechoath_command.description>
+  <archotechoath_aegis.label>self-repair aegis</archotechoath_aegis.label>
+  <archotechoath_aegis.description>Micromechanites prioritize structural integrity and rapid recovery under stress.</archotechoath_aegis.description>
+
+  <frontierwarden.label>&lt;color=#6B8E23&gt;frontier warden&lt;/color&gt;</frontierwarden.label>
+  <frontierwarden.description>Raised by hard land and harder duty, this doctrine shapes a pawn into the colony's shield. They scout farther, shoot cleaner, mend faster, and stand firm where lines would otherwise break.</frontierwarden.description>
+  <frontierwarden_pathfinder.label>pathfinder stride</frontierwarden_pathfinder.label>
+  <frontierwarden_pathfinder.description>Hard-march conditioning improves movement, hauling, and field awareness.</frontierwarden_pathfinder.description>
+  <frontierwarden_fireline.label>fireline doctrine</frontierwarden_fireline.label>
+  <frontierwarden_fireline.description>Battlefield drills improve aim discipline and target acquisition under pressure.</frontierwarden_fireline.description>
+  <frontierwarden_fieldsurgeon.label>field surgeon's calm</frontierwarden_fieldsurgeon.label>
+  <frontierwarden_fieldsurgeon.description>Triaged instincts and steady hands sustain allies through prolonged campaigns.</frontierwarden_fieldsurgeon.description>
+  <frontierwarden_breachfighter.label>breachfighter resolve</frontierwarden_breachfighter.label>
+  <frontierwarden_breachfighter.description>Close-quarters aggression and stubborn defense hold the line in chaos.</frontierwarden_breachfighter.description>
+</LanguageData>

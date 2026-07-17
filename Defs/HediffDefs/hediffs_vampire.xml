@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<HediffDef>
+		<defName>crimsondynasty</defName>
+		<hediffClass>Hediff_High</hediffClass>
+		<label>crimson dynasty</label>
+		<description>An ancient hemogenic lineage has awakened in the host. Hunger sharpens instinct, aristocratic poise bends weaker wills, and each battle feeds a body that refuses to die quietly.</description>
+		<defaultLabelColor>(178,34,34)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="EasyMode.HediffCompProperties_GiveMultipleHediffs">
+				<atSeverity>0</atSeverity>
+				<disappearsAfterGiving>false</disappearsAfterGiving>
+				<hediffsToGive>
+					<li>
+						<hediffDef>crimsondynasty_predator</hediffDef>
+						<severity>1.0</severity>
+					</li>
+					<li>
+						<hediffDef>crimsondynasty_hemogenic</hediffDef>
+						<severity>1.0</severity>
+					</li>
+					<li>
+						<hediffDef>crimsondynasty_mesmer</hediffDef>
+						<severity>1.0</severity>
+					</li>
+					<li>
+						<hediffDef>crimsondynasty_dreadguard</hediffDef>
+						<severity>1.0</severity>
+					</li>
+				</hediffsToGive>
+			</li>
+		</comps>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>crimsondynasty_predator</defName>
+		<hediffClass>Hediff_High</hediffClass>
+		<label>predator grace</label>
+		<description>Predatory reflexes grant fast closes, clean strikes, and precise body control.</description>
+		<defaultLabelColor>(178,34,34)</defaultLabelColor>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.30</offset>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>0.25</offset>
+					</li>
+				</capMods>
+				<statFactors>
+					<MoveSpeed>1.25</MoveSpeed>
+					<MeleeCooldownFactor>0.65</MeleeCooldownFactor>
+					<MeleeDamageFactor>1.5</MeleeDamageFactor>
+					<MeleeHitChance>1.35</MeleeHitChance>
+					<MeleeDodgeChance>1.35</MeleeDodgeChance>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>crimsondynasty_hemogenic</defName>
+		<hediffClass>Hediff_High</hediffClass>
+		<label>hemogenic vigor</label>
+		<description>Blood chemistry turns preternaturally efficient, accelerating recovery and resistance.</description>
+		<defaultLabelColor>(178,34,34)</defaultLabelColor>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>0.30</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>0.25</offset>
+					</li>
+					<li>
+						<capacity>Metabolism</capacity>
+						<offset>0.20</offset>
+					</li>
+				</capMods>
+				<regeneration>45</regeneration>
+				<statFactors>
+					<ImmunityGainSpeed>1.6</ImmunityGainSpeed>
+					<InjuryHealingFactor>1.8</InjuryHealingFactor>
+					<RestRateMultiplier>1.4</RestRateMultiplier>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>crimsondynasty_mesmer</defName>
+		<hediffClass>Hediff_High</hediffClass>
+		<label>mesmeric authority</label>
+		<description>A cold aristocratic presence unsettles rivals and compels obedience in conversation.</description>
+		<defaultLabelColor>(178,34,34)</defaultLabelColor>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<statOffsets>
+					<MentalBreakThreshold>-0.20</MentalBreakThreshold>
+				</statOffsets>
+				<statFactors>
+					<SocialImpact>1.8</SocialImpact>
+					<NegotiationAbility>1.5</NegotiationAbility>
+					<TradePriceImprovement>1.2</TradePriceImprovement>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>crimsondynasty_dreadguard</defName>
+		<hediffClass>Hediff_High</hediffClass>
+		<label>dreadguard resilience</label>
+		<description>Battle-hardened bloodline resilience dampens pain and keeps the host fighting through mortal wounds, but open flame remains dangerous.</description>
+		<defaultLabelColor>(178,34,34)</defaultLabelColor>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<painFactor>0.55</painFactor>
+				<statOffsets>
+					<ArmorRating_Blunt>0.25</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+					<ArmorRating_Heat>0.15</ArmorRating_Heat>
+				</statOffsets>
+				<statFactors>
+					<IncomingDamageFactor>0.75</IncomingDamageFactor>
+					<Flammability>1.25</Flammability>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+</Defs>
