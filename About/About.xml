@@ -1,44 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
 	<packageId>sant.rimcheats</packageId>
-	<name>轻松环世界 - easyrim</name>
+	<name>EasyRim - Overpowered Colony Enhancements</name>
 	<author>Passion=Life</author>
 	<supportedVersions>
 		<li>1.6</li>
 	</supportedVersions>
-	<description>轻松环世界 - 超强特性模组 / EasyRim - Overpowered Colony Enhancements
+	<description>Make the Rim easier with deliberately overpowered colonist upgrades, faster production, and improved world-map mobility.
 
-	[中文]
-	这是一个让环世界更轻松的功能增强模组，聚焦于殖民者强化与玩法提速。
+	FEATURES
+	- Transcendence: five enhancement branches, adaptive armor, nanite battle morphs, and emergency reconstruction after critical collapse.
+	- Brave Soul, Blood Essence Resonance, and Pioneer Spirit: powerful staged bonuses for combat, work, recovery, and survival.
+	- Hero abilities: healing, execution, resurrection, universal bloodfeeding, world-target transit, drop pods, work guidance, and a colony-wide rally.
+	- Buildings and crafting: an unattended solar auto drill, a buildable life-support power unit, batch components, neutroamine, synthread, and hyperweave.
+	- Accelerated systems: biosculpter cycles, infinite chemreactor output, wastepack atomization, geothermal and ship-reactor power, plus deep scanning for tunneler mechs.
 
-	主要内容项：
-	- 殖民者特性
-	- 能力系统（战斗、治疗、复活、传送、动员等）
-	- 状态增强（超越系列、自适应护甲、狂战士之血、血液血红素等）
-	- 心情效果
-	- 合成配方（含中性胺与批量组件）
-	- 建筑内容
-	- 平衡补丁
-	- 中英本地化
+	Most upgrades are delivered through Hediffs and Abilities. TraitDef currently contains no gameplay entries.
 
-	警告：这是超强化模组，会显著降低游戏难度。
+	WARNING
+	EasyRim is intentionally unbalanced and will significantly reduce the game's difficulty.
 
-	[English]
-	This is a gameplay-easing enhancement mod for RimWorld, focused on pawn power-ups and faster progression.
-
-	Content includes:
-	- Pawn traits
-	- Ability system (combat, healing, resurrection, teleportation, rally)
-	- Hediff-based buffs (Transcendence set, Adaptive Armor, Berserker Blood, Blood Hemogen, etc.)
-	- Mood effects
-	- Crafting recipes (including neutroamine and batch components)
-	- Building content
-	- Balance patches
-	- Chinese &amp; English localization
-
-	Warning: This is an overpowered mod and can make the game much easier.
-
-	Supported version: RimWorld 1.6 (Odyssey)
+	For RimWorld 1.6 (Odyssey).
 	GitHub: https://github.com/ledshic/easyrim
 	</description>
 </ModMetaData>

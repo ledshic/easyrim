@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<packageId>sant.rimcheats</packageId>
+	<name>轻松环世界 - EasyRim</name>
+	<author>Passion=Life</author>
+	<supportedVersions>
+		<li>1.6</li>
+	</supportedVersions>
+	<description>用大幅强化的殖民者、更快的生产节奏和更灵活的世界地图移动，让环世界变得轻松。
+
+	主要功能
+	- 超凡融合：认知强化、身体强化、生物强化、环境适应和灵能强化，以及适应性装甲、纳米作战协议和濒危后的紧急纳米重构。
+	- 不朽之魂、血原质共鸣与先驱意志：为战斗、工作、恢复和生存提供强力的阶段化增益。
+	- 英雄能力：赤钢融血、机械复原、血肉雕塑师、血肉溶解、机械复生、吸血宇宙、纳米解析传送、纳米中继投送、工作指导和殖民地动员。
+	- 建筑与制造：无人值守的自动钻探机、可建造生命支持单元、批量制造组件，以及配制中性胺、编织合成纤维和铸造超织物。
+	- 系统提速：塑形舱、无限反应釜、垃圾分解器、地热发电机和飞船反应堆，以及掘进机的深层资源扫描。
+
+	当前强化主要通过 Hediff 与 Ability 系统实现；TraitDef 暂无实际玩法条目。
+
+	警告
+	本模组刻意追求超强效果，会显著降低游戏难度。
+
+	适用于 RimWorld 1.6（Odyssey）。
+	GitHub：https://github.com/ledshic/easyrim
+	</description>
+</ModMetaData>
