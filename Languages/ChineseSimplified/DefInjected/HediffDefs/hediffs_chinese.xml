@@ -67,4 +67,14 @@
 	<WorkGuidance.description>被指点了工作细节与步骤，短时间内工作熟练度明显提升，学习速度显著加快。</WorkGuidance.description>
 	<WorkMotivation.label>万众一心</WorkMotivation.label>
 	<WorkMotivation.description>受到殖民地动员令的激励，与同伴同仇敌忾、全力以赴，干劲十足地投入手头的每一项工作。效果将在一天内消退。</WorkMotivation.description>
+	<EasyMode_NeuralOverclock.label>神经超频</EasyMode_NeuralOverclock.label>
+	<EasyMode_NeuralOverclock.description>神经系统与肌肉组织正在远超正常安全极限运转。动作变得极为迅猛精确，同时身体各处会不断积累组织损伤。</EasyMode_NeuralOverclock.description>
+	<EasyMode_NeuralOverclockStrain.label>超频劳损</EasyMode_NeuralOverclockStrain.label>
+	<EasyMode_NeuralOverclockStrain.labelNoun>一处超频劳损</EasyMode_NeuralOverclockStrain.labelNoun>
+	<EasyMode_NeuralOverclockStrain.description>强迫身体突破安全运转极限所造成的局部神经与肌肉组织损伤。</EasyMode_NeuralOverclockStrain.description>
+	<EasyMode_NeuralOverclockStrain.comps.0.labelTendedWell>已稳定</EasyMode_NeuralOverclockStrain.comps.0.labelTendedWell>
+	<EasyMode_NeuralOverclockStrain.comps.0.labelTendedWellInner>已稳定</EasyMode_NeuralOverclockStrain.comps.0.labelTendedWellInner>
+	<EasyMode_NeuralOverclockStrain.comps.0.labelSolidTendedWell>已稳定</EasyMode_NeuralOverclockStrain.comps.0.labelSolidTendedWell>
+	<EasyMode_NeuralOverclockStrain.injuryProps.destroyedLabel>过载损毁</EasyMode_NeuralOverclockStrain.injuryProps.destroyedLabel>
+	<EasyMode_NeuralOverclockStrain.injuryProps.destroyedOutLabel>过载损毁</EasyMode_NeuralOverclockStrain.injuryProps.destroyedOutLabel>
 </LanguageData>

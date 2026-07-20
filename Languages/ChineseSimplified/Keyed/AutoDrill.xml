@@ -8,4 +8,11 @@
   <SwitchedOff>已关闭</SwitchedOff>
   <DeepDrillNoResources>无资源</DeepDrillNoResources>
   <AutoDrillDebugNoPower>调试: 无电力组件</AutoDrillDebugNoPower>
+  <AutoDrillPowerExternal>供电：外部电源</AutoDrillPowerExternal>
+  <AutoDrillPowerSolar>供电：太阳能</AutoDrillPowerSolar>
+  <AutoDrillPowerModeDesc>切换自动深钻井的供电方式。外部电源消耗 1000W；太阳能无需接入电网，但只能在有日照且未被屋顶遮挡时工作。</AutoDrillPowerModeDesc>
+  <AutoDrillModeHighSpeed>模式：高速</AutoDrillModeHighSpeed>
+  <AutoDrillModeHighPrecision>模式：高精度</AutoDrillModeHighPrecision>
+  <AutoDrillModeSafe>模式：安全</AutoDrillModeSafe>
+  <AutoDrillOperatingModeDesc>循环切换钻取模式。高速模式保持当前速度和矿物损耗；高精度模式回收全部矿物，但效率为 1/3；安全模式保留矿物损耗、效率为 1/2，且不会产生虫害。</AutoDrillOperatingModeDesc>
 </LanguageData>

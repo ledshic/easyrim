@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Reusable profiles can be referenced by any controller Hediff. -->
+  <Def Class="EasyMode.ConditionalHediffProfileDef">
+    <defName>EM_NexusSpine_CoreProfile</defName>
+    <rules>
+      <li>
+        <key>core-physical</key>
+        <activeHediff>transcendence_physical</activeHediff>
+        <activeSeverity>1</activeSeverity>
+      </li>
+      <li>
+        <key>core-biological</key>
+        <activeHediff>transcendence_biological</activeHediff>
+        <activeSeverity>1</activeSeverity>
+      </li>
+    </rules>
+  </Def>
+
+  <!-- Dynamic effects used by the adaptive nexus spine. -->
+  <HediffDef>
+    <defName>EM_NexusSpine_RangedAdaptation</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>nexus ranged calibration</label>
+    <description>The adaptive nexus spine has detected a ranged weapon and is continuously recalibrating posture, recoil compensation, and visual-motor timing.</description>
+    <defaultLabelColor>(120,200,255)</defaultLabelColor>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <statFactors>
+          <ShootingAccuracyPawn>1.35</ShootingAccuracyPawn>
+          <AimingDelayFactor>0.70</AimingDelayFactor>
+          <RangedCooldownFactor>0.80</RangedCooldownFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>EM_NexusSpine_GeneAdaptation</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>nexus genetic resonance</label>
+    <description>The adaptive nexus spine is resonating with strong fast-twitch muscle genes, reinforcing the host's close-combat biomechanics.</description>
+    <defaultLabelColor>(170,120,255)</defaultLabelColor>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <statFactors>
+          <MeleeDamageFactor>1.35</MeleeDamageFactor>
+          <MeleeArmorPenetration>1.25</MeleeArmorPenetration>
+          <MeleeCooldownFactor>0.85</MeleeCooldownFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- Installed form. The rules deliberately exercise persistent, health, combat,
+       equipment, and gene conditions while reusing existing functional Hediffs. -->
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>EM_AdaptiveNexusSpine</defName>
+    <label>adaptive nexus spine</label>
+    <labelNoun>an adaptive nexus spine</labelNoun>
+    <description>An installed synthetic spine built around a self-reconfiguring neural lattice. It acts as a body-wide adaptation controller, distributing enhancement protocols and changing modules in response to the host's condition, actions, genes, and equipment.</description>
+    <descriptionHyperlinks><ThingDef>EM_AdaptiveNexusSpine</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>EM_AdaptiveNexusSpine</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.35</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+    <comps>
+      <li Class="EasyMode.HediffCompProperties_ConditionalHediffDistributor">
+        <checkIntervalTicks>120</checkIntervalTicks>
+        <profiles>
+          <li>EM_NexusSpine_CoreProfile</li>
+        </profiles>
+        <rules>
+          <!-- Health response. Adaptive armor continues to choose its own stage. -->
+          <li>
+            <key>health-adaptive-armor</key>
+            <activeHediff>adaptive_armor</activeHediff>
+            <activeSeverity>1</activeSeverity>
+            <healthPercent>0~0.75</healthPercent>
+          </li>
+
+          <!-- Action/state response. -->
+          <li>
+            <key>combat-battle-morph</key>
+            <activeHediff>transcendence_battle_morph_verbs</activeHediff>
+            <activeSeverity>1</activeSeverity>
+            <inCombat>Required</inCombat>
+          </li>
+
+          <!-- Equipment response. -->
+          <li>
+            <key>equipment-ranged-calibration</key>
+            <activeHediff>EM_NexusSpine_RangedAdaptation</activeHediff>
+            <activeSeverity>1</activeSeverity>
+            <anyEquipmentTags>
+              <li>Ranged</li>
+            </anyEquipmentTags>
+          </li>
+
+          <!-- Gene response. The whole rule is removed when Biotech is unavailable. -->
+          <li MayRequire="Ludeon.RimWorld.Biotech">
+            <key>gene-strong-melee</key>
+            <activeHediff>EM_NexusSpine_GeneAdaptation</activeHediff>
+            <activeSeverity>1</activeSeverity>
+            <allGenes>
+              <li>MeleeDamage_Strong</li>
+            </allGenes>
+          </li>
+        </rules>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <!-- Item form. BodyPartBionicBase supplies fabrication recipe generation. -->
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>EM_AdaptiveNexusSpine</defName>
+    <label>adaptive nexus spine</label>
+    <description>A self-reconfiguring artificial spine containing a distributed neural lattice. Once installed, it can host multiple enhancement protocols and adapt them to the user's biology, condition, actions, and equipment.</description>
+    <descriptionHyperlinks><RecipeDef>EM_InstallAdaptiveNexusSpine</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Plasteel>50</Plasteel>
+      <ComponentSpacer>8</ComponentSpacer>
+    </costList>
+    <statBases>
+      <MarketValue>8500</MarketValue>
+      <Mass>3</Mass>
+      <WorkToMake>52000</WorkToMake>
+    </statBases>
+    <thingSetMakerTags>
+      <li>RewardStandardCore</li>
+    </thingSetMakerTags>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>EM_InstallAdaptiveNexusSpine</defName>
+    <label>install adaptive nexus spine</label>
+    <description>Replace the patient's spine with an adaptive nexus spine.</description>
+    <descriptionHyperlinks>
+      <ThingDef>EM_AdaptiveNexusSpine</ThingDef>
+      <HediffDef>EM_AdaptiveNexusSpine</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing adaptive nexus spine.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>EM_AdaptiveNexusSpine</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>EM_AdaptiveNexusSpine</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Spine</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>EM_AdaptiveNexusSpine</addsHediff>
+  </RecipeDef>
+</Defs>

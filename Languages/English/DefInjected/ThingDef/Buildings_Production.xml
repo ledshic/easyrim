@@ -2,6 +2,6 @@
 <LanguageData>
 
   <AutoDrill.label>auto drill</AutoDrill.label>
-  <AutoDrill.description>An old-generation deep-crust auto drill designed for long-term unmanned operation. It runs on solar power, continuously mines underground veins based on ground-penetrating scanner results, and ejects processed ore directly. Because its legacy drilling algorithm cannot precisely strip fine mineral veins, unattended operation suffers significant material loss. When local deep resources are exhausted, it automatically powers down. Can be repositioned freely.</AutoDrill.description>
+  <AutoDrill.description>An old-generation deep-crust auto drill designed for long-term unmanned operation. It can switch between external power and solar power, and offers high-speed, high-precision, and safe drilling modes. It continuously mines underground veins based on ground-penetrating scanner results and ejects processed ore directly. When local deep resources are exhausted, it automatically powers down. Can be repositioned freely.</AutoDrill.description>
 
 </LanguageData>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <EM_NexusSpine_RangedAdaptation.label>中枢远程校准</EM_NexusSpine_RangedAdaptation.label>
+  <EM_NexusSpine_RangedAdaptation.description>适应性中枢脊椎检测到了远程武器，正在持续校准姿态、后坐力补偿和视动反应时序。</EM_NexusSpine_RangedAdaptation.description>
+
+  <EM_NexusSpine_GeneAdaptation.label>中枢基因共鸣</EM_NexusSpine_GeneAdaptation.label>
+  <EM_NexusSpine_GeneAdaptation.description>适应性中枢脊椎正与强健的快速收缩肌基因产生共鸣，进一步强化宿主的近战生物力学。</EM_NexusSpine_GeneAdaptation.description>
+
+  <EM_AdaptiveNexusSpine.label>适应性中枢脊椎</EM_AdaptiveNexusSpine.label>
+  <EM_AdaptiveNexusSpine.labelNoun>适应性中枢脊椎</EM_AdaptiveNexusSpine.labelNoun>
+  <EM_AdaptiveNexusSpine.description>一条以自重构神经晶格为核心的合成脊椎。它充当覆盖全身的适应控制器，可分发强化协议，并根据宿主的状态、行动、基因和装备动态切换模块。</EM_AdaptiveNexusSpine.description>
+</LanguageData>

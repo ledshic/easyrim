@@ -12,5 +12,9 @@ _workshop/
 RimWorld-Data
 RimWorld-XMLs
 
+# Generated vanilla-game reference material. Track only its documentation.
+references/*
+!references/README.md
+
 # Local deployment helper script.
 deploy.ps1
