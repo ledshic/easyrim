@@ -13,6 +13,7 @@
 			<li Class="HediffCompProperties_GiveAbility">
 				<abilityDefs>
 					<li>ColonyRally</li>
+					<li>PioneerProclamation</li>
 				</abilityDefs>
 			</li>
 			<li Class="EasyMode.HediffCompProperties_GiveMultipleHediffs">

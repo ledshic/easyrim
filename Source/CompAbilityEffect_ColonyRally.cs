@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using RimWorld;
 using Verse;
 
@@ -52,6 +53,71 @@ namespace EasyMode
             {
                 if (throwMessages)
                     Messages.Message("EasyMode_RallyNoMap".Translate(),
+                        MessageTypeDefOf.RejectInput, historical: false);
+                return false;
+            }
+            return true;
+        }
+    }
+
+    public class CompProperties_PioneerProclamation : CompProperties_AbilityEffect
+    {
+        public CompProperties_PioneerProclamation()
+        {
+            compClass = typeof(CompAbilityEffect_PioneerProclamation);
+        }
+    }
+
+    public class CompAbilityEffect_PioneerProclamation : CompAbilityEffect
+    {
+        public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
+        {
+            Map map = parent.pawn.Map;
+            if (map == null)
+                return;
+
+            List<Pawn> pawns = map.mapPawns.SpawnedPawnsInFaction(Faction.OfPlayer);
+            int inspiredCount = 0;
+            foreach (Pawn pawn in pawns)
+            {
+                if (TryGrantAnyInspiration(pawn))
+                    inspiredCount++;
+            }
+
+            Messages.Message("PioneerProclamationApplied".Translate(inspiredCount, pawns.Count), MessageTypeDefOf.PositiveEvent);
+        }
+
+        private static bool TryGrantAnyInspiration(Pawn pawn)
+        {
+            if (pawn?.mindState?.inspirationHandler == null)
+                return false;
+
+            if (!pawn.RaceProps.Humanlike)
+                return false;
+
+            if (pawn.Inspired)
+                return false;
+
+            List<InspirationDef> inspirations = DefDatabase<InspirationDef>.AllDefsListForReading
+                .Where(def => def?.Worker != null && def.Worker.InspirationCanOccur(pawn))
+                .InRandomOrder()
+                .ToList();
+
+            foreach (InspirationDef inspiration in inspirations)
+            {
+                if (pawn.mindState.inspirationHandler.TryStartInspiration(inspiration))
+                    return true;
+            }
+
+            return false;
+        }
+
+        public override bool Valid(LocalTargetInfo target, bool throwMessages = false)
+        {
+            if (parent.pawn.Map == null)
+            {
+                if (throwMessages)
+                    Messages.Message("EasyMode_ProclamationNoMap".Translate(),
                         MessageTypeDefOf.RejectInput, historical: false);
                 return false;
             }

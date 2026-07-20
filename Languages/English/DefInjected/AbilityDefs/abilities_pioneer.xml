@@ -4,4 +4,6 @@
   <WorkGuidance.description>Urge the target to work harder for a period of time, increasing production efficiency.</WorkGuidance.description>
   <ColonyRally.label>colony mobilization</ColonyRally.label>
   <ColonyRally.description>Deliver a rousing mobilization speech to every colonist on the map, uniting them as one. Each member of the colony will be filled with renewed purpose, boosting their mood and working speed for a full day. A leader who knows when to call the colony together can turn the tide of even the darkest times.</ColonyRally.description>
+  <PioneerProclamation.label>pioneer proclamation</PioneerProclamation.label>
+  <PioneerProclamation.description>Issue a colony-wide proclamation that ignites frontier resolve. Every allied pawn on the map will attempt to gain a fitting inspiration, similar to Word of Inspiration.</PioneerProclamation.description>
 </LanguageData>

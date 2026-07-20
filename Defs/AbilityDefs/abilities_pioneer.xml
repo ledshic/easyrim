@@ -76,4 +76,33 @@
 			</li>
 		</comps>
 	</AbilityDef>
+	<AbilityDef>
+		<defName>PioneerProclamation</defName>
+		<label>pioneer proclamation</label>
+		<description>Issue a colony-wide proclamation that ignites everyone with frontier resolve. Every allied pawn on the map will attempt to receive a fitting inspiration, like a mass "Word of Inspiration".</description>
+		<iconPath>UI/Abilities/LeaderSpeech</iconPath>
+		<cooldownTicksRange>300000</cooldownTicksRange>
+		<hostile>false</hostile>
+		<targetRequired>false</targetRequired>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+		<sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
+		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+		<warmupStartSound>WorkDrive_Warmup</warmupStartSound>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<drawAimPie>false</drawAimPie>
+			<warmupTime>3.0</warmupTime>
+			<requireLineOfSight>false</requireLineOfSight>
+			<nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+			<targetable>false</targetable>
+			<targetParams>
+				<canTargetSelf>true</canTargetSelf>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="EasyMode.CompProperties_PioneerProclamation">
+			</li>
+		</comps>
+	</AbilityDef>
 </Defs>

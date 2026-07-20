@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
   <ColonyRallyApplied>{0}名殖民者响应了殖民地动员，万众一心！</ColonyRallyApplied>
+  <PioneerProclamationApplied>先驱宣言激励了{0}/{1}名殖民地成员，灵感如火蔓延！</PioneerProclamationApplied>
   <EasyMode_RallyNoMap>殖民地动员只能在地图上使用。</EasyMode_RallyNoMap>
+  <EasyMode_ProclamationNoMap>先驱宣言只能在地图上使用。</EasyMode_ProclamationNoMap>
 </LanguageData>

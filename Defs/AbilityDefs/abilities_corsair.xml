@@ -13,6 +13,9 @@
 		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
 		<cooldownTicksRange>18000</cooldownTicksRange>
 		<sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
+		<statBases>
+			<Ability_Duration>1800</Ability_Duration>
+		</statBases>
 		<verbProperties>
 			<verbClass>Verb_CastAbility</verbClass>
 			<drawAimPie>false</drawAimPie>
@@ -44,6 +47,9 @@
 		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
 		<cooldownTicksRange>24000</cooldownTicksRange>
 		<sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
+		<statBases>
+			<Ability_Duration>2400</Ability_Duration>
+		</statBases>
 		<verbProperties>
 			<verbClass>Verb_CastAbility</verbClass>
 			<drawAimPie>false</drawAimPie>

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
   <ColonyRallyApplied>{0} colonists mobilized as one!</ColonyRallyApplied>
+  <PioneerProclamationApplied>Pioneer proclamation inspired {0}/{1} colony members.</PioneerProclamationApplied>
   <EasyMode_RallyNoMap>Colony rally can only be used on a map.</EasyMode_RallyNoMap>
+  <EasyMode_ProclamationNoMap>Pioneer proclamation can only be used on a map.</EasyMode_ProclamationNoMap>
 </LanguageData>
