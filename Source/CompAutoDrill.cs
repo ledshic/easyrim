@@ -1,14 +1,32 @@
 using System;
+using System.Collections.Generic;
 using System.Reflection;
 using RimWorld;
+using UnityEngine;
 using Verse;
 
 namespace EasyMode
 {
+    public enum AutoDrillPowerMode
+    {
+        ExternalPower,
+        Solar
+    }
+
+    public enum AutoDrillOperatingMode
+    {
+        HighSpeed,
+        HighPrecision,
+        Safe
+    }
+
     public class CompProperties_AutoDrill : CompProperties
     {
         public int drillTicksPerWork = 120;
         public float resourceOutputMultiplier = 1f;
+        public float externalPowerConsumption = 1000f;
+        public float highPrecisionEfficiency = 1f / 3f;
+        public float safeEfficiency = 0.5f;
         public IntRange spawnIntervalRange = new IntRange(600, 1200);
         public float detectionRadius = 5f;
 
@@ -25,6 +43,8 @@ namespace EasyMode
 
         private int ticksUntilSpawn;
         private int workTickAccumulator;
+        private AutoDrillPowerMode powerMode = AutoDrillPowerMode.ExternalPower;
+        private AutoDrillOperatingMode operatingMode = AutoDrillOperatingMode.HighSpeed;
 
         private int cachedResourceTick = -1;
         private bool cachedHasResource;
@@ -33,6 +53,22 @@ namespace EasyMode
         private IntVec3 cachedCell;
 
         public CompProperties_AutoDrill Props => (CompProperties_AutoDrill)props;
+
+        private float DrillingEfficiency
+        {
+            get
+            {
+                switch (operatingMode)
+                {
+                    case AutoDrillOperatingMode.HighPrecision:
+                        return Mathf.Clamp01(Props.highPrecisionEfficiency);
+                    case AutoDrillOperatingMode.Safe:
+                        return Mathf.Clamp01(Props.safeEfficiency);
+                    default:
+                        return 1f;
+                }
+            }
+        }
 
         private float RoofedPowerOutputFactor
         {
@@ -81,6 +117,12 @@ namespace EasyMode
             {
                 ResetTimer();
                 TryRearmAfterRedeploy();
+            }
+
+            UpdatePowerConsumption();
+            if (operatingMode == AutoDrillOperatingMode.Safe)
+            {
+                ClearVanillaDeepDrillUsage();
             }
         }
 
@@ -185,7 +227,9 @@ namespace EasyMode
             int num = Math.Min(countPresent, resDef.deepCountPerPortion);
             parent.Map.deepResourceGrid.SetAt(cell, resDef, Math.Max(0, countPresent - num));
 
-            float adjustedYield = (float)num * Props.resourceOutputMultiplier * Find.Storyteller.difficulty.mineYieldFactor;
+            float adjustedYield = operatingMode == AutoDrillOperatingMode.HighPrecision
+                ? num
+                : (float)num * Props.resourceOutputMultiplier * Find.Storyteller.difficulty.mineYieldFactor;
             Thing obj = ThingMaker.MakeThing(resDef, (ThingDef)null);
             obj.stackCount = Math.Max(1, GenMath.RoundRandom(adjustedYield));
             GenPlace.TryPlaceThing(obj, parent.Position, parent.Map, ThingPlaceMode.Near, null, null, null, 1);
@@ -252,7 +296,7 @@ namespace EasyMode
 
         private bool CanDrillNow()
         {
-            if (!parent.Spawned || !HasSolarPowerNow())
+            if (!parent.Spawned || !HasRequiredPower())
                 return false;
 
             CompFlickable flickable = parent.GetComp<CompFlickable>();
@@ -269,9 +313,35 @@ namespace EasyMode
             return true;
         }
 
+        private bool HasRequiredPower()
+        {
+            if (powerMode == AutoDrillPowerMode.Solar)
+            {
+                return HasSolarPowerNow();
+            }
+
+            CompPowerTrader power = parent.GetComp<CompPowerTrader>();
+            return power != null && power.PowerOn;
+        }
+
+        private void UpdatePowerConsumption()
+        {
+            CompPowerTrader power = parent.GetComp<CompPowerTrader>();
+            if (power == null)
+            {
+                return;
+            }
+
+            power.PowerOutput = powerMode == AutoDrillPowerMode.ExternalPower
+                ? -Math.Abs(Props.externalPowerConsumption)
+                : 0f;
+        }
+
         public override void CompTick()
         {
             base.CompTick();
+
+            UpdatePowerConsumption();
 
             if (!CanDrillNow())
             {
@@ -279,8 +349,11 @@ namespace EasyMode
                 return;
             }
 
-            // Keep vanilla deep drill infestation eligibility in sync with auto-drill activity.
-            MarkVanillaDeepDrillUsedThisTick();
+            // Safe mode deliberately stays outside vanilla deep-drill infestation eligibility.
+            if (operatingMode != AutoDrillOperatingMode.Safe)
+            {
+                MarkVanillaDeepDrillUsedThisTick();
+            }
 
             workTickAccumulator++;
             int workTicks = Math.Max(1, Props.drillTicksPerWork);
@@ -288,7 +361,7 @@ namespace EasyMode
                 return;
 
             // Reduce by elapsed batched ticks to preserve the same overall timing as per-tick updates.
-            ticksUntilSpawn -= workTickAccumulator;
+            ticksUntilSpawn -= Math.Max(1, GenMath.RoundRandom(workTickAccumulator * DrillingEfficiency));
             workTickAccumulator = 0;
 
             if (ticksUntilSpawn <= 0)
@@ -303,6 +376,8 @@ namespace EasyMode
             base.PostExposeData();
             Scribe_Values.Look(ref ticksUntilSpawn, "ticksUntilSpawn", 0);
             Scribe_Values.Look(ref workTickAccumulator, "workTickAccumulator", 0);
+            Scribe_Values.Look(ref powerMode, "powerMode", AutoDrillPowerMode.ExternalPower);
+            Scribe_Values.Look(ref operatingMode, "operatingMode", AutoDrillOperatingMode.HighSpeed);
         }
 
         private void MarkVanillaDeepDrillUsedThisTick()
@@ -321,12 +396,81 @@ namespace EasyMode
             CompDeepDrillLastUsedTickField.SetValue(deepDrill, Find.TickManager.TicksGame);
         }
 
+        private void ClearVanillaDeepDrillUsage()
+        {
+            if (CompDeepDrillLastUsedTickField == null)
+            {
+                return;
+            }
+
+            CompDeepDrill deepDrill = parent.GetComp<CompDeepDrill>();
+            if (deepDrill != null)
+            {
+                CompDeepDrillLastUsedTickField.SetValue(deepDrill, Find.TickManager.TicksGame - GenDate.TicksPerDay);
+            }
+        }
+
+        public override IEnumerable<Gizmo> CompGetGizmosExtra()
+        {
+            foreach (Gizmo gizmo in base.CompGetGizmosExtra())
+            {
+                yield return gizmo;
+            }
+
+            yield return new Command_Action
+            {
+                defaultLabel = (powerMode == AutoDrillPowerMode.ExternalPower
+                    ? "AutoDrillPowerExternal"
+                    : "AutoDrillPowerSolar").Translate(),
+                defaultDesc = "AutoDrillPowerModeDesc".Translate(),
+                icon = ContentFinder<Texture2D>.Get("UI/Commands/TogglePower"),
+                action = delegate
+                {
+                    powerMode = powerMode == AutoDrillPowerMode.ExternalPower
+                        ? AutoDrillPowerMode.Solar
+                        : AutoDrillPowerMode.ExternalPower;
+                    UpdatePowerConsumption();
+                }
+            };
+
+            yield return new Command_Action
+            {
+                defaultLabel = OperatingModeLabel,
+                defaultDesc = "AutoDrillOperatingModeDesc".Translate(),
+                icon = ContentFinder<Texture2D>.Get("UI/Commands/ChangeStyle"),
+                action = delegate
+                {
+                    operatingMode = (AutoDrillOperatingMode)(((int)operatingMode + 1) % 3);
+                    if (operatingMode == AutoDrillOperatingMode.Safe)
+                    {
+                        ClearVanillaDeepDrillUsage();
+                    }
+                }
+            };
+        }
+
+        private string OperatingModeLabel
+        {
+            get
+            {
+                switch (operatingMode)
+                {
+                    case AutoDrillOperatingMode.HighPrecision:
+                        return "AutoDrillModeHighPrecision".Translate();
+                    case AutoDrillOperatingMode.Safe:
+                        return "AutoDrillModeSafe".Translate();
+                    default:
+                        return "AutoDrillModeHighSpeed".Translate();
+                }
+            }
+        }
+
         public override string CompInspectStringExtra()
         {
             if (!parent.Spawned)
                 return null;
 
-            if (!HasSolarPowerNow())
+            if (!HasRequiredPower())
                 return "AutoDrillStopped".Translate();
 
             CompFlickable flickable = parent.GetComp<CompFlickable>();
@@ -339,9 +483,14 @@ namespace EasyMode
 
             if (GetNextResource(out ThingDef resDef, out _, out _))
             {
+                int remainingTicks = Mathf.CeilToInt(ticksUntilSpawn / Math.Max(0.01f, DrillingEfficiency));
+                string powerLabel = (powerMode == AutoDrillPowerMode.ExternalPower
+                    ? "AutoDrillPowerExternal"
+                    : "AutoDrillPowerSolar").Translate();
                 return "AutoDrillWorking".Translate() + "\n" +
+                       powerLabel + " / " + OperatingModeLabel + "\n" +
                        "NextSpawnedItemIn".Translate(resDef.label) + " " +
-                       GenDate.ToStringTicksToPeriod(ticksUntilSpawn, allowSeconds: true, shortForm: false);
+                       GenDate.ToStringTicksToPeriod(remainingTicks, allowSeconds: true, shortForm: false);
             }
 
             return "AutoDrillStopped".Translate();

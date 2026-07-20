@@ -3,7 +3,7 @@
   <ThingDef ParentName="BuildingBase">
     <defName>AutoDrill</defName>
     <label>auto drill</label>
-    <description>An old-generation deep-crust auto drill designed for long-term unmanned operation. It runs on solar power, continuously mines underground veins based on ground-penetrating scanner results, and ejects processed ore directly. Because its legacy drilling algorithm cannot precisely strip fine mineral veins, unattended operation suffers significant material loss. When local deep resources are exhausted, it automatically powers down. Can be repositioned freely.</description>
+    <description>An old-generation deep-crust auto drill designed for long-term unmanned operation. It can switch between external power and solar power, and offers high-speed, high-precision, and safe drilling modes. It continuously mines underground veins based on ground-penetrating scanner results and ejects processed ore directly. When local deep resources are exhausted, it automatically powers down. Can be repositioned freely.</description>
     <graphicData>
       <graphicClass>Graphic_Single</graphicClass>
       <texPath>Things/Building/Production/DeepDrill</texPath>
@@ -63,11 +63,18 @@
     <comps>
       <li Class="CompProperties_Forbiddable"/>
       <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>1000</basePowerConsumption>
+      </li>
       <li Class="CompProperties_DeepDrill" />
       <li Class="CompProperties_CreatesInfestations" />
       <li Class="EasyMode.CompProperties_AutoDrill">
         <drillTicksPerWork>120</drillTicksPerWork>
         <resourceOutputMultiplier>0.35</resourceOutputMultiplier>
+        <externalPowerConsumption>1000</externalPowerConsumption>
+        <highPrecisionEfficiency>0.3333333</highPrecisionEfficiency>
+        <safeEfficiency>0.5</safeEfficiency>
         <detectionRadius>2.6</detectionRadius>
         <spawnIntervalRange>
           <min>600</min>

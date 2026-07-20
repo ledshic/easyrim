@@ -8,4 +8,11 @@
   <SwitchedOff>Switched off</SwitchedOff>
   <DeepDrillNoResources>No resources</DeepDrillNoResources>
   <AutoDrillDebugNoPower>Debug: No power component</AutoDrillDebugNoPower>
+  <AutoDrillPowerExternal>Power: External</AutoDrillPowerExternal>
+  <AutoDrillPowerSolar>Power: Solar</AutoDrillPowerSolar>
+  <AutoDrillPowerModeDesc>Switch the auto drill's power source. External power consumes 1000 W; solar power needs no grid connection, but only works in daylight without roof coverage.</AutoDrillPowerModeDesc>
+  <AutoDrillModeHighSpeed>Mode: High speed</AutoDrillModeHighSpeed>
+  <AutoDrillModeHighPrecision>Mode: High precision</AutoDrillModeHighPrecision>
+  <AutoDrillModeSafe>Mode: Safe</AutoDrillModeSafe>
+  <AutoDrillOperatingModeDesc>Cycle drilling modes. High speed retains the current speed and mineral loss; high precision recovers all minerals at 1/3 efficiency; safe mode retains mineral loss, runs at 1/2 efficiency, and cannot cause infestations.</AutoDrillOperatingModeDesc>
 </LanguageData>

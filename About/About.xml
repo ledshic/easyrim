@@ -13,7 +13,7 @@
 	- Adaptive nexus spine: a craftable implant that distributes enhancement branches and dynamically responds to health, combat, genes, and equipment.
 	- Brave Soul, Blood Essence Resonance, and Pioneer Spirit: powerful staged bonuses for combat, work, recovery, and survival.
 	- Hero abilities: healing, execution, resurrection, universal bloodfeeding, world-target transit, drop pods, work guidance, and a colony-wide rally.
-	- Buildings and crafting: an unattended solar auto drill, a buildable life-support power unit, batch components, neutroamine, synthread, and hyperweave.
+	- Buildings and crafting: an unattended selectable-power auto drill with three operating modes, a buildable life-support power unit, batch components, neutroamine, synthread, and hyperweave.
 	- Accelerated systems: biosculpter cycles, infinite chemreactor output, wastepack atomization, geothermal and ship-reactor power, plus deep scanning for tunneler mechs.
 
 	Most upgrades are delivered through Hediffs and Abilities. TraitDef currently contains no gameplay entries.
