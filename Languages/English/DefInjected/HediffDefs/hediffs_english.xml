@@ -62,4 +62,9 @@
   <WorkGuidance.description>After receiving precise guidance on work details and steps, work proficiency improves noticeably and learning accelerates sharply for a short time.</WorkGuidance.description>
   <WorkMotivation.label>united as one</WorkMotivation.label>
   <WorkMotivation.description>Galvanized by the colony mobilization call, this pawn works shoulder to shoulder with their comrades, throwing themselves into every task with exceptional drive and focus. The effect fades after one day.</WorkMotivation.description>
+  <EasyMode_NeuralOverclock.label>neural overclock</EasyMode_NeuralOverclock.label>
+  <EasyMode_NeuralOverclock.description>The nervous system and musculature are operating far beyond normal safety limits. Motion becomes explosively fast and precise while accumulating tissue strain across the body.</EasyMode_NeuralOverclock.description>
+  <EasyMode_NeuralOverclockStrain.label>overclock strain</EasyMode_NeuralOverclockStrain.label>
+  <EasyMode_NeuralOverclockStrain.labelNoun>an overclock strain</EasyMode_NeuralOverclockStrain.labelNoun>
+  <EasyMode_NeuralOverclockStrain.description>Localized neural and muscular damage caused by forcing the body beyond its safe operating limits.</EasyMode_NeuralOverclockStrain.description>
 </LanguageData>

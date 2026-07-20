@@ -20,4 +20,6 @@
 	<WorkGuidance.description>呼吁目标在一段时间内更加努力工作，提升生产效率。</WorkGuidance.description>
 	<ColonyRally.label>殖民地动员</ColonyRally.label>
 	<ColonyRally.description>向殖民地所有成员发表慷慨激昂的动员令，唤起众人的斗志与使命感，令全体殖民者万众一心。地图上每一位殖民者都将获得心情鼓舞，并在接下来的一天内以更高的热情投入工作。真正的领袖懂得在最艰难的时刻凝聚人心，将绝望化为前进的动力。</ColonyRally.description>
+	<EasyMode_NeuralOverclock.label>神经超频</EasyMode_NeuralOverclock.label>
+	<EasyMode_NeuralOverclock.description>在五秒内强迫神经系统与肌肉组织远超安全极限运转。移动速度、近战命中率与远程瞄准速度都会大幅提高，但超频会持续在身体各处造成组织损伤。</EasyMode_NeuralOverclock.description>
 </languageData>
