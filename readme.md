@@ -13,6 +13,7 @@ EasyRim is a deliberately overpowered RimWorld mod focused on stronger colonists
 - **Brave Soul:** staged vitality and combat bonuses with powerful regeneration and melee pressure.
 - **Blood Essence Resonance:** bonuses and penalties change dynamically with hemogen reserves across apex, flow, balance, ebb, and famine stages.
 - **Pioneer Spirit:** broad improvements to labor, hauling, shooting, recovery, and survival.
+- **Adaptive nexus spine:** a craftable artificial spine that distributes existing enhancement branches and dynamically responds to health, combat, genes, and equipped gear.
 
 ## Abilities
 

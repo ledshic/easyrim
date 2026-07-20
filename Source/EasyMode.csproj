@@ -5,36 +5,39 @@
 		<OutputType>Library</OutputType>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<LangVersion>latest</LangVersion>
+		<UseLocalRimWorldAssemblies Condition="Exists('../../../RimWorldWin64_Data/Managed/Assembly-CSharp.dll') Or Exists('../../../../Contents/Resources/Data/Managed/Assembly-CSharp.dll') Or Exists('$(RimWorldMacManagedDir)/Assembly-CSharp.dll')">true</UseLocalRimWorldAssemblies>
 	</PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="Lib.Harmony" Version="2.2.2" />
-		<PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.4817-beta" />
+		<PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.4817-beta" Condition="'$(UseLocalRimWorldAssemblies)' != 'true'" />
 		<PackageReference Include="RimWorld.MultiplayerAPI" Version="0.6.0" />
 	</ItemGroup>
 	<ItemGroup>
 		<Reference Include="Assembly-CSharp" Condition="Exists('../../../RimWorldWin64_Data/Managed/Assembly-CSharp.dll')">
 			<HintPath>../../../RimWorldWin64_Data/Managed/Assembly-CSharp.dll</HintPath>
+			<Private>false</Private>
 		</Reference>
 		<Reference Include="UnityEngine.CoreModule" Condition="Exists('../../../RimWorldWin64_Data/Managed/UnityEngine.CoreModule.dll')">
 			<HintPath>../../../RimWorldWin64_Data/Managed/UnityEngine.CoreModule.dll</HintPath>
+			<Private>false</Private>
 		</Reference>
 		<!-- Mac: inside app bundle (mod installed in Mods/) -->
 		<Reference Include="Assembly-CSharp-mac" Condition="'$(RimWorldMacManagedDir)' == '' And Exists('../../../../Contents/Resources/Data/Managed/Assembly-CSharp.dll')">
 			<HintPath>../../../../Contents/Resources/Data/Managed/Assembly-CSharp.dll</HintPath>
-			<Aliases>mac</Aliases>
+			<Private>false</Private>
 		</Reference>
 		<Reference Include="UnityEngine.CoreModule-mac" Condition="'$(RimWorldMacManagedDir)' == '' And Exists('../../../../Contents/Resources/Data/Managed/UnityEngine.CoreModule.dll')">
 			<HintPath>../../../../Contents/Resources/Data/Managed/UnityEngine.CoreModule.dll</HintPath>
-			<Aliases>mac</Aliases>
+			<Private>false</Private>
 		</Reference>
 		<!-- Mac: Steam installation detected via Directory.Build.props -->
 		<Reference Include="Assembly-CSharp-mac-steam" Condition="'$(RimWorldMacManagedDir)' != '' And Exists('$(RimWorldMacManagedDir)/Assembly-CSharp.dll')">
 			<HintPath>$(RimWorldMacManagedDir)/Assembly-CSharp.dll</HintPath>
-			<Aliases>mac</Aliases>
+			<Private>false</Private>
 		</Reference>
 		<Reference Include="UnityEngine.CoreModule-mac-steam" Condition="'$(RimWorldMacManagedDir)' != '' And Exists('$(RimWorldMacManagedDir)/UnityEngine.CoreModule.dll')">
 			<HintPath>$(RimWorldMacManagedDir)/UnityEngine.CoreModule.dll</HintPath>
-			<Aliases>mac</Aliases>
+			<Private>false</Private>
 		</Reference>
 	</ItemGroup>
 	<Target Name="CopyToModFolder" AfterTargets="Build">
