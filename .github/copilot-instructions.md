@@ -1,6 +1,6 @@
 # Repository Instructions
 
-- Store all decompile reference files under `_decompile/`.
-- When creating or refreshing a temporary decompile reference, write it directly into `_decompile/` instead of the repository root.
-- Name decompile files after the type or symbol they represent, for example `_decompile/HediffDef.cs`.
-- Treat files in `_decompile/` as reference material only unless the user explicitly asks to move code into the production source tree.
+- Store generated vanilla-game reference files under `references/`.
+- Put decompiled sources in `references/decompiled/` and extracted Simplified Chinese language packs in `references/chinese-simplified/`.
+- Track `references/README.md`, but do not track generated files inside the reference subdirectories.
+- Treat files in `references/` as reference material only unless the user explicitly asks to move code into the production source tree.
