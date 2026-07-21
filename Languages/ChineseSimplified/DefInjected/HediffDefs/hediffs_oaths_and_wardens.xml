@@ -10,6 +10,12 @@
 	<archotechoath_command.description>沉着措辞与稳定气场能安定同伴，并在交涉中逐步占据主动。</archotechoath_command.description>
 	<archotechoath_aegis.label>自修护壁</archotechoath_aegis.label>
 	<archotechoath_aegis.description>微型机械体优先维持结构完整，在高压环境下加速恢复并强化防护。</archotechoath_aegis.description>
+	<archotechoath_labsync.label>研作同调协议</archotechoath_labsync.label>
+	<archotechoath_labsync.description>脱离正面战斗后，认知例程会锁定研究与精密工艺吞吐，持续抬升后勤效率。</archotechoath_labsync.description>
+	<archotechoath_warprotocol.label>战协晶格</archotechoath_warprotocol.label>
+	<archotechoath_warprotocol.description>战场遥测将认知算力导入瞄准、位移预判与损伤控制回路，形成战斗态协议。</archotechoath_warprotocol.description>
+	<archotechoath_emergency_bulkhead.label>紧急隔舱</archotechoath_emergency_bulkhead.label>
+	<archotechoath_emergency_bulkhead.description>当完整性下降到危险区间，应急装甲与创伤分流会强制进入硬抗生存状态。</archotechoath_emergency_bulkhead.description>
 
 	<frontierwarden.label>&lt;color=#6B8E23&gt;边疆守望&lt;/color&gt;</frontierwarden.label>
 	<frontierwarden.description>在严酷边地与更严酷职责中淬炼而成，此道统将宿主塑造成殖民地的屏障。其侦察更远、射击更稳、救治更快，并能在防线将崩之处稳住全局。</frontierwarden.description>
@@ -21,4 +27,16 @@
 	<frontierwarden_fieldsurgeon.description>分诊直觉与稳定手法让宿主在漫长战役中持续维系队伍战力。</frontierwarden_fieldsurgeon.description>
 	<frontierwarden_breachfighter.label>破阵意志</frontierwarden_breachfighter.label>
 	<frontierwarden_breachfighter.description>近距突击的凶猛与顽强抗压能力，使其能在混战中牢牢顶住战线。</frontierwarden_breachfighter.description>
+	<frontierwarden_overwatch_matrix.label>警戒火网矩阵</frontierwarden_overwatch_matrix.label>
+	<frontierwarden_overwatch_matrix.description>进入警戒火力模式后，远程节奏与火线压制能力会显著提高。</frontierwarden_overwatch_matrix.description>
+	<frontierwarden_breach_rampage.label>破阵狂袭</frontierwarden_breach_rampage.label>
+	<frontierwarden_breach_rampage.description>近战破阵姿态会放弃保守换取暴力突破与持续近距压制。</frontierwarden_breach_rampage.description>
+	<frontierwarden_camp_triage.label>营地分诊指挥</frontierwarden_camp_triage.label>
+	<frontierwarden_camp_triage.description>脱离交火后切换为后勤救治模式，提升稳定伤员与持续恢复能力。</frontierwarden_camp_triage.description>
+	<archotech_protocol_surge.label>协议超涌</archotech_protocol_surge.label>
+	<archotech_protocol_surge.description>短时过载远古机誓主控例程，在战斗与生产端同时拉升峰值吞吐。</archotech_protocol_surge.description>
+	<archotech_lockstep_marked.label>协锁标定</archotech_lockstep_marked.label>
+	<archotech_lockstep_marked.description>目标被远古遥测协锁，机动与防御节奏遭到压制，更易承受后续打击。</archotech_lockstep_marked.description>
+	<frontier_bulwark_pulse.label>壁垒脉冲</frontier_bulwark_pulse.label>
+	<frontier_bulwark_pulse.description>守望脉冲会强化姿态与反应速度，短时提高防线维持能力。</frontier_bulwark_pulse.description>
 </LanguageData>

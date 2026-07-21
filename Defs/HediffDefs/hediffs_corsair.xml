@@ -14,6 +14,7 @@
 				<abilityDefs>
 					<li>CorsairBroadside</li>
 					<li>CorsairPlunderMark</li>
+					<li>CorsairCutthroatRush</li>
 				</abilityDefs>
 			</li>
 			<li Class="EasyMode.HediffCompProperties_GiveMultipleHediffs">
@@ -37,6 +38,27 @@
 						<severity>1.0</severity>
 					</li>
 				</hediffsToGive>
+			</li>
+			<li Class="EasyMode.HediffCompProperties_ConditionalHediffDistributor">
+				<checkIntervalTicks>90</checkIntervalTicks>
+				<rules>
+					<li>
+						<key>corsair-ranged-posture</key>
+						<activeHediff>corsaircreed_gunner_posture</activeHediff>
+						<activeSeverity>1.0</activeSeverity>
+						<anyEquipmentTags>
+							<li>Ranged</li>
+						</anyEquipmentTags>
+						<inCombat>Required</inCombat>
+					</li>
+					<li>
+						<key>corsair-last-stand-frenzy</key>
+						<activeHediff>corsaircreed_marauder_frenzy</activeHediff>
+						<activeSeverity>1.0</activeSeverity>
+						<healthPercent>0~0.45</healthPercent>
+						<inCombat>Required</inCombat>
+					</li>
+				</rules>
 			</li>
 		</comps>
 	</HediffDef>
@@ -110,9 +132,9 @@
 					<CarryingCapacity>90</CarryingCapacity>
 				</statOffsets>
 				<statFactors>
-					<CarryingCapacity>1.7</CarryingCapacity>
-					<WorkSpeedGlobal>1.2</WorkSpeedGlobal>
-					<GeneralLaborSpeed>1.4</GeneralLaborSpeed>
+					<CarryingCapacity>1.9</CarryingCapacity>
+					<WorkSpeedGlobal>1.35</WorkSpeedGlobal>
+					<GeneralLaborSpeed>1.6</GeneralLaborSpeed>
 				</statFactors>
 			</li>
 		</stages>
@@ -127,13 +149,51 @@
 		<isBad>false</isBad>
 		<stages>
 			<li>
-				<painFactor>0.6</painFactor>
+				<painFactor>0.5</painFactor>
 				<statOffsets>
 					<MentalBreakThreshold>-0.25</MentalBreakThreshold>
 				</statOffsets>
 				<statFactors>
-					<SocialImpact>1.35</SocialImpact>
-					<IncomingDamageFactor>0.8</IncomingDamageFactor>
+					<SocialImpact>1.45</SocialImpact>
+					<IncomingDamageFactor>0.75</IncomingDamageFactor>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>corsaircreed_gunner_posture</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>deck gunnery posture</label>
+		<description>The host enters a stabilized gunnery stance during live exchanges, sacrificing subtlety for relentless ranged pressure.</description>
+		<defaultLabelColor>(183,65,14)</defaultLabelColor>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<statFactors>
+					<ShootingAccuracyPawn>1.45</ShootingAccuracyPawn>
+					<RangedCooldownFactor>0.58</RangedCooldownFactor>
+					<AimingDelayFactor>0.55</AimingDelayFactor>
+					<MoveSpeed>0.95</MoveSpeed>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+	<HediffDef>
+		<defName>corsaircreed_marauder_frenzy</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>marauder frenzy</label>
+		<description>At critical health in close battle, the corsair doctrine abandons restraint and forces a lethal surge.</description>
+		<defaultLabelColor>(183,65,14)</defaultLabelColor>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<statFactors>
+					<MeleeDamageFactor>1.65</MeleeDamageFactor>
+					<MeleeCooldownFactor>0.52</MeleeCooldownFactor>
+					<MeleeHitChance>1.35</MeleeHitChance>
+					<MoveSpeed>1.28</MoveSpeed>
+					<IncomingDamageFactor>1.15</IncomingDamageFactor>
 				</statFactors>
 			</li>
 		</stages>
@@ -149,6 +209,32 @@
 		<maxSeverity>1.0</maxSeverity>
 		<comps>
 			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>2100</disappearsAfterTicks>
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<statFactors>
+					<ShootingAccuracyPawn>1.6</ShootingAccuracyPawn>
+					<RangedCooldownFactor>0.35</RangedCooldownFactor>
+					<AimingDelayFactor>0.42</AimingDelayFactor>
+					<MoveSpeed>1.2</MoveSpeed>
+					<IncomingDamageFactor>1.28</IncomingDamageFactor>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+	<HediffDef>
+		<defName>corsair_cutthroat_rush</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>cutthroat rush</label>
+		<description>The host commits to a savage boarding sprint. Pursuit and close-range lethality spike at the cost of tactical exposure.</description>
+		<defaultLabelColor>(183,65,14)</defaultLabelColor>
+		<isBad>false</isBad>
+		<maxSeverity>1.0</maxSeverity>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
 				<disappearsAfterTicks>1800</disappearsAfterTicks>
 				<showRemainingTime>true</showRemainingTime>
 			</li>
@@ -156,11 +242,11 @@
 		<stages>
 			<li>
 				<statFactors>
-					<ShootingAccuracyPawn>1.35</ShootingAccuracyPawn>
-					<RangedCooldownFactor>0.55</RangedCooldownFactor>
-					<AimingDelayFactor>0.55</AimingDelayFactor>
-					<MoveSpeed>1.15</MoveSpeed>
-					<IncomingDamageFactor>1.15</IncomingDamageFactor>
+					<MoveSpeed>1.5</MoveSpeed>
+					<MeleeDamageFactor>1.55</MeleeDamageFactor>
+					<MeleeCooldownFactor>0.55</MeleeCooldownFactor>
+					<MeleeHitChance>1.3</MeleeHitChance>
+					<IncomingDamageFactor>1.3</IncomingDamageFactor>
 				</statFactors>
 			</li>
 		</stages>
@@ -182,9 +268,9 @@
 		<stages>
 			<li>
 				<statFactors>
-					<MoveSpeed>0.75</MoveSpeed>
-					<MeleeDodgeChance>0.7</MeleeDodgeChance>
-					<IncomingDamageFactor>1.2</IncomingDamageFactor>
+					<MoveSpeed>0.68</MoveSpeed>
+					<MeleeDodgeChance>0.62</MeleeDodgeChance>
+					<IncomingDamageFactor>1.3</IncomingDamageFactor>
 				</statFactors>
 			</li>
 		</stages>

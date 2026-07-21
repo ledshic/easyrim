@@ -11,10 +11,10 @@
 		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
 		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
 		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
-		<cooldownTicksRange>18000</cooldownTicksRange>
+		<cooldownTicksRange>15000</cooldownTicksRange>
 		<sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
 		<statBases>
-			<Ability_Duration>1800</Ability_Duration>
+			<Ability_Duration>2100</Ability_Duration>
 		</statBases>
 		<verbProperties>
 			<verbClass>Verb_CastAbility</verbClass>
@@ -45,10 +45,10 @@
 		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
 		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
 		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
-		<cooldownTicksRange>24000</cooldownTicksRange>
+		<cooldownTicksRange>20000</cooldownTicksRange>
 		<sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
 		<statBases>
-			<Ability_Duration>2400</Ability_Duration>
+			<Ability_Duration>3000</Ability_Duration>
 		</statBases>
 		<verbProperties>
 			<verbClass>Verb_CastAbility</verbClass>
@@ -68,6 +68,41 @@
 				<compClass>CompAbilityEffect_GiveHediff</compClass>
 				<hediffDef>corsair_plunder_marked</hediffDef>
 				<onlyBrain>false</onlyBrain>
+				<applicableToMechs>false</applicableToMechs>
+				<canTargetBaby>false</canTargetBaby>
+			</li>
+		</comps>
+	</AbilityDef>
+	<AbilityDef>
+		<defName>CorsairCutthroatRush</defName>
+		<label>cutthroat rush</label>
+		<description>Commit to a savage boarding sprint. You gain brutal close-range momentum at the cost of higher exposure.</description>
+		<iconPath>UI/Abilities/LeaderSpeech</iconPath>
+		<showPsycastEffects>false</showPsycastEffects>
+		<hostile>false</hostile>
+		<targetRequired>false</targetRequired>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+		<cooldownTicksRange>16000</cooldownTicksRange>
+		<sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
+		<statBases>
+			<Ability_Duration>1800</Ability_Duration>
+		</statBases>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<drawAimPie>false</drawAimPie>
+			<warmupTime>1.0</warmupTime>
+			<targetable>false</targetable>
+			<targetParams>
+				<canTargetSelf>true</canTargetSelf>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="CompProperties_AbilityGiveHediff">
+				<compClass>CompAbilityEffect_GiveHediff</compClass>
+				<hediffDef>corsair_cutthroat_rush</hediffDef>
+				<onlyApplyToSelf>true</onlyApplyToSelf>
 				<applicableToMechs>false</applicableToMechs>
 				<canTargetBaby>false</canTargetBaby>
 			</li>

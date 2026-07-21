@@ -105,4 +105,42 @@
 			</li>
 		</comps>
 	</AbilityDef>
+	<AbilityDef>
+		<defName>PioneerFrontierEdict</defName>
+		<label>frontier edict</label>
+		<description>Issue a rapid-response frontier doctrine pulse to yourself, boosting movement, labor throughput, and weapon cadence for a short critical window.</description>
+		<iconPath>UI/Abilities/WorkDrive</iconPath>
+		<showPsycastEffects>false</showPsycastEffects>
+		<hostile>false</hostile>
+		<targetRequired>false</targetRequired>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+		<sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
+		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+		<warmupStartSound>WorkDrive_Warmup</warmupStartSound>
+		<cooldownTicksRange>16000</cooldownTicksRange>
+		<statBases>
+			<Ability_Duration>2400</Ability_Duration>
+		</statBases>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<drawAimPie>false</drawAimPie>
+			<warmupTime>1.5</warmupTime>
+			<requireLineOfSight>false</requireLineOfSight>
+			<nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+			<targetable>false</targetable>
+			<targetParams>
+				<canTargetSelf>true</canTargetSelf>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="CompProperties_AbilityGiveHediff">
+				<compClass>CompAbilityEffect_GiveHediff</compClass>
+				<hediffDef>pioneer_frontier_edict</hediffDef>
+				<onlyApplyToSelf>true</onlyApplyToSelf>
+				<applicableToMechs>false</applicableToMechs>
+				<canTargetBaby>false</canTargetBaby>
+			</li>
+		</comps>
+	</AbilityDef>
 </Defs>

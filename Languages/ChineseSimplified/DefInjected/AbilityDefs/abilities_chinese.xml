@@ -22,6 +22,8 @@
 	<ColonyRally.description>向殖民地所有成员发表慷慨激昂的动员令，唤起众人的斗志与使命感，令全体殖民者万众一心。地图上每一位殖民者都将获得心情鼓舞，并在接下来的一天内以更高的热情投入工作。真正的领袖懂得在最艰难的时刻凝聚人心，将绝望化为前进的动力。</ColonyRally.description>
 	<PioneerProclamation.label>先驱宣言</PioneerProclamation.label>
 	<PioneerProclamation.description>发布覆盖全殖民地的先驱宣言，点燃每一位同盟成员的开拓意志。地图上的每个己方 pawn 都会尝试获得一个契合自身的灵感，效果类似灵能能力“启迪之语”。</PioneerProclamation.description>
+	<PioneerFrontierEdict.label>边境敕令</PioneerFrontierEdict.label>
+	<PioneerFrontierEdict.description>向自身发布紧急边境敕令，在短时间内提升机动、劳动吞吐与武器节奏以应对高压局面。</PioneerFrontierEdict.description>
 	<EasyMode_NeuralOverclock.label>神经超频</EasyMode_NeuralOverclock.label>
 	<EasyMode_NeuralOverclock.description>在五秒内强迫神经系统与肌肉组织远超安全极限运转。移动速度、近战命中率与远程瞄准速度都会大幅提高，但超频会持续在身体各处造成组织损伤。</EasyMode_NeuralOverclock.description>
 </languageData>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<AbilityDef>
+		<defName>CrimsonBloodrush</defName>
+		<label>bloodrush surge</label>
+		<description>Force your bloodline into an aggressive overdrive. Melee lethality and speed surge for a short duration while incoming risk increases.</description>
+		<iconPath>UI/Abilities/MarksmanCommand</iconPath>
+		<showPsycastEffects>false</showPsycastEffects>
+		<hostile>false</hostile>
+		<targetRequired>false</targetRequired>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+		<cooldownTicksRange>17000</cooldownTicksRange>
+		<sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
+		<statBases>
+			<Ability_Duration>2400</Ability_Duration>
+		</statBases>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<drawAimPie>false</drawAimPie>
+			<warmupTime>1.1</warmupTime>
+			<targetable>false</targetable>
+			<targetParams>
+				<canTargetSelf>true</canTargetSelf>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="CompProperties_AbilityGiveHediff">
+				<compClass>CompAbilityEffect_GiveHediff</compClass>
+				<hediffDef>crimson_bloodrush_surge</hediffDef>
+				<onlyApplyToSelf>true</onlyApplyToSelf>
+				<applicableToMechs>false</applicableToMechs>
+				<canTargetBaby>false</canTargetBaby>
+			</li>
+		</comps>
+	</AbilityDef>
+	<AbilityDef>
+		<defName>CrimsonSovereignGaze</defName>
+		<label>sovereign gaze</label>
+		<description>Impose aristocratic predatory pressure on a target, slowing movement and weakening evasive posture.</description>
+		<iconPath>UI/Abilities/LeaderSpeech</iconPath>
+		<showPsycastEffects>false</showPsycastEffects>
+		<hostile>true</hostile>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+		<cooldownTicksRange>21000</cooldownTicksRange>
+		<sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
+		<statBases>
+			<Ability_Duration>3000</Ability_Duration>
+		</statBases>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<drawAimPie>false</drawAimPie>
+			<range>24.9</range>
+			<warmupTime>1.4</warmupTime>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetAnimals>true</canTargetAnimals>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetMechs>false</canTargetMechs>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="CompProperties_AbilityGiveHediff">
+				<compClass>CompAbilityEffect_GiveHediff</compClass>
+				<hediffDef>crimson_sovereign_gaze_marked</hediffDef>
+				<onlyBrain>false</onlyBrain>
+				<applicableToMechs>false</applicableToMechs>
+				<canTargetBaby>false</canTargetBaby>
+			</li>
+		</comps>
+	</AbilityDef>
+</Defs>

@@ -10,6 +10,12 @@
 		<maxSeverity>1.0</maxSeverity>
 		<isBad>false</isBad>
 		<comps>
+			<li Class="HediffCompProperties_GiveAbility">
+				<abilityDefs>
+					<li>ArchotechProtocolSurge</li>
+					<li>ArchotechLockstep</li>
+				</abilityDefs>
+			</li>
 			<li Class="EasyMode.HediffCompProperties_GiveMultipleHediffs">
 				<atSeverity>0</atSeverity>
 				<disappearsAfterGiving>false</disappearsAfterGiving>
@@ -31,6 +37,29 @@
 						<severity>1.0</severity>
 					</li>
 				</hediffsToGive>
+			</li>
+			<li Class="EasyMode.HediffCompProperties_ConditionalHediffDistributor">
+				<checkIntervalTicks>90</checkIntervalTicks>
+				<rules>
+					<li>
+						<key>oath-labsync</key>
+						<activeHediff>archotechoath_labsync</activeHediff>
+						<activeSeverity>1.0</activeSeverity>
+						<drafted>Forbidden</drafted>
+					</li>
+					<li>
+						<key>oath-warprotocol</key>
+						<activeHediff>archotechoath_warprotocol</activeHediff>
+						<activeSeverity>1.0</activeSeverity>
+						<inCombat>Required</inCombat>
+					</li>
+					<li>
+						<key>oath-emergency-bulkhead</key>
+						<activeHediff>archotechoath_emergency_bulkhead</activeHediff>
+						<activeSeverity>1.0</activeSeverity>
+						<healthPercent>0~0.5</healthPercent>
+					</li>
+				</rules>
 			</li>
 		</comps>
 	</HediffDef>
@@ -149,6 +178,66 @@
 	</HediffDef>
 
 	<HediffDef>
+		<defName>archotechoath_labsync</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>lab sync protocol</label>
+		<description>Out of direct combat, cognitive routines lock onto research and precision craft throughput.</description>
+		<defaultLabelColor>(212,175,55)</defaultLabelColor>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<statFactors>
+					<ResearchSpeed>1.75</ResearchSpeed>
+					<GlobalLearningFactor>1.6</GlobalLearningFactor>
+					<ConstructionSpeed>1.5</ConstructionSpeed>
+					<WorkSpeedGlobal>1.45</WorkSpeedGlobal>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+	<HediffDef>
+		<defName>archotechoath_warprotocol</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>warprotocol lattice</label>
+		<description>Combat telemetry routes cognition into targeting, movement prediction, and damage control loops.</description>
+		<defaultLabelColor>(212,175,55)</defaultLabelColor>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<statFactors>
+					<ShootingAccuracyPawn>1.4</ShootingAccuracyPawn>
+					<AimingDelayFactor>0.62</AimingDelayFactor>
+					<RangedCooldownFactor>0.62</RangedCooldownFactor>
+					<MeleeHitChance>1.3</MeleeHitChance>
+					<IncomingDamageFactor>0.72</IncomingDamageFactor>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+	<HediffDef>
+		<defName>archotechoath_emergency_bulkhead</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>emergency bulkhead</label>
+		<description>When integrity falls, contingency armor and trauma routing force a stubborn survival state.</description>
+		<defaultLabelColor>(212,175,55)</defaultLabelColor>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<regeneration>65</regeneration>
+				<painFactor>0.3</painFactor>
+				<statOffsets>
+					<ArmorRating_Blunt>0.35</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
+					<ArmorRating_Heat>0.35</ArmorRating_Heat>
+				</statOffsets>
+				<statFactors>
+					<IncomingDamageFactor>0.58</IncomingDamageFactor>
+					<MoveSpeed>0.95</MoveSpeed>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+	<HediffDef>
 		<defName>frontierwarden</defName>
 		<hediffClass>Hediff_High</hediffClass>
 		<label>frontier warden</label>
@@ -158,6 +247,11 @@
 		<maxSeverity>1.0</maxSeverity>
 		<isBad>false</isBad>
 		<comps>
+			<li Class="HediffCompProperties_GiveAbility">
+				<abilityDefs>
+					<li>FrontierBulwarkPulse</li>
+				</abilityDefs>
+			</li>
 			<li Class="EasyMode.HediffCompProperties_GiveMultipleHediffs">
 				<atSeverity>0</atSeverity>
 				<disappearsAfterGiving>false</disappearsAfterGiving>
@@ -180,7 +274,90 @@
 					</li>
 				</hediffsToGive>
 			</li>
+			<li Class="EasyMode.HediffCompProperties_ConditionalHediffDistributor">
+				<checkIntervalTicks>90</checkIntervalTicks>
+				<rules>
+					<li>
+						<key>warden-overwatch-matrix</key>
+						<activeHediff>frontierwarden_overwatch_matrix</activeHediff>
+						<activeSeverity>1.0</activeSeverity>
+						<anyEquipmentTags>
+							<li>Ranged</li>
+						</anyEquipmentTags>
+						<inCombat>Required</inCombat>
+					</li>
+					<li>
+						<key>warden-breach-rampage</key>
+						<activeHediff>frontierwarden_breach_rampage</activeHediff>
+						<activeSeverity>1.0</activeSeverity>
+						<anyEquipmentTags>
+							<li>Melee</li>
+						</anyEquipmentTags>
+						<inCombat>Required</inCombat>
+					</li>
+					<li>
+						<key>warden-camp-triage</key>
+						<activeHediff>frontierwarden_camp_triage</activeHediff>
+						<activeSeverity>1.0</activeSeverity>
+						<drafted>Forbidden</drafted>
+					</li>
+				</rules>
+			</li>
 		</comps>
+	</HediffDef>
+	<HediffDef>
+		<defName>frontierwarden_overwatch_matrix</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>overwatch matrix</label>
+		<description>Disciplined overwatch mode refines ranged cadence and exposes targets for line-breaking volleys.</description>
+		<defaultLabelColor>(107,142,35)</defaultLabelColor>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<statFactors>
+					<ShootingAccuracyPawn>1.45</ShootingAccuracyPawn>
+					<RangedCooldownFactor>0.56</RangedCooldownFactor>
+					<AimingDelayFactor>0.56</AimingDelayFactor>
+					<MoveSpeed>1.0</MoveSpeed>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+	<HediffDef>
+		<defName>frontierwarden_breach_rampage</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>breach rampage</label>
+		<description>Melee breach posture trades caution for violent breakthrough and sustained close-quarters pressure.</description>
+		<defaultLabelColor>(107,142,35)</defaultLabelColor>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<statFactors>
+					<MeleeDamageFactor>1.55</MeleeDamageFactor>
+					<MeleeArmorPenetration>1.5</MeleeArmorPenetration>
+					<MeleeCooldownFactor>0.58</MeleeCooldownFactor>
+					<IncomingDamageFactor>1.15</IncomingDamageFactor>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+	<HediffDef>
+		<defName>frontierwarden_camp_triage</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>camp triage command</label>
+		<description>Between firefights, the warden shifts to logistics medicine and rapid stabilization of wounded allies.</description>
+		<defaultLabelColor>(107,142,35)</defaultLabelColor>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<statFactors>
+					<MedicalTendQuality>1.65</MedicalTendQuality>
+					<ImmunityGainSpeed>1.55</ImmunityGainSpeed>
+					<InjuryHealingFactor>1.55</InjuryHealingFactor>
+					<WorkSpeedGlobal>1.3</WorkSpeedGlobal>
+				</statFactors>
+			</li>
+		</stages>
 	</HediffDef>
 	<HediffDef>
 		<defName>frontierwarden_pathfinder</defName>
@@ -281,6 +458,83 @@
 					<MeleeArmorPenetration>1.6</MeleeArmorPenetration>
 					<MeleeCooldownFactor>0.55</MeleeCooldownFactor>
 					<IncomingDamageFactor>0.7</IncomingDamageFactor>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+	<HediffDef>
+		<defName>archotech_protocol_surge</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>protocol surge</label>
+		<description>Short-term overclock of archotech governance routines for peak combat and production output.</description>
+		<defaultLabelColor>(212,175,55)</defaultLabelColor>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>2400</disappearsAfterTicks>
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<statFactors>
+					<WorkSpeedGlobal>1.6</WorkSpeedGlobal>
+					<ResearchSpeed>1.75</ResearchSpeed>
+					<RangedCooldownFactor>0.62</RangedCooldownFactor>
+					<AimingDelayFactor>0.62</AimingDelayFactor>
+					<IncomingDamageFactor>1.18</IncomingDamageFactor>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+	<HediffDef>
+		<defName>archotech_lockstep_marked</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>lockstep marked</label>
+		<description>The target is prediction-locked by archotech telemetry, degrading movement and defensive timing.</description>
+		<defaultLabelColor>(212,175,55)</defaultLabelColor>
+		<isBad>true</isBad>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>2400</disappearsAfterTicks>
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<statFactors>
+					<MoveSpeed>0.7</MoveSpeed>
+					<MeleeDodgeChance>0.58</MeleeDodgeChance>
+					<IncomingDamageFactor>1.3</IncomingDamageFactor>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+	<HediffDef>
+		<defName>frontier_bulwark_pulse</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>bulwark pulse</label>
+		<description>Warden pulse hardens posture and response speed for holding unstable defensive lines.</description>
+		<defaultLabelColor>(107,142,35)</defaultLabelColor>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>2100</disappearsAfterTicks>
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<statOffsets>
+					<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0.3</ArmorRating_Sharp>
+				</statOffsets>
+				<statFactors>
+					<IncomingDamageFactor>0.62</IncomingDamageFactor>
+					<MeleeCooldownFactor>0.65</MeleeCooldownFactor>
+					<RangedCooldownFactor>0.68</RangedCooldownFactor>
+					<AimingDelayFactor>0.68</AimingDelayFactor>
+					<MoveSpeed>1.22</MoveSpeed>
 				</statFactors>
 			</li>
 		</stages>

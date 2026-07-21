@@ -10,8 +10,14 @@
 	<corsaircreed_scavenger.description>以战利品为导向的本能提升了负重搬运、搜刮效率与战后回收速度。</corsaircreed_scavenger.description>
 	<corsaircreed_blackflag.label>黑旗悍意</corsaircreed_blackflag.label>
 	<corsaircreed_blackflag.description>掠夺者的胆魄会钝化恐惧与痛感，使宿主在他人退缩时依旧维持侵略性。</corsaircreed_blackflag.description>
+	<corsaircreed_gunner_posture.label>甲板枪姿</corsaircreed_gunner_posture.label>
+	<corsaircreed_gunner_posture.description>在实战交火中进入稳定枪姿，牺牲隐蔽与机动细节，换取持续火力压制。</corsaircreed_gunner_posture.description>
+	<corsaircreed_marauder_frenzy.label>劫掠狂潮</corsaircreed_marauder_frenzy.label>
+	<corsaircreed_marauder_frenzy.description>当生命降至临界并仍处近战时，星匪信条会抛弃克制并强推致命反扑。</corsaircreed_marauder_frenzy.description>
 	<corsair_broadside_overdrive.label>舷炮过载</corsair_broadside_overdrive.label>
 	<corsair_broadside_overdrive.description>将作战节奏强行压入短时高烈度齐射循环。射击节奏与瞄准速度显著提升，但暴露风险也会同步上升。</corsair_broadside_overdrive.description>
+	<corsair_cutthroat_rush.label>割喉突袭</corsair_cutthroat_rush.label>
+	<corsair_cutthroat_rush.description>强行进入凶暴接舷冲刺。追击速度与近距杀伤陡升，但战术暴露也随之上升。</corsair_cutthroat_rush.description>
 	<corsair_plunder_marked.label>掠夺标记</corsair_plunder_marked.label>
 	<corsair_plunder_marked.description>目标被标注为优先战利品，行动与临战姿态受到扰乱，更易被迅速击倒。</corsair_plunder_marked.description>
 </LanguageData>

@@ -10,6 +10,12 @@
 		<maxSeverity>1.0</maxSeverity>
 		<isBad>false</isBad>
 		<comps>
+			<li Class="HediffCompProperties_GiveAbility">
+				<abilityDefs>
+					<li>CrimsonBloodrush</li>
+					<li>CrimsonSovereignGaze</li>
+				</abilityDefs>
+			</li>
 			<li Class="EasyMode.HediffCompProperties_GiveMultipleHediffs">
 				<atSeverity>0</atSeverity>
 				<disappearsAfterGiving>false</disappearsAfterGiving>
@@ -32,7 +38,93 @@
 					</li>
 				</hediffsToGive>
 			</li>
+			<li Class="EasyMode.HediffCompProperties_ConditionalHediffDistributor">
+				<checkIntervalTicks>90</checkIntervalTicks>
+				<rules>
+					<li>
+						<key>crimson-bloodfrenzy</key>
+						<activeHediff>crimsondynasty_bloodfrenzy</activeHediff>
+						<activeSeverity>1.0</activeSeverity>
+						<healthPercent>0~0.45</healthPercent>
+						<inCombat>Required</inCombat>
+					</li>
+					<li>
+						<key>crimson-noble-poise</key>
+						<activeHediff>crimsondynasty_noble_poise</activeHediff>
+						<activeSeverity>1.0</activeSeverity>
+						<healthPercent>0.8~1</healthPercent>
+						<inCombat>Forbidden</inCombat>
+					</li>
+					<li>
+						<key>crimson-duelist-ascendancy</key>
+						<activeHediff>crimsondynasty_duelist_ascendancy</activeHediff>
+						<activeSeverity>1.0</activeSeverity>
+						<anyEquipmentTags>
+							<li>Melee</li>
+						</anyEquipmentTags>
+						<inCombat>Required</inCombat>
+					</li>
+				</rules>
+			</li>
 		</comps>
+	</HediffDef>
+	<HediffDef>
+		<defName>crimsondynasty_bloodfrenzy</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>bloodfrenzy ascendant</label>
+		<description>At the edge of death, hunger and terror collapse into a monstrous battle crescendo.</description>
+		<defaultLabelColor>(178,34,34)</defaultLabelColor>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<painFactor>0.1</painFactor>
+				<regeneration>95</regeneration>
+				<statFactors>
+					<MeleeDamageFactor>1.75</MeleeDamageFactor>
+					<MeleeCooldownFactor>0.5</MeleeCooldownFactor>
+					<MeleeHitChance>1.45</MeleeHitChance>
+					<MeleeDodgeChance>1.35</MeleeDodgeChance>
+					<MoveSpeed>1.35</MoveSpeed>
+					<IncomingDamageFactor>1.18</IncomingDamageFactor>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+	<HediffDef>
+		<defName>crimsondynasty_noble_poise</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>noble poise</label>
+		<description>When well-fed and unpressured, aristocratic control sharpens social coercion and colony-level command.</description>
+		<defaultLabelColor>(178,34,34)</defaultLabelColor>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<statFactors>
+					<SocialImpact>1.6</SocialImpact>
+					<NegotiationAbility>1.45</NegotiationAbility>
+					<TradePriceImprovement>1.3</TradePriceImprovement>
+					<WorkSpeedGlobal>1.25</WorkSpeedGlobal>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+	<HediffDef>
+		<defName>crimsondynasty_duelist_ascendancy</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>duelist ascendancy</label>
+		<description>Melee engagement unlocks predatory duelist routines focused on pressure and execution.</description>
+		<defaultLabelColor>(178,34,34)</defaultLabelColor>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<statFactors>
+					<MeleeArmorPenetration>1.55</MeleeArmorPenetration>
+					<MeleeCooldownFactor>0.6</MeleeCooldownFactor>
+					<MeleeHitChance>1.35</MeleeHitChance>
+					<MoveSpeed>1.2</MoveSpeed>
+				</statFactors>
+			</li>
+		</stages>
 	</HediffDef>
 
 	<HediffDef>
@@ -90,11 +182,11 @@
 						<offset>0.20</offset>
 					</li>
 				</capMods>
-				<regeneration>45</regeneration>
+				<regeneration>70</regeneration>
 				<statFactors>
-					<ImmunityGainSpeed>1.6</ImmunityGainSpeed>
-					<InjuryHealingFactor>1.8</InjuryHealingFactor>
-					<RestRateMultiplier>1.4</RestRateMultiplier>
+					<ImmunityGainSpeed>2.1</ImmunityGainSpeed>
+					<InjuryHealingFactor>2.25</InjuryHealingFactor>
+					<RestRateMultiplier>1.65</RestRateMultiplier>
 				</statFactors>
 			</li>
 		</stages>
@@ -132,15 +224,63 @@
 		<isBad>false</isBad>
 		<stages>
 			<li>
-				<painFactor>0.55</painFactor>
+				<painFactor>0.35</painFactor>
 				<statOffsets>
-					<ArmorRating_Blunt>0.25</ArmorRating_Blunt>
-					<ArmorRating_Sharp>0.25</ArmorRating_Sharp>
-					<ArmorRating_Heat>0.15</ArmorRating_Heat>
+					<ArmorRating_Blunt>0.4</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0.4</ArmorRating_Sharp>
+					<ArmorRating_Heat>0.25</ArmorRating_Heat>
 				</statOffsets>
 				<statFactors>
-					<IncomingDamageFactor>0.75</IncomingDamageFactor>
-					<Flammability>1.25</Flammability>
+					<IncomingDamageFactor>0.62</IncomingDamageFactor>
+					<Flammability>1.3</Flammability>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+	<HediffDef>
+		<defName>crimson_bloodrush_surge</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>bloodrush surge</label>
+		<description>The lineage is forcibly overdriven into a frenzy state. Lethality and speed explode, while restraint vanishes.</description>
+		<defaultLabelColor>(178,34,34)</defaultLabelColor>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>2400</disappearsAfterTicks>
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<statFactors>
+					<MeleeDamageFactor>1.7</MeleeDamageFactor>
+					<MeleeCooldownFactor>0.5</MeleeCooldownFactor>
+					<MeleeHitChance>1.4</MeleeHitChance>
+					<MoveSpeed>1.4</MoveSpeed>
+					<IncomingDamageFactor>1.28</IncomingDamageFactor>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+	<HediffDef>
+		<defName>crimson_sovereign_gaze_marked</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>sovereign gaze marked</label>
+		<description>The target's will falters under predatory authority, reducing coordination and resistance.</description>
+		<defaultLabelColor>(178,34,34)</defaultLabelColor>
+		<isBad>true</isBad>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>2400</disappearsAfterTicks>
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<statFactors>
+					<MoveSpeed>0.72</MoveSpeed>
+					<MeleeDodgeChance>0.6</MeleeDodgeChance>
+					<IncomingDamageFactor>1.32</IncomingDamageFactor>
 				</statFactors>
 			</li>
 		</stages>

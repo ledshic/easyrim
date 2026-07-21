@@ -10,6 +10,12 @@
   <archotechoath_command.description>Measured speech and composure steady allies and bend negotiations.</archotechoath_command.description>
   <archotechoath_aegis.label>self-repair aegis</archotechoath_aegis.label>
   <archotechoath_aegis.description>Micromechanites prioritize structural integrity and rapid recovery under stress.</archotechoath_aegis.description>
+  <archotechoath_labsync.label>lab sync protocol</archotechoath_labsync.label>
+  <archotechoath_labsync.description>Out of direct combat, cognitive routines lock onto research and precision craft throughput.</archotechoath_labsync.description>
+  <archotechoath_warprotocol.label>warprotocol lattice</archotechoath_warprotocol.label>
+  <archotechoath_warprotocol.description>Combat telemetry routes cognition into targeting, movement prediction, and damage control loops.</archotechoath_warprotocol.description>
+  <archotechoath_emergency_bulkhead.label>emergency bulkhead</archotechoath_emergency_bulkhead.label>
+  <archotechoath_emergency_bulkhead.description>When integrity falls, contingency armor and trauma routing force a stubborn survival state.</archotechoath_emergency_bulkhead.description>
 
   <frontierwarden.label>&lt;color=#6B8E23&gt;frontier warden&lt;/color&gt;</frontierwarden.label>
   <frontierwarden.description>Raised by hard land and harder duty, this doctrine shapes a pawn into the colony's shield. They scout farther, shoot cleaner, mend faster, and stand firm where lines would otherwise break.</frontierwarden.description>
@@ -21,4 +27,16 @@
   <frontierwarden_fieldsurgeon.description>Triaged instincts and steady hands sustain allies through prolonged campaigns.</frontierwarden_fieldsurgeon.description>
   <frontierwarden_breachfighter.label>breachfighter resolve</frontierwarden_breachfighter.label>
   <frontierwarden_breachfighter.description>Close-quarters aggression and stubborn defense hold the line in chaos.</frontierwarden_breachfighter.description>
+  <frontierwarden_overwatch_matrix.label>overwatch matrix</frontierwarden_overwatch_matrix.label>
+  <frontierwarden_overwatch_matrix.description>Disciplined overwatch mode refines ranged cadence and exposes targets for line-breaking volleys.</frontierwarden_overwatch_matrix.description>
+  <frontierwarden_breach_rampage.label>breach rampage</frontierwarden_breach_rampage.label>
+  <frontierwarden_breach_rampage.description>Melee breach posture trades caution for violent breakthrough and sustained close-quarters pressure.</frontierwarden_breach_rampage.description>
+  <frontierwarden_camp_triage.label>camp triage command</frontierwarden_camp_triage.label>
+  <frontierwarden_camp_triage.description>Between firefights, the warden shifts to logistics medicine and rapid stabilization of wounded allies.</frontierwarden_camp_triage.description>
+  <archotech_protocol_surge.label>protocol surge</archotech_protocol_surge.label>
+  <archotech_protocol_surge.description>Short-term overclock of archotech governance routines for peak combat and production output.</archotech_protocol_surge.description>
+  <archotech_lockstep_marked.label>lockstep marked</archotech_lockstep_marked.label>
+  <archotech_lockstep_marked.description>The target is prediction-locked by archotech telemetry, degrading movement and defensive timing.</archotech_lockstep_marked.description>
+  <frontier_bulwark_pulse.label>bulwark pulse</frontier_bulwark_pulse.label>
+  <frontier_bulwark_pulse.description>Warden pulse hardens posture and response speed for holding unstable defensive lines.</frontier_bulwark_pulse.description>
 </LanguageData>
