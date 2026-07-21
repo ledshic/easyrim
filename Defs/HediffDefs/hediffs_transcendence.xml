@@ -45,6 +45,27 @@
 					</li>
 				</hediffsToGive>
 			</li>
+			<li Class="EasyMode.HediffCompProperties_ConditionalHediffDistributor">
+				<checkIntervalTicks>120</checkIntervalTicks>
+				<rules>
+					<li>
+						<key>transcendence-ranged-calibration</key>
+						<activeHediff>EM_NexusSpine_RangedAdaptation</activeHediff>
+						<activeSeverity>1</activeSeverity>
+						<anyEquipmentTags>
+							<li>Ranged</li>
+						</anyEquipmentTags>
+					</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">
+						<key>transcendence-gene-strong-melee</key>
+						<activeHediff>EM_NexusSpine_GeneAdaptation</activeHediff>
+						<activeSeverity>1</activeSeverity>
+						<allGenes>
+							<li>MeleeDamage_Strong</li>
+						</allGenes>
+					</li>
+				</rules>
+			</li>
 		</comps>
 	</HediffDef>
 	<HediffDef>

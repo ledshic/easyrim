@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>EM_InstallAdaptiveNexusSpine</defName>
+    <label>install adaptive nexus spine</label>
+    <description>Replace the patient's spine with an adaptive nexus spine.</description>
+    <descriptionHyperlinks>
+      <ThingDef>EM_AdaptiveNexusSpine</ThingDef>
+      <HediffDef>EM_AdaptiveNexusSpine</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing adaptive nexus spine.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>EM_AdaptiveNexusSpine</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>EM_AdaptiveNexusSpine</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Spine</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>EM_AdaptiveNexusSpine</addsHediff>
+  </RecipeDef>
+</Defs>

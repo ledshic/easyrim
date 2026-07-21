@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Item form. Inherited fabrication is explicitly disabled to keep this quest/reward only. -->
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>EM_AdaptiveNexusSpine</defName>
+    <label>adaptive nexus spine</label>
+    <description>A self-reconfiguring artificial spine containing a distributed neural lattice. Once installed, it can host multiple enhancement protocols and adapt them to the user's biology, condition, actions, and equipment.</description>
+    <descriptionHyperlinks><RecipeDef>EM_InstallAdaptiveNexusSpine</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Plasteel>50</Plasteel>
+      <ComponentSpacer>8</ComponentSpacer>
+    </costList>
+    <statBases>
+      <MarketValue>8500</MarketValue>
+      <Mass>3</Mass>
+      <WorkToMake>52000</WorkToMake>
+    </statBases>
+    <thingSetMakerTags>
+      <li>RewardStandardCore</li>
+    </thingSetMakerTags>
+    <recipeMaker Inherit="false" />
+  </ThingDef>
+</Defs>
