@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <Def Class="EasyMode.ConditionalHediffProfileDef">
+    <defName>EM_ArchotechOathSpine_CoreProfile</defName>
+    <rules>
+      <li>
+        <key>core-cognition</key>
+        <activeHediff>archotechoath_cognition</activeHediff>
+        <activeSeverity>1</activeSeverity>
+      </li>
+      <li>
+        <key>core-aegis</key>
+        <activeHediff>archotechoath_aegis</activeHediff>
+        <activeSeverity>1</activeSeverity>
+      </li>
+    </rules>
+  </Def>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>EM_ArchotechOathSpine</defName>
+    <label>archotech oath spine</label>
+    <labelNoun>an archotech oath spine</labelNoun>
+    <description>An installed archotech governance spine that keeps strategic cognition and self-repair online at all times, then routes spare capacity into administration, lab synchronization, or battlefield prediction as needed.</description>
+    <descriptionHyperlinks><ThingDef>EM_ArchotechOathSpine</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>EM_ArchotechOathSpine</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.33</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+    <comps>
+      <li Class="EasyMode.HediffCompProperties_ConditionalHediffDistributor">
+        <checkIntervalTicks>90</checkIntervalTicks>
+        <profiles>
+          <li>EM_ArchotechOathSpine_CoreProfile</li>
+        </profiles>
+        <rules>
+          <li>
+            <key>oath-command-cadence</key>
+            <activeHediff>archotechoath_command</activeHediff>
+            <activeSeverity>1</activeSeverity>
+            <drafted>Forbidden</drafted>
+          </li>
+          <li>
+            <key>oath-labsync</key>
+            <activeHediff>archotechoath_labsync</activeHediff>
+            <activeSeverity>1</activeSeverity>
+            <drafted>Forbidden</drafted>
+          </li>
+          <li>
+            <key>oath-warprotocol</key>
+            <activeHediff>archotechoath_warprotocol</activeHediff>
+            <activeSeverity>1</activeSeverity>
+            <inCombat>Required</inCombat>
+          </li>
+          <li>
+            <key>oath-emergency-bulkhead</key>
+            <activeHediff>archotechoath_emergency_bulkhead</activeHediff>
+            <activeSeverity>1</activeSeverity>
+            <healthPercent>0~0.5</healthPercent>
+          </li>
+        </rules>
+      </li>
+    </comps>
+  </HediffDef>
+</Defs>

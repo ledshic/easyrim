@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>EM_PioneerSpine</defName>
+    <label>frontier lattice spine</label>
+    <description>An industrial-grade adaptive spine built around pathfinding heuristics, labor routing, and expedition combat routines. It continuously shifts between settlement throughput and frontier overdrive, and includes a built-in neural overclock trigger package for emergency action.</description>
+    <descriptionHyperlinks><RecipeDef>EM_InstallPioneerSpine</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Plasteel>45</Plasteel>
+      <ComponentSpacer>7</ComponentSpacer>
+    </costList>
+    <statBases>
+      <MarketValue>7600</MarketValue>
+      <Mass>3</Mass>
+      <WorkToMake>50000</WorkToMake>
+    </statBases>
+    <thingSetMakerTags>
+      <li>RewardStandardCore</li>
+    </thingSetMakerTags>
+    <recipeMaker Inherit="false" />
+  </ThingDef>
+</Defs>

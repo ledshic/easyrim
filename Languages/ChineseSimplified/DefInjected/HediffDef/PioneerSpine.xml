@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <EM_PioneerSpine_OverclockHarmony.label>超频拓荒同步</EM_PioneerSpine_OverclockHarmony.label>
+  <EM_PioneerSpine_OverclockHarmony.description>当内置的神经超频包被触发时，这条脊椎会把爆发期导入更稳定的移动、索敌和保持施工节奏的运动控制回路。</EM_PioneerSpine_OverclockHarmony.description>
+
+  <EM_PioneerSpine.label>拓荒晶格脊椎</EM_PioneerSpine.label>
+  <EM_PioneerSpine.labelNoun>拓荒晶格脊椎</EM_PioneerSpine.labelNoun>
+  <EM_PioneerSpine.description>一条已安装的远征指挥脊椎，可在聚落建设高通量模式与高速应变模式之间切换。它会赋予神经超频能力，并围绕远程压制、劳动节奏与绝境生存状态进行自适应调度。</EM_PioneerSpine.description>
+</LanguageData>

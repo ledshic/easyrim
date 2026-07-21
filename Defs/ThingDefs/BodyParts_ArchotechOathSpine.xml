@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>EM_ArchotechOathSpine</defName>
+    <label>archotech oath spine</label>
+    <description>An oathbound command spine seeded with fragmentary archotech governance logic. It pivots between scholarly synchronization, combat prediction, and emergency structural protection without losing strategic clarity.</description>
+    <descriptionHyperlinks><RecipeDef>EM_InstallArchotechOathSpine</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Plasteel>55</Plasteel>
+      <ComponentSpacer>9</ComponentSpacer>
+      <Gold>12</Gold>
+    </costList>
+    <statBases>
+      <MarketValue>9000</MarketValue>
+      <Mass>3</Mass>
+      <WorkToMake>55000</WorkToMake>
+    </statBases>
+    <thingSetMakerTags>
+      <li>RewardStandardCore</li>
+    </thingSetMakerTags>
+    <recipeMaker Inherit="false" />
+  </ThingDef>
+</Defs>

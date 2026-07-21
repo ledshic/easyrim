@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <Def Class="EasyMode.ConditionalHediffProfileDef">
+    <defName>EM_PioneerSpine_CoreProfile</defName>
+    <rules>
+      <li>
+        <key>core-industry</key>
+        <activeHediff>pioneerspirit_industry</activeHediff>
+        <activeSeverity>1</activeSeverity>
+      </li>
+      <li>
+        <key>core-resilience</key>
+        <activeHediff>pioneerspirit_resilience</activeHediff>
+        <activeSeverity>1</activeSeverity>
+      </li>
+    </rules>
+  </Def>
+
+  <HediffDef>
+    <defName>EM_PioneerSpine_OverclockHarmony</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>overclock frontier synchronization</label>
+    <description>When the built-in neural overclock package is triggered, the spine routes that burst into stabilized movement, target acquisition, and work-preserving motor discipline.</description>
+    <defaultLabelColor>(135,206,235)</defaultLabelColor>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <statFactors>
+          <MoveSpeed>1.35</MoveSpeed>
+          <AimingDelayFactor>0.55</AimingDelayFactor>
+          <RangedCooldownFactor>0.68</RangedCooldownFactor>
+          <WorkSpeedGlobal>1.25</WorkSpeedGlobal>
+          <ConstructionSpeed>1.25</ConstructionSpeed>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>EM_PioneerSpine</defName>
+    <label>frontier lattice spine</label>
+    <labelNoun>a frontier lattice spine</labelNoun>
+    <description>An installed expeditionary command spine that alternates between colony-building throughput and high-speed response routines. It grants access to Neural Overclock and adapts around ranged pressure, work tempo, and last-stand survival states.</description>
+    <descriptionHyperlinks>
+      <ThingDef>EM_PioneerSpine</ThingDef>
+      <AbilityDef>EasyMode_NeuralOverclock</AbilityDef>
+    </descriptionHyperlinks>
+    <spawnThingOnRemoved>EM_PioneerSpine</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.3</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+    <comps>
+      <li Class="HediffCompProperties_GiveAbility">
+        <abilityDefs>
+          <li>EasyMode_NeuralOverclock</li>
+        </abilityDefs>
+      </li>
+      <li Class="EasyMode.HediffCompProperties_ConditionalHediffDistributor">
+        <checkIntervalTicks>90</checkIntervalTicks>
+        <profiles>
+          <li>EM_PioneerSpine_CoreProfile</li>
+        </profiles>
+        <rules>
+          <li>
+            <key>pioneer-vanguard-fire</key>
+            <activeHediff>pioneerspirit_vanguard_fire</activeHediff>
+            <activeSeverity>1</activeSeverity>
+            <anyEquipmentTags>
+              <li>Ranged</li>
+            </anyEquipmentTags>
+            <inCombat>Required</inCombat>
+          </li>
+          <li>
+            <key>pioneer-settler-engine</key>
+            <activeHediff>pioneerspirit_settler_engine</activeHediff>
+            <activeSeverity>1</activeSeverity>
+            <drafted>Forbidden</drafted>
+          </li>
+          <li>
+            <key>pioneer-laststand-overdrive</key>
+            <activeHediff>pioneerspirit_laststand</activeHediff>
+            <activeSeverity>1</activeSeverity>
+            <healthPercent>0~0.4</healthPercent>
+            <inCombat>Required</inCombat>
+          </li>
+          <li>
+            <key>pioneer-neural-overclock</key>
+            <activeHediff>EM_PioneerSpine_OverclockHarmony</activeHediff>
+            <activeSeverity>1</activeSeverity>
+            <anyHediffs>
+              <li>
+                <hediff>EasyMode_NeuralOverclock</hediff>
+              </li>
+            </anyHediffs>
+          </li>
+        </rules>
+      </li>
+    </comps>
+  </HediffDef>
+</Defs>

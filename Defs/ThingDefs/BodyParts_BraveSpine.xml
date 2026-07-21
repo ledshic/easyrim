@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>EM_BraveSpine</defName>
+    <label>indomitable warspine</label>
+    <description>A combat-forged artificial spine that feeds on discipline, aggression, and refusal to break. It sustains a warrior's body in battle and escalates into last-stand protocols when death closes in.</description>
+    <descriptionHyperlinks><RecipeDef>EM_InstallBraveSpine</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Plasteel>50</Plasteel>
+      <ComponentSpacer>8</ComponentSpacer>
+    </costList>
+    <statBases>
+      <MarketValue>8200</MarketValue>
+      <Mass>3</Mass>
+      <WorkToMake>52000</WorkToMake>
+    </statBases>
+    <thingSetMakerTags>
+      <li>RewardStandardCore</li>
+    </thingSetMakerTags>
+    <recipeMaker Inherit="false" />
+  </ThingDef>
+</Defs>

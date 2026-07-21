@@ -29,4 +29,186 @@
     </appliedOnFixedBodyParts>
     <addsHediff>EM_AdaptiveNexusSpine</addsHediff>
   </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>EM_InstallPioneerSpine</defName>
+    <label>install frontier lattice spine</label>
+    <description>Replace the patient's spine with a frontier lattice spine.</description>
+    <descriptionHyperlinks>
+      <ThingDef>EM_PioneerSpine</ThingDef>
+      <HediffDef>EM_PioneerSpine</HediffDef>
+      <AbilityDef>EasyMode_NeuralOverclock</AbilityDef>
+    </descriptionHyperlinks>
+    <jobString>Installing frontier lattice spine.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>EM_PioneerSpine</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>EM_PioneerSpine</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Spine</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>EM_PioneerSpine</addsHediff>
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>EM_InstallCrimsonDynastySpine</defName>
+    <label>install crimson dynasty spine</label>
+    <description>Replace the patient's spine with a crimson dynasty spine.</description>
+    <descriptionHyperlinks>
+      <ThingDef>EM_CrimsonDynastySpine</ThingDef>
+      <HediffDef>EM_CrimsonDynastySpine</HediffDef>
+      <HediffDef>bloodhemogen_resonance</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing crimson dynasty spine.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>EM_CrimsonDynastySpine</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>EM_CrimsonDynastySpine</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Spine</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>EM_CrimsonDynastySpine</addsHediff>
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>EM_InstallBraveSpine</defName>
+    <label>install indomitable warspine</label>
+    <description>Replace the patient's spine with an indomitable warspine.</description>
+    <descriptionHyperlinks>
+      <ThingDef>EM_BraveSpine</ThingDef>
+      <HediffDef>EM_BraveSpine</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing indomitable warspine.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>EM_BraveSpine</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>EM_BraveSpine</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Spine</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>EM_BraveSpine</addsHediff>
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>EM_InstallCorsairSpine</defName>
+    <label>install blackflag spine rig</label>
+    <description>Replace the patient's spine with a blackflag spine rig.</description>
+    <descriptionHyperlinks>
+      <ThingDef>EM_CorsairSpine</ThingDef>
+      <HediffDef>EM_CorsairSpine</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing blackflag spine rig.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>EM_CorsairSpine</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>EM_CorsairSpine</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Spine</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>EM_CorsairSpine</addsHediff>
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>EM_InstallArchotechOathSpine</defName>
+    <label>install archotech oath spine</label>
+    <description>Replace the patient's spine with an archotech oath spine.</description>
+    <descriptionHyperlinks>
+      <ThingDef>EM_ArchotechOathSpine</ThingDef>
+      <HediffDef>EM_ArchotechOathSpine</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing archotech oath spine.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>EM_ArchotechOathSpine</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>EM_ArchotechOathSpine</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Spine</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>EM_ArchotechOathSpine</addsHediff>
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>EM_InstallFrontierWardenSpine</defName>
+    <label>install frontier warden spine</label>
+    <description>Replace the patient's spine with a frontier warden spine.</description>
+    <descriptionHyperlinks>
+      <ThingDef>EM_FrontierWardenSpine</ThingDef>
+      <HediffDef>EM_FrontierWardenSpine</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing frontier warden spine.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>EM_FrontierWardenSpine</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>EM_FrontierWardenSpine</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Spine</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>EM_FrontierWardenSpine</addsHediff>
+  </RecipeDef>
 </Defs>

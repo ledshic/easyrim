@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <Def Class="EasyMode.ConditionalHediffProfileDef">
+    <defName>EM_FrontierWardenSpine_CoreProfile</defName>
+    <rules>
+      <li>
+        <key>core-pathfinder</key>
+        <activeHediff>frontierwarden_pathfinder</activeHediff>
+        <activeSeverity>1</activeSeverity>
+      </li>
+      <li>
+        <key>core-fieldsurgeon</key>
+        <activeHediff>frontierwarden_fieldsurgeon</activeHediff>
+        <activeSeverity>1</activeSeverity>
+      </li>
+    </rules>
+  </Def>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>EM_FrontierWardenSpine</defName>
+    <label>frontier warden spine</label>
+    <labelNoun>a frontier warden spine</labelNoun>
+    <description>An installed service spine for colony defenders, combining patrol stride, field stabilization, and breach-response combat posture. It shifts between overwatch, melee line-breaking, and recovery command as conditions change.</description>
+    <descriptionHyperlinks><ThingDef>EM_FrontierWardenSpine</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>EM_FrontierWardenSpine</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.3</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+    <comps>
+      <li Class="EasyMode.HediffCompProperties_ConditionalHediffDistributor">
+        <checkIntervalTicks>90</checkIntervalTicks>
+        <profiles>
+          <li>EM_FrontierWardenSpine_CoreProfile</li>
+        </profiles>
+        <rules>
+          <li>
+            <key>warden-fireline</key>
+            <activeHediff>frontierwarden_fireline</activeHediff>
+            <activeSeverity>1</activeSeverity>
+            <drafted>Required</drafted>
+          </li>
+          <li>
+            <key>warden-overwatch-matrix</key>
+            <activeHediff>frontierwarden_overwatch_matrix</activeHediff>
+            <activeSeverity>1</activeSeverity>
+            <anyEquipmentTags>
+              <li>Ranged</li>
+            </anyEquipmentTags>
+            <inCombat>Required</inCombat>
+          </li>
+          <li>
+            <key>warden-breachfighter</key>
+            <activeHediff>frontierwarden_breachfighter</activeHediff>
+            <activeSeverity>1</activeSeverity>
+            <anyEquipmentTags>
+              <li>Melee</li>
+            </anyEquipmentTags>
+            <inCombat>Required</inCombat>
+          </li>
+          <li>
+            <key>warden-breach-rampage</key>
+            <activeHediff>frontierwarden_breach_rampage</activeHediff>
+            <activeSeverity>1</activeSeverity>
+            <anyEquipmentTags>
+              <li>Melee</li>
+            </anyEquipmentTags>
+            <inCombat>Required</inCombat>
+            <healthPercent>0~0.7</healthPercent>
+          </li>
+          <li>
+            <key>warden-camp-triage</key>
+            <activeHediff>frontierwarden_camp_triage</activeHediff>
+            <activeSeverity>1</activeSeverity>
+            <drafted>Forbidden</drafted>
+          </li>
+        </rules>
+      </li>
+    </comps>
+  </HediffDef>
+</Defs>

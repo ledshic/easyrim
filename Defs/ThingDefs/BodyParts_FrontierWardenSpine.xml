@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>EM_FrontierWardenSpine</defName>
+    <label>frontier warden spine</label>
+    <description>A defensive service spine designed for hard marches, clean firelines, and field triage under pressure. It reinforces the host as a line-holder, scout, and recovery anchor for the colony.</description>
+    <descriptionHyperlinks><RecipeDef>EM_InstallFrontierWardenSpine</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Plasteel>50</Plasteel>
+      <ComponentSpacer>8</ComponentSpacer>
+    </costList>
+    <statBases>
+      <MarketValue>8400</MarketValue>
+      <Mass>3</Mass>
+      <WorkToMake>53000</WorkToMake>
+    </statBases>
+    <thingSetMakerTags>
+      <li>RewardStandardCore</li>
+    </thingSetMakerTags>
+    <recipeMaker Inherit="false" />
+  </ThingDef>
+</Defs>

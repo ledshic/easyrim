@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>EM_CorsairSpine</defName>
+    <label>blackflag spine rig</label>
+    <description>A raider-grade spinal rig that blends recoil control, scavenger instinct, and boarding violence into a single piracy doctrine. It rewards momentum, greed, and ruthless combat positioning.</description>
+    <descriptionHyperlinks><RecipeDef>EM_InstallCorsairSpine</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Plasteel>48</Plasteel>
+      <ComponentSpacer>8</ComponentSpacer>
+    </costList>
+    <statBases>
+      <MarketValue>8000</MarketValue>
+      <Mass>3</Mass>
+      <WorkToMake>51000</WorkToMake>
+    </statBases>
+    <thingSetMakerTags>
+      <li>RewardStandardCore</li>
+    </thingSetMakerTags>
+    <recipeMaker Inherit="false" />
+  </ThingDef>
+</Defs>

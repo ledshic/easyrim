@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <Def Class="EasyMode.ConditionalHediffProfileDef">
+    <defName>EM_CrimsonDynastySpine_CoreProfile</defName>
+    <rules>
+      <li>
+        <key>core-predator</key>
+        <activeHediff>crimsondynasty_predator</activeHediff>
+        <activeSeverity>1</activeSeverity>
+      </li>
+      <li>
+        <key>core-hemogenic</key>
+        <activeHediff>crimsondynasty_hemogenic</activeHediff>
+        <activeSeverity>1</activeSeverity>
+      </li>
+      <li>
+        <key>core-blood-resonance</key>
+        <activeHediff>bloodhemogen_resonance</activeHediff>
+        <activeSeverity>3</activeSeverity>
+      </li>
+    </rules>
+  </Def>
+
+  <HediffDef>
+    <defName>EM_CrimsonSpine_SanguineAscendancy</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>sanguine ascendancy</label>
+    <description>When blood essence runs rich, the implanted dynasty spine drives every stride and strike into a ceremonious predator's crescendo.</description>
+    <defaultLabelColor>(178,34,34)</defaultLabelColor>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <regeneration>40</regeneration>
+        <statFactors>
+          <MeleeDamageFactor>1.35</MeleeDamageFactor>
+          <MeleeArmorPenetration>1.3</MeleeArmorPenetration>
+          <MeleeCooldownFactor>0.72</MeleeCooldownFactor>
+          <MoveSpeed>1.15</MoveSpeed>
+          <SocialImpact>1.25</SocialImpact>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>EM_CrimsonDynastySpine</defName>
+    <label>crimson dynasty spine</label>
+    <labelNoun>a crimson dynasty spine</labelNoun>
+    <description>An installed noble hemogenic spine that maintains blood essence resonance as a standing state, then pivots between hunting grace, courtly authority, and executioner pressure as the host's condition shifts.</description>
+    <descriptionHyperlinks>
+      <ThingDef>EM_CrimsonDynastySpine</ThingDef>
+      <HediffDef>bloodhemogen_resonance</HediffDef>
+    </descriptionHyperlinks>
+    <spawnThingOnRemoved>EM_CrimsonDynastySpine</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.32</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+    <comps>
+      <li Class="EasyMode.HediffCompProperties_ConditionalHediffDistributor">
+        <checkIntervalTicks>90</checkIntervalTicks>
+        <profiles>
+          <li>EM_CrimsonDynastySpine_CoreProfile</li>
+        </profiles>
+        <rules>
+          <li>
+            <key>crimson-bloodfrenzy</key>
+            <activeHediff>crimsondynasty_bloodfrenzy</activeHediff>
+            <activeSeverity>1</activeSeverity>
+            <healthPercent>0~0.45</healthPercent>
+            <inCombat>Required</inCombat>
+          </li>
+          <li>
+            <key>crimson-noble-poise</key>
+            <activeHediff>crimsondynasty_noble_poise</activeHediff>
+            <activeSeverity>1</activeSeverity>
+            <healthPercent>0.8~1</healthPercent>
+            <inCombat>Forbidden</inCombat>
+          </li>
+          <li>
+            <key>crimson-duelist-ascendancy</key>
+            <activeHediff>crimsondynasty_duelist_ascendancy</activeHediff>
+            <activeSeverity>1</activeSeverity>
+            <anyEquipmentTags>
+              <li>Melee</li>
+            </anyEquipmentTags>
+            <inCombat>Required</inCombat>
+          </li>
+          <li>
+            <key>crimson-sanguine-ascendancy</key>
+            <activeHediff>EM_CrimsonSpine_SanguineAscendancy</activeHediff>
+            <activeSeverity>1</activeSeverity>
+            <allHediffs>
+              <li>
+                <hediff>bloodhemogen_resonance</hediff>
+                <minSeverity>1</minSeverity>
+                <maxSeverity>2</maxSeverity>
+              </li>
+            </allHediffs>
+          </li>
+        </rules>
+      </li>
+    </comps>
+  </HediffDef>
+</Defs>

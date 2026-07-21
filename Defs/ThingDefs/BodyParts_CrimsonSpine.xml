@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>EM_CrimsonDynastySpine</defName>
+    <label>crimson dynasty spine</label>
+    <description>An aristocratic hemogenic spine-graft threaded with blood-sense valves and predatory reflex relays. It sustains the dynasty's hunt-state, channels blood essence resonance, and pivots between courtly dominance and lethal close-quarters execution.</description>
+    <descriptionHyperlinks><RecipeDef>EM_InstallCrimsonDynastySpine</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Plasteel>55</Plasteel>
+      <ComponentSpacer>8</ComponentSpacer>
+      <Gold>20</Gold>
+    </costList>
+    <statBases>
+      <MarketValue>9400</MarketValue>
+      <Mass>3</Mass>
+      <WorkToMake>56000</WorkToMake>
+    </statBases>
+    <thingSetMakerTags>
+      <li>RewardStandardCore</li>
+    </thingSetMakerTags>
+    <recipeMaker Inherit="false" />
+  </ThingDef>
+</Defs>

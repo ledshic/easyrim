@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <Def Class="EasyMode.ConditionalHediffProfileDef">
+    <defName>EM_CorsairSpine_CoreProfile</defName>
+    <rules>
+      <li>
+        <key>core-gunner</key>
+        <activeHediff>corsaircreed_gunner</activeHediff>
+        <activeSeverity>1</activeSeverity>
+      </li>
+      <li>
+        <key>core-scavenger</key>
+        <activeHediff>corsaircreed_scavenger</activeHediff>
+        <activeSeverity>1</activeSeverity>
+      </li>
+    </rules>
+  </Def>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>EM_CorsairSpine</defName>
+    <label>blackflag spine rig</label>
+    <labelNoun>a blackflag spine rig</labelNoun>
+    <description>An installed pirate rig that couples gunnery posture, plunder instinct, and boarding aggression. It reads combat tempo and shifts the host toward the dirtiest efficient posture for the moment.</description>
+    <descriptionHyperlinks><ThingDef>EM_CorsairSpine</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>EM_CorsairSpine</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.3</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+    <comps>
+      <li Class="EasyMode.HediffCompProperties_ConditionalHediffDistributor">
+        <checkIntervalTicks>90</checkIntervalTicks>
+        <profiles>
+          <li>EM_CorsairSpine_CoreProfile</li>
+        </profiles>
+        <rules>
+          <li>
+            <key>corsair-boarder</key>
+            <activeHediff>corsaircreed_boarder</activeHediff>
+            <activeSeverity>1</activeSeverity>
+            <inCombat>Required</inCombat>
+          </li>
+          <li>
+            <key>corsair-ranged-posture</key>
+            <activeHediff>corsaircreed_gunner_posture</activeHediff>
+            <activeSeverity>1</activeSeverity>
+            <anyEquipmentTags>
+              <li>Ranged</li>
+            </anyEquipmentTags>
+            <inCombat>Required</inCombat>
+          </li>
+          <li>
+            <key>corsair-last-stand-frenzy</key>
+            <activeHediff>corsaircreed_marauder_frenzy</activeHediff>
+            <activeSeverity>1</activeSeverity>
+            <healthPercent>0~0.45</healthPercent>
+            <inCombat>Required</inCombat>
+          </li>
+          <li>
+            <key>corsair-blackflag-audacity</key>
+            <activeHediff>corsaircreed_blackflag</activeHediff>
+            <activeSeverity>1</activeSeverity>
+            <drafted>Required</drafted>
+          </li>
+        </rules>
+      </li>
+    </comps>
+  </HediffDef>
+</Defs>
