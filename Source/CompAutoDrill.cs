@@ -423,7 +423,9 @@ namespace EasyMode
                     ? "AutoDrillPowerExternal"
                     : "AutoDrillPowerSolar").Translate(),
                 defaultDesc = "AutoDrillPowerModeDesc".Translate(),
-                icon = ContentFinder<Texture2D>.Get("UI/Commands/TogglePower"),
+                icon = ContentFinder<Texture2D>.Get(powerMode == AutoDrillPowerMode.Solar
+                    ? "UI/Abilities/SolarPinhole"
+                    : "UI/Commands/TryReconnect"),
                 action = delegate
                 {
                     powerMode = powerMode == AutoDrillPowerMode.ExternalPower
@@ -437,7 +439,7 @@ namespace EasyMode
             {
                 defaultLabel = OperatingModeLabel,
                 defaultDesc = "AutoDrillOperatingModeDesc".Translate(),
-                icon = ContentFinder<Texture2D>.Get("UI/Commands/ChangeStyle"),
+                icon = OperatingModeIcon,
                 action = delegate
                 {
                     operatingMode = (AutoDrillOperatingMode)(((int)operatingMode + 1) % 3);
@@ -462,6 +464,29 @@ namespace EasyMode
                     default:
                         return "AutoDrillModeHighSpeed".Translate();
                 }
+            }
+        }
+
+        // HighSpeed = steel pile, HighPrecision = plasteel pile, Safe = no-insectoid.
+        private Texture2D OperatingModeIcon
+        {
+            get
+            {
+                string path;
+                switch (operatingMode)
+                {
+                    case AutoDrillOperatingMode.HighPrecision:
+                        path = "UI/AutoDrill/HighPrecision";
+                        break;
+                    case AutoDrillOperatingMode.Safe:
+                        path = "UI/AutoDrill/Safe";
+                        break;
+                    default:
+                        path = "UI/AutoDrill/HighSpeed";
+                        break;
+                }
+
+                return ContentFinder<Texture2D>.Get(path);
             }
         }
 

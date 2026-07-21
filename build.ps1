@@ -16,7 +16,8 @@ $workshopItems = @(
     'Assemblies',
     'Defs',
     'Languages',
-    'Patches'
+    'Patches',
+    'Textures'
 )
 
 if (-not (Test-Path -Path $solutionPath)) {
