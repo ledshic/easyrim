@@ -3,13 +3,13 @@
   <ArchotechProtocolSurge.label>protocol surge</ArchotechProtocolSurge.label>
   <ArchotechProtocolSurge.description>Force the oath's core routines into a short overclock. Work, research, and combat throughput spike briefly, then normalize.
 
-created/edited by easyrim</ArchotechProtocolSurge.description>
+-- easyrim</ArchotechProtocolSurge.description>
   <ArchotechLockstep.label>lockstep mark</ArchotechLockstep.label>
   <ArchotechLockstep.description>Mark a hostile target with predictive lock telemetry, reducing its mobility and evasive timing while increasing damage received.
 
-created/edited by easyrim</ArchotechLockstep.description>
+-- easyrim</ArchotechLockstep.description>
   <FrontierBulwarkPulse.label>bulwark pulse</FrontierBulwarkPulse.label>
   <FrontierBulwarkPulse.description>Trigger a hardened defensive pulse tuned for frontier line-holding. Movement, resilience, and weapon handling improve for a short hold-the-line window.
 
-created/edited by easyrim</FrontierBulwarkPulse.description>
+-- easyrim</FrontierBulwarkPulse.description>
 </LanguageData>

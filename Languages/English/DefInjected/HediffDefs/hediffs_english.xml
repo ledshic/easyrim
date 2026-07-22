@@ -4,25 +4,25 @@
   <transcendence.description>
     A glittertech integration matrix keeps cognitive, physical, biological, environmental, psychic, and battle-protocol channels active at all times. Linked effects switch with context: adaptive armor hardens as health drops, ranged posture calibration engages with ranged weapons, and strong melee gene resonance unlocks extra close-quarters optimization.
 
-created/edited by easyrim</transcendence.description>
+-- easyrim</transcendence.description>
 
   <bravesoul.label>&lt;color=#00CED1&gt;immortal soul&lt;/color&gt;</bravesoul.label>
   <bravesoul.description>
     The immortal soul doctrine runs five channels in parallel: cognitive fervor, physical might, vital ascendance, combat mastery, and indomitable spirit. Its linked design is front-line focused, giving a stable baseline that brave-linked combat states can escalate into harder survival and melee pressure.
 
-created/edited by easyrim</bravesoul.description>
+-- easyrim</bravesoul.description>
 
   <pioneerspirit.label>&lt;color=#87CEEB&gt;pioneer spirit&lt;/color&gt;</pioneerspirit.label>
   <pioneerspirit.description>
     The pioneer doctrine maintains physical, industry, combat, and resilience channels while synchronizing with colony command abilities. Linked effects branch by state: ranged firefights trigger vanguard fire discipline, civilian mode triggers settler throughput, and low-health combat forces a last-stand survival surge.
 
-created/edited by easyrim</pioneerspirit.description>
+-- easyrim</pioneerspirit.description>
 
   <adaptive_armor.label>&lt;color=#646464&gt;adaptive armor&lt;/color&gt;</adaptive_armor.label>
   <adaptive_armor.description>
     Advanced adaptive armor that responds to the health condition. As health decreases, the armor becomes more protective but restricts movement. Nanoscale actuators analyze threat levels and automatically adjust defensive parameters.
 
-created/edited by easyrim</adaptive_armor.description>
+-- easyrim</adaptive_armor.description>
   <adaptive_armor.stages.0.label>adaptive armor (active)</adaptive_armor.stages.0.label>
   <adaptive_armor.stages.1.label>adaptive armor (alert)</adaptive_armor.stages.1.label>
   <adaptive_armor.stages.2.label>adaptive armor (defensive)</adaptive_armor.stages.2.label>
@@ -31,7 +31,7 @@ created/edited by easyrim</adaptive_armor.description>
   <transcendence_battle_morph_verbs.label>nanite battle protocol</transcendence_battle_morph_verbs.label>
   <transcendence_battle_morph_verbs.description>A standing nanite combat protocol derived from glitterworld battlefield doctrine. It does not replace natural limbs; instead, it overlays battle-prosthetic motion patterns through the neural lattice and continuously grants six melee maneuvers: phase cleave, kinetic ram, vector thrust, needle rake, heel spike, and sweeping kick.
 
-created/edited by easyrim</transcendence_battle_morph_verbs.description>
+-- easyrim</transcendence_battle_morph_verbs.description>
   <transcendence_battle_morph_verbs.comps.0.tools.0.label>phase cleave</transcendence_battle_morph_verbs.comps.0.tools.0.label>
   <transcendence_battle_morph_verbs.comps.0.tools.1.label>kinetic ram</transcendence_battle_morph_verbs.comps.0.tools.1.label>
   <transcendence_battle_morph_verbs.comps.0.tools.2.label>vector thrust</transcendence_battle_morph_verbs.comps.0.tools.2.label>
@@ -41,17 +41,17 @@ created/edited by easyrim</transcendence_battle_morph_verbs.description>
   <bravesoul_cognitive.label>cognitive fervor</bravesoul_cognitive.label>
   <bravesoul_cognitive.description>Sharpened mind and heightened perception fueled by warrior spirit.
 
-created/edited by easyrim</bravesoul_cognitive.description>
+-- easyrim</bravesoul_cognitive.description>
 
   <bravesoul_physical.label>physical might</bravesoul_physical.label>
   <bravesoul_physical.description>Unmatched agility and control honed through countless battles.
 
-created/edited by easyrim</bravesoul_physical.description>
+-- easyrim</bravesoul_physical.description>
 
   <bravesoul_vitals.label>vital ascendance</bravesoul_vitals.label>
   <bravesoul_vitals.description>Reinforced organs and accelerated recovery.
 
-created/edited by easyrim</bravesoul_vitals.description>
+-- easyrim</bravesoul_vitals.description>
   <bravesoul_vitals.stages.0.label>vital ascendance (stable)</bravesoul_vitals.stages.0.label>
   <bravesoul_vitals.stages.1.label>vital ascendance (awakened)</bravesoul_vitals.stages.1.label>
   <bravesoul_vitals.stages.2.label>vital ascendance (surging)</bravesoul_vitals.stages.2.label>
@@ -61,62 +61,62 @@ created/edited by easyrim</bravesoul_vitals.description>
   <bravesoul_combat.label>combat mastery</bravesoul_combat.label>
   <bravesoul_combat.description>Supreme martial prowess and adaptive defenses.
 
-created/edited by easyrim</bravesoul_combat.description>
+-- easyrim</bravesoul_combat.description>
 
   <bravesoul_spirit.label>indomitable spirit</bravesoul_spirit.label>
   <bravesoul_spirit.description>Unbreakable resolve that steadies the mind in the face of death.
 
-created/edited by easyrim</bravesoul_spirit.description>
+-- easyrim</bravesoul_spirit.description>
   <pioneerspirit_physical.label>frontier vigor</pioneerspirit_physical.label>
   <pioneerspirit_physical.description>Refined physicality for exploration and hauling.
 
-created/edited by easyrim</pioneerspirit_physical.description>
+-- easyrim</pioneerspirit_physical.description>
 
   <pioneerspirit_industry.label>pioneer industry</pioneerspirit_industry.label>
   <pioneerspirit_industry.description>Mastery of labor and production.
 
-created/edited by easyrim</pioneerspirit_industry.description>
+-- easyrim</pioneerspirit_industry.description>
 
   <pioneerspirit_combat.label>frontier marksmanship</pioneerspirit_combat.label>
   <pioneerspirit_combat.description>Tactical superiority and combat readiness.
 
-created/edited by easyrim</pioneerspirit_combat.description>
+-- easyrim</pioneerspirit_combat.description>
 
   <pioneerspirit_resilience.label>survival instinct</pioneerspirit_resilience.label>
   <pioneerspirit_resilience.description>Endurance, recovery, and unshakable resolve.
 
-created/edited by easyrim</pioneerspirit_resilience.description>
+-- easyrim</pioneerspirit_resilience.description>
   <pioneerspirit_vanguard_fire.label>vanguard fire discipline</pioneerspirit_vanguard_fire.label>
   <pioneerspirit_vanguard_fire.description>In active engagements, scouting doctrine folds into precision ranged pressure and rapid target cycling.
 
-created/edited by easyrim</pioneerspirit_vanguard_fire.description>
+-- easyrim</pioneerspirit_vanguard_fire.description>
   <pioneerspirit_settler_engine.label>settler throughput engine</pioneerspirit_settler_engine.label>
   <pioneerspirit_settler_engine.description>Outside direct combat, the pioneer mindset reorganizes labor into a relentless high-output routine.
 
-created/edited by easyrim</pioneerspirit_settler_engine.description>
+-- easyrim</pioneerspirit_settler_engine.description>
   <pioneerspirit_laststand.label>frontier last stand</pioneerspirit_laststand.label>
   <pioneerspirit_laststand.description>When collapse is imminent, every reserve is burned to keep moving, shooting, and surviving through the worst minute.
 
-created/edited by easyrim</pioneerspirit_laststand.description>
+-- easyrim</pioneerspirit_laststand.description>
   <pioneer_frontier_edict.label>frontier edict</pioneer_frontier_edict.label>
   <pioneer_frontier_edict.description>A short doctrine pulse synchronizes movement, labor cadence, and weapon handling for intense frontier response windows.
 
-created/edited by easyrim</pioneer_frontier_edict.description>
+-- easyrim</pioneer_frontier_edict.description>
   <WorkGuidance.label>work guidance</WorkGuidance.label>
   <WorkGuidance.description>After receiving precise guidance on work details and steps, work proficiency improves noticeably and learning accelerates sharply for a short time.
 
-created/edited by easyrim</WorkGuidance.description>
+-- easyrim</WorkGuidance.description>
   <WorkMotivation.label>united as one</WorkMotivation.label>
   <WorkMotivation.description>Galvanized by the colony mobilization call, this pawn works shoulder to shoulder with their comrades, throwing themselves into every task with exceptional drive and focus. The effect fades after one day.
 
-created/edited by easyrim</WorkMotivation.description>
+-- easyrim</WorkMotivation.description>
   <EasyMode_NeuralOverclock.label>neural overclock</EasyMode_NeuralOverclock.label>
   <EasyMode_NeuralOverclock.description>The nervous system and musculature are operating far beyond normal safety limits. Motion becomes explosively fast and precise while accumulating tissue strain across the body.
 
-created/edited by easyrim</EasyMode_NeuralOverclock.description>
+-- easyrim</EasyMode_NeuralOverclock.description>
   <EasyMode_NeuralOverclockStrain.label>overclock strain</EasyMode_NeuralOverclockStrain.label>
   <EasyMode_NeuralOverclockStrain.labelNoun>an overclock strain</EasyMode_NeuralOverclockStrain.labelNoun>
   <EasyMode_NeuralOverclockStrain.description>Localized neural and muscular damage caused by forcing the body beyond its safe operating limits.
 
-created/edited by easyrim</EasyMode_NeuralOverclockStrain.description>
+-- easyrim</EasyMode_NeuralOverclockStrain.description>
 </LanguageData>

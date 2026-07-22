@@ -3,78 +3,78 @@
 	<archotechoath.label>&lt;color=#D4AF37&gt;远古机誓&lt;/color&gt;</archotechoath.label>
 	<archotechoath.description>远古机誓会常驻维持谕算心智、锻律执持、执政节律与自修护壁四条核心链路。联动效果随状态改写：未征召时偏向研作同调，战斗中切换战协晶格，生命跌破 50% 时强制触发紧急隔舱。
 
-由 easyrim 创建/编辑</archotechoath.description>
+-- easyrim</archotechoath.description>
 	<archotechoath_cognition.label>谕算心智</archotechoath_cognition.label>
 	<archotechoath_cognition.description>由模式预判与严谨思维构成的认知框架，显著提升学习与研究效率。
 
-由 easyrim 创建/编辑</archotechoath_cognition.description>
+-- easyrim</archotechoath_cognition.description>
 	<archotechoath_industry.label>锻律执持</archotechoath_industry.label>
 	<archotechoath_industry.description>精细操作与不倦节律将劳作转化为近乎工坊级的精密流程。
 
-由 easyrim 创建/编辑</archotechoath_industry.description>
+-- easyrim</archotechoath_industry.description>
 	<archotechoath_command.label>执政节律</archotechoath_command.label>
 	<archotechoath_command.description>沉着措辞与稳定气场能安定同伴，并在交涉中逐步占据主动。
 
-由 easyrim 创建/编辑</archotechoath_command.description>
+-- easyrim</archotechoath_command.description>
 	<archotechoath_aegis.label>自修护壁</archotechoath_aegis.label>
 	<archotechoath_aegis.description>微型机械体优先维持结构完整，在高压环境下加速恢复并强化防护。
 
-由 easyrim 创建/编辑</archotechoath_aegis.description>
+-- easyrim</archotechoath_aegis.description>
 	<archotechoath_labsync.label>研作同调协议</archotechoath_labsync.label>
 	<archotechoath_labsync.description>脱离正面战斗后，认知例程会锁定研究与精密工艺吞吐，持续抬升后勤效率。
 
-由 easyrim 创建/编辑</archotechoath_labsync.description>
+-- easyrim</archotechoath_labsync.description>
 	<archotechoath_warprotocol.label>战协晶格</archotechoath_warprotocol.label>
 	<archotechoath_warprotocol.description>战场遥测将认知算力导入瞄准、位移预判与损伤控制回路，形成战斗态协议。
 
-由 easyrim 创建/编辑</archotechoath_warprotocol.description>
+-- easyrim</archotechoath_warprotocol.description>
 	<archotechoath_emergency_bulkhead.label>紧急隔舱</archotechoath_emergency_bulkhead.label>
 	<archotechoath_emergency_bulkhead.description>当完整性下降到危险区间，应急装甲与创伤分流会强制进入硬抗生存状态。
 
-由 easyrim 创建/编辑</archotechoath_emergency_bulkhead.description>
+-- easyrim</archotechoath_emergency_bulkhead.description>
 
 	<frontierwarden.label>&lt;color=#6B8E23&gt;边疆守望&lt;/color&gt;</frontierwarden.label>
 	<frontierwarden.description>边疆守望会常驻维持踏荒行军、火线教范、战地稳术与破阵意志四条守线链路，作为殖民地防御中枢。联动效果按姿态切换：远程交火时启用警戒火网矩阵，近战缠斗时启用破阵狂袭，脱离征召时切换营地分诊指挥以抬升恢复与后勤节奏。
 
-由 easyrim 创建/编辑</frontierwarden.description>
+-- easyrim</frontierwarden.description>
 	<frontierwarden_pathfinder.label>踏荒行军</frontierwarden_pathfinder.label>
 	<frontierwarden_pathfinder.description>长期远行训练强化机动、负重与野外态势感知。
 
-由 easyrim 创建/编辑</frontierwarden_pathfinder.description>
+-- easyrim</frontierwarden_pathfinder.description>
 	<frontierwarden_fireline.label>火线教范</frontierwarden_fireline.label>
 	<frontierwarden_fireline.description>战场操典磨炼瞄准纪律与压制下的目标捕获能力。
 
-由 easyrim 创建/编辑</frontierwarden_fireline.description>
+-- easyrim</frontierwarden_fireline.description>
 	<frontierwarden_fieldsurgeon.label>战地稳术</frontierwarden_fieldsurgeon.label>
 	<frontierwarden_fieldsurgeon.description>分诊直觉与稳定手法让宿主在漫长战役中持续维系队伍战力。
 
-由 easyrim 创建/编辑</frontierwarden_fieldsurgeon.description>
+-- easyrim</frontierwarden_fieldsurgeon.description>
 	<frontierwarden_breachfighter.label>破阵意志</frontierwarden_breachfighter.label>
 	<frontierwarden_breachfighter.description>近距突击的凶猛与顽强抗压能力，使其能在混战中牢牢顶住战线。
 
-由 easyrim 创建/编辑</frontierwarden_breachfighter.description>
+-- easyrim</frontierwarden_breachfighter.description>
 	<frontierwarden_overwatch_matrix.label>警戒火网矩阵</frontierwarden_overwatch_matrix.label>
 	<frontierwarden_overwatch_matrix.description>进入警戒火力模式后，远程节奏与火线压制能力会显著提高。
 
-由 easyrim 创建/编辑</frontierwarden_overwatch_matrix.description>
+-- easyrim</frontierwarden_overwatch_matrix.description>
 	<frontierwarden_breach_rampage.label>破阵狂袭</frontierwarden_breach_rampage.label>
 	<frontierwarden_breach_rampage.description>近战破阵姿态会放弃保守换取暴力突破与持续近距压制。
 
-由 easyrim 创建/编辑</frontierwarden_breach_rampage.description>
+-- easyrim</frontierwarden_breach_rampage.description>
 	<frontierwarden_camp_triage.label>营地分诊指挥</frontierwarden_camp_triage.label>
 	<frontierwarden_camp_triage.description>脱离交火后切换为后勤救治模式，提升稳定伤员与持续恢复能力。
 
-由 easyrim 创建/编辑</frontierwarden_camp_triage.description>
+-- easyrim</frontierwarden_camp_triage.description>
 	<archotech_protocol_surge.label>协议超涌</archotech_protocol_surge.label>
 	<archotech_protocol_surge.description>短时过载远古机誓主控例程，在战斗与生产端同时拉升峰值吞吐。
 
-由 easyrim 创建/编辑</archotech_protocol_surge.description>
+-- easyrim</archotech_protocol_surge.description>
 	<archotech_lockstep_marked.label>协锁标定</archotech_lockstep_marked.label>
 	<archotech_lockstep_marked.description>目标被远古遥测协锁，机动与防御节奏遭到压制，更易承受后续打击。
 
-由 easyrim 创建/编辑</archotech_lockstep_marked.description>
+-- easyrim</archotech_lockstep_marked.description>
 	<frontier_bulwark_pulse.label>壁垒脉冲</frontier_bulwark_pulse.label>
 	<frontier_bulwark_pulse.description>守望脉冲会强化姿态与反应速度，短时提高防线维持能力。
 
-由 easyrim 创建/编辑</frontier_bulwark_pulse.description>
+-- easyrim</frontier_bulwark_pulse.description>
 </LanguageData>

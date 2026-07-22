@@ -3,13 +3,17 @@
   <TranscendentDropPods.label>nano relay drop</TranscendentDropPods.label>
   <TranscendentDropPods.description>Broadcast a forged nano-command uplink that hijacks nearby logistics satellites, forcing rapid deployment of several single-use strike pods onto the selected zone.
 
-created/edited by easyrim</TranscendentDropPods.description>
+-- easyrim</TranscendentDropPods.description>
   <BloodfeedUniverse.label>bloodfeed universe</BloodfeedUniverse.label>
   <BloodfeedUniverse.description>Drain blood from any living nearby pawn, including hostile targets. Causes heavier blood loss and grants more hemogen than normal bloodfeed.
 
-created/edited by easyrim</BloodfeedUniverse.description>
+-- easyrim</BloodfeedUniverse.description>
   <NanoDisassemblyTransit.label>nano disassembly transit</NanoDisassemblyTransit.label>
   <NanoDisassemblyTransit.description>Initiate the integrated nano-transit matrix and convert the body into a compressed subatomic data stream. Trillions of nanomachines encode molecular and neural states, relay the packet through synchronized orbital nodes, then reassemble matter at the destination with atomic precision.
 
-created/edited by easyrim</NanoDisassemblyTransit.description>
+-- easyrim</NanoDisassemblyTransit.description>
+  <ArchotechRestoration.label>archotech restoration</ArchotechRestoration.label>
+  <ArchotechRestoration.description>Deploy a focused archotech recovery lattice to rapidly close wounds, stop bleeding, and repair the worst injuries. The process is precise and stable, leaving the subject without mutation, infection, or psychic backlash.
+
+-- easyrim</ArchotechRestoration.description>
 </LanguageData>

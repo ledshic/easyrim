@@ -3,13 +3,13 @@
   <CorsairBroadside.label>broadside overdrive</CorsairBroadside.label>
   <CorsairBroadside.description>Force your combat rhythm into a short broadside burst. Fire faster and aim quicker, but incoming fire becomes harder to shrug off.
 
-created/edited by easyrim</CorsairBroadside.description>
+-- easyrim</CorsairBroadside.description>
   <CorsairPlunderMark.label>plunder mark</CorsairPlunderMark.label>
   <CorsairPlunderMark.description>Tag a target as ripe salvage, slowing their movement and making them easier to finish.
 
-created/edited by easyrim</CorsairPlunderMark.description>
+-- easyrim</CorsairPlunderMark.description>
   <CorsairCutthroatRush.label>cutthroat rush</CorsairCutthroatRush.label>
   <CorsairCutthroatRush.description>Commit to a savage boarding sprint. You gain brutal close-range momentum at the cost of higher exposure.
 
-created/edited by easyrim</CorsairCutthroatRush.description>
+-- easyrim</CorsairCutthroatRush.description>
 </LanguageData>

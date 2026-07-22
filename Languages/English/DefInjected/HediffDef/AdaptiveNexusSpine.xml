@@ -3,16 +3,16 @@
   <EM_NexusSpine_RangedAdaptation.label>nexus ranged calibration</EM_NexusSpine_RangedAdaptation.label>
   <EM_NexusSpine_RangedAdaptation.description>The adaptive nexus spine detects a ranged weapon and continuously recalibrates posture, recoil compensation, and visual-motor timing.
 
-created/edited by easyrim</EM_NexusSpine_RangedAdaptation.description>
+-- easyrim</EM_NexusSpine_RangedAdaptation.description>
 
   <EM_NexusSpine_GeneAdaptation.label>nexus gene resonance</EM_NexusSpine_GeneAdaptation.label>
   <EM_NexusSpine_GeneAdaptation.description>The adaptive nexus spine resonates with strong fast-twitch melee genes and pushes close-quarters biomechanics to a higher output band.
 
-created/edited by easyrim</EM_NexusSpine_GeneAdaptation.description>
+-- easyrim</EM_NexusSpine_GeneAdaptation.description>
 
   <EM_AdaptiveNexusSpine.label>adaptive nexus spine</EM_AdaptiveNexusSpine.label>
   <EM_AdaptiveNexusSpine.labelNoun>an adaptive nexus spine</EM_AdaptiveNexusSpine.labelNoun>
   <EM_AdaptiveNexusSpine.description>This spine permanently distributes physical and biological transcendence channels as its baseline. Linked effects switch by state: adaptive armor below 75% health, nanite battle protocol in combat, ranged calibration with ranged weapons, and gene resonance with strong melee genes.
 
-created/edited by easyrim</EM_AdaptiveNexusSpine.description>
+-- easyrim</EM_AdaptiveNexusSpine.description>
 </LanguageData>

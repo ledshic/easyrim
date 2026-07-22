@@ -4,6 +4,6 @@
   <AutoDrill.label>auto drill</AutoDrill.label>
   <AutoDrill.description>An old-generation deep-crust auto drill designed for long-term unmanned operation. It can switch between external power and solar power, and offers high-speed, high-precision, and safe drilling modes. It continuously mines underground veins based on ground-penetrating scanner results and ejects processed ore directly. When local deep resources are exhausted, it automatically powers down. Can be repositioned freely.
 
-created/edited by easyrim</AutoDrill.description>
+-- easyrim</AutoDrill.description>
 
 </LanguageData>
