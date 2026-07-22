@@ -12,6 +12,67 @@ namespace EasyMode
         Forbidden
     }
 
+    internal static class PawnConditionUtility
+    {
+        public static bool IsInCombat(Pawn pawn)
+        {
+            if (pawn == null)
+            {
+                return false;
+            }
+
+            if (pawn.mindState?.enemyTarget != null)
+            {
+                return true;
+            }
+
+            JobDef job = pawn.CurJobDef;
+            return job == JobDefOf.AttackMelee ||
+                   job == JobDefOf.AttackStatic ||
+                   job == JobDefOf.Wait_Combat;
+        }
+
+        public static bool HasEquippedWeapon(Pawn pawn)
+        {
+            if (pawn?.equipment == null)
+            {
+                return false;
+            }
+
+            List<ThingWithComps> equipment = pawn.equipment.AllEquipmentListForReading;
+            for (int i = 0; i < equipment.Count; i++)
+            {
+                ThingWithComps thing = equipment[i];
+                if (thing?.def?.IsWeapon == true)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        public static bool IsIndoors(Pawn pawn)
+        {
+            return pawn?.Spawned == true && pawn.Map?.roofGrid?.Roofed(pawn.Position) == true;
+        }
+
+        public static bool IsOutdoors(Pawn pawn)
+        {
+            return pawn?.Spawned == true && pawn.Map?.roofGrid?.Roofed(pawn.Position) != true;
+        }
+
+        public static bool IsInLight(Pawn pawn)
+        {
+            return pawn?.Spawned == true && pawn.Map?.glowGrid?.PsychGlowAt(pawn.Position) != PsychGlow.Dark;
+        }
+
+        public static bool IsInDarkness(Pawn pawn)
+        {
+            return pawn?.Spawned == true && pawn.Map?.glowGrid?.PsychGlowAt(pawn.Position) == PsychGlow.Dark;
+        }
+    }
+
     public class ConditionalHediffRequirement
     {
         public HediffDef hediff;
@@ -73,6 +134,10 @@ namespace EasyMode
         public bool includeWeapons = true;
         public bool includeApparel = true;
 
+        public List<ConditionalHediffRule> allRules;
+        public List<ConditionalHediffRule> anyRules;
+        public List<ConditionalHediffRule> noRules;
+
         public List<JobDef> anyJobs;
         public List<JobDef> noJobs;
 
@@ -83,6 +148,10 @@ namespace EasyMode
         public ConditionalStateRequirement moving = ConditionalStateRequirement.Any;
         public ConditionalStateRequirement asleep = ConditionalStateRequirement.Any;
         public ConditionalStateRequirement hasPrimaryEquipment = ConditionalStateRequirement.Any;
+        public ConditionalStateRequirement indoors = ConditionalStateRequirement.Any;
+        public ConditionalStateRequirement outdoors = ConditionalStateRequirement.Any;
+        public ConditionalStateRequirement inLight = ConditionalStateRequirement.Any;
+        public ConditionalStateRequirement inDarkness = ConditionalStateRequirement.Any;
 
         public FloatRange healthPercent = new FloatRange(0f, 1f);
 
@@ -123,6 +192,13 @@ namespace EasyMode
                 return false;
             }
 
+            if (!AllRulesMatch(pawn, allRules) ||
+                !AnyRulesMatch(pawn, anyRules) ||
+                AnyRulesMatchForbidden(pawn, noRules))
+            {
+                return false;
+            }
+
             JobDef currentJob = pawn.CurJobDef;
             if (!anyJobs.NullOrEmpty() && !anyJobs.Contains(currentJob))
             {
@@ -137,10 +213,68 @@ namespace EasyMode
             return StateMatches(drafted, pawn.Drafted) &&
                    StateMatches(downed, pawn.Downed) &&
                    StateMatches(inMentalState, pawn.InMentalState) &&
-                   StateMatches(inCombat, IsInCombat(pawn)) &&
+                   StateMatches(inCombat, PawnConditionUtility.IsInCombat(pawn)) &&
                    StateMatches(moving, pawn.pather?.MovingNow == true) &&
                    StateMatches(asleep, !pawn.Awake()) &&
-                   StateMatches(hasPrimaryEquipment, pawn.equipment?.Primary != null);
+                   StateMatches(hasPrimaryEquipment, PawnConditionUtility.HasEquippedWeapon(pawn)) &&
+                   StateMatches(indoors, PawnConditionUtility.IsIndoors(pawn)) &&
+                   StateMatches(outdoors, PawnConditionUtility.IsOutdoors(pawn)) &&
+                   StateMatches(inLight, PawnConditionUtility.IsInLight(pawn)) &&
+                   StateMatches(inDarkness, PawnConditionUtility.IsInDarkness(pawn));
+        }
+
+        private bool AllRulesMatch(Pawn pawn, List<ConditionalHediffRule> rules)
+        {
+            if (rules.NullOrEmpty())
+            {
+                return true;
+            }
+
+            for (int i = 0; i < rules.Count; i++)
+            {
+                if (rules[i] == null || !rules[i].Matches(pawn))
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        private bool AnyRulesMatch(Pawn pawn, List<ConditionalHediffRule> rules)
+        {
+            if (rules.NullOrEmpty())
+            {
+                return true;
+            }
+
+            for (int i = 0; i < rules.Count; i++)
+            {
+                if (rules[i]?.Matches(pawn) == true)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        private bool AnyRulesMatchForbidden(Pawn pawn, List<ConditionalHediffRule> rules)
+        {
+            if (rules.NullOrEmpty())
+            {
+                return false;
+            }
+
+            for (int i = 0; i < rules.Count; i++)
+            {
+                if (rules[i]?.Matches(pawn) == true)
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
 
         private bool AllHediffsMatch(Pawn pawn, List<ConditionalHediffRequirement> requirements)
@@ -451,18 +585,6 @@ namespace EasyMode
             }
         }
 
-        private static bool IsInCombat(Pawn pawn)
-        {
-            if (pawn.Drafted || pawn.mindState?.enemyTarget != null)
-            {
-                return true;
-            }
-
-            JobDef job = pawn.CurJobDef;
-            return job == JobDefOf.AttackMelee ||
-                   job == JobDefOf.AttackStatic ||
-                   job == JobDefOf.Wait_Combat;
-        }
     }
 
     public class ConditionalHediffProfileDef : Def
@@ -479,7 +601,7 @@ namespace EasyMode
 
             for (int i = 0; i < rules.Count; i++)
             {
-                ManagedHediffEffectUtility.EnsureManagedEffectDef(rules[i]?.activeHediff);
+                EnsureManagedEffectDefs(rules[i]);
             }
         }
 
@@ -508,7 +630,7 @@ namespace EasyMode
                     yield return $"{defName}: duplicate conditional rule key '{rules[i].key}'";
                 }
 
-                string error = ValidateRule(rules[i], i, defName);
+                string error = ValidateRule(rules[i], i, defName, true);
                 if (error != null)
                 {
                     yield return error;
@@ -516,19 +638,92 @@ namespace EasyMode
             }
         }
 
-        internal static string ValidateRule(ConditionalHediffRule rule, int index, string ownerName)
+        internal static string ValidateRule(ConditionalHediffRule rule, int index, string ownerName, bool requireActiveHediff)
         {
-            if (rule?.activeHediff == null)
+            return ValidateRule(rule, $"{ownerName}: conditional rule {index}", requireActiveHediff);
+        }
+
+        private static string ValidateRule(ConditionalHediffRule rule, string path, bool requireActiveHediff)
+        {
+            if (rule == null)
             {
-                return $"{ownerName}: conditional rule {index} has no activeHediff";
+                return $"{path} is null";
             }
 
-            if (!typeof(HediffWithComps).IsAssignableFrom(rule.activeHediff.hediffClass))
+            if (requireActiveHediff && rule.activeHediff == null)
             {
-                return $"{ownerName}: effect {rule.activeHediff.defName} must use a HediffWithComps-derived class";
+                return $"{path} has no activeHediff";
+            }
+
+            if (rule.activeHediff != null && !typeof(HediffWithComps).IsAssignableFrom(rule.activeHediff.hediffClass))
+            {
+                return $"{path}: effect {rule.activeHediff.defName} must use a HediffWithComps-derived class";
+            }
+
+            string error = ValidateRuleList(rule.allRules, path, "allRules");
+            if (error != null)
+            {
+                return error;
+            }
+
+            error = ValidateRuleList(rule.anyRules, path, "anyRules");
+            if (error != null)
+            {
+                return error;
+            }
+
+            error = ValidateRuleList(rule.noRules, path, "noRules");
+            if (error != null)
+            {
+                return error;
             }
 
             return null;
+        }
+
+        private static string ValidateRuleList(List<ConditionalHediffRule> rules, string path, string listName)
+        {
+            if (rules.NullOrEmpty())
+            {
+                return null;
+            }
+
+            for (int i = 0; i < rules.Count; i++)
+            {
+                string error = ValidateRule(rules[i], $"{path}.{listName}[{i}]", false);
+                if (error != null)
+                {
+                    return error;
+                }
+            }
+
+            return null;
+        }
+
+        private static void EnsureManagedEffectDefs(ConditionalHediffRule rule)
+        {
+            if (rule == null)
+            {
+                return;
+            }
+
+            ManagedHediffEffectUtility.EnsureManagedEffectDef(rule.activeHediff);
+            EnsureManagedEffectDefs(rule.allRules);
+            EnsureManagedEffectDefs(rule.anyRules);
+            EnsureManagedEffectDefs(rule.noRules);
+        }
+
+        private static void EnsureManagedEffectDefs(List<ConditionalHediffRule> rules)
+        {
+            if (rules.NullOrEmpty())
+            {
+                return;
+            }
+
+            for (int i = 0; i < rules.Count; i++)
+            {
+                EnsureManagedEffectDefs(rules[i]);
+            }
         }
     }
 
@@ -590,7 +785,7 @@ namespace EasyMode
 
             for (int i = 0; i < allRules.Count; i++)
             {
-                string error = ConditionalHediffProfileDef.ValidateRule(allRules[i], i, parentDef.defName);
+                string error = ConditionalHediffProfileDef.ValidateRule(allRules[i], i, parentDef.defName, true);
                 if (error != null)
                 {
                     yield return error;

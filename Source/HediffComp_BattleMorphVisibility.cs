@@ -36,7 +36,7 @@ namespace EasyMode
                 ? HiddenSeverityEpsilon
                 : PropsBattleMorphVisibility.hiddenSeverity;
 
-            float targetSeverity = IsInCombat(pawn)
+            float targetSeverity = PawnConditionUtility.IsInCombat(pawn)
                 ? PropsBattleMorphVisibility.activeSeverity
                 : hiddenSeverity;
 
@@ -46,23 +46,5 @@ namespace EasyMode
             }
         }
 
-        private static bool IsInCombat(Pawn pawn)
-        {
-            if (pawn.Drafted)
-            {
-                return true;
-            }
-
-            if (pawn.CurJob != null)
-            {
-                JobDef job = pawn.CurJob.def;
-                if (job == JobDefOf.AttackMelee || job == JobDefOf.AttackStatic || job == JobDefOf.Wait_Combat)
-                {
-                    return true;
-                }
-            }
-
-            return pawn.mindState?.enemyTarget != null;
-        }
     }
 }

@@ -50,6 +50,35 @@ Rules are ANDed across condition families. Within a family:
 
 An entirely conditionless rule is persistent while its controller exists.
 
+Rules can also nest other rules to express grouped logic. Use `allRules`, `anyRules`, and `noRules` when you need parentheses-style combinations such as `A and (B or C)`.
+
+Example:
+
+```xml
+<rules>
+  <li>
+    <key>drafted-ranged-or-combat-melee</key>
+    <activeHediff>MyEffect</activeHediff>
+    <anyRules>
+      <li>
+        <drafted>Required</drafted>
+        <hasPrimaryEquipment>Required</hasPrimaryEquipment>
+        <anyEquipmentTags>
+          <li>Ranged</li>
+        </anyEquipmentTags>
+      </li>
+      <li>
+        <inCombat>Required</inCombat>
+        <hasPrimaryEquipment>Required</hasPrimaryEquipment>
+        <anyEquipmentTags>
+          <li>Melee</li>
+        </anyEquipmentTags>
+      </li>
+    </anyRules>
+  </li>
+</rules>
+```
+
 Every rule should define a unique, stable `key`. Provider leases use this key in save data, so keys must not be renamed after release. Rules without a key receive a deterministic fallback, but emit a configuration error because list reordering could then change ownership identity.
 
 ## Supported conditions
@@ -115,9 +144,19 @@ Rules can inspect both equipped weapons and worn apparel:
 <moving>Any</moving>
 <asleep>Forbidden</asleep>
 <hasPrimaryEquipment>Required</hasPrimaryEquipment>
+<indoors>Any</indoors>
+<outdoors>Any</outdoors>
+<inLight>Any</inLight>
+<inDarkness>Any</inDarkness>
 ```
 
 State values are `Any`, `Required`, and `Forbidden`.
+
+`drafted` is the raw drafted state only. `inCombat` means an active combat situation, driven by hostile targets or combat jobs, and is no longer a proxy for drafted idle behavior.
+
+`hasPrimaryEquipment` now checks whether the pawn is actually carrying a weapon in equipment, not just whether the primary slot is non-empty.
+
+`indoors` and `outdoors` use roof coverage at the pawn position. `inLight` and `inDarkness` use the map glow level at the pawn position.
 
 ### Health
 
