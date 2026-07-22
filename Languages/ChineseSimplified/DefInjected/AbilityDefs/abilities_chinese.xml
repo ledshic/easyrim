@@ -2,14 +2,12 @@
 <languageData>
 	<MetalbloodSurge.label>赤钢融血</MetalbloodSurge.label>
 	<MetalbloodSurge.description>激活金属血心植入体，令液态金属机械涌入血管，创造血肉与钢铁的暂时融合。这种强化会显著减少受到的伤害，融合体暂时会由于液态金属的易燃性更惧怕火焰，效果会随着金属化合物被自然过滤而消退。</MetalbloodSurge.description>
-	<BlessHealing.label>机械复原</BlessHealing.label>
-	<BlessHealing.description>释放解锁控制的机械单元用于快速执行有机修复，然而解锁的机械单元可能收到黑暗灵能的干扰而重组成为独立的血肉生物。</BlessHealing.description>
+	<ResurrectNoCost.label>机械复生</ResurrectNoCost.label>
+	<ResurrectNoCost.description>利用血流中的机械单元为死者恢复生命。这些微观机器修复细胞损伤，重启生命功能，重建神经通路。复活的成功和质量取决于尸体的状况——新鲜的身体保留更多记忆和身体完整性，而老旧遗骸可能遭受永久的认知或身体损伤。</ResurrectNoCost.description>
 	<ChaosCall.label>血肉雕塑师</ChaosCall.label>
 	<ChaosCall.description>召唤恶意的远古智能将尸体复活为可怖的血肉怪兽。黑暗的转化扭曲死亡组织成为纯粹攻击性驱动的噩梦生物。生成的怪物将无差别攻击所有生物，包括其创造者。</ChaosCall.description>
 	<CommandSlaughter.label>血肉溶解</CommandSlaughter.label>
 	<CommandSlaughter.description>释放毁灭性心灵攻击，导致活体组织发生灾难性细胞破坏。目标的血肉快速恶化并重新形成扭曲的有机物质团块，通过可怖的生物重构瞬间杀死目标。这种能力代表了血肉操控技术的巅峰。</CommandSlaughter.description>
-	<ResurrectNoCost.label>机械复生</ResurrectNoCost.label>
-	<ResurrectNoCost.description>利用血流中的机械单元为死者恢复生命。这些微观机器修复细胞损伤，重启生命功能，重建神经通路。复活的成功和质量取决于尸体的状况——新鲜的身体保留更多记忆和身体完整性，而老旧遗骸可能遭受永久的认知或身体损伤。</ResurrectNoCost.description>
 	<BloodfeedUniverse.label>吸血宇宙</BloodfeedUniverse.label>
 	<BloodfeedUniverse.description>近距离汲取任何活着的目标血液，包括敌对单位。造成更严重的失血，并获得更多血原质。</BloodfeedUniverse.description>
 	<TranscendentDropPods.label>纳米中继投送</TranscendentDropPods.label>

@@ -39,40 +39,6 @@
 			</li>
 		</comps>
 	</AbilityDef>
-	<AbilityDef ParentName="AbilityTouchBase">
-		<defName>BlessHealing</defName>
-		<label>forbidden restoration</label>
-		<description>Channel dark psychic forces to rapidly heal severe wounds and restore lost blood. This forbidden technique can mend even grievous injuries that would normally prove fatal, but the unnatural process may trigger unexpected mutations or psychological trauma in the subject.</description>
-		<iconPath>UI/Abilities/UnnaturalHealing</iconPath>
-		<cooldownTicksRange>6000</cooldownTicksRange>
-		<showPsycastEffects>false</showPsycastEffects>
-		<sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
-		<stunTargetWhileCasting>true</stunTargetWhileCasting>
-		<moteOffsetAmountTowardsTarget>0.5</moteOffsetAmountTowardsTarget>
-		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
-		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
-		<warmupMote>Mote_HoraxSmallSpellWarmup</warmupMote>
-		<warmupEffecter>HoraxianAbilityCasting</warmupEffecter>
-		<warmupSound>AnomalyAbilityWarmup</warmupSound>
-		<hostile>false</hostile>
-		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
-		<charges>7</charges>
-		<cooldownPerCharge>true</cooldownPerCharge>
-		<verbProperties>
-			<verbClass>Verb_CastAbilityTouch</verbClass>
-			<drawAimPie>false</drawAimPie>
-			<range>-1</range>
-			<warmupTime>4.5</warmupTime>
-			<targetParams>
-				<canTargetSelf>true</canTargetSelf>
-				<canTargetMechs>false</canTargetMechs>
-				<canTargetBuildings>false</canTargetBuildings>
-			</targetParams>
-		</verbProperties>
-		<comps>
-			<li Class="CompProperties_UnnaturalHealing" />
-		</comps>
-	</AbilityDef>
 	<AbilityDef Name="ShapeFlesh">
 		<defName>ChaosCall</defName>
 		<label>flesh sculptor</label>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <ResurrectNoCost.label>eternal revival</ResurrectNoCost.label>
+  <ResurrectNoCost.description>Harness advanced archite technology flowing through the bloodstream to restore life to the deceased. These microscopic machines repair cellular damage, restart vital functions, and reconstruct neural pathways. The success and quality of resurrection depends on the corpse's condition - fresher bodies retain more memories and physical integrity, while older remains may suffer permanent cognitive or physical impairments.</ResurrectNoCost.description>
+  <ArchotechRestoration.label>archotech restoration</ArchotechRestoration.label>
+  <ArchotechRestoration.description>Deploy a focused archotech recovery lattice to rapidly close wounds, stop bleeding, and repair the worst injuries. The process is precise and stable, leaving the subject without mutation, infection, or psychic backlash.</ArchotechRestoration.description>
+</LanguageData>

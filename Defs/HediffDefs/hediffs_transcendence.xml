@@ -161,6 +161,7 @@
 			<li Class="HediffCompProperties_GiveAbility">
 				<abilityDefs>
 					<li>ResurrectNoCost</li>
+					<li>ArchotechRestoration</li>
 					<li>TranscendentDropPods</li>
 					<li>NanoDisassemblyTransit</li>
 				</abilityDefs>

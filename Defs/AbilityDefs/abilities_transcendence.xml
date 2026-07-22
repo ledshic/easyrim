@@ -31,6 +31,37 @@
 			<li Class="CompProperties_Resurrect" />
 		</comps>
 	</AbilityDef>
+	<AbilityDef ParentName="AbilityTouchBase">
+		<defName>ArchotechRestoration</defName>
+		<label>archotech restoration</label>
+		<description>Deploy a focused archotech recovery lattice to rapidly close wounds, stop bleeding, and repair the worst injuries. The process is precise and stable, leaving the subject without mutation, infection, or psychic backlash.</description>
+		<iconPath>UI/Abilities/UnnaturalHealing</iconPath>
+		<cooldownTicksRange>60000~120000</cooldownTicksRange>
+		<warmupMote>Mote_ResurrectAbility</warmupMote>
+		<warmupStartSound>Resurrect_Cast</warmupStartSound>
+		<displayOrder>600</displayOrder>
+		<hostile>false</hostile>
+		<sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
+		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+		<charges>3</charges>
+		<cooldownPerCharge>true</cooldownPerCharge>
+		<verbProperties>
+			<verbClass>Verb_CastAbilityTouch</verbClass>
+			<drawAimPie>false</drawAimPie>
+			<range>-1</range>
+			<warmupTime>2</warmupTime>
+			<soundCast>Resurrect_Resolve</soundCast>
+			<targetParams>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetCorpses>true</canTargetCorpses>
+				<canTargetMechs>false</canTargetMechs>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="EasyMode.CompProperties_ArchotechRestoration" />
+		</comps>
+	</AbilityDef>
 	<AbilityDef>
 		<defName>NanoDisassemblyTransit</defName>
 		<label>nano disassembly transit</label>
