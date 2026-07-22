@@ -304,4 +304,81 @@
 			</li>
 		</stages>
 	</HediffDef>
+
+	<Def Class="EasyMode.ConditionalHediffProfileDef">
+		<defName>EM_BraveSpine_CoreProfile</defName>
+		<rules>
+			<li>
+				<key>core-physical</key>
+				<activeHediff>bravesoul_physical</activeHediff>
+				<activeSeverity>1</activeSeverity>
+			</li>
+			<li>
+				<key>core-spirit</key>
+				<activeHediff>bravesoul_spirit</activeHediff>
+				<activeSeverity>1</activeSeverity>
+			</li>
+		</rules>
+	</Def>
+
+	<HediffDef>
+		<defName>EM_BraveSpine_BattleTrance</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>battle trance discipline</label>
+		<description>The warspine locks the host into a ritual combat cadence, suppressing hesitation and driving clean, committed attacks.</description>
+		<defaultLabelColor>(0,206,209)</defaultLabelColor>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<statFactors>
+					<MeleeHitChance>1.25</MeleeHitChance>
+					<MeleeCooldownFactor>0.72</MeleeCooldownFactor>
+					<MoveSpeed>1.15</MoveSpeed>
+					<IncomingDamageFactor>0.8</IncomingDamageFactor>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>EM_BraveSpine</defName>
+		<label>indomitable warspine</label>
+		<labelNoun>an indomitable warspine</labelNoun>
+		<description>An installed warspine that keeps a fighter upright through pain, fear, and impact. It reserves deeper combat mastery and vital overdrive for moments of direct engagement or extreme danger.</description>
+		<descriptionHyperlinks><ThingDef>EM_BraveSpine</ThingDef></descriptionHyperlinks>
+		<spawnThingOnRemoved>EM_BraveSpine</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.3</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<comps>
+			<li Class="EasyMode.HediffCompProperties_ConditionalHediffDistributor">
+				<checkIntervalTicks>90</checkIntervalTicks>
+				<profiles>
+					<li>EM_BraveSpine_CoreProfile</li>
+				</profiles>
+				<rules>
+					<li>
+						<key>brave-combat-mastery</key>
+						<activeHediff>bravesoul_combat</activeHediff>
+						<activeSeverity>1</activeSeverity>
+						<inCombat>Required</inCombat>
+					</li>
+					<li>
+						<key>brave-vital-overdrive</key>
+						<activeHediff>bravesoul_vitals</activeHediff>
+						<activeSeverity>3</activeSeverity>
+						<healthPercent>0~0.65</healthPercent>
+					</li>
+					<li>
+						<key>brave-battle-trance</key>
+						<activeHediff>EM_BraveSpine_BattleTrance</activeHediff>
+						<activeSeverity>1</activeSeverity>
+						<drafted>Required</drafted>
+					</li>
+				</rules>
+			</li>
+		</comps>
+	</HediffDef>
 </Defs>

@@ -379,4 +379,169 @@
 			</li>
 		</comps>
 	</HediffDef>
+	<Def Class="EasyMode.VerbToolProfileDef">
+		<defName>TranscendenceBattleMorphToolset</defName>
+		<tools>
+			<li>
+				<label>phase cleave</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<armorPenetration>2.25</armorPenetration>
+				<power>25</power>
+				<cooldownTime>1.2</cooldownTime>
+			</li>
+			<li>
+				<label>kinetic ram</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<armorPenetration>1.95</armorPenetration>
+				<power>9.0</power>
+				<cooldownTime>1.5</cooldownTime>
+			</li>
+			<li>
+				<label>vector thrust</label>
+				<capacities>
+					<li>Stab</li>
+				</capacities>
+				<armorPenetration>3.35</armorPenetration>
+				<power>36.8</power>
+				<cooldownTime>2.1</cooldownTime>
+			</li>
+			<li>
+				<label>needle rake</label>
+				<capacities>
+					<li>Scratch</li>
+				</capacities>
+				<armorPenetration>1.05</armorPenetration>
+				<power>5.2</power>
+				<cooldownTime>0.2</cooldownTime>
+			</li>
+			<li>
+				<label>heel spike</label>
+				<capacities>
+					<li>Stab</li>
+				</capacities>
+				<armorPenetration>2.10</armorPenetration>
+				<power>7.2</power>
+				<cooldownTime>1.3</cooldownTime>
+			</li>
+			<li>
+				<label>sweeping kick</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<armorPenetration>0.85</armorPenetration>
+				<power>8.4</power>
+				<cooldownTime>0.6</cooldownTime>
+			</li>
+		</tools>
+	</Def>
+	<Def Class="EasyMode.ConditionalHediffProfileDef">
+		<defName>EM_NexusSpine_CoreProfile</defName>
+		<rules>
+			<li>
+				<key>core-physical</key>
+				<activeHediff>transcendence_physical</activeHediff>
+				<activeSeverity>1</activeSeverity>
+			</li>
+			<li>
+				<key>core-biological</key>
+				<activeHediff>transcendence_biological</activeHediff>
+				<activeSeverity>1</activeSeverity>
+			</li>
+		</rules>
+	</Def>
+
+	<HediffDef>
+		<defName>EM_NexusSpine_RangedAdaptation</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>nexus ranged calibration</label>
+		<description>The adaptive nexus spine has detected a ranged weapon and is continuously recalibrating posture, recoil compensation, and visual-motor timing.</description>
+		<defaultLabelColor>(120,200,255)</defaultLabelColor>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<statFactors>
+					<ShootingAccuracyPawn>1.35</ShootingAccuracyPawn>
+					<AimingDelayFactor>0.70</AimingDelayFactor>
+					<RangedCooldownFactor>0.80</RangedCooldownFactor>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>EM_NexusSpine_GeneAdaptation</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>nexus genetic resonance</label>
+		<description>The adaptive nexus spine is resonating with strong fast-twitch muscle genes, reinforcing the host's close-combat biomechanics.</description>
+		<defaultLabelColor>(170,120,255)</defaultLabelColor>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<statFactors>
+					<MeleeDamageFactor>1.35</MeleeDamageFactor>
+					<MeleeArmorPenetration>1.25</MeleeArmorPenetration>
+					<MeleeCooldownFactor>0.85</MeleeCooldownFactor>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>EM_AdaptiveNexusSpine</defName>
+		<label>adaptive nexus spine</label>
+		<labelNoun>an adaptive nexus spine</labelNoun>
+		<description>An installed synthetic spine built around a self-reconfiguring neural lattice. It acts as a body-wide adaptation controller, distributing enhancement protocols and changing modules in response to the host's condition, actions, genes, and equipment.</description>
+		<descriptionHyperlinks><ThingDef>EM_AdaptiveNexusSpine</ThingDef></descriptionHyperlinks>
+		<spawnThingOnRemoved>EM_AdaptiveNexusSpine</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.35</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<comps>
+			<li Class="EasyMode.HediffCompProperties_ConditionalHediffDistributor">
+				<checkIntervalTicks>120</checkIntervalTicks>
+				<profiles>
+					<li>EM_NexusSpine_CoreProfile</li>
+				</profiles>
+				<rules>
+					<li>
+						<key>health-adaptive-armor</key>
+						<activeHediff>adaptive_armor</activeHediff>
+						<activeSeverity>1</activeSeverity>
+						<healthPercent>0~0.75</healthPercent>
+					</li>
+
+					<li>
+						<key>combat-battle-morph</key>
+						<activeHediff>transcendence_battle_morph_verbs</activeHediff>
+						<activeSeverity>1</activeSeverity>
+						<inCombat>Required</inCombat>
+					</li>
+
+					<li>
+						<key>equipment-ranged-calibration</key>
+						<activeHediff>EM_NexusSpine_RangedAdaptation</activeHediff>
+						<activeSeverity>1</activeSeverity>
+						<anyEquipmentTags>
+							<li>Ranged</li>
+						</anyEquipmentTags>
+					</li>
+
+					<li MayRequire="Ludeon.RimWorld.Biotech">
+						<key>gene-strong-melee</key>
+						<activeHediff>EM_NexusSpine_GeneAdaptation</activeHediff>
+						<activeSeverity>1</activeSeverity>
+						<allGenes>
+							<li>MeleeDamage_Strong</li>
+						</allGenes>
+					</li>
+				</rules>
+			</li>
+		</comps>
+	</HediffDef>
 </Defs>

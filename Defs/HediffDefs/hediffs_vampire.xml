@@ -99,6 +99,154 @@
 		</stages>
 	</HediffDef>
 	<HediffDef>
+		<defName>bloodhemogen_resonance</defName>
+		<hediffClass>Hediff_High</hediffClass>
+		<label>blood essence resonance</label>
+		<description>The host's vitality ebbs and flows with their blood essence reserves. When blood essence runs high, the body surges with power; when it runs low, weakness and pain set in.</description>
+		<defaultLabelColor>(180,40,40)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<initialSeverity>3</initialSeverity>
+		<maxSeverity>5.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="EasyMode.HediffCompProperties_BloodHemogenStage">
+				<thresholds>
+					<li>0.8</li>
+					<li>0.6</li>
+					<li>0.4</li>
+					<li>0.2</li>
+					<li>0.0</li>
+				</thresholds>
+				<tickInterval>60</tickInterval>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<minSeverity>1</minSeverity>
+				<label>blood essence apex</label>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.30</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.30</offset>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>0.25</offset>
+					</li>
+				</capMods>
+				<statOffsets>
+					<MoveSpeed>0.8</MoveSpeed>
+				</statOffsets>
+				<statFactors>
+					<MeleeDamageFactor>1.6</MeleeDamageFactor>
+					<MeleeHitChance>1.5</MeleeHitChance>
+					<MeleeArmorPenetration>1.4</MeleeArmorPenetration>
+					<MeleeCooldownFactor>0.6</MeleeCooldownFactor>
+					<ShootingAccuracyPawn>1.3</ShootingAccuracyPawn>
+					<GlobalLearningFactor>1.5</GlobalLearningFactor>
+				</statFactors>
+				<regeneration>120</regeneration>
+				<painFactor>0.5</painFactor>
+			</li>
+			<li>
+				<minSeverity>2</minSeverity>
+				<label>blood essence flow</label>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.15</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.15</offset>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>0.10</offset>
+					</li>
+				</capMods>
+				<statOffsets>
+					<MoveSpeed>0.3</MoveSpeed>
+				</statOffsets>
+				<statFactors>
+					<MeleeDamageFactor>1.25</MeleeDamageFactor>
+					<MeleeHitChance>1.2</MeleeHitChance>
+					<ShootingAccuracyPawn>1.15</ShootingAccuracyPawn>
+				</statFactors>
+				<regeneration>30</regeneration>
+				<painFactor>0.75</painFactor>
+			</li>
+			<li>
+				<minSeverity>3</minSeverity>
+				<label>blood essence balance</label>
+			</li>
+			<li>
+				<minSeverity>4</minSeverity>
+				<label>blood essence ebb</label>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.15</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.15</offset>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.10</offset>
+					</li>
+				</capMods>
+				<statOffsets>
+					<MoveSpeed>-0.3</MoveSpeed>
+				</statOffsets>
+				<statFactors>
+					<MeleeDamageFactor>0.8</MeleeDamageFactor>
+					<ShootingAccuracyPawn>0.85</ShootingAccuracyPawn>
+				</statFactors>
+				<painOffset>0.10</painOffset>
+				<mentalBreakMtbDays>20</mentalBreakMtbDays>
+			</li>
+			<li>
+				<minSeverity>5</minSeverity>
+				<label>blood essence famine</label>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.40</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.35</offset>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.30</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>-0.25</offset>
+					</li>
+				</capMods>
+				<statOffsets>
+					<MoveSpeed>-0.8</MoveSpeed>
+				</statOffsets>
+				<statFactors>
+					<MeleeDamageFactor>0.5</MeleeDamageFactor>
+					<MeleeHitChance>0.6</MeleeHitChance>
+					<ShootingAccuracyPawn>0.6</ShootingAccuracyPawn>
+					<WorkSpeedGlobal>0.6</WorkSpeedGlobal>
+				</statFactors>
+				<painOffset>0.35</painOffset>
+				<mentalBreakMtbDays>5</mentalBreakMtbDays>
+			</li>
+		</stages>
+	</HediffDef>
+	<HediffDef>
 		<defName>crimsondynasty_noble_poise</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		<label>noble poise</label>
@@ -292,5 +440,112 @@
 				</statFactors>
 			</li>
 		</stages>
+	</HediffDef>
+
+	<Def Class="EasyMode.ConditionalHediffProfileDef">
+		<defName>EM_CrimsonDynastySpine_CoreProfile</defName>
+		<rules>
+			<li>
+				<key>core-predator</key>
+				<activeHediff>crimsondynasty_predator</activeHediff>
+				<activeSeverity>1</activeSeverity>
+			</li>
+			<li>
+				<key>core-hemogenic</key>
+				<activeHediff>crimsondynasty_hemogenic</activeHediff>
+				<activeSeverity>1</activeSeverity>
+			</li>
+			<li>
+				<key>core-blood-resonance</key>
+				<activeHediff>bloodhemogen_resonance</activeHediff>
+				<activeSeverity>-1</activeSeverity>
+				<allGenes>
+					<li>Hemogenic</li>
+				</allGenes>
+			</li>
+		</rules>
+	</Def>
+
+	<HediffDef>
+		<defName>EM_CrimsonSpine_SanguineAscendancy</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>sanguine ascendancy</label>
+		<description>When blood essence runs rich, the implanted dynasty spine drives every stride and strike into a ceremonious predator's crescendo.</description>
+		<defaultLabelColor>(178,34,34)</defaultLabelColor>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<regeneration>40</regeneration>
+				<statFactors>
+					<MeleeDamageFactor>1.35</MeleeDamageFactor>
+					<MeleeArmorPenetration>1.3</MeleeArmorPenetration>
+					<MeleeCooldownFactor>0.72</MeleeCooldownFactor>
+					<MoveSpeed>1.15</MoveSpeed>
+					<SocialImpact>1.25</SocialImpact>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>EM_CrimsonDynastySpine</defName>
+		<label>crimson dynasty spine</label>
+		<labelNoun>a crimson dynasty spine</labelNoun>
+		<description>An installed noble hemogenic spine that activates blood essence resonance only when the host carries the Hemogenic gene, with resonance stage adjusting dynamically to current blood state. It then pivots between hunting grace, courtly authority, and executioner pressure as the host's condition shifts.</description>
+		<descriptionHyperlinks>
+			<ThingDef>EM_CrimsonDynastySpine</ThingDef>
+			<HediffDef>bloodhemogen_resonance</HediffDef>
+		</descriptionHyperlinks>
+		<spawnThingOnRemoved>EM_CrimsonDynastySpine</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.32</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<comps>
+			<li Class="EasyMode.HediffCompProperties_ConditionalHediffDistributor">
+				<checkIntervalTicks>90</checkIntervalTicks>
+				<profiles>
+					<li>EM_CrimsonDynastySpine_CoreProfile</li>
+				</profiles>
+				<rules>
+					<li>
+						<key>crimson-bloodfrenzy</key>
+						<activeHediff>crimsondynasty_bloodfrenzy</activeHediff>
+						<activeSeverity>1</activeSeverity>
+						<healthPercent>0~0.45</healthPercent>
+						<inCombat>Required</inCombat>
+					</li>
+					<li>
+						<key>crimson-noble-poise</key>
+						<activeHediff>crimsondynasty_noble_poise</activeHediff>
+						<activeSeverity>1</activeSeverity>
+						<healthPercent>0.8~1</healthPercent>
+						<inCombat>Forbidden</inCombat>
+					</li>
+					<li>
+						<key>crimson-duelist-ascendancy</key>
+						<activeHediff>crimsondynasty_duelist_ascendancy</activeHediff>
+						<activeSeverity>1</activeSeverity>
+						<anyEquipmentTags>
+							<li>Melee</li>
+						</anyEquipmentTags>
+						<inCombat>Required</inCombat>
+					</li>
+					<li>
+						<key>crimson-sanguine-ascendancy</key>
+						<activeHediff>EM_CrimsonSpine_SanguineAscendancy</activeHediff>
+						<activeSeverity>1</activeSeverity>
+						<allHediffs>
+							<li>
+								<hediff>bloodhemogen_resonance</hediff>
+								<minSeverity>1</minSeverity>
+								<maxSeverity>2</maxSeverity>
+							</li>
+						</allHediffs>
+					</li>
+				</rules>
+			</li>
+		</comps>
 	</HediffDef>
 </Defs>

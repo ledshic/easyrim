@@ -148,3 +148,26 @@ One-shot distributors (`disappearsAfterGiving=true`) retain one-shot semantics a
 ## Extension boundary
 
 The current framework evaluates sustained state. Instant events such as “after landing a hit,” “on kill,” or “after using an ability” should be implemented as event-triggered, duration-limited Hediffs rather than by shortening the polling interval. Those event adapters can still use `ManagedHediffEffectUtility` when several sources need to share an output.
+
+## Hediff classification and naming strategy
+
+EasyRim uses a compatibility-first classification model for defs under `Defs/HediffDefs`:
+
+- Gameplay combo trees: parent + module suite status groups.
+- Spine bridge Hediffs: implant controllers that distribute combo effects.
+- Utility standalone Hediffs: focused one-off tools, buffs, or helper effects.
+
+Reference guide:
+
+- [../Defs/HediffDefs/README.md](../Defs/HediffDefs/README.md)
+
+Compatibility rule:
+
+- Existing released `defName` values are stable by default and should not be renamed for style-only cleanup.
+- Apply naming conventions to new or incremental content.
+
+Localization and maintenance rule:
+
+- Any new Hediff in these categories should keep EN/SCH DefInjected entries in sync.
+- When adding conditional rules, every rule key should be unique and stable for save compatibility.
+- When a helper Def is owned by one Hediff suite (for example `VerbToolProfileDef` used only by one Hediff), prefer co-locating it in the same XML file as the owning suite to reduce split-file drift.

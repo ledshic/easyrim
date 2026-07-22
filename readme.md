@@ -47,6 +47,11 @@ EasyRim is a deliberately overpowered RimWorld mod focused on stronger colonists
 
 Most character power is implemented through Hediffs and Abilities. `TraitDef` currently contains no gameplay entries.
 
+## Developer notes
+
+- Hediff classification and naming guide: [Defs/HediffDefs/README.md](Defs/HediffDefs/README.md)
+- Adaptive framework details: [Docs/AdaptiveHediffFramework.md](Docs/AdaptiveHediffFramework.md)
+
 ## Compatibility
 
 - RimWorld 1.6 (Odyssey)

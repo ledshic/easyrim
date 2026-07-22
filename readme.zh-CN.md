@@ -47,6 +47,11 @@ EasyRim 是一个刻意追求超强效果的《环世界》功能模组，聚焦
 
 当前角色强化主要通过 Hediff 与 Ability 系统实现；`TraitDef` 暂无实际玩法条目。
 
+## 开发者说明
+
+- Hediff 分类与命名规范：[Defs/HediffDefs/README.md](Defs/HediffDefs/README.md)
+- 自适应框架说明：[Docs/AdaptiveHediffFramework.md](Docs/AdaptiveHediffFramework.md)
+
 ## 兼容性
 
 - RimWorld 1.6（Odyssey）

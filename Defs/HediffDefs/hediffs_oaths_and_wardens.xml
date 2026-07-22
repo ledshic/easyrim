@@ -539,4 +539,147 @@
 			</li>
 		</stages>
 	</HediffDef>
+	<Def Class="EasyMode.ConditionalHediffProfileDef">
+		<defName>EM_ArchotechOathSpine_CoreProfile</defName>
+		<rules>
+			<li>
+				<key>core-cognition</key>
+				<activeHediff>archotechoath_cognition</activeHediff>
+				<activeSeverity>1</activeSeverity>
+			</li>
+			<li>
+				<key>core-aegis</key>
+				<activeHediff>archotechoath_aegis</activeHediff>
+				<activeSeverity>1</activeSeverity>
+			</li>
+		</rules>
+	</Def>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>EM_ArchotechOathSpine</defName>
+		<label>archotech oath spine</label>
+		<labelNoun>an archotech oath spine</labelNoun>
+		<description>An installed archotech governance spine that keeps strategic cognition and self-repair online at all times, then routes spare capacity into administration, lab synchronization, or battlefield prediction as needed.</description>
+		<descriptionHyperlinks><ThingDef>EM_ArchotechOathSpine</ThingDef></descriptionHyperlinks>
+		<spawnThingOnRemoved>EM_ArchotechOathSpine</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.33</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<comps>
+			<li Class="EasyMode.HediffCompProperties_ConditionalHediffDistributor">
+				<checkIntervalTicks>90</checkIntervalTicks>
+				<profiles>
+					<li>EM_ArchotechOathSpine_CoreProfile</li>
+				</profiles>
+				<rules>
+					<li>
+						<key>oath-command-cadence</key>
+						<activeHediff>archotechoath_command</activeHediff>
+						<activeSeverity>1</activeSeverity>
+						<drafted>Forbidden</drafted>
+					</li>
+					<li>
+						<key>oath-labsync</key>
+						<activeHediff>archotechoath_labsync</activeHediff>
+						<activeSeverity>1</activeSeverity>
+						<drafted>Forbidden</drafted>
+					</li>
+					<li>
+						<key>oath-warprotocol</key>
+						<activeHediff>archotechoath_warprotocol</activeHediff>
+						<activeSeverity>1</activeSeverity>
+						<inCombat>Required</inCombat>
+					</li>
+					<li>
+						<key>oath-emergency-bulkhead</key>
+						<activeHediff>archotechoath_emergency_bulkhead</activeHediff>
+						<activeSeverity>1</activeSeverity>
+						<healthPercent>0~0.5</healthPercent>
+					</li>
+				</rules>
+			</li>
+		</comps>
+	</HediffDef>
+
+	<Def Class="EasyMode.ConditionalHediffProfileDef">
+		<defName>EM_FrontierWardenSpine_CoreProfile</defName>
+		<rules>
+			<li>
+				<key>core-pathfinder</key>
+				<activeHediff>frontierwarden_pathfinder</activeHediff>
+				<activeSeverity>1</activeSeverity>
+			</li>
+			<li>
+				<key>core-fieldsurgeon</key>
+				<activeHediff>frontierwarden_fieldsurgeon</activeHediff>
+				<activeSeverity>1</activeSeverity>
+			</li>
+		</rules>
+	</Def>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>EM_FrontierWardenSpine</defName>
+		<label>frontier warden spine</label>
+		<labelNoun>a frontier warden spine</labelNoun>
+		<description>An installed service spine for colony defenders, combining patrol stride, field stabilization, and breach-response combat posture. It shifts between overwatch, melee line-breaking, and recovery command as conditions change.</description>
+		<descriptionHyperlinks><ThingDef>EM_FrontierWardenSpine</ThingDef></descriptionHyperlinks>
+		<spawnThingOnRemoved>EM_FrontierWardenSpine</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.3</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<comps>
+			<li Class="EasyMode.HediffCompProperties_ConditionalHediffDistributor">
+				<checkIntervalTicks>90</checkIntervalTicks>
+				<profiles>
+					<li>EM_FrontierWardenSpine_CoreProfile</li>
+				</profiles>
+				<rules>
+					<li>
+						<key>warden-fireline</key>
+						<activeHediff>frontierwarden_fireline</activeHediff>
+						<activeSeverity>1</activeSeverity>
+						<drafted>Required</drafted>
+					</li>
+					<li>
+						<key>warden-overwatch-matrix</key>
+						<activeHediff>frontierwarden_overwatch_matrix</activeHediff>
+						<activeSeverity>1</activeSeverity>
+						<anyEquipmentTags>
+							<li>Ranged</li>
+						</anyEquipmentTags>
+						<inCombat>Required</inCombat>
+					</li>
+					<li>
+						<key>warden-breachfighter</key>
+						<activeHediff>frontierwarden_breachfighter</activeHediff>
+						<activeSeverity>1</activeSeverity>
+						<anyEquipmentTags>
+							<li>Melee</li>
+						</anyEquipmentTags>
+						<inCombat>Required</inCombat>
+					</li>
+					<li>
+						<key>warden-breach-rampage</key>
+						<activeHediff>frontierwarden_breach_rampage</activeHediff>
+						<activeSeverity>1</activeSeverity>
+						<anyEquipmentTags>
+							<li>Melee</li>
+						</anyEquipmentTags>
+						<inCombat>Required</inCombat>
+						<healthPercent>0~0.7</healthPercent>
+					</li>
+					<li>
+						<key>warden-camp-triage</key>
+						<activeHediff>frontierwarden_camp_triage</activeHediff>
+						<activeSeverity>1</activeSeverity>
+						<drafted>Forbidden</drafted>
+					</li>
+				</rules>
+			</li>
+		</comps>
+	</HediffDef>
 </Defs>
