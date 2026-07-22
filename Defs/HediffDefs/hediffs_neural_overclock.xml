@@ -24,8 +24,10 @@
 		</comps>
 		<stages>
 			<li>
+				<statOffsets>
+					<MoveSpeed>50</MoveSpeed>
+				</statOffsets>
 				<statFactors>
-					<MoveSpeed>4.5</MoveSpeed>
 					<MeleeHitChance>1.5</MeleeHitChance>
 					<AimingDelayFactor>0.35</AimingDelayFactor>
 				</statFactors>
