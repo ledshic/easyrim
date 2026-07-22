@@ -66,6 +66,13 @@
 					</li>
 				</rules>
 			</li>
+			<li Class="EasyMode.HediffCompProperties_TranscendenceMaintenance">
+				<tickInterval>240</tickInterval>
+				<apparelRepairPerTick>5</apparelRepairPerTick>
+				<equipmentRepairPerTick>5</equipmentRepairPerTick>
+				<psyfocusRestore>0.40</psyfocusRestore>
+				<removeBadHediffCount>1</removeBadHediffCount>
+			</li>
 		</comps>
 	</HediffDef>
 	<HediffDef>
@@ -237,9 +244,6 @@
 		<defaultLabelColor>(192,192,192)</defaultLabelColor>
 		<maxSeverity>1.0</maxSeverity>
 		<isBad>false</isBad>
-		<comps>
-			<li Class="EasyMode.HediffCompProperties_RestorePsy" />
-		</comps>
 		<stages>
 			<li>
 				<statFactors>
