@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
   <LifeSupportUnit_Buildable.label>buildable life support unit</LifeSupportUnit_Buildable.label>
-  <LifeSupportUnit_Buildable.description>A buildable unit that keeps rooms heated and pressurized. Provides life support for your colony. Can be constructed using steel and industrial components.</LifeSupportUnit_Buildable.description>
+  <LifeSupportUnit_Buildable.description>A buildable unit that keeps rooms heated and pressurized. Provides life support for your colony. Can be constructed using steel and industrial components.
+
+created/edited by easyrim</LifeSupportUnit_Buildable.description>
 
 </LanguageData>

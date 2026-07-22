@@ -1,30 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
   <EM_InstallAdaptiveNexusSpine.label>安装适应性中枢脊椎</EM_InstallAdaptiveNexusSpine.label>
-  <EM_InstallAdaptiveNexusSpine.description>将患者的脊椎替换为适应性中枢脊椎。</EM_InstallAdaptiveNexusSpine.description>
+  <EM_InstallAdaptiveNexusSpine.description>将患者的脊椎替换为适应性中枢脊椎。
+
+由 easyrim 创建/编辑</EM_InstallAdaptiveNexusSpine.description>
   <EM_InstallAdaptiveNexusSpine.jobString>正在安装适应性中枢脊椎。</EM_InstallAdaptiveNexusSpine.jobString>
 
   <EM_InstallPioneerSpine.label>安装拓荒晶格脊椎</EM_InstallPioneerSpine.label>
-  <EM_InstallPioneerSpine.description>将患者的脊椎替换为拓荒晶格脊椎。</EM_InstallPioneerSpine.description>
+  <EM_InstallPioneerSpine.description>将患者的脊椎替换为拓荒晶格脊椎。
+
+由 easyrim 创建/编辑</EM_InstallPioneerSpine.description>
   <EM_InstallPioneerSpine.jobString>正在安装拓荒晶格脊椎。</EM_InstallPioneerSpine.jobString>
 
   <EM_InstallCrimsonDynastySpine.label>安装绯红王朝脊椎</EM_InstallCrimsonDynastySpine.label>
-  <EM_InstallCrimsonDynastySpine.description>将患者的脊椎替换为绯红王朝脊椎。</EM_InstallCrimsonDynastySpine.description>
+  <EM_InstallCrimsonDynastySpine.description>将患者的脊椎替换为绯红王朝脊椎。
+
+由 easyrim 创建/编辑</EM_InstallCrimsonDynastySpine.description>
   <EM_InstallCrimsonDynastySpine.jobString>正在安装绯红王朝脊椎。</EM_InstallCrimsonDynastySpine.jobString>
 
   <EM_InstallBraveSpine.label>安装不屈战脊</EM_InstallBraveSpine.label>
-  <EM_InstallBraveSpine.description>将患者的脊椎替换为不屈战脊。</EM_InstallBraveSpine.description>
+  <EM_InstallBraveSpine.description>将患者的脊椎替换为不屈战脊。
+
+由 easyrim 创建/编辑</EM_InstallBraveSpine.description>
   <EM_InstallBraveSpine.jobString>正在安装不屈战脊。</EM_InstallBraveSpine.jobString>
 
   <EM_InstallCorsairSpine.label>安装黑旗脊架</EM_InstallCorsairSpine.label>
-  <EM_InstallCorsairSpine.description>将患者的脊椎替换为黑旗脊架。</EM_InstallCorsairSpine.description>
+  <EM_InstallCorsairSpine.description>将患者的脊椎替换为黑旗脊架。
+
+由 easyrim 创建/编辑</EM_InstallCorsairSpine.description>
   <EM_InstallCorsairSpine.jobString>正在安装黑旗脊架。</EM_InstallCorsairSpine.jobString>
 
   <EM_InstallArchotechOathSpine.label>安装远古誓约脊椎</EM_InstallArchotechOathSpine.label>
-  <EM_InstallArchotechOathSpine.description>将患者的脊椎替换为远古誓约脊椎。</EM_InstallArchotechOathSpine.description>
+  <EM_InstallArchotechOathSpine.description>将患者的脊椎替换为远古誓约脊椎。
+
+由 easyrim 创建/编辑</EM_InstallArchotechOathSpine.description>
   <EM_InstallArchotechOathSpine.jobString>正在安装远古誓约脊椎。</EM_InstallArchotechOathSpine.jobString>
 
   <EM_InstallFrontierWardenSpine.label>安装边疆守望者脊椎</EM_InstallFrontierWardenSpine.label>
-  <EM_InstallFrontierWardenSpine.description>将患者的脊椎替换为边疆守望者脊椎。</EM_InstallFrontierWardenSpine.description>
+  <EM_InstallFrontierWardenSpine.description>将患者的脊椎替换为边疆守望者脊椎。
+
+由 easyrim 创建/编辑</EM_InstallFrontierWardenSpine.description>
   <EM_InstallFrontierWardenSpine.jobString>正在安装边疆守望者脊椎。</EM_InstallFrontierWardenSpine.jobString>
 </LanguageData>

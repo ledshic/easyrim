@@ -1,23 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 	<crimsondynasty.label>&lt;color=#B22222&gt;绯血王裔&lt;/color&gt;</crimsondynasty.label>
-	<crimsondynasty.description>古老的血原质贵胄血脉在宿主体内苏醒。饥渴会磨尖猎杀本能，贵族般的冷峻气场可压制弱者意志，而每一次战斗都在滋养一具难以沉寂的躯体。</crimsondynasty.description>
+	<crimsondynasty.description>古老的血原质贵胄血脉在宿主体内苏醒。饥渴会磨尖猎杀本能，贵族般的冷峻气场可压制弱者意志，而每一次战斗都在滋养一具难以沉寂的躯体。
+
+由 easyrim 创建/编辑</crimsondynasty.description>
 	<crimsondynasty_predator.label>猎裔身法</crimsondynasty_predator.label>
-	<crimsondynasty_predator.description>掠食者级别的反射与步法带来更迅猛的贴身突进与更精准的近战控制。</crimsondynasty_predator.description>
+	<crimsondynasty_predator.description>掠食者级别的反射与步法带来更迅猛的贴身突进与更精准的近战控制。
+
+由 easyrim 创建/编辑</crimsondynasty_predator.description>
 	<crimsondynasty_hemogenic.label>血原强势</crimsondynasty_hemogenic.label>
-	<crimsondynasty_hemogenic.description>血液化学被重塑为异常高效的循环体系，显著提升复原与抗病能力。</crimsondynasty_hemogenic.description>
+	<crimsondynasty_hemogenic.description>血液化学被重塑为异常高效的循环体系，显著提升复原与抗病能力。
+
+由 easyrim 创建/编辑</crimsondynasty_hemogenic.description>
 	<crimsondynasty_mesmer.label>魅压统御</crimsondynasty_mesmer.label>
-	<crimsondynasty_mesmer.description>冷峻而高位的威仪会动摇对手心神，并在交涉中迫使对方让步。</crimsondynasty_mesmer.description>
+	<crimsondynasty_mesmer.description>冷峻而高位的威仪会动摇对手心神，并在交涉中迫使对方让步。
+
+由 easyrim 创建/编辑</crimsondynasty_mesmer.description>
 	<crimsondynasty_dreadguard.label>惊惧守御</crimsondynasty_dreadguard.label>
-	<crimsondynasty_dreadguard.description>久经血战的血脉韧性可压低痛觉并硬扛致命创伤，但对明火仍更为敏感。</crimsondynasty_dreadguard.description>
+	<crimsondynasty_dreadguard.description>久经血战的血脉韧性可压低痛觉并硬扛致命创伤，但对明火仍更为敏感。
+
+由 easyrim 创建/编辑</crimsondynasty_dreadguard.description>
 	<crimsondynasty_bloodfrenzy.label>绯怒升格</crimsondynasty_bloodfrenzy.label>
-	<crimsondynasty_bloodfrenzy.description>当宿主濒死仍在战斗时，饥渴与恐惧会塌缩为怪物级战斗狂潮。</crimsondynasty_bloodfrenzy.description>
+	<crimsondynasty_bloodfrenzy.description>当宿主濒死仍在战斗时，饥渴与恐惧会塌缩为怪物级战斗狂潮。
+
+由 easyrim 创建/编辑</crimsondynasty_bloodfrenzy.description>
 	<crimsondynasty_noble_poise.label>王裔仪态</crimsondynasty_noble_poise.label>
-	<crimsondynasty_noble_poise.description>在充足血原与非交战状态下，贵胄级掌控力会显著强化统御、交易与后勤节奏。</crimsondynasty_noble_poise.description>
+	<crimsondynasty_noble_poise.description>在充足血原与非交战状态下，贵胄级掌控力会显著强化统御、交易与后勤节奏。
+
+由 easyrim 创建/编辑</crimsondynasty_noble_poise.description>
 	<crimsondynasty_duelist_ascendancy.label>决斗升格</crimsondynasty_duelist_ascendancy.label>
-	<crimsondynasty_duelist_ascendancy.description>近战交锋会激活掠食决斗流程，强化压迫、命中与处决效率。</crimsondynasty_duelist_ascendancy.description>
+	<crimsondynasty_duelist_ascendancy.description>近战交锋会激活掠食决斗流程，强化压迫、命中与处决效率。
+
+由 easyrim 创建/编辑</crimsondynasty_duelist_ascendancy.description>
 	<crimson_bloodrush_surge.label>血潮爆涌</crimson_bloodrush_surge.label>
-	<crimson_bloodrush_surge.description>强制过载血裔回路，短时引爆近战杀伤与机动能力，但受击风险会同步上升。</crimson_bloodrush_surge.description>
+	<crimson_bloodrush_surge.description>强制过载血裔回路，短时引爆近战杀伤与机动能力，但受击风险会同步上升。
+
+由 easyrim 创建/编辑</crimson_bloodrush_surge.description>
 	<crimson_sovereign_gaze_marked.label>王瞳标定</crimson_sovereign_gaze_marked.label>
-	<crimson_sovereign_gaze_marked.description>目标在王裔威压下意志动摇，协同能力与抗压姿态显著下降。</crimson_sovereign_gaze_marked.description>
+	<crimson_sovereign_gaze_marked.description>目标在王裔威压下意志动摇，协同能力与抗压姿态显著下降。
+
+由 easyrim 创建/编辑</crimson_sovereign_gaze_marked.description>
 </LanguageData>

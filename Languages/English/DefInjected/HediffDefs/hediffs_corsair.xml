@@ -1,23 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
   <corsaircreed.label>&lt;color=#B7410E&gt;corsair creed&lt;/color&gt;</corsaircreed.label>
-  <corsaircreed.description>Life under the black signal has burned a ruthless doctrine into bone and nerve. The host strikes fast, fights dirty, and turns every wreck and battlefield into profit for the crew.</corsaircreed.description>
+  <corsaircreed.description>Life under the black signal has burned a ruthless doctrine into bone and nerve. The host strikes fast, fights dirty, and turns every wreck and battlefield into profit for the crew.
+
+created/edited by easyrim</corsaircreed.description>
   <corsaircreed_boarder.label>boarding momentum</corsaircreed_boarder.label>
-  <corsaircreed_boarder.description>Close-quarters boarding drills amplify speed, control, and brutal follow-through.</corsaircreed_boarder.description>
+  <corsaircreed_boarder.description>Close-quarters boarding drills amplify speed, control, and brutal follow-through.
+
+created/edited by easyrim</corsaircreed_boarder.description>
   <corsaircreed_gunner.label>deck gunner's eye</corsaircreed_gunner.label>
-  <corsaircreed_gunner.description>Predatory timing and recoil control sharpen ranged lethality.</corsaircreed_gunner.description>
+  <corsaircreed_gunner.description>Predatory timing and recoil control sharpen ranged lethality.
+
+created/edited by easyrim</corsaircreed_gunner.description>
   <corsaircreed_scavenger.label>wreck scavenger instinct</corsaircreed_scavenger.label>
-  <corsaircreed_scavenger.description>Loot-minded reflexes improve hauling, stripping, and rapid battlefield recovery.</corsaircreed_scavenger.description>
+  <corsaircreed_scavenger.description>Loot-minded reflexes improve hauling, stripping, and rapid battlefield recovery.
+
+created/edited by easyrim</corsaircreed_scavenger.description>
   <corsaircreed_blackflag.label>blackflag audacity</corsaircreed_blackflag.label>
-  <corsaircreed_blackflag.description>A raider's nerve dulls fear and pain, keeping the host aggressive when others would fold.</corsaircreed_blackflag.description>
+  <corsaircreed_blackflag.description>A raider's nerve dulls fear and pain, keeping the host aggressive when others would fold.
+
+created/edited by easyrim</corsaircreed_blackflag.description>
   <corsaircreed_gunner_posture.label>deck gunnery posture</corsaircreed_gunner_posture.label>
-  <corsaircreed_gunner_posture.description>The host enters a stabilized gunnery stance during live exchanges, sacrificing subtlety for relentless ranged pressure.</corsaircreed_gunner_posture.description>
+  <corsaircreed_gunner_posture.description>The host enters a stabilized gunnery stance during live exchanges, sacrificing subtlety for relentless ranged pressure.
+
+created/edited by easyrim</corsaircreed_gunner_posture.description>
   <corsaircreed_marauder_frenzy.label>marauder frenzy</corsaircreed_marauder_frenzy.label>
-  <corsaircreed_marauder_frenzy.description>At critical health in close battle, the corsair doctrine abandons restraint and forces a lethal surge.</corsaircreed_marauder_frenzy.description>
+  <corsaircreed_marauder_frenzy.description>At critical health in close battle, the corsair doctrine abandons restraint and forces a lethal surge.
+
+created/edited by easyrim</corsaircreed_marauder_frenzy.description>
   <corsair_broadside_overdrive.label>broadside overdrive</corsair_broadside_overdrive.label>
-  <corsair_broadside_overdrive.description>An all-in firing rhythm tuned for short violent exchanges. Accuracy cadence rises, but exposure risk increases.</corsair_broadside_overdrive.description>
+  <corsair_broadside_overdrive.description>An all-in firing rhythm tuned for short violent exchanges. Accuracy cadence rises, but exposure risk increases.
+
+created/edited by easyrim</corsair_broadside_overdrive.description>
   <corsair_cutthroat_rush.label>cutthroat rush</corsair_cutthroat_rush.label>
-  <corsair_cutthroat_rush.description>The host commits to a savage boarding sprint. Pursuit and close-range lethality spike at the cost of tactical exposure.</corsair_cutthroat_rush.description>
+  <corsair_cutthroat_rush.description>The host commits to a savage boarding sprint. Pursuit and close-range lethality spike at the cost of tactical exposure.
+
+created/edited by easyrim</corsair_cutthroat_rush.description>
   <corsair_plunder_marked.label>marked for plunder</corsair_plunder_marked.label>
-  <corsair_plunder_marked.description>The target is highlighted as easy loot, disrupting footing and composure under fire.</corsair_plunder_marked.description>
+  <corsair_plunder_marked.description>The target is highlighted as easy loot, disrupting footing and composure under fire.
+
+created/edited by easyrim</corsair_plunder_marked.description>
 </LanguageData>

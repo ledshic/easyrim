@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
   <CrimsonBloodrush.label>bloodrush surge</CrimsonBloodrush.label>
-  <CrimsonBloodrush.description>Force your bloodline into an aggressive overdrive. Melee lethality and speed surge for a short duration while incoming risk increases.</CrimsonBloodrush.description>
+  <CrimsonBloodrush.description>Force your bloodline into an aggressive overdrive. Melee lethality and speed surge for a short duration while incoming risk increases.
+
+created/edited by easyrim</CrimsonBloodrush.description>
   <CrimsonSovereignGaze.label>sovereign gaze</CrimsonSovereignGaze.label>
-  <CrimsonSovereignGaze.description>Impose aristocratic predatory pressure on a target, slowing movement and weakening evasive posture.</CrimsonSovereignGaze.description>
+  <CrimsonSovereignGaze.description>Impose aristocratic predatory pressure on a target, slowing movement and weakening evasive posture.
+
+created/edited by easyrim</CrimsonSovereignGaze.description>
 </LanguageData>

@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
   <EM_CrimsonSpine_SanguineAscendancy.label>血华升腾</EM_CrimsonSpine_SanguineAscendancy.label>
-  <EM_CrimsonSpine_SanguineAscendancy.description>当血源精华充盈时，植入的王朝脊椎会把每一次步伐与斩击都推入一种华贵而掠食性的高潮。</EM_CrimsonSpine_SanguineAscendancy.description>
+  <EM_CrimsonSpine_SanguineAscendancy.description>当血源精华充盈时，植入的王朝脊椎会把每一次步伐与斩击都推入一种华贵而掠食性的高潮。
+
+由 easyrim 创建/编辑</EM_CrimsonSpine_SanguineAscendancy.description>
 
   <EM_CrimsonDynastySpine.label>绯红王朝脊椎</EM_CrimsonDynastySpine.label>
   <EM_CrimsonDynastySpine.labelNoun>绯红王朝脊椎</EM_CrimsonDynastySpine.labelNoun>
-  <EM_CrimsonDynastySpine.description>一条已安装的贵胄血能脊椎，能够将血源共鸣维持为常驻状态，并随着宿主状态变化在狩猎优雅、贵族威仪与处决者压制之间切换。</EM_CrimsonDynastySpine.description>
+  <EM_CrimsonDynastySpine.description>一条已安装的贵胄血能脊椎，能够将血源共鸣维持为常驻状态，并随着宿主状态变化在狩猎优雅、贵族威仪与处决者压制之间切换。
+
+由 easyrim 创建/编辑</EM_CrimsonDynastySpine.description>
 </LanguageData>

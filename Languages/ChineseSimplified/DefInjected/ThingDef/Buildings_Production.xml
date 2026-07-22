@@ -2,6 +2,8 @@
 <LanguageData>
 
   <AutoDrill.label>自动钻探机</AutoDrill.label>
-  <AutoDrill.description>这是一台可长期无人值守的自动深钻井，可在外部电源与太阳能之间切换，并提供高速、高精度和安全三种钻取模式。它会根据地面穿透扫描结果持续开采地下矿脉，并将处理后的矿物直接排出。当地下资源采集任务结束后，它会自动关机。可自由重新部署。</AutoDrill.description>
+  <AutoDrill.description>这是一台可长期无人值守的自动深钻井，可在外部电源与太阳能之间切换，并提供高速、高精度和安全三种钻取模式。它会根据地面穿透扫描结果持续开采地下矿脉，并将处理后的矿物直接排出。当地下资源采集任务结束后，它会自动关机。可自由重新部署。
+
+由 easyrim 创建/编辑</AutoDrill.description>
 
 </LanguageData>

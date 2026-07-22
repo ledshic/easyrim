@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
   <Make_Neutroamine.label>配制中性胺</Make_Neutroamine.label>
-  <Make_Neutroamine.description>将化学燃料的能量与天然草药和精神叶片的生物活性物质融合，通过医疗级的精密配制过程，创造出具有强大生理调节效能的中性胺。这是现代医学与古老自然力量的完美结合。</Make_Neutroamine.description>
+  <Make_Neutroamine.description>将化学燃料的能量与天然草药和精神叶片的生物活性物质融合，通过医疗级的精密配制过程，创造出具有强大生理调节效能的中性胺。这是现代医学与古老自然力量的完美结合。
+
+由 easyrim 创建/编辑</Make_Neutroamine.description>
   <Make_Neutroamine.jobString>正在配制中性胺。</Make_Neutroamine.jobString>
 </LanguageData>
