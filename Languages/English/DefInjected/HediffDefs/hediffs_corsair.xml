@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
   <corsaircreed.label>&lt;color=#B7410E&gt;corsair creed&lt;/color&gt;</corsaircreed.label>
-  <corsaircreed.description>Life under the black signal has burned a ruthless doctrine into bone and nerve. The host strikes fast, fights dirty, and turns every wreck and battlefield into profit for the crew.
+  <corsaircreed.description>The corsair doctrine permanently maintains boarding, gunnery, scavenging, and blackflag aggression modules, then layers active abilities for burst windows. Linked effects react to combat state: ranged exchanges lock deck gunnery posture, while health at 45% or lower in combat triggers marauder frenzy.
 
 created/edited by easyrim</corsaircreed.description>
   <corsaircreed_boarder.label>boarding momentum</corsaircreed_boarder.label>

@@ -16,7 +16,10 @@
       <li>
         <key>core-blood-resonance</key>
         <activeHediff>bloodhemogen_resonance</activeHediff>
-        <activeSeverity>3</activeSeverity>
+        <activeSeverity>-1</activeSeverity>
+        <allGenes>
+          <li>Hemogenic</li>
+        </allGenes>
       </li>
     </rules>
   </Def>
@@ -46,7 +49,7 @@
     <defName>EM_CrimsonDynastySpine</defName>
     <label>crimson dynasty spine</label>
     <labelNoun>a crimson dynasty spine</labelNoun>
-    <description>An installed noble hemogenic spine that maintains blood essence resonance as a standing state, then pivots between hunting grace, courtly authority, and executioner pressure as the host's condition shifts.</description>
+    <description>An installed noble hemogenic spine that activates blood essence resonance only when the host carries the Hemogenic gene, with resonance stage adjusting dynamically to current blood state. It then pivots between hunting grace, courtly authority, and executioner pressure as the host's condition shifts.</description>
     <descriptionHyperlinks>
       <ThingDef>EM_CrimsonDynastySpine</ThingDef>
       <HediffDef>bloodhemogen_resonance</HediffDef>

@@ -2,7 +2,7 @@
 <LanguageData>
   <EM_CorsairSpine.label>黑旗脊架</EM_CorsairSpine.label>
   <EM_CorsairSpine.labelNoun>黑旗脊架</EM_CorsairSpine.labelNoun>
-  <EM_CorsairSpine.description>一套已安装的海盗脊柱装置，将炮手姿态、掠夺直觉与登舰侵袭耦合在一起。它会读取战斗节奏，并把宿主切换到当下最肮脏但最高效的姿态。
+  <EM_CorsairSpine.description>黑旗脊架会常驻维持枪手之眼与拾荒本能，作为掠袭战的基础框架。联动效果按战况推进：交战时启用接舷冲势，远程交火追加甲板枪姿，生命低于 45% 且在战斗中触发劫掠狂潮，被征召时维持黑旗悍意。
 
 由 easyrim 创建/编辑</EM_CorsairSpine.description>
 </LanguageData>

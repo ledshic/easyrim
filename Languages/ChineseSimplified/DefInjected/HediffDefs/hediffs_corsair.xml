@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 	<corsaircreed.label>&lt;color=#B7410E&gt;星匪信条&lt;/color&gt;</corsaircreed.label>
-	<corsaircreed.description>在黑色信标下讨生的岁月，将一套冷酷法则烙进了骨与神经。宿主出手更快、手段更狠，并能把每一处残骸与战场都变成船队的收益。
+	<corsaircreed.description>星匪信条会常驻维持接舷、枪手、拾荒与黑旗悍意四个模块，并叠加主动能力形成爆发窗口。联动效果按战况触发：远程交火时锁定甲板枪姿，生命低于 45% 且仍在战斗时触发劫掠狂潮。
 
 由 easyrim 创建/编辑</corsaircreed.description>
 	<corsaircreed_boarder.label>接舷冲势</corsaircreed_boarder.label>

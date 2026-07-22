@@ -4,7 +4,7 @@
 		<defName>crimsondynasty</defName>
 		<hediffClass>Hediff_High</hediffClass>
 		<label>crimson dynasty</label>
-		<description>An ancient hemogenic lineage has awakened in the host. Hunger sharpens instinct, aristocratic poise bends weaker wills, and each battle feeds a body that refuses to die quietly.</description>
+		<description>An ancient hemogenic lineage has awakened in the host. Core bloodline channels remain active at all times, and blood essence resonance is conditionally granted when the host carries the Hemogenic gene. The resonance stage then shifts dynamically with current blood state.</description>
 		<defaultLabelColor>(178,34,34)</defaultLabelColor>
 		<scenarioCanAdd>true</scenarioCanAdd>
 		<maxSeverity>1.0</maxSeverity>
@@ -41,6 +41,14 @@
 			<li Class="EasyMode.HediffCompProperties_ConditionalHediffDistributor">
 				<checkIntervalTicks>90</checkIntervalTicks>
 				<rules>
+					<li>
+						<key>crimson-blood-resonance-gene</key>
+						<activeHediff>bloodhemogen_resonance</activeHediff>
+						<activeSeverity>-1</activeSeverity>
+						<allGenes>
+							<li>Hemogenic</li>
+						</allGenes>
+					</li>
 					<li>
 						<key>crimson-bloodfrenzy</key>
 						<activeHediff>crimsondynasty_bloodfrenzy</activeHediff>

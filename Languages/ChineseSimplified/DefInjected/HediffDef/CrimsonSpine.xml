@@ -7,7 +7,7 @@
 
   <EM_CrimsonDynastySpine.label>绯红王朝脊椎</EM_CrimsonDynastySpine.label>
   <EM_CrimsonDynastySpine.labelNoun>绯红王朝脊椎</EM_CrimsonDynastySpine.labelNoun>
-  <EM_CrimsonDynastySpine.description>一条已安装的贵胄血能脊椎，能够将血源共鸣维持为常驻状态，并随着宿主状态变化在狩猎优雅、贵族威仪与处决者压制之间切换。
+  <EM_CrimsonDynastySpine.description>绯红王朝脊椎会常驻维持猎裔身法与血原强势；当宿主具备血原化基因时，额外联动赋予血原质共鸣，且共鸣等级会随当前血原状态动态变化。联动效果按状态分层：生命低于 45% 且交战时触发绯怒升格，生命高于 80% 且脱战时维持王裔仪态，近战交锋激活决斗升格，血原质共鸣处于盛态区间时触发血华升腾。
 
 由 easyrim 创建/编辑</EM_CrimsonDynastySpine.description>
 </LanguageData>

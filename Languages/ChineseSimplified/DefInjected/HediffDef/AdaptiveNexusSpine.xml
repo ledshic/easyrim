@@ -12,7 +12,7 @@
 
   <EM_AdaptiveNexusSpine.label>适应性中枢脊椎</EM_AdaptiveNexusSpine.label>
   <EM_AdaptiveNexusSpine.labelNoun>适应性中枢脊椎</EM_AdaptiveNexusSpine.labelNoun>
-  <EM_AdaptiveNexusSpine.description>一条以自重构神经晶格为核心的合成脊椎。它充当覆盖全身的适应控制器，可分发强化协议，并根据宿主的状态、行动、基因和装备动态切换模块。
+  <EM_AdaptiveNexusSpine.description>这条中枢脊椎会常驻分发身体强化与生物强化，作为全身适配控制器运行。联动效果按状态切换：生命低于 75% 启用适应性装甲，进入战斗启用纳米作战协议，使用远程武器时触发中枢远程校准，具备强力近战基因时触发基因共鸣。
 
 由 easyrim 创建/编辑</EM_AdaptiveNexusSpine.description>
 </LanguageData>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
   <crimsondynasty.label>&lt;color=#B22222&gt;crimson dynasty&lt;/color&gt;</crimsondynasty.label>
-  <crimsondynasty.description>An ancient hemogenic lineage has awakened in the host. Hunger sharpens instinct, aristocratic poise bends weaker wills, and each battle feeds a body that refuses to die quietly.
+  <crimsondynasty.description>An awakened hemogenic lineage sustains predator, hemogenic, mesmer, and dreadguard channels at all times. Blood resonance is additionally granted only when the host carries the Hemogenic gene, and its stage adjusts dynamically with current blood state. Linked effects switch with state: bloodfrenzy at 45% or lower health in combat, noble poise above 80% health out of combat, and duelist ascendancy during melee engagements.
 
 created/edited by easyrim</crimsondynasty.description>
   <crimsondynasty_predator.label>predator grace</crimsondynasty_predator.label>

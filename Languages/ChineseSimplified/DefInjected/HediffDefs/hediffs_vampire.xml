@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 	<crimsondynasty.label>&lt;color=#B22222&gt;绯血王裔&lt;/color&gt;</crimsondynasty.label>
-	<crimsondynasty.description>古老的血原质贵胄血脉在宿主体内苏醒。饥渴会磨尖猎杀本能，贵族般的冷峻气场可压制弱者意志，而每一次战斗都在滋养一具难以沉寂的躯体。
+	<crimsondynasty.description>绯血王裔会常驻维持猎裔、血原、魅压与惊惧守御四条血能链路；当宿主具备血原化（Hemogenic）基因时，额外联动赋予血原质共鸣，且共鸣等级会随当前血原状态动态变化。联动效果明确分层：生命低于 45% 且交战时触发绯怒升格，生命高于 80% 且脱战时维持王裔仪态，进入近战后激活决斗升格。
 
 由 easyrim 创建/编辑</crimsondynasty.description>
 	<crimsondynasty_predator.label>猎裔身法</crimsondynasty_predator.label>

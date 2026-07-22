@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 	<archotechoath.label>&lt;color=#D4AF37&gt;远古机誓&lt;/color&gt;</archotechoath.label>
-	<archotechoath.description>一段残缺的远古机械协议已在宿主神经系统中扎根。它并不赐予神性，却会持续驱动心智、工艺、统御与生存力的极限打磨。
+	<archotechoath.description>远古机誓会常驻维持谕算心智、锻律执持、执政节律与自修护壁四条核心链路。联动效果随状态改写：未征召时偏向研作同调，战斗中切换战协晶格，生命跌破 50% 时强制触发紧急隔舱。
 
 由 easyrim 创建/编辑</archotechoath.description>
 	<archotechoath_cognition.label>谕算心智</archotechoath_cognition.label>
@@ -34,7 +34,7 @@
 由 easyrim 创建/编辑</archotechoath_emergency_bulkhead.description>
 
 	<frontierwarden.label>&lt;color=#6B8E23&gt;边疆守望&lt;/color&gt;</frontierwarden.label>
-	<frontierwarden.description>在严酷边地与更严酷职责中淬炼而成，此道统将宿主塑造成殖民地的屏障。其侦察更远、射击更稳、救治更快，并能在防线将崩之处稳住全局。
+	<frontierwarden.description>边疆守望会常驻维持踏荒行军、火线教范、战地稳术与破阵意志四条守线链路，作为殖民地防御中枢。联动效果按姿态切换：远程交火时启用警戒火网矩阵，近战缠斗时启用破阵狂袭，脱离征召时切换营地分诊指挥以抬升恢复与后勤节奏。
 
 由 easyrim 创建/编辑</frontierwarden.description>
 	<frontierwarden_pathfinder.label>踏荒行军</frontierwarden_pathfinder.label>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
   <archotechoath.label>&lt;color=#D4AF37&gt;archotech oath&lt;/color&gt;</archotechoath.label>
-  <archotechoath.description>A fragmentary archotech protocol has taken root in the host's nervous system. It does not grant divinity, but it compels relentless refinement of thought, craft, leadership, and endurance.
+  <archotechoath.description>The oath keeps cognition, industry, command, and self-repair channels online as a permanent baseline. Linked effects reroute by state: lab sync while undrafted, warprotocol in live combat, and emergency bulkhead below half health.
 
 created/edited by easyrim</archotechoath.description>
   <archotechoath_cognition.label>oracle cognition</archotechoath_cognition.label>
@@ -34,7 +34,7 @@ created/edited by easyrim</archotechoath_warprotocol.description>
 created/edited by easyrim</archotechoath_emergency_bulkhead.description>
 
   <frontierwarden.label>&lt;color=#6B8E23&gt;frontier warden&lt;/color&gt;</frontierwarden.label>
-  <frontierwarden.description>Raised by hard land and harder duty, this doctrine shapes a pawn into the colony's shield. They scout farther, shoot cleaner, mend faster, and stand firm where lines would otherwise break.
+  <frontierwarden.description>The frontier warden doctrine keeps pathfinder, fireline, field surgeon, and breachfighter channels online as a persistent defense baseline. Linked effects switch by posture: overwatch matrix in ranged combat, breach rampage in melee pressure, and camp triage command while undrafted to sustain recovery and logistics tempo.
 
 created/edited by easyrim</frontierwarden.description>
   <frontierwarden_pathfinder.label>pathfinder stride</frontierwarden_pathfinder.label>
