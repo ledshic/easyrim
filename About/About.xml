@@ -6,22 +6,38 @@
 	<supportedVersions>
 		<li>1.6</li>
 	</supportedVersions>
-	<description>Make the Rim easier with deliberately overpowered colonist upgrades, faster production, and improved world-map mobility.
+	<description>EasyRim is a deliberately overpowered RimWorld mod focused on stronger colonists, faster production, and better world-map mobility.
 
-	FEATURES
-	- Transcendence: five enhancement branches, adaptive armor, nanite battle morphs, and emergency reconstruction after critical collapse.
-	- Adaptive nexus spine: a craftable implant that distributes enhancement branches and dynamically responds to health, combat, genes, and equipment.
-	- Brave Soul, Blood Essence Resonance, and Pioneer Spirit: powerful staged bonuses for combat, work, recovery, and survival.
-	- Hero abilities: healing, execution, resurrection, universal bloodfeeding, world-target transit, drop pods, work guidance, and a colony-wide rally.
-	- Buildings and crafting: an unattended selectable-power auto drill with three operating modes, a buildable life-support power unit, batch components, neutroamine, synthread, and hyperweave.
-	- Accelerated systems: biosculpter cycles, infinite chemreactor output, wastepack atomization, geothermal and ship-reactor power, plus deep scanning for tunneler mechs.
+	CORE ENHANCEMENT SYSTEMS
+	- Transcendence: cognitive, physical, biological, environmental, and psychic upgrades, plus adaptive armor and permanent nanite battle-morph tools.
+	- Nano emergency reconstruction: the biological transcendence branch can prevent death and reconstruct critically wounded pawns after a delay.
+	- Brave Soul, Blood Essence Resonance, and Pioneer Spirit: staged bonuses for combat, work, recovery, and survival.
+	- Adaptive nexus spine: a craftable artificial spine that distributes enhancement branches and dynamically responds to health, combat, genes, and equipment.
 
-	Most upgrades are delivered through Hediffs and Abilities. TraitDef currently contains no gameplay entries.
+	ABILITIES
+	- Crimson Steel Infusion, Forbidden Restoration, Flesh Sculptor, Flesh Dissolution, Universal Bloodfeed, Eternal Revival.
+	- Nano Disassembly Transit and Overmind Drops for rapid map/world-map mobility and tactical deployment.
+	- Work Guidance and Colony Mobilization for powerful colony-wide tempo boosts.
+
+	BUILDINGS AND PRODUCTION
+	- Auto Drill: unattended deep-resource mining with sunlight checks, selectable power modes, and redeployable installation.
+	- Buildable Life Support Unit: room pressurization/heating with substantial power output.
+	- Batch components, neutroamine synthesis, synthread, and hyperweave crafting.
+
+	ACCELERATED SYSTEMS AND BALANCE CHANGES
+	- Faster biosculpter cycles, infinite chemreactor output, and wastepack atomization.
+	- Greatly increased geothermal-generator and ship-reactor output.
+	- Deep-resource detection for player-controlled tunneler mechs.
+
+	Most character power is implemented through Hediffs and Abilities. TraitDef currently contains no gameplay entries.
 
 	WARNING
 	EasyRim is intentionally unbalanced and will significantly reduce the game's difficulty.
+	AI-Assisted Mod: Developed with significant AI support, with human oversight and edits. Transparency note: Please avoid if you dislike AI-assisted creations.
 
 	For RimWorld 1.6 (Odyssey).
+	Steam Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=3761671600
 	GitHub: https://github.com/ledshic/easyrim
+	Mod ID: 3761671600
 	</description>
 </ModMetaData>

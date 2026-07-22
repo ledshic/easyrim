@@ -43,7 +43,6 @@ EasyRim is a deliberately overpowered RimWorld mod focused on stronger colonists
 - Faster wastepack atomization with larger internal storage.
 - Greatly increased geothermal-generator and ship-reactor output.
 - Deep-resource detection for player-controlled tunneler mechs.
-- Adjusted melee trade-offs for the trigger-happy trait.
 
 Most character power is implemented through Hediffs and Abilities. `TraitDef` currently contains no gameplay entries.
 
