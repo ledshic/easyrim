@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <EasyMode_ConvertToUniqueRangedWeapon.label>weapon customization</EasyMode_ConvertToUniqueRangedWeapon.label>
+  <EasyMode_ConvertToUniqueRangedWeapon.description>Redesign, reinforce, and customize a ranged weapon. With the gunsmith's own inspiration, turn an ordinary weapon into a one-of-a-kind signature piece. You can also strip and rebuild an existing customized weapon into a brand-new personal collection piece.
+
+-- easyrim</EasyMode_ConvertToUniqueRangedWeapon.description>
+  <EasyMode_ConvertToUniqueRangedWeapon.jobString>Customizing weapon.</EasyMode_ConvertToUniqueRangedWeapon.jobString>
+</LanguageData>

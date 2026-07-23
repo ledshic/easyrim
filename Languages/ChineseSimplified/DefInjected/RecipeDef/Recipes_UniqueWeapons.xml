@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <EasyMode_ConvertToUniqueRangedWeapon.label>枪械改装</EasyMode_ConvertToUniqueRangedWeapon.label>
+  <EasyMode_ConvertToUniqueRangedWeapon.description>重新设计、强化和改装远程武器。根据枪匠的个人灵感，将当前的平庸武器改造成独一无二的个人限定款。也可以重新还原打造一个全新的个人收藏。
+
+-- easyrim</EasyMode_ConvertToUniqueRangedWeapon.description>
+  <EasyMode_ConvertToUniqueRangedWeapon.jobString>正在改装武器。</EasyMode_ConvertToUniqueRangedWeapon.jobString>
+</LanguageData>
