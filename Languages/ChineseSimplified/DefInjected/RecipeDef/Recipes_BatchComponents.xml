@@ -3,11 +3,11 @@
   <Make_ComponentIndustrialBatch.label>批量制造组件</Make_ComponentIndustrialBatch.label>
   <Make_ComponentIndustrialBatch.description>一次性批量制造工业组件。
 
-由 easyrim 创建/编辑</Make_ComponentIndustrialBatch.description>
+-- easyrim</Make_ComponentIndustrialBatch.description>
   <Make_ComponentIndustrialBatch.jobString>正在批量制造组件。</Make_ComponentIndustrialBatch.jobString>
   <Make_ComponentSpacerBatch.label>批量制造高级组件</Make_ComponentSpacerBatch.label>
   <Make_ComponentSpacerBatch.description>一次性批量制造高级组件。
 
-由 easyrim 创建/编辑</Make_ComponentSpacerBatch.description>
+-- easyrim</Make_ComponentSpacerBatch.description>
   <Make_ComponentSpacerBatch.jobString>正在批量制造高级组件。</Make_ComponentSpacerBatch.jobString>
 </LanguageData>

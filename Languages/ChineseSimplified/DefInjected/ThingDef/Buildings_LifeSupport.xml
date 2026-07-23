@@ -3,6 +3,6 @@
   <LifeSupportUnit_Buildable.label>可建造生命支持单元</LifeSupportUnit_Buildable.label>
   <LifeSupportUnit_Buildable.description>一个可建造的单元，能够保持房间的温度和压力。为你的殖民地提供生命支持。可以使用钢材和工业组件建造。
 
-由 easyrim 创建/编辑</LifeSupportUnit_Buildable.description>
+-- easyrim</LifeSupportUnit_Buildable.description>
 
 </LanguageData>

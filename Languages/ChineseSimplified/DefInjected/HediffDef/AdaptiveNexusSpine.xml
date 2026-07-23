@@ -3,16 +3,16 @@
   <EM_NexusSpine_RangedAdaptation.label>中枢远程校准</EM_NexusSpine_RangedAdaptation.label>
   <EM_NexusSpine_RangedAdaptation.description>适应性中枢脊椎检测到了远程武器，正在持续校准姿态、后坐力补偿和视动反应时序。
 
-由 easyrim 创建/编辑</EM_NexusSpine_RangedAdaptation.description>
+-- easyrim</EM_NexusSpine_RangedAdaptation.description>
 
   <EM_NexusSpine_GeneAdaptation.label>中枢基因共鸣</EM_NexusSpine_GeneAdaptation.label>
   <EM_NexusSpine_GeneAdaptation.description>适应性中枢脊椎正与强健的快速收缩肌基因产生共鸣，进一步强化宿主的近战生物力学。
 
-由 easyrim 创建/编辑</EM_NexusSpine_GeneAdaptation.description>
+-- easyrim</EM_NexusSpine_GeneAdaptation.description>
 
   <EM_AdaptiveNexusSpine.label>适应性中枢脊椎</EM_AdaptiveNexusSpine.label>
   <EM_AdaptiveNexusSpine.labelNoun>适应性中枢脊椎</EM_AdaptiveNexusSpine.labelNoun>
   <EM_AdaptiveNexusSpine.description>这条中枢脊椎会常驻分发身体强化与生物强化，作为全身适配控制器运行。联动效果按状态切换：生命低于 75% 启用适应性装甲，进入战斗启用纳米作战协议，使用远程武器时触发中枢远程校准，具备强力近战基因时触发基因共鸣。
 
-由 easyrim 创建/编辑</EM_AdaptiveNexusSpine.description>
+-- easyrim</EM_AdaptiveNexusSpine.description>
 </LanguageData>

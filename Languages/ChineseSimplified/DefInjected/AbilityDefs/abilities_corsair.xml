@@ -3,13 +3,13 @@
 	<CorsairBroadside.label>舷炮过载</CorsairBroadside.label>
 	<CorsairBroadside.description>将作战节奏压入短时高烈度齐射循环，显著提升射击节奏与瞄准速度，但会在持续时间内提高受击风险。
 
-由 easyrim 创建/编辑</CorsairBroadside.description>
+-- easyrim</CorsairBroadside.description>
 	<CorsairPlunderMark.label>掠夺标记</CorsairPlunderMark.label>
 	<CorsairPlunderMark.description>将目标标记为优先战利品，削弱其机动与闪避姿态，使其更容易被迅速击倒。
 
-由 easyrim 创建/编辑</CorsairPlunderMark.description>
+-- easyrim</CorsairPlunderMark.description>
 	<CorsairCutthroatRush.label>割喉突袭</CorsairCutthroatRush.label>
 	<CorsairCutthroatRush.description>强行进入凶暴接舷冲刺。短时间内近距追击与杀伤能力显著上升，但自身暴露风险也会提高。
 
-由 easyrim 创建/编辑</CorsairCutthroatRush.description>
+-- easyrim</CorsairCutthroatRush.description>
 </languageData>

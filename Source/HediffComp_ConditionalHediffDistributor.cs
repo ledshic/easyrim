@@ -545,12 +545,31 @@ namespace EasyMode
                 return false;
             }
 
+            string normalizedTag = tag.Trim();
+
             if (includeWeapons && pawn.equipment != null)
             {
                 List<ThingWithComps> equipment = pawn.equipment.AllEquipmentListForReading;
                 for (int i = 0; i < equipment.Count; i++)
                 {
-                    if (equipment[i].def.weaponTags?.Contains(tag) == true)
+                    ThingDef def = equipment[i]?.def;
+                    if (def == null)
+                    {
+                        continue;
+                    }
+
+                    if (def.weaponTags?.Contains(normalizedTag) == true)
+                    {
+                        return true;
+                    }
+
+                    // Support semantic aliases used in XML rules.
+                    if (string.Equals(normalizedTag, "Ranged", StringComparison.OrdinalIgnoreCase) && def.IsRangedWeapon)
+                    {
+                        return true;
+                    }
+
+                    if (string.Equals(normalizedTag, "Melee", StringComparison.OrdinalIgnoreCase) && def.IsMeleeWeapon)
                     {
                         return true;
                     }
@@ -562,7 +581,7 @@ namespace EasyMode
                 List<Apparel> apparel = pawn.apparel.WornApparel;
                 for (int i = 0; i < apparel.Count; i++)
                 {
-                    if (apparel[i].def.apparel?.tags?.Contains(tag) == true)
+                    if (apparel[i].def.apparel?.tags?.Contains(normalizedTag) == true)
                     {
                         return true;
                     }

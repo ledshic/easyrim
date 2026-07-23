@@ -3,41 +3,41 @@
 	<corsaircreed.label>&lt;color=#B7410E&gt;星匪信条&lt;/color&gt;</corsaircreed.label>
 	<corsaircreed.description>星匪信条会常驻维持接舷、枪手、拾荒与黑旗悍意四个模块，并叠加主动能力形成爆发窗口。联动效果按战况触发：远程交火时锁定甲板枪姿，生命低于 45% 且仍在战斗时触发劫掠狂潮。
 
-由 easyrim 创建/编辑</corsaircreed.description>
+-- easyrim</corsaircreed.description>
 	<corsaircreed_boarder.label>接舷冲势</corsaircreed_boarder.label>
 	<corsaircreed_boarder.description>高强度接舷训练显著提升近距突入时的速度、控制与连击压迫。
 
-由 easyrim 创建/编辑</corsaircreed_boarder.description>
+-- easyrim</corsaircreed_boarder.description>
 	<corsaircreed_gunner.label>甲板枪手之眼</corsaircreed_gunner.label>
 	<corsaircreed_gunner.description>掠食式时机判断与后坐控制强化了远程致命效率。
 
-由 easyrim 创建/编辑</corsaircreed_gunner.description>
+-- easyrim</corsaircreed_gunner.description>
 	<corsaircreed_scavenger.label>废舰拾荒本能</corsaircreed_scavenger.label>
 	<corsaircreed_scavenger.description>以战利品为导向的本能提升了负重搬运、搜刮效率与战后回收速度。
 
-由 easyrim 创建/编辑</corsaircreed_scavenger.description>
+-- easyrim</corsaircreed_scavenger.description>
 	<corsaircreed_blackflag.label>黑旗悍意</corsaircreed_blackflag.label>
 	<corsaircreed_blackflag.description>掠夺者的胆魄会钝化恐惧与痛感，使宿主在他人退缩时依旧维持侵略性。
 
-由 easyrim 创建/编辑</corsaircreed_blackflag.description>
+-- easyrim</corsaircreed_blackflag.description>
 	<corsaircreed_gunner_posture.label>甲板枪姿</corsaircreed_gunner_posture.label>
 	<corsaircreed_gunner_posture.description>在实战交火中进入稳定枪姿，牺牲隐蔽与机动细节，换取持续火力压制。
 
-由 easyrim 创建/编辑</corsaircreed_gunner_posture.description>
+-- easyrim</corsaircreed_gunner_posture.description>
 	<corsaircreed_marauder_frenzy.label>劫掠狂潮</corsaircreed_marauder_frenzy.label>
 	<corsaircreed_marauder_frenzy.description>当生命降至临界并仍处近战时，星匪信条会抛弃克制并强推致命反扑。
 
-由 easyrim 创建/编辑</corsaircreed_marauder_frenzy.description>
+-- easyrim</corsaircreed_marauder_frenzy.description>
 	<corsair_broadside_overdrive.label>舷炮过载</corsair_broadside_overdrive.label>
 	<corsair_broadside_overdrive.description>将作战节奏强行压入短时高烈度齐射循环。射击节奏与瞄准速度显著提升，但暴露风险也会同步上升。
 
-由 easyrim 创建/编辑</corsair_broadside_overdrive.description>
+-- easyrim</corsair_broadside_overdrive.description>
 	<corsair_cutthroat_rush.label>割喉突袭</corsair_cutthroat_rush.label>
 	<corsair_cutthroat_rush.description>强行进入凶暴接舷冲刺。追击速度与近距杀伤陡升，但战术暴露也随之上升。
 
-由 easyrim 创建/编辑</corsair_cutthroat_rush.description>
+-- easyrim</corsair_cutthroat_rush.description>
 	<corsair_plunder_marked.label>掠夺标记</corsair_plunder_marked.label>
 	<corsair_plunder_marked.description>目标被标注为优先战利品，行动与临战姿态受到扰乱，更易被迅速击倒。
 
-由 easyrim 创建/编辑</corsair_plunder_marked.description>
+-- easyrim</corsair_plunder_marked.description>
 </LanguageData>
