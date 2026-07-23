@@ -48,7 +48,9 @@ EasyRim 是一个刻意追求超强效果的《环世界》功能模组，聚焦
 
 ## 开发者说明
 
-- Hediff 分类与命名规范：[Defs/HediffDefs/README.md](Defs/HediffDefs/README.md)
+- 项目目录结构规范：[Docs/ProjectStructureConvention.md](Docs/ProjectStructureConvention.md)
+- 目录规范校验脚本：[scripts/check-structure.sh](scripts/check-structure.sh)
+- Hediff 分类与命名规范：[Defs/HediffDef/README.md](Defs/HediffDef/README.md)
 - 自适应框架说明：[Docs/AdaptiveHediffFramework.md](Docs/AdaptiveHediffFramework.md)
 
 ## 兼容性

@@ -190,7 +190,7 @@ The current framework evaluates sustained state. Instant events such as “after
 
 ## Hediff classification and naming strategy
 
-EasyRim uses a compatibility-first classification model for defs under `Defs/HediffDefs`:
+EasyRim uses a compatibility-first classification model for defs under `Defs/HediffDef`:
 
 - Gameplay combo trees: parent + module suite status groups.
 - Spine bridge Hediffs: implant controllers that distribute combo effects.
@@ -198,7 +198,7 @@ EasyRim uses a compatibility-first classification model for defs under `Defs/Hed
 
 Reference guide:
 
-- [../Defs/HediffDefs/README.md](../Defs/HediffDefs/README.md)
+- [../Defs/HediffDef/README.md](../Defs/HediffDef/README.md)
 
 Compatibility rule:
 

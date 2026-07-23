@@ -48,7 +48,9 @@ Most character power is implemented through Hediffs and Abilities. `TraitDef` cu
 
 ## Developer notes
 
-- Hediff classification and naming guide: [Defs/HediffDefs/README.md](Defs/HediffDefs/README.md)
+- Project structure convention: [Docs/ProjectStructureConvention.md](Docs/ProjectStructureConvention.md)
+- Structure validation script: [scripts/check-structure.sh](scripts/check-structure.sh)
+- Hediff classification and naming guide: [Defs/HediffDef/README.md](Defs/HediffDef/README.md)
 - Adaptive framework details: [Docs/AdaptiveHediffFramework.md](Docs/AdaptiveHediffFramework.md)
 
 ## Compatibility
