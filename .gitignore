@@ -17,4 +17,5 @@ references/*
 !references/README.md
 
 # Local deployment helper script.
+build.ps1
 deploy.ps1
