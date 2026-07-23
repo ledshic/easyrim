@@ -39,6 +39,42 @@
 			</li>
 		</comps>
 	</AbilityDef>
+	<AbilityDef>
+		<defName>EasyMode_NeuralOverclock</defName>
+		<label>neural overclock</label>
+		<description>Drive the nervous system and musculature far beyond their safe operating limits for five seconds. Movement speed, melee precision, and ranged aiming speed increase dramatically, but the overclock inflicts recurring tissue strain throughout the body.</description>
+		<iconPath>UI/Abilities/Longjump</iconPath>
+		<cooldownTicksRange>300</cooldownTicksRange>
+		<displayOrder>700</displayOrder>
+		<hostile>false</hostile>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+		<targetRequired>false</targetRequired>
+		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+		<statBases>
+			<Ability_Duration>5</Ability_Duration>
+		</statBases>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<drawAimPie>false</drawAimPie>
+			<requireLineOfSight>false</requireLineOfSight>
+			<nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+			<warmupTime>0</warmupTime>
+			<targetable>false</targetable>
+			<targetParams>
+				<canTargetSelf>true</canTargetSelf>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="CompProperties_AbilityGiveHediff">
+				<compClass>CompAbilityEffect_GiveHediff</compClass>
+				<hediffDef>EasyMode_NeuralOverclock</hediffDef>
+				<onlyApplyToSelf>true</onlyApplyToSelf>
+				<replaceExisting>true</replaceExisting>
+			</li>
+			<li Class="EasyMode.CompProperties_AbilityNeuralOverclockVisual" />
+		</comps>
+	</AbilityDef>
 	<AbilityDef Name="ShapeFlesh">
 		<defName>ChaosCall</defName>
 		<label>flesh sculptor</label>

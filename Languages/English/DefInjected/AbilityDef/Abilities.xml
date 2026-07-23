@@ -4,4 +4,8 @@
   <ResurrectNoCost.description>Harness advanced archite technology flowing through the bloodstream to restore life to the deceased. These microscopic machines repair cellular damage, restart vital functions, and reconstruct neural pathways. The success and quality of resurrection depends on the corpse's condition - fresher bodies retain more memories and physical integrity, while older remains may suffer permanent cognitive or physical impairments.
 
 -- easyrim</ResurrectNoCost.description>
+  <EasyMode_NeuralOverclock.label>neural overclock</EasyMode_NeuralOverclock.label>
+  <EasyMode_NeuralOverclock.description>The nervous system and musculature are operating far beyond normal safety limits. Motion becomes explosively fast and precise while accumulating tissue strain across the body.
+
+-- easyrim</EasyMode_NeuralOverclock.description>
 </LanguageData>

@@ -12,4 +12,8 @@
 	<CommandSlaughter.description>释放毁灭性心灵攻击，导致活体组织发生灾难性细胞破坏。目标的血肉快速恶化并重新形成扭曲的有机物质团块，通过可怖的生物重构瞬间杀死目标。这种能力代表了血肉操控技术的巅峰。
 
 -- easyrim</CommandSlaughter.description>
+	<EasyMode_NeuralOverclock.label>神经超频</EasyMode_NeuralOverclock.label>
+	<EasyMode_NeuralOverclock.description>在五秒内强迫神经系统与肌肉组织远超安全极限运转。移动速度、近战命中率与远程瞄准速度都会大幅提高，但超频会持续在身体各处造成组织损伤。
+
+-- easyrim</EasyMode_NeuralOverclock.description>
 </languageData>
