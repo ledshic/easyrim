@@ -49,6 +49,22 @@ Rules:
 - Use `Recipes` spelling only. Do not use `Receipes`.
 - Keep released `defName` values stable unless migration impact is accepted.
 
+## Source layout
+
+Classify C# files under `Source/` with CustomWeapon-style role folders:
+
+- `Source/CompProperties/` for `CompProperties_*`, `CompAbilityEffect_*`, and Hediff comp implementation clusters
+- `Source/ThingComps/` for Thing-level comps (`ThingComp`)
+- `Source/HarmonyPatches/` for Harmony patch and patch entry files
+- `Source/Controllers/` for long-lived game/world lifecycle controllers
+- `Source/Defs/` for custom Def and DefOf declarations
+- `Source/Data/` for debug actions and data-centric utility definitions
+
+Rules:
+
+- New C# source files should be placed in one of the folders above rather than directly under `Source/`.
+- Keep namespace compatibility stable; folder moves should not change runtime behavior.
+
 ## Localization layout
 
 Keep both English and ChineseSimplified in dual-track localization:

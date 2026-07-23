@@ -112,6 +112,21 @@ else
   pass "No flat patch XML files under Patches/"
 fi
 
+printf '\nChecking Source layout...\n'
+ensure_dir_exists "Source/CompProperties"
+ensure_dir_exists "Source/ThingComps"
+ensure_dir_exists "Source/HarmonyPatches"
+ensure_dir_exists "Source/Controllers"
+ensure_dir_exists "Source/Defs"
+ensure_dir_exists "Source/Data"
+
+if compgen -G "Source/*.cs" >/dev/null; then
+  fail "Root-level C# files found under Source/; move them into classified subfolders"
+  ls -1 Source/*.cs
+else
+  pass "No root-level C# files under Source/"
+fi
+
 printf '\nChecking forbidden spellings and legacy paths in docs/xml...\n'
 ensure_no_match "Receipes_" "." "No Receipes_ typo remains"
 ensure_no_match "Defs/(AbilityDefs|HediffDefs|RecipeDefs|ThingDefs|ThoughtDefs)" "." "No legacy plural Def paths remain in text files"
