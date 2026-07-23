@@ -3,6 +3,7 @@
 # Local build outputs. Keep Assemblies/EasyMode.dll for the workshop package.
 Source/bin/
 Source/obj/
+Assemblies/EasyMode.dll
 
 # Local workshop upload staging.
 .workshop-upload/
