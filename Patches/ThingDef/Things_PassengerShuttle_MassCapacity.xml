@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="PassengerShuttle"]/comps/li[@Class="CompProperties_Transporter"]/massCapacity</xpath>
+        <value>
+            <massCapacity>1500</massCapacity>
+        </value>
+    </Operation>
+
+</Patch>
