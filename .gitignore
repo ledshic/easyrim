@@ -8,6 +8,7 @@ Assemblies/EasyMode.dll
 # Local workshop upload staging.
 .workshop-upload/
 _workshop/
+_artifacts/
 
 # Local RimWorld install links.
 RimWorld-Data
