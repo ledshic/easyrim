@@ -1,12 +1,13 @@
-# RimWorld 原版参考资料
+# RimWorld 参考资料
 
-此目录用于集中存放开发 EasyRim 时使用的原版游戏参考资料。仓库只追踪本说明文件；解压的本地化文件和反编译源码均由根目录 `.gitignore` 排除，不进入 Git。
+此目录用于集中存放开发 EasyRim 时使用的参考资料（原版资料与第三方模组源码）。仓库只追踪本说明文件；目录内生成或拉取的内容均由根目录 `.gitignore` 排除，不进入 Git。
 
 本地目录结构：
 
 ```text
 references/
 ├── README.md
+├── CustomizeWeapon/      # 第三方模组源码参考（realloon/CustomizeWeapon）
 ├── chinese-simplified/  # 原版及 DLC 的简体中文语言包
 └── decompiled/          # Assembly-CSharp.dll 的反编译结果
 ```
@@ -18,6 +19,12 @@ references/
 - `decompiled/_selected/HediffDef.cs`：迁移自仓库原有的 `_decompile/HediffDef.cs`，仅作为历史选取参考。
 
 这些内容属于 RimWorld 原版游戏资料，仅用于本地检索和兼容性研究。更新游戏后应重新生成，不能把目录内部文件加入提交。
+
+第三方参考资料：
+
+- `CustomizeWeapon/`：来自 `https://github.com/realloon/CustomizeWeapon` 的本地克隆副本，用于实现对照与兼容性参考。
+- 建议更新方式：在仓库根目录执行 `gh repo clone realloon/CustomizeWeapon` 后移动到 `references/CustomizeWeapon`，或在已有目录内执行 `git pull`。
+- 同样不应将该目录内容加入提交（保留本地参考用途）。
 
 可使用以下方式刷新语言文件：
 
