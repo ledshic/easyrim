@@ -6,7 +6,7 @@
 		<label>transcendence</label>
 		<description>Advanced glitter tech mechanites have fundamentally transformed the body, elevating it beyond mortal limitations. Every biological system operates at peak efficiency while the mind achieves perfect clarity.</description>
 		<defaultLabelColor>(192,192,192)</defaultLabelColor>
-		<priceOffset>-3000</priceOffset>
+		<priceOffset>-30000</priceOffset>
 		<scenarioCanAdd>true</scenarioCanAdd>
 		<maxSeverity>1.0</maxSeverity>
 		<isBad>false</isBad>
@@ -506,7 +506,7 @@
 					<li>
 						<key>health-adaptive-armor</key>
 						<activeHediff>adaptive_armor</activeHediff>
-						<activeSeverity>1</activeSeverity>
+						<activeSeverity>-1</activeSeverity>
 						<healthPercent>0~0.75</healthPercent>
 					</li>
 					<li>

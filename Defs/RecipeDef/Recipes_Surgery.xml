@@ -153,36 +153,6 @@
   </RecipeDef>
 
   <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
-    <defName>EM_InstallArchotechOathSpine</defName>
-    <label>install archotech oath spine</label>
-    <description>Replace the patient's spine with an archotech oath spine.</description>
-    <descriptionHyperlinks>
-      <ThingDef>EM_ArchotechOathSpine</ThingDef>
-      <HediffDef>EM_ArchotechOathSpine</HediffDef>
-    </descriptionHyperlinks>
-    <jobString>Installing archotech oath spine.</jobString>
-    <ingredients>
-      <li>
-        <filter>
-          <thingDefs>
-            <li>EM_ArchotechOathSpine</li>
-          </thingDefs>
-        </filter>
-        <count>1</count>
-      </li>
-    </ingredients>
-    <fixedIngredientFilter>
-      <thingDefs>
-        <li>EM_ArchotechOathSpine</li>
-      </thingDefs>
-    </fixedIngredientFilter>
-    <appliedOnFixedBodyParts>
-      <li>Spine</li>
-    </appliedOnFixedBodyParts>
-    <addsHediff>EM_ArchotechOathSpine</addsHediff>
-  </RecipeDef>
-
-  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
     <defName>EM_InstallFrontierWardenSpine</defName>
     <label>install frontier warden spine</label>
     <description>Replace the patient's spine with a frontier warden spine.</description>

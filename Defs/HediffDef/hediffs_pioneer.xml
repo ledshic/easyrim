@@ -322,26 +322,6 @@
 		</rules>
 	</Def>
 
-	<HediffDef>
-		<defName>EM_PioneerSpine_OverclockHarmony</defName>
-		<hediffClass>HediffWithComps</hediffClass>
-		<label>overclock frontier synchronization</label>
-		<description>When the built-in neural overclock package is triggered, the spine routes that burst into stabilized movement, target acquisition, and work-preserving motor discipline.</description>
-		<defaultLabelColor>(135,206,235)</defaultLabelColor>
-		<isBad>false</isBad>
-		<stages>
-			<li>
-				<statFactors>
-					<MoveSpeed>1.35</MoveSpeed>
-					<AimingDelayFactor>0.55</AimingDelayFactor>
-					<RangedCooldownFactor>0.68</RangedCooldownFactor>
-					<WorkSpeedGlobal>1.25</WorkSpeedGlobal>
-					<ConstructionSpeed>1.25</ConstructionSpeed>
-				</statFactors>
-			</li>
-		</stages>
-	</HediffDef>
-
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>EM_PioneerSpine</defName>
 		<label>frontier lattice spine</label>
@@ -376,7 +356,6 @@
 						<anyEquipmentTags>
 							<li>Ranged</li>
 						</anyEquipmentTags>
-						<inCombat>Required</inCombat>
 					</li>
 					<li>
 						<key>pioneer-settler-engine</key>
@@ -389,17 +368,6 @@
 						<activeHediff>pioneerspirit_laststand</activeHediff>
 						<activeSeverity>1</activeSeverity>
 						<healthPercent>0~0.4</healthPercent>
-						<inCombat>Required</inCombat>
-					</li>
-					<li>
-						<key>pioneer-neural-overclock</key>
-						<activeHediff>EM_PioneerSpine_OverclockHarmony</activeHediff>
-						<activeSeverity>1</activeSeverity>
-						<anyHediffs>
-							<li>
-								<hediff>EasyMode_NeuralOverclock</hediff>
-							</li>
-						</anyHediffs>
 					</li>
 				</rules>
 			</li>
@@ -451,5 +419,61 @@
 		<stages>
 			<li />
 		</stages>
+	</HediffDef>
+		<HediffDef>
+		<defName>EasyMode_NeuralOverclock</defName>
+		<label>neural overclock</label>
+		<description>The nervous system and musculature are operating far beyond normal safety limits. Motion becomes explosively fast and precise while accumulating tissue strain across the body.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<isBad>false</isBad>
+		<maxSeverity>1</maxSeverity>
+		<comps>
+			<li Class="EasyMode.HediffCompProperties_NeuralOverclock">
+				<damageIntervalTicks>60</damageIntervalTicks>
+				<damageRange>1~2</damageRange>
+				<internalPartChance>0.01</internalPartChance>
+				<trailSampleIntervalTicks>4</trailSampleIntervalTicks>
+				<trailLifetimeTicks>20</trailLifetimeTicks>
+				<maxTrailSnapshots>5</maxTrailSnapshots>
+			</li>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>300</disappearsAfterTicks>
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+			<li Class="HediffCompProperties_DisappearsOnDeath" />
+		</comps>
+		<stages>
+			<li>
+				<statOffsets>
+					<MoveSpeed>50</MoveSpeed>
+				</statOffsets>
+				<statFactors>
+					<MeleeHitChance>1.5</MeleeHitChance>
+					<AimingDelayFactor>0.35</AimingDelayFactor>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef ParentName="InjuryBase">
+		<defName>EasyMode_NeuralOverclockStrain</defName>
+		<label>overclock strain</label>
+		<labelNoun>an overclock strain</labelNoun>
+		<description>Localized neural and muscular damage caused by forcing the body beyond its safe operating limits.</description>
+		<displayWound>false</displayWound>
+		<comps>
+			<li Class="HediffCompProperties_TendDuration">
+				<labelTendedWell>stabilized</labelTendedWell>
+				<labelTendedWellInner>stabilized</labelTendedWellInner>
+				<labelSolidTendedWell>stabilized</labelSolidTendedWell>
+			</li>
+		</comps>
+		<injuryProps>
+			<painPerSeverity>0.006</painPerSeverity>
+			<bleedRate>0</bleedRate>
+			<canMerge>true</canMerge>
+			<destroyedLabel>Overstrained</destroyedLabel>
+			<destroyedOutLabel>Overstrained</destroyedOutLabel>
+		</injuryProps>
 	</HediffDef>
 </Defs>

@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 	<pioneerspirit.label>&lt;color=#87CEEB&gt;先驱意志&lt;/color&gt;</pioneerspirit.label>
-	<pioneerspirit.description>先驱意志会常驻维持体能、工艺、战斗与韧性四条主链，并与殖民地指挥能力协同。联动效果按状态分流：远程交火时启用先锋火力教范，未征召时启用拓殖吞吐引擎，生命较低且仍在战斗时强制进入边境死守。
+	<pioneerspirit.description>先驱意志会常驻维持体能、工艺、战斗与韧性四条主链，并与殖民地指挥能力协同。
+		支持者协议随宿主状态切换：
+			远程作战就绪时：先锋火力教范；
+			未征召时：负载均衡引擎；
+			生命值较低时：最终防线。
 
 -- easyrim</pioneerspirit.description>
 	<pioneerspirit_physical.label>千锤百炼</pioneerspirit_physical.label>
@@ -48,14 +52,14 @@
 	<ColonyRallyFatigue.description>激情已经消退，饥饿和困顿如潮水般涌来。
 
 -- easyrim</ColonyRallyFatigue.description>
-  <EM_PioneerSpine_OverclockHarmony.label>超频同步</EM_PioneerSpine_OverclockHarmony.label>
-  <EM_PioneerSpine_OverclockHarmony.description>当内置的神经超频程序被触发时，这条脊椎会把爆发期导入更稳定运动控制回路。
 
--- easyrim</EM_PioneerSpine_OverclockHarmony.description>
-
-  <EM_PioneerSpine.label>拓荒晶格脊椎</EM_PioneerSpine.label>
-  <EM_PioneerSpine.labelNoun>拓荒晶格脊椎</EM_PioneerSpine.labelNoun>
-  <EM_PioneerSpine.description>拓荒晶格脊椎会常驻维持先驱工艺与求生本能，并直接赋予神经超频能力。联动效果按状态分流：远程交火启用先锋火力教范，未征召时启用负载均衡引擎，生命低于 40% 且在战斗中触发最终防线，神经超频生效时追加超频同步。
+  <EM_PioneerSpine.label>先驱者脊椎</EM_PioneerSpine.label>
+  <EM_PioneerSpine.labelNoun>先驱者脊椎</EM_PioneerSpine.labelNoun>
+  <EM_PioneerSpine.description>先驱者脊椎会常驻维持先驱工艺与求生本能，并直接赋予神经超频能力。
+		支持者协议随宿主状态切换：
+			远程作战就绪时：先锋火力教范；
+			未征召时：负载均衡引擎；
+			生命值较低时：最终防线。
 
 -- easyrim</EM_PioneerSpine.description>
 	<EasyMode_NeuralOverclock.label>神经超频</EasyMode_NeuralOverclock.label>

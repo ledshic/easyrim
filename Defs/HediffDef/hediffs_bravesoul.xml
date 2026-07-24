@@ -363,19 +363,13 @@
 						<key>brave-combat-mastery</key>
 						<activeHediff>bravesoul_combat</activeHediff>
 						<activeSeverity>1</activeSeverity>
-						<inCombat>Required</inCombat>
+						<healthPercent>0~0.65</healthPercent>
 					</li>
 					<li>
 						<key>brave-vital-overdrive</key>
 						<activeHediff>bravesoul_vitals</activeHediff>
 						<activeSeverity>-1</activeSeverity>
 						<healthPercent>0~0.65</healthPercent>
-					</li>
-					<li>
-						<key>brave-battle-trance</key>
-						<activeHediff>EM_BraveSpine_BattleTrance</activeHediff>
-						<activeSeverity>1</activeSeverity>
-						<drafted>Required</drafted>
 					</li>
 				</rules>
 			</li>

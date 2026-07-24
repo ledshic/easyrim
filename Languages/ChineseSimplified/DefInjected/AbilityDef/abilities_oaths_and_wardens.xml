@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-  <ArchotechProtocolSurge.label>协议超涌</ArchotechProtocolSurge.label>
-  <ArchotechProtocolSurge.description>强制远古机誓核心例程进入短时超频，使研究、生产与战斗吞吐在短窗口内显著提升。
-
--- easyrim</ArchotechProtocolSurge.description>
-  <ArchotechLockstep.label>协锁标定</ArchotechLockstep.label>
-  <ArchotechLockstep.description>对目标施加预测协锁遥测，削弱其机动与闪避节奏，并提高其承伤风险。
-
--- easyrim</ArchotechLockstep.description>
   <FrontierBulwarkPulse.label>壁垒脉冲</FrontierBulwarkPulse.label>
   <FrontierBulwarkPulse.description>触发面向守线的硬化脉冲，在短时间内提升机动、防御与武器操作稳定性。
 

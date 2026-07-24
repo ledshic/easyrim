@@ -22,7 +22,7 @@ Current files:
 - `hediffs_bravesoul.xml`
 - `hediffs_corsair.xml`
 - `hediffs_pioneer.xml`
-- `hediffs_oaths_and_wardens.xml`
+- `hediffs_frontier_warden.xml`
 - `hediffs_vampire.xml`
 
 `hediffs_vampire.xml` also contains `bloodhemogen_resonance`.
@@ -32,7 +32,7 @@ Current files:
 `hediffs_pioneer.xml` also contains `EM_PioneerSpine` and `WorkMotivation`.
 `hediffs_corsair.xml` also contains `EM_CorsairSpine`.
 `hediffs_bravesoul.xml` also contains `EM_BraveSpine`.
-`hediffs_oaths_and_wardens.xml` also contains `EM_ArchotechOathSpine` and `EM_FrontierWardenSpine`.
+`hediffs_frontier_warden.xml` also contains `EM_FrontierWardenSpine`.
 
 Typical shape:
 
@@ -60,7 +60,7 @@ Purpose: single-purpose tool, buff, proc, or helper not modeled as a full combo 
 
 Current files:
 
-- `hediffs_neural_overclock.xml`
+- none (utility effects are currently co-located in combo-tree files)
 
 Typical shape:
 

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-	<bravesoul.label>&lt;color=#00CED1&gt;不朽之魂&lt;/color&gt;</bravesoul.label>
-	<bravesoul.description>不朽之魂会并行维持认知炽焰、体能强势、生命升华、战斗精通与不屈意志五个核心模块。该体系定位为前线近战与硬抗生存底座，可被联动状态进一步推升为更高压的续战与压制能力。
+	<bravesoul.label>&lt;color=#00CED1&gt;英魂不灭&lt;/color&gt;</bravesoul.label>
+	<bravesoul.description>英魂不灭会并行维持认知炽焰、体能强势、生命升华、战斗精通与不屈意志五个核心模块。该体系定位为前线近战与硬抗生存底座，
+		支持者协议随宿主状态切换：
+			生命威胁：生命升华，杀戮造诣
 
 -- easyrim</bravesoul.description>
 	<bravesoul_cognitive.label>认知炽焰</bravesoul_cognitive.label>
@@ -12,6 +14,14 @@
 	<bravesoul_physical.description>久经战阵锤炼的敏捷与掌控。
 
 -- easyrim</bravesoul_physical.description>
+	<bravesoul_combat.label>杀戮造诣</bravesoul_combat.label>
+	<bravesoul_combat.description>血战到底！
+
+-- easyrim</bravesoul_combat.description>
+	<bravesoul_spirit.label>不屈意志</bravesoul_spirit.label>
+	<bravesoul_spirit.description>死亡也无法触动的决心。
+
+-- easyrim</bravesoul_spirit.description>
 	<bravesoul_vitals.label>生命升华</bravesoul_vitals.label>
 	<bravesoul_vitals.description>器官强化与加速复原。
 
@@ -21,22 +31,11 @@
 	<bravesoul_vitals.stages.2.label>生命升华（涌动）</bravesoul_vitals.stages.2.label>
 	<bravesoul_vitals.stages.3.label>生命升华（狂热）</bravesoul_vitals.stages.3.label>
 	<bravesoul_vitals.stages.4.label>生命升华（不灭）</bravesoul_vitals.stages.4.label>
-	<bravesoul_combat.label>战斗精通</bravesoul_combat.label>
-	<bravesoul_combat.description>至高武艺与自适应防御。
-
--- easyrim</bravesoul_combat.description>
-	<bravesoul_spirit.label>不屈意志</bravesoul_spirit.label>
-	<bravesoul_spirit.description>死亡也无法触动的决心。
-
--- easyrim</bravesoul_spirit.description>
-  <EM_BraveSpine_BattleTrance.label>战斗律动</EM_BraveSpine_BattleTrance.label>
-  <EM_BraveSpine_BattleTrance.description>这条战脊会把宿主锁入仪式化的战斗节拍，压制迟疑，推动更干净更果断的攻击节奏。
-
--- easyrim</EM_BraveSpine_BattleTrance.description>
-
-  <EM_BraveSpine.label>不屈战脊</EM_BraveSpine.label>
-  <EM_BraveSpine.labelNoun>不屈战脊</EM_BraveSpine.labelNoun>
-  <EM_BraveSpine.description>不屈战脊会常驻维持体能强势与不屈意志，保证前线稳定输出。联动效果按压力触发：战斗中启用战斗精通，生命低于 65% 时激活生命升华，被征召时进入战斗律动。
+  <EM_BraveSpine.label>死战不屈脊椎</EM_BraveSpine.label>
+  <EM_BraveSpine.labelNoun>死战不屈脊椎</EM_BraveSpine.labelNoun>
+  <EM_BraveSpine.description>死战不屈脊椎会常驻维持体能强势与不屈意志，保证前线稳定输出。
+		支持者协议随宿主状态切换：
+			生命威胁：生命升华，杀戮造诣
 
 -- easyrim</EM_BraveSpine.description>
 </LanguageData>

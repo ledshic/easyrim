@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 	<transcendence.label>&lt;color=#C0C0C0&gt;超凡融合&lt;/color&gt;</transcendence.label>
-	<transcendence.description>超凡科技整合矩阵会常驻维持认知、身体、生物、环境、灵能与作战六条强化链路。联动效果会随状态切换：生命下降时适应性装甲持续加固，使用远程武器时启用中枢远程校准，具备强力近战基因时触发额外近战共鸣优化。
+	<transcendence.description>超凡科技整合矩阵会常驻维持认知、身体、生物、环境、灵能与作战六条强化链路。
+		支持者协议随宿主状态切换：
+			生命下降时适应性装甲持续加固；
+			使用远程武器时启用中枢远程校准；
+			具备强力近战基因时触发额外近战优化。
 
 -- easyrim</transcendence.description>
 	<transcendence_cognitive.label>认知强化</transcendence_cognitive.label>
-	<transcendence_cognitive.description>机械体融合带来的精神能力增强。
+	<transcendence_cognitive.description>机械体融合带来的意识能力增强。
 
 -- easyrim</transcendence_cognitive.description>
 	<transcendence_physical.label>身体强化</transcendence_physical.label>
-	<transcendence_physical.description>机械体融合带来的身体能力增强。
+	<transcendence_physical.description>机械体融合带来的机体能力增强。
 
 -- easyrim</transcendence_physical.description>
 	<transcendence_biological.label>生物强化</transcendence_biological.label>
@@ -46,7 +50,7 @@
 	<transcendence_battle_morph_verbs.comps.0.tools.2.label>矢量突刺</transcendence_battle_morph_verbs.comps.0.tools.2.label>
 	<transcendence_battle_morph_verbs.comps.0.tools.3.label>针幕掠袭</transcendence_battle_morph_verbs.comps.0.tools.3.label>
 	<transcendence_battle_morph_verbs.comps.0.tools.4.label>横扫踢击</transcendence_battle_morph_verbs.comps.0.tools.4.label>
-    <EM_NexusSpine_RangedAdaptation.label>远程校准</EM_NexusSpine_RangedAdaptation.label>
+	<EM_NexusSpine_RangedAdaptation.label>远程校准</EM_NexusSpine_RangedAdaptation.label>
   <EM_NexusSpine_RangedAdaptation.description>适应性中枢脊椎检测到了长距离战斗倾向，正在持续校准姿态、后坐力补偿和视动反应时序。
 
 -- easyrim</EM_NexusSpine_RangedAdaptation.description>

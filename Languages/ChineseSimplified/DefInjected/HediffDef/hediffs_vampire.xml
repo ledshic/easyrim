@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-	<crimsondynasty.label>&lt;color=#B22222&gt;绯血王裔&lt;/color&gt;</crimsondynasty.label>
-	<crimsondynasty.description>绯血王裔会常驻维持猎裔、血原、魅压与惊惧守御四条血能链路；当宿主具备血原化（Hemogenic）基因时，额外联动赋予血原质共鸣，且共鸣等级会随当前血原状态动态变化。联动效果明确分层：生命低于 45% 且交战时触发绯怒升格，生命高于 80% 且脱战时维持王裔仪态，进入近战后激活决斗升格。
+	<crimsondynasty.label>&lt;color=#B22222&gt;猩红王朝&lt;/color&gt;</crimsondynasty.label>
+	<crimsondynasty.description>猩红王朝会常驻维持狩猎身法、血原强势、魅力统御与惊惧守御四条猩红链路；
+		支持者协议随宿主状态切换：
+			战斗中低生命：血怒升格；
+			脱战且生命平稳：贵族仪态；
+			近战交锋：决斗升格；
+			具备血原化基因：血原质共鸣；
+			血原质共鸣处于鼎盛：血华升腾。
 
 -- easyrim</crimsondynasty.description>
-	<crimsondynasty_predator.label>猎裔身法</crimsondynasty_predator.label>
+	<crimsondynasty_predator.label>狩猎身法</crimsondynasty_predator.label>
 	<crimsondynasty_predator.description>掠食者级别的反射与步法带来更迅猛的贴身突进与更精准的近战控制。
 
 -- easyrim</crimsondynasty_predator.description>
@@ -12,7 +18,7 @@
 	<crimsondynasty_hemogenic.description>血液化学被重塑为异常高效的循环体系，显著提升复原与抗病能力。
 
 -- easyrim</crimsondynasty_hemogenic.description>
-	<crimsondynasty_mesmer.label>魅压统御</crimsondynasty_mesmer.label>
+	<crimsondynasty_mesmer.label>魅力统御</crimsondynasty_mesmer.label>
 	<crimsondynasty_mesmer.description>冷峻而高位的威仪会动摇对手心神，并在交涉中迫使对方让步。
 
 -- easyrim</crimsondynasty_mesmer.description>
@@ -20,12 +26,12 @@
 	<crimsondynasty_dreadguard.description>久经血战的血脉韧性可压低痛觉并硬扛致命创伤，但对明火仍更为敏感。
 
 -- easyrim</crimsondynasty_dreadguard.description>
-	<crimsondynasty_bloodfrenzy.label>绯怒升格</crimsondynasty_bloodfrenzy.label>
-	<crimsondynasty_bloodfrenzy.description>当宿主濒死仍在战斗时，饥渴与恐惧会塌缩为怪物级战斗狂潮。
+	<crimsondynasty_bloodfrenzy.label>血怒升格</crimsondynasty_bloodfrenzy.label>
+	<crimsondynasty_bloodfrenzy.description>自顾不暇的战斗中无法再抑制猩红渴望。
 
 -- easyrim</crimsondynasty_bloodfrenzy.description>
-	<crimsondynasty_noble_poise.label>王裔仪态</crimsondynasty_noble_poise.label>
-	<crimsondynasty_noble_poise.description>在充足血原与非交战状态下，贵胄级掌控力会显著强化统御、交易与后勤节奏。
+	<crimsondynasty_noble_poise.label>贵族仪态</crimsondynasty_noble_poise.label>
+	<crimsondynasty_noble_poise.description>在充足血原质与非交战状态下，贵胄级掌控力会显著强化统御、交易与后勤节奏。
 
 -- easyrim</crimsondynasty_noble_poise.description>
 	<crimsondynasty_duelist_ascendancy.label>决斗升格</crimsondynasty_duelist_ascendancy.label>
@@ -54,9 +60,15 @@
 
 -- easyrim</EM_CrimsonSpine_SanguineAscendancy.description>
 
-  <EM_CrimsonDynastySpine.label>绯红王朝脊椎</EM_CrimsonDynastySpine.label>
-  <EM_CrimsonDynastySpine.labelNoun>绯红王朝脊椎</EM_CrimsonDynastySpine.labelNoun>
-  <EM_CrimsonDynastySpine.description>绯红王朝脊椎会常驻维持猎裔身法与血原强势；当宿主具备血原化基因时，额外联动赋予血原质共鸣，且共鸣等级会随当前血原状态动态变化。联动效果按状态分层：生命低于 45% 且交战时触发绯怒升格，生命高于 80% 且脱战时维持王裔仪态，近战交锋激活决斗升格，血原质共鸣处于盛态区间时触发血华升腾。
+  <EM_CrimsonDynastySpine.label>猩红王朝脊椎</EM_CrimsonDynastySpine.label>
+  <EM_CrimsonDynastySpine.labelNoun>猩红王朝脊椎</EM_CrimsonDynastySpine.labelNoun>
+  <EM_CrimsonDynastySpine.description>猩红王朝脊椎会常驻维持猎裔身法与血原强势；
+		支持者协议随宿主状态切换：
+			战斗中低生命：血怒升格；
+			脱战且生命平稳：王裔仪态；
+			近战交锋：决斗升格；
+			具备血原化基因：血原质共鸣；
+			血原质共鸣处于鼎盛：血华升腾。
 
 -- easyrim</EM_CrimsonDynastySpine.description>
 </LanguageData>
