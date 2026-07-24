@@ -40,4 +40,9 @@
   <corsair_plunder_marked.description>The target is highlighted as easy loot, disrupting footing and composure under fire.
 
 -- easyrim</corsair_plunder_marked.description>
+  <EM_CorsairSpine.label>blackflag spineframe</EM_CorsairSpine.label>
+  <EM_CorsairSpine.labelNoun>a blackflag spineframe</EM_CorsairSpine.labelNoun>
+  <EM_CorsairSpine.description>This spine keeps gunner discipline and scavenger instinct active as the corsair baseline. Linked effects escalate with combat tempo: boarding momentum during combat, deck gunnery posture in ranged exchanges, marauder frenzy below 45% health in combat, and blackflag audacity while drafted.
+
+-- easyrim</EM_CorsairSpine.description>
 </LanguageData>

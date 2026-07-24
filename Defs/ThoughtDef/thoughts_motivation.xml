@@ -9,8 +9,8 @@
     <stages>
       <li>
         <label>united as one</label>
-        <description>Our leader's rallying call has ignited a fire in me. We are capable of great things.</description>
-        <baseMoodEffect>24</baseMoodEffect>
+        <description>Our leader's rallying call has ignited a fire in me. We are capable of great things together.</description>
+        <baseMoodEffect>64</baseMoodEffect>
       </li>
     </stages>
   </ThoughtDef>

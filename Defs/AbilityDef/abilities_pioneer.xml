@@ -48,7 +48,7 @@
 	<AbilityDef>
 		<defName>ColonyRally</defName>
 		<label>colony mobilization</label>
-		<description>Deliver a rousing speech to galvanize every colonist on the map. Each member of the colony will be filled with renewed purpose, boosting their mood and working speed for a full day. A leader who knows when to rally the troops can turn the tide of even the darkest times.</description>
+		<description>Deliver a rousing speech to galvanize nearby colonists around the caster. Allies within 10 tiles are filled with renewed purpose for a full day, then suffer a fatigue aftershock as the rally fades. A leader who knows when to rally the troops can turn the tide of even the darkest times.</description>
 		<iconPath>UI/Abilities/WorkDrive</iconPath>
 		<cooldownTicksRange>300000</cooldownTicksRange>
 		<hostile>false</hostile>
@@ -73,6 +73,7 @@
 			<li Class="EasyMode.CompProperties_ColonyRally">
 				<thoughtDef>ColonyMotivated</thoughtDef>
 				<hediffDef>WorkMotivation</hediffDef>
+				<radius>10</radius>
 			</li>
 		</comps>
 	</AbilityDef>
@@ -118,7 +119,7 @@
 		<sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
 		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
 		<warmupStartSound>WorkDrive_Warmup</warmupStartSound>
-		<cooldownTicksRange>16000</cooldownTicksRange>
+		<cooldownTicksRange>160000</cooldownTicksRange>
 		<statBases>
 			<Ability_Duration>2400</Ability_Duration>
 		</statBases>

@@ -7,6 +7,8 @@
 ```text
 references/
 ├── README.md
+├── RimWorld-Data/        # 原版游戏数据目录快照，用于本地比对
+├── RimWorld-XMLs/        # 原版 XML 资料快照，用于本地检索
 ├── CustomizeWeapon/      # 第三方模组源码参考（realloon/CustomizeWeapon）
 ├── chinese-simplified/  # 原版及 DLC 的简体中文语言包
 └── decompiled/          # Assembly-CSharp.dll 的反编译结果

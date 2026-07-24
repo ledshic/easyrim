@@ -30,12 +30,6 @@
 -- easyrim</EM_InstallCorsairSpine.description>
   <EM_InstallCorsairSpine.jobString>正在安装黑旗脊架。</EM_InstallCorsairSpine.jobString>
 
-  <EM_InstallArchotechOathSpine.label>安装远古誓约脊椎</EM_InstallArchotechOathSpine.label>
-  <EM_InstallArchotechOathSpine.description>将患者的脊椎替换为远古誓约脊椎。
-
--- easyrim</EM_InstallArchotechOathSpine.description>
-  <EM_InstallArchotechOathSpine.jobString>正在安装远古誓约脊椎。</EM_InstallArchotechOathSpine.jobString>
-
   <EM_InstallFrontierWardenSpine.label>安装边疆守望者脊椎</EM_InstallFrontierWardenSpine.label>
   <EM_InstallFrontierWardenSpine.description>将患者的脊椎替换为边疆守望者脊椎。
 

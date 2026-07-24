@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="ApparelArmorReconBase"]/equippedStatOffsets</xpath>
+    <value>
+      <CarryingCapacity>10</CarryingCapacity>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="ApparelArmorPowerBase"]/equippedStatOffsets</xpath>
+    <value>
+      <CarryingCapacity>20</CarryingCapacity>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="ApparelArmorCataphractBase"]/equippedStatOffsets</xpath>
+    <value>
+      <CarryingCapacity>30</CarryingCapacity>
+    </value>
+  </Operation>
+
+</Patch>

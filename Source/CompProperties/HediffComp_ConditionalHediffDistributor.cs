@@ -558,18 +558,14 @@ namespace EasyMode
                         continue;
                     }
 
+                    // Priority 1: Check weaponClasses (most authoritative XML definition)
+                    if (MatchesWeaponClass(def, normalizedTag))
+                    {
+                        return true;
+                    }
+
+                    // Priority 2: Check weaponTags (flexible label system for backward compatibility)
                     if (def.weaponTags?.Contains(normalizedTag) == true)
-                    {
-                        return true;
-                    }
-
-                    // Support semantic aliases used in XML rules.
-                    if (string.Equals(normalizedTag, "Ranged", StringComparison.OrdinalIgnoreCase) && def.IsRangedWeapon)
-                    {
-                        return true;
-                    }
-
-                    if (string.Equals(normalizedTag, "Melee", StringComparison.OrdinalIgnoreCase) && def.IsMeleeWeapon)
                     {
                         return true;
                     }
@@ -589,6 +585,75 @@ namespace EasyMode
             }
 
             return false;
+        }
+
+        /// <summary>
+        /// Checks if a weapon def matches a specific weapon class name or semantic alias.
+        /// Uses weaponClasses as the authoritative source for melee/ranged distinction.
+        /// </summary>
+        private bool MatchesWeaponClass(ThingDef weaponDef, string className)
+        {
+            if (weaponDef == null || className == null || weaponDef.weaponClasses.NullOrEmpty())
+            {
+                return false;
+            }
+
+            for (int i = 0; i < weaponDef.weaponClasses.Count; i++)
+            {
+                WeaponClassDef wc = weaponDef.weaponClasses[i];
+                if (wc != null && string.Equals(wc.defName, className, StringComparison.OrdinalIgnoreCase))
+                {
+                    return true;
+                }
+            }
+
+            // Support semantic melee aliases (match any melee-derived class)
+            if (string.Equals(className, "Melee", StringComparison.OrdinalIgnoreCase))
+            {
+                for (int i = 0; i < weaponDef.weaponClasses.Count; i++)
+                {
+                    WeaponClassDef wc = weaponDef.weaponClasses[i];
+                    if (wc != null && IsInMeleeFamily(wc.defName))
+                    {
+                        return true;
+                    }
+                }
+            }
+
+            // Support semantic ranged aliases (match any ranged-derived class)
+            if (string.Equals(className, "Ranged", StringComparison.OrdinalIgnoreCase))
+            {
+                for (int i = 0; i < weaponDef.weaponClasses.Count; i++)
+                {
+                    WeaponClassDef wc = weaponDef.weaponClasses[i];
+                    if (wc != null && IsInRangedFamily(wc.defName))
+                    {
+                        return true;
+                    }
+                }
+            }
+
+            return false;
+        }
+
+        private bool IsInMeleeFamily(string weaponClassName)
+        {
+            // Melee family includes: Melee, MeleePiercer, MeleeBlunt, Neolithic
+            return string.Equals(weaponClassName, "Melee", StringComparison.OrdinalIgnoreCase) ||
+                   string.Equals(weaponClassName, "MeleePiercer", StringComparison.OrdinalIgnoreCase) ||
+                   string.Equals(weaponClassName, "MeleeBlunt", StringComparison.OrdinalIgnoreCase) ||
+                   string.Equals(weaponClassName, "Neolithic", StringComparison.OrdinalIgnoreCase);
+        }
+
+        private bool IsInRangedFamily(string weaponClassName)
+        {
+            // Ranged family includes: Ranged, RangedLight, RangedHeavy, LongShots, ShortShots, Ultratech
+            return string.Equals(weaponClassName, "Ranged", StringComparison.OrdinalIgnoreCase) ||
+                   string.Equals(weaponClassName, "RangedLight", StringComparison.OrdinalIgnoreCase) ||
+                   string.Equals(weaponClassName, "RangedHeavy", StringComparison.OrdinalIgnoreCase) ||
+                   string.Equals(weaponClassName, "LongShots", StringComparison.OrdinalIgnoreCase) ||
+                   string.Equals(weaponClassName, "ShortShots", StringComparison.OrdinalIgnoreCase) ||
+                   string.Equals(weaponClassName, "Ultratech", StringComparison.OrdinalIgnoreCase);
         }
 
         private static bool StateMatches(ConditionalStateRequirement requirement, bool value)

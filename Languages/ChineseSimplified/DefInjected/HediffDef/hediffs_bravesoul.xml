@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+	<bravesoul.label>&lt;color=#00CED1&gt;英魂不灭&lt;/color&gt;</bravesoul.label>
+	<bravesoul.description>英魂不灭会并行维持认知炽焰、体能强势、生命升华、战斗精通与不屈意志五个核心模块。该体系定位为前线近战与硬抗生存底座，
+		支持者协议随宿主状态切换：
+			生命威胁：生命升华，杀戮造诣
+
+-- easyrim</bravesoul.description>
+	<bravesoul_cognitive.label>认知炽焰</bravesoul_cognitive.label>
+	<bravesoul_cognitive.description>战魂激发心智，锐化感知并提升学习能力。
+
+-- easyrim</bravesoul_cognitive.description>
+	<bravesoul_physical.label>体能强势</bravesoul_physical.label>
+	<bravesoul_physical.description>久经战阵锤炼的敏捷与掌控。
+
+-- easyrim</bravesoul_physical.description>
+	<bravesoul_combat.label>杀戮造诣</bravesoul_combat.label>
+	<bravesoul_combat.description>血战到底！
+
+-- easyrim</bravesoul_combat.description>
+	<bravesoul_spirit.label>不屈意志</bravesoul_spirit.label>
+	<bravesoul_spirit.description>死亡也无法触动的决心。
+
+-- easyrim</bravesoul_spirit.description>
+	<bravesoul_vitals.label>生命升华</bravesoul_vitals.label>
+	<bravesoul_vitals.description>器官强化与加速复原。
+
+-- easyrim</bravesoul_vitals.description>
+	<bravesoul_vitals.stages.0.label>生命升华（稳态）</bravesoul_vitals.stages.0.label>
+	<bravesoul_vitals.stages.1.label>生命升华（激活）</bravesoul_vitals.stages.1.label>
+	<bravesoul_vitals.stages.2.label>生命升华（涌动）</bravesoul_vitals.stages.2.label>
+	<bravesoul_vitals.stages.3.label>生命升华（狂热）</bravesoul_vitals.stages.3.label>
+	<bravesoul_vitals.stages.4.label>生命升华（不灭）</bravesoul_vitals.stages.4.label>
+  <EM_BraveSpine.label>死战不屈脊椎</EM_BraveSpine.label>
+  <EM_BraveSpine.labelNoun>死战不屈脊椎</EM_BraveSpine.labelNoun>
+  <EM_BraveSpine.description>死战不屈脊椎会常驻维持体能强势与不屈意志，保证前线稳定输出。
+		支持者协议随宿主状态切换：
+			生命威胁：生命升华，杀戮造诣
+
+-- easyrim</EM_BraveSpine.description>
+</LanguageData>
