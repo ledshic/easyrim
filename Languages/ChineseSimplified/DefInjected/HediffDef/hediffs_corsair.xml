@@ -40,4 +40,9 @@
 	<corsair_plunder_marked.description>目标被标注为优先战利品，行动与临战姿态受到扰乱，更易被迅速击倒。
 
 -- easyrim</corsair_plunder_marked.description>
+  <EM_CorsairSpine.label>黑旗脊架</EM_CorsairSpine.label>
+  <EM_CorsairSpine.labelNoun>黑旗脊架</EM_CorsairSpine.labelNoun>
+  <EM_CorsairSpine.description>黑旗脊架会常驻维持枪手之眼与拾荒本能，作为掠袭战的基础框架。联动效果按战况推进：交战时启用接舷冲势，远程交火追加甲板枪姿，生命低于 45% 且在战斗中触发劫掠狂潮，被征召时维持黑旗悍意。
+
+-- easyrim</EM_CorsairSpine.description>
 </LanguageData>

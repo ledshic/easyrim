@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<HediffDef>
+		<defName>archotechoath</defName>
+		<hediffClass>Hediff_High</hediffClass>
+		<label>archotech oath</label>
+		<description>A fragmentary archotech protocol has taken root in the host's nervous system. It does not grant divinity, but it compels relentless refinement of thought, craft, leadership, and endurance.</description>
+		<defaultLabelColor>(212,175,55)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_GiveAbility">
+				<abilityDefs>
+					<li>ArchotechProtocolSurge</li>
+					<li>ArchotechLockstep</li>
+				</abilityDefs>
+			</li>
+			<li Class="EasyMode.HediffCompProperties_GiveMultipleHediffs">
+				<atSeverity>0</atSeverity>
+				<disappearsAfterGiving>false</disappearsAfterGiving>
+				<hediffsToGive>
+					<li>
+						<hediffDef>archotechoath_cognition</hediffDef>
+						<severity>1.0</severity>
+					</li>
+					<li>
+						<hediffDef>archotechoath_industry</hediffDef>
+						<severity>1.0</severity>
+					</li>
+					<li>
+						<hediffDef>archotechoath_command</hediffDef>
+						<severity>1.0</severity>
+					</li>
+					<li>
+						<hediffDef>archotechoath_aegis</hediffDef>
+						<severity>1.0</severity>
+					</li>
+				</hediffsToGive>
+			</li>
+			<li Class="EasyMode.HediffCompProperties_ConditionalHediffDistributor">
+				<checkIntervalTicks>90</checkIntervalTicks>
+				<rules>
+					<li>
+						<key>oath-labsync</key>
+						<activeHediff>archotechoath_labsync</activeHediff>
+						<activeSeverity>1.0</activeSeverity>
+						<drafted>Forbidden</drafted>
+					</li>
+					<li>
+						<key>oath-warprotocol</key>
+						<activeHediff>archotechoath_warprotocol</activeHediff>
+						<activeSeverity>1.0</activeSeverity>
+						<inCombat>Required</inCombat>
+					</li>
+					<li>
+						<key>oath-emergency-bulkhead</key>
+						<activeHediff>archotechoath_emergency_bulkhead</activeHediff>
+						<activeSeverity>1.0</activeSeverity>
+						<healthPercent>0~0.5</healthPercent>
+					</li>
+				</rules>
+			</li>
+		</comps>
+	</HediffDef>
+	<HediffDef>
+		<defName>archotechoath_cognition</defName>
+		<hediffClass>Hediff_High</hediffClass>
+		<label>oracle cognition</label>
+		<description>Pattern prediction and disciplined thought elevate learning and research.</description>
+		<defaultLabelColor>(212,175,55)</defaultLabelColor>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.35</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.20</offset>
+					</li>
+				</capMods>
+				<statFactors>
+					<GlobalLearningFactor>2.2</GlobalLearningFactor>
+					<ResearchSpeed>2.0</ResearchSpeed>
+					<WorkSpeedGlobal>1.2</WorkSpeedGlobal>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+	<HediffDef>
+		<defName>archotechoath_industry</defName>
+		<hediffClass>Hediff_High</hediffClass>
+		<label>forgebound discipline</label>
+		<description>Fine motor control and tireless routine turn labor into precision craft.</description>
+		<defaultLabelColor>(212,175,55)</defaultLabelColor>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>0.25</offset>
+					</li>
+				</capMods>
+				<statFactors>
+					<WorkSpeedGlobal>1.35</WorkSpeedGlobal>
+					<ConstructionSpeed>1.5</ConstructionSpeed>
+					<MiningSpeed>1.5</MiningSpeed>
+					<PlantWorkSpeed>1.4</PlantWorkSpeed>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+	<HediffDef>
+		<defName>archotechoath_command</defName>
+		<hediffClass>Hediff_High</hediffClass>
+		<label>governor cadence</label>
+		<description>Measured speech and composure steady allies and bend negotiations.</description>
+		<defaultLabelColor>(212,175,55)</defaultLabelColor>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<statOffsets>
+					<MentalBreakThreshold>-0.18</MentalBreakThreshold>
+				</statOffsets>
+				<statFactors>
+					<SocialImpact>1.6</SocialImpact>
+					<NegotiationAbility>1.4</NegotiationAbility>
+					<TradePriceImprovement>1.2</TradePriceImprovement>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+	<HediffDef>
+		<defName>archotechoath_aegis</defName>
+		<hediffClass>Hediff_High</hediffClass>
+		<label>self-repair aegis</label>
+		<description>Micromechanites prioritize structural integrity and rapid recovery under stress.</description>
+		<defaultLabelColor>(212,175,55)</defaultLabelColor>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>0.20</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>0.15</offset>
+					</li>
+					<li>
+						<capacity>Metabolism</capacity>
+						<offset>0.15</offset>
+					</li>
+				</capMods>
+				<regeneration>25</regeneration>
+				<statOffsets>
+					<ArmorRating_Blunt>0.30</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0.30</ArmorRating_Sharp>
+					<ArmorRating_Heat>0.20</ArmorRating_Heat>
+				</statOffsets>
+				<statFactors>
+					<IncomingDamageFactor>0.75</IncomingDamageFactor>
+					<ImmunityGainSpeed>1.5</ImmunityGainSpeed>
+					<InjuryHealingFactor>1.5</InjuryHealingFactor>
+					<RestRateMultiplier>1.3</RestRateMultiplier>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>archotechoath_labsync</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>lab sync protocol</label>
+		<description>Out of direct combat, cognitive routines lock onto research and precision craft throughput.</description>
+		<defaultLabelColor>(212,175,55)</defaultLabelColor>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<statFactors>
+					<ResearchSpeed>1.75</ResearchSpeed>
+					<GlobalLearningFactor>1.6</GlobalLearningFactor>
+					<ConstructionSpeed>1.5</ConstructionSpeed>
+					<WorkSpeedGlobal>1.45</WorkSpeedGlobal>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+	<HediffDef>
+		<defName>archotechoath_warprotocol</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>warprotocol lattice</label>
+		<description>Combat telemetry routes cognition into targeting, movement prediction, and damage control loops.</description>
+		<defaultLabelColor>(212,175,55)</defaultLabelColor>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<statFactors>
+					<ShootingAccuracyPawn>1.4</ShootingAccuracyPawn>
+					<AimingDelayFactor>0.62</AimingDelayFactor>
+					<RangedCooldownFactor>0.62</RangedCooldownFactor>
+					<MeleeHitChance>1.3</MeleeHitChance>
+					<IncomingDamageFactor>0.72</IncomingDamageFactor>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+	<HediffDef>
+		<defName>archotechoath_emergency_bulkhead</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>emergency bulkhead</label>
+		<description>When integrity falls, contingency armor and trauma routing force a stubborn survival state.</description>
+		<defaultLabelColor>(212,175,55)</defaultLabelColor>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<regeneration>65</regeneration>
+				<painFactor>0.3</painFactor>
+				<statOffsets>
+					<ArmorRating_Blunt>0.35</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
+					<ArmorRating_Heat>0.35</ArmorRating_Heat>
+				</statOffsets>
+				<statFactors>
+					<IncomingDamageFactor>0.58</IncomingDamageFactor>
+					<MoveSpeed>0.95</MoveSpeed>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+	<HediffDef>
+		<defName>archotech_protocol_surge</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>protocol surge</label>
+		<description>Short-term overclock of archotech governance routines for peak combat and production output.</description>
+		<defaultLabelColor>(212,175,55)</defaultLabelColor>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>2400</disappearsAfterTicks>
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<statFactors>
+					<WorkSpeedGlobal>1.6</WorkSpeedGlobal>
+					<ResearchSpeed>1.75</ResearchSpeed>
+					<RangedCooldownFactor>0.62</RangedCooldownFactor>
+					<AimingDelayFactor>0.62</AimingDelayFactor>
+					<IncomingDamageFactor>1.18</IncomingDamageFactor>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+	<HediffDef>
+		<defName>archotech_lockstep_marked</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>lockstep marked</label>
+		<description>The target is prediction-locked by archotech telemetry, degrading movement and defensive timing.</description>
+		<defaultLabelColor>(212,175,55)</defaultLabelColor>
+		<isBad>true</isBad>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>2400</disappearsAfterTicks>
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<statFactors>
+					<MoveSpeed>0.7</MoveSpeed>
+					<MeleeDodgeChance>0.58</MeleeDodgeChance>
+					<IncomingDamageFactor>1.3</IncomingDamageFactor>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+	<Def Class="EasyMode.ConditionalHediffProfileDef">
+		<defName>EM_ArchotechOathSpine_CoreProfile</defName>
+		<rules>
+			<li>
+				<key>core-cognition</key>
+				<activeHediff>archotechoath_cognition</activeHediff>
+				<activeSeverity>1</activeSeverity>
+			</li>
+			<li>
+				<key>core-aegis</key>
+				<activeHediff>archotechoath_aegis</activeHediff>
+				<activeSeverity>1</activeSeverity>
+			</li>
+		</rules>
+	</Def>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>EM_ArchotechOathSpine</defName>
+		<label>archotech oath spine</label>
+		<labelNoun>an archotech oath spine</labelNoun>
+		<description>An installed archotech governance spine that keeps strategic cognition and self-repair online at all times, then routes spare capacity into administration, lab synchronization, or battlefield prediction as needed.</description>
+		<descriptionHyperlinks><ThingDef>EM_ArchotechOathSpine</ThingDef></descriptionHyperlinks>
+		<spawnThingOnRemoved>EM_ArchotechOathSpine</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.33</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<comps>
+			<li Class="EasyMode.HediffCompProperties_ConditionalHediffDistributor">
+				<checkIntervalTicks>90</checkIntervalTicks>
+				<profiles>
+					<li>EM_ArchotechOathSpine_CoreProfile</li>
+				</profiles>
+				<rules>
+					<li>
+						<key>oath-command-cadence</key>
+						<activeHediff>archotechoath_command</activeHediff>
+						<activeSeverity>1</activeSeverity>
+						<drafted>Forbidden</drafted>
+					</li>
+					<li>
+						<key>oath-labsync</key>
+						<activeHediff>archotechoath_labsync</activeHediff>
+						<activeSeverity>1</activeSeverity>
+						<drafted>Forbidden</drafted>
+					</li>
+					<li>
+						<key>oath-warprotocol</key>
+						<activeHediff>archotechoath_warprotocol</activeHediff>
+						<activeSeverity>1</activeSeverity>
+						<inCombat>Required</inCombat>
+					</li>
+					<li>
+						<key>oath-emergency-bulkhead</key>
+						<activeHediff>archotechoath_emergency_bulkhead</activeHediff>
+						<activeSeverity>1</activeSeverity>
+						<healthPercent>0~0.5</healthPercent>
+					</li>
+				</rules>
+			</li>
+		</comps>
+	</HediffDef>
+</Defs>

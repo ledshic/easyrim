@@ -5,7 +5,7 @@
 
 -- easyrim</WorkGuidance.description>
   <ColonyRally.label>colony mobilization</ColonyRally.label>
-  <ColonyRally.description>Deliver a rousing mobilization speech to every colonist on the map, uniting them as one. Each member of the colony will be filled with renewed purpose, boosting their mood and working speed for a full day. A leader who knows when to call the colony together can turn the tide of even the darkest times.
+  <ColonyRally.description>Deliver a rousing mobilization speech to nearby colonists around the caster, uniting them as one. Allies within 10 tiles will have every need restored for a full day, then suffer a fatigue aftershock as the rally fades. A leader who knows when to call the colony together can turn the tide of even the darkest times.
 
 -- easyrim</ColonyRally.description>
   <PioneerProclamation.label>pioneer proclamation</PioneerProclamation.label>

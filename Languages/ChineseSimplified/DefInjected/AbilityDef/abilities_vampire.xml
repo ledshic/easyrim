@@ -8,4 +8,8 @@
   <CrimsonSovereignGaze.description>以王裔威压锁定目标，削弱其机动与防御节奏，令其更易被后续打击击溃。
 
 -- easyrim</CrimsonSovereignGaze.description>
+	<BloodfeedUniverse.label>吸血宇宙</BloodfeedUniverse.label>
+	<BloodfeedUniverse.description>近距离汲取任何活着的生物目标血液，包括敌对单位。造成严重失血，并获得大量血原质。
+
+-- easyrim</BloodfeedUniverse.description>
 </LanguageData>

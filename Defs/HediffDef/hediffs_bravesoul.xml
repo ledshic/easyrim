@@ -368,7 +368,7 @@
 					<li>
 						<key>brave-vital-overdrive</key>
 						<activeHediff>bravesoul_vitals</activeHediff>
-						<activeSeverity>3</activeSeverity>
+						<activeSeverity>-1</activeSeverity>
 						<healthPercent>0~0.65</healthPercent>
 					</li>
 					<li>

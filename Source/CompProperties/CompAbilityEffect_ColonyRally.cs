@@ -9,6 +9,7 @@ namespace EasyMode
     {
         public ThoughtDef thoughtDef;
         public HediffDef hediffDef;
+        public float radius = 10f;
 
         public CompProperties_ColonyRally()
         {
@@ -26,10 +27,14 @@ namespace EasyMode
             if (map == null)
                 return;
 
+            Pawn caster = parent.pawn;
             List<Pawn> colonists = map.mapPawns.FreeColonistsSpawned;
             int count = 0;
             foreach (Pawn pawn in colonists)
             {
+                if (pawn == null || !pawn.Spawned || !pawn.Position.InHorDistOf(caster.Position, Props.radius))
+                    continue;
+
                 if (Props.thoughtDef != null && pawn.needs?.mood?.thoughts?.memories != null)
                     pawn.needs.mood.thoughts.memories.TryGainMemory(Props.thoughtDef);
 

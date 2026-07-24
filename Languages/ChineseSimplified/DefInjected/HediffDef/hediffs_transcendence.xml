@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+	<transcendence.label>&lt;color=#C0C0C0&gt;超凡融合&lt;/color&gt;</transcendence.label>
+	<transcendence.description>超凡科技整合矩阵会常驻维持认知、身体、生物、环境、灵能与作战六条强化链路。联动效果会随状态切换：生命下降时适应性装甲持续加固，使用远程武器时启用中枢远程校准，具备强力近战基因时触发额外近战共鸣优化。
+
+-- easyrim</transcendence.description>
+	<transcendence_cognitive.label>认知强化</transcendence_cognitive.label>
+	<transcendence_cognitive.description>机械体融合带来的精神能力增强。
+
+-- easyrim</transcendence_cognitive.description>
+	<transcendence_physical.label>身体强化</transcendence_physical.label>
+	<transcendence_physical.description>机械体融合带来的身体能力增强。
+
+-- easyrim</transcendence_physical.description>
+	<transcendence_biological.label>生物强化</transcendence_biological.label>
+	<transcendence_biological.description>机械体融合带来的生物系统增强。
+
+-- easyrim</transcendence_biological.description>
+	<transcendence_environmental.label>环境适应</transcendence_environmental.label>
+	<transcendence_environmental.description>机械体融合带来的环境危险抗性增强。
+
+-- easyrim</transcendence_environmental.description>
+	<transcendence_psychic.label>灵能强化</transcendence_psychic.label>
+	<transcendence_psychic.description>机械体融合带来的灵能天赋增强。
+
+-- easyrim</transcendence_psychic.description>
+	<psylink_fullpower.label>&lt;color=#8000FF&gt;灵能链接&lt;/color&gt;</psylink_fullpower.label>
+	<psylink_fullpower.description>超越时代的闪耀科技杰作，将意识与宇宙灵能网络完美融合。神经接口在大脑皮层中编织出复杂的量子回路，每一个思维脉冲都能引发现实的扭曲。掌握此等力量者已成为生物与机械、物质与精神的完美桥梁，能够操控最为强大的灵能法术，甚至重塑时空的基本法则。
+
+-- easyrim</psylink_fullpower.description>
+	<adaptive_armor.label>&lt;color=#646464&gt;适应性装甲&lt;/color&gt;</adaptive_armor.label>
+	<adaptive_armor.description>自适应体表装甲系统，能够根据健康状况做出响应。随着健康状况的恶化，装甲变得更为坚固但会限制移动。
+
+-- easyrim</adaptive_armor.description>
+	<adaptive_armor.stages.0.label>适应性装甲 (活跃)</adaptive_armor.stages.0.label>
+	<adaptive_armor.stages.1.label>适应性装甲 (警戒)</adaptive_armor.stages.1.label>
+	<adaptive_armor.stages.2.label>适应性装甲 (防御)</adaptive_armor.stages.2.label>
+	<adaptive_armor.stages.3.label>适应性装甲 (紧急)</adaptive_armor.stages.3.label>
+	<adaptive_armor.stages.4.label>适应性装甲 (堡垒)</adaptive_armor.stages.4.label>
+	<transcendence_battle_morph_verbs.label>作战协议</transcendence_battle_morph_verbs.label>
+	<transcendence_battle_morph_verbs.description>模拟作战义体动作库提供多种近战动作：相位劈斩、动能冲槌、矢量突刺、针幕掠袭与横扫踢击。
+
+-- easyrim</transcendence_battle_morph_verbs.description>
+	<transcendence_battle_morph_verbs.comps.0.tools.0.label>相位劈斩</transcendence_battle_morph_verbs.comps.0.tools.0.label>
+	<transcendence_battle_morph_verbs.comps.0.tools.1.label>动能冲槌</transcendence_battle_morph_verbs.comps.0.tools.1.label>
+	<transcendence_battle_morph_verbs.comps.0.tools.2.label>矢量突刺</transcendence_battle_morph_verbs.comps.0.tools.2.label>
+	<transcendence_battle_morph_verbs.comps.0.tools.3.label>针幕掠袭</transcendence_battle_morph_verbs.comps.0.tools.3.label>
+	<transcendence_battle_morph_verbs.comps.0.tools.4.label>横扫踢击</transcendence_battle_morph_verbs.comps.0.tools.4.label>
+    <EM_NexusSpine_RangedAdaptation.label>远程校准</EM_NexusSpine_RangedAdaptation.label>
+  <EM_NexusSpine_RangedAdaptation.description>适应性中枢脊椎检测到了长距离战斗倾向，正在持续校准姿态、后坐力补偿和视动反应时序。
+
+-- easyrim</EM_NexusSpine_RangedAdaptation.description>
+
+  <EM_NexusSpine_GeneAdaptation.label>机体强化共鸣</EM_NexusSpine_GeneAdaptation.label>
+  <EM_NexusSpine_GeneAdaptation.description>适应性中枢脊椎正与强健的快速收缩肌基因产生共鸣，进一步强化宿主的近战生物力学。
+
+-- easyrim</EM_NexusSpine_GeneAdaptation.description>
+
+  <EM_AdaptiveNexusSpine.label>适应性中枢脊椎</EM_AdaptiveNexusSpine.label>
+  <EM_AdaptiveNexusSpine.labelNoun>适应性中枢脊椎</EM_AdaptiveNexusSpine.labelNoun>
+  <EM_AdaptiveNexusSpine.description>这条中枢脊椎会常驻分发身体强化与生物强化，作为全身适配控制器运行。联动效果按状态切换：生命低于 75% 启用适应性装甲，进入战斗启用作战协议，使用远程武器时触发远程校准，具备强力近战基因时触发机体强化共鸣。
+
+-- easyrim</EM_AdaptiveNexusSpine.description>
+</LanguageData>

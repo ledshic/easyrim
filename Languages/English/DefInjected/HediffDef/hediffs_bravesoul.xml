@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <bravesoul.label>&lt;color=#00CED1&gt;immortal soul&lt;/color&gt;</bravesoul.label>
+  <bravesoul.description>
+    The immortal soul doctrine runs five channels in parallel: cognitive fervor, physical might, vital ascendance, combat mastery, and indomitable spirit. Its linked design is front-line focused, giving a stable baseline that synergy states can escalate into stronger sustained pressure and suppression.
+
+-- easyrim</bravesoul.description>
+  <bravesoul_cognitive.label>cognitive fervor</bravesoul_cognitive.label>
+  <bravesoul_cognitive.description>Sharpened mind and heightened perception fueled by warrior spirit.
+
+-- easyrim</bravesoul_cognitive.description>
+  <bravesoul_physical.label>physical might</bravesoul_physical.label>
+  <bravesoul_physical.description>Unmatched agility and control honed through countless battles.
+
+-- easyrim</bravesoul_physical.description>
+  <bravesoul_vitals.label>vital ascendance</bravesoul_vitals.label>
+  <bravesoul_vitals.description>Reinforced organs and accelerated recovery.
+
+-- easyrim</bravesoul_vitals.description>
+  <bravesoul_vitals.stages.0.label>vital ascendance (stable)</bravesoul_vitals.stages.0.label>
+  <bravesoul_vitals.stages.1.label>vital ascendance (awakened)</bravesoul_vitals.stages.1.label>
+  <bravesoul_vitals.stages.2.label>vital ascendance (surging)</bravesoul_vitals.stages.2.label>
+  <bravesoul_vitals.stages.3.label>vital ascendance (frenzy)</bravesoul_vitals.stages.3.label>
+  <bravesoul_vitals.stages.4.label>vital ascendance (undying)</bravesoul_vitals.stages.4.label>
+  <bravesoul_combat.label>combat mastery</bravesoul_combat.label>
+  <bravesoul_combat.description>Supreme martial prowess and adaptive defenses.
+
+-- easyrim</bravesoul_combat.description>
+  <bravesoul_spirit.label>indomitable spirit</bravesoul_spirit.label>
+  <bravesoul_spirit.description>A resolve that even death cannot shake.
+
+-- easyrim</bravesoul_spirit.description>
+  <EM_BraveSpine_BattleTrance.label>combat rhythm</EM_BraveSpine_BattleTrance.label>
+  <EM_BraveSpine_BattleTrance.description>This warspine locks the host into a ritualized combat rhythm, suppressing hesitation and driving cleaner, more decisive attack sequencing.
+
+-- easyrim</EM_BraveSpine_BattleTrance.description>
+
+  <EM_BraveSpine.label>indomitable warspine</EM_BraveSpine.label>
+  <EM_BraveSpine.labelNoun>an indomitable warspine</EM_BraveSpine.labelNoun>
+  <EM_BraveSpine.description>This spine keeps physical might and indomitable spirit online as a stable front-line baseline. Linked effects trigger by pressure: combat mastery in live combat, vital ascendance below 65% health, and combat rhythm while drafted.
+
+-- easyrim</EM_BraveSpine.description>
+</LanguageData>

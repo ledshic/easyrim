@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <archotechoath.label>&lt;color=#D4AF37&gt;archotech oath&lt;/color&gt;</archotechoath.label>
+  <archotechoath.description>The oath keeps cognition, industry, command, and self-repair channels online as a permanent baseline. Linked effects reroute by state: lab sync while undrafted, warprotocol in live combat, and emergency bulkhead below half health.
+
+-- easyrim</archotechoath.description>
+  <archotechoath_cognition.label>oracle cognition</archotechoath_cognition.label>
+  <archotechoath_cognition.description>Pattern prediction and disciplined thought elevate learning and research.
+
+-- easyrim</archotechoath_cognition.description>
+  <archotechoath_industry.label>forgebound discipline</archotechoath_industry.label>
+  <archotechoath_industry.description>Fine motor control and tireless routine turn labor into precision craft.
+
+-- easyrim</archotechoath_industry.description>
+  <archotechoath_command.label>governor cadence</archotechoath_command.label>
+  <archotechoath_command.description>Measured speech and composure steady allies and bend negotiations.
+
+-- easyrim</archotechoath_command.description>
+  <archotechoath_aegis.label>self-repair aegis</archotechoath_aegis.label>
+  <archotechoath_aegis.description>Micromechanites prioritize structural integrity and rapid recovery under stress.
+
+-- easyrim</archotechoath_aegis.description>
+  <archotechoath_labsync.label>lab sync protocol</archotechoath_labsync.label>
+  <archotechoath_labsync.description>Out of direct combat, cognitive routines lock onto research and precision craft throughput.
+
+-- easyrim</archotechoath_labsync.description>
+  <archotechoath_warprotocol.label>warprotocol lattice</archotechoath_warprotocol.label>
+  <archotechoath_warprotocol.description>Combat telemetry routes cognition into targeting, movement prediction, and damage control loops.
+
+-- easyrim</archotechoath_warprotocol.description>
+  <archotechoath_emergency_bulkhead.label>emergency bulkhead</archotechoath_emergency_bulkhead.label>
+  <archotechoath_emergency_bulkhead.description>When integrity falls, contingency armor and trauma routing force a stubborn survival state.
+
+-- easyrim</archotechoath_emergency_bulkhead.description>
+  <archotech_protocol_surge.label>protocol surge</archotech_protocol_surge.label>
+  <archotech_protocol_surge.description>Short-term overclock of archotech governance routines for peak combat and production output.
+
+-- easyrim</archotech_protocol_surge.description>
+  <archotech_lockstep_marked.label>lockstep marked</archotech_lockstep_marked.label>
+  <archotech_lockstep_marked.description>The target is prediction-locked by archotech telemetry, degrading movement and defensive timing.
+
+-- easyrim</archotech_lockstep_marked.description>
+  <EM_ArchotechOathSpine.label>archotech oath spine</EM_ArchotechOathSpine.label>
+  <EM_ArchotechOathSpine.labelNoun>an archotech oath spine</EM_ArchotechOathSpine.labelNoun>
+  <EM_ArchotechOathSpine.description>This spine keeps oracle cognition and self-repair aegis online as a constant governance substrate. Linked effects reroute by state: governor cadence plus lab sync while undrafted, warprotocol lattice in combat, and emergency bulkhead below 50% health.
+
+-- easyrim</EM_ArchotechOathSpine.description>
+</LanguageData>

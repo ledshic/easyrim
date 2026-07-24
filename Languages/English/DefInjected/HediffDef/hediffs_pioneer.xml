@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <pioneerspirit.label>&lt;color=#87CEEB&gt;pioneer spirit&lt;/color&gt;</pioneerspirit.label>
+  <pioneerspirit.description>
+    The pioneer doctrine maintains physical, industry, combat, and resilience channels while synchronizing with colony command abilities. Linked effects branch by state: ranged firefights trigger vanguard fire discipline, civilian mode triggers settler throughput, and low-health combat forces a last-stand survival surge.
+
+-- easyrim</pioneerspirit.description>
+  <pioneerspirit_physical.label>frontier vigor</pioneerspirit_physical.label>
+  <pioneerspirit_physical.description>Built through relentless daily physical training.
+
+-- easyrim</pioneerspirit_physical.description>
+  <pioneerspirit_industry.label>pioneer industry</pioneerspirit_industry.label>
+  <pioneerspirit_industry.description>Diligent and fast-learning, refined through constant work.
+
+-- easyrim</pioneerspirit_industry.description>
+  <pioneerspirit_combat.label>frontier marksmanship</pioneerspirit_combat.label>
+  <pioneerspirit_combat.description>Tactical advantage and constant readiness.
+
+-- easyrim</pioneerspirit_combat.description>
+  <pioneerspirit_resilience.label>survival instinct</pioneerspirit_resilience.label>
+  <pioneerspirit_resilience.description>Endurance and unwavering will.
+
+-- easyrim</pioneerspirit_resilience.description>
+  <pioneerspirit_vanguard_fire.label>vanguard fire discipline</pioneerspirit_vanguard_fire.label>
+  <pioneerspirit_vanguard_fire.description>In active engagements, scouting doctrine folds into precision ranged pressure and rapid target cycling.
+
+-- easyrim</pioneerspirit_vanguard_fire.description>
+  <pioneerspirit_settler_engine.label>load balancing engine</pioneerspirit_settler_engine.label>
+  <pioneerspirit_settler_engine.description>Outside direct combat, the pioneer mindset reorganizes labor into a relentless high-output routine.
+
+-- easyrim</pioneerspirit_settler_engine.description>
+  <pioneerspirit_laststand.label>final line</pioneerspirit_laststand.label>
+  <pioneerspirit_laststand.description>When collapse is imminent, every reserve is burned to keep moving, shooting, and surviving through the worst minute.
+
+-- easyrim</pioneerspirit_laststand.description>
+  <pioneer_frontier_edict.label>emergency action</pioneer_frontier_edict.label>
+  <pioneer_frontier_edict.description>A brief burst of action capacity to handle high-pressure moments.
+
+-- easyrim</pioneer_frontier_edict.description>
+  <WorkGuidance.label>work guidance</WorkGuidance.label>
+  <WorkGuidance.description>After receiving precise guidance on work details and steps, work proficiency improves noticeably and learning accelerates sharply for a short time.
+
+-- easyrim</WorkGuidance.description>
+  <WorkMotivation.label>united as one</WorkMotivation.label>
+  <WorkMotivation.description>Galvanized by the colony mobilization call, this pawn works shoulder to shoulder with their comrades and throws themselves into every task with exceptional drive and focus.
+
+-- easyrim</WorkMotivation.description>
+  <ColonyRallyFatigue.label>rally fatigue</ColonyRallyFatigue.label>
+  <ColonyRallyFatigue.description>The surge has faded, and hunger and exhaustion come flooding in.
+
+-- easyrim</ColonyRallyFatigue.description>
+  <EM_PioneerSpine_OverclockHarmony.label>overclock synchronization</EM_PioneerSpine_OverclockHarmony.label>
+  <EM_PioneerSpine_OverclockHarmony.description>When the built-in neural overclock routine is active, this spine channels the burst window into a more stable motor-control loop.
+
+-- easyrim</EM_PioneerSpine_OverclockHarmony.description>
+
+  <EM_PioneerSpine.label>pioneer lattice spine</EM_PioneerSpine.label>
+  <EM_PioneerSpine.labelNoun>a pioneer lattice spine</EM_PioneerSpine.labelNoun>
+  <EM_PioneerSpine.description>This spine keeps pioneer industry and resilience active at all times and grants neural overclock directly. Linked effects branch by state: vanguard fire in ranged combat, load balancing while undrafted, final line below 40% health in combat, and overclock synchronization whenever neural overclock is active.
+
+-- easyrim</EM_PioneerSpine.description>
+  <EasyMode_NeuralOverclock.label>neural overclock</EasyMode_NeuralOverclock.label>
+  <EasyMode_NeuralOverclock.description>The nervous system and musculature are operating far beyond normal safety limits. Motion becomes explosively fast and precise while accumulating tissue strain across the body.
+
+-- easyrim</EasyMode_NeuralOverclock.description>
+  <EasyMode_NeuralOverclockStrain.label>overclock strain</EasyMode_NeuralOverclockStrain.label>
+  <EasyMode_NeuralOverclockStrain.labelNoun>an overclock strain</EasyMode_NeuralOverclockStrain.labelNoun>
+  <EasyMode_NeuralOverclockStrain.description>Localized neural and muscular damage caused by forcing the body beyond its safe operating limits.
+
+-- easyrim</EasyMode_NeuralOverclockStrain.description>
+</LanguageData>

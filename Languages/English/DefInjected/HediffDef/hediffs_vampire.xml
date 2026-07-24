@@ -40,4 +40,23 @@
   <crimson_sovereign_gaze_marked.description>The target's will falters under predatory authority, reducing coordination and resistance.
 
 -- easyrim</crimson_sovereign_gaze_marked.description>
+  <bloodhemogen_resonance.label>blood hemogen resonance</bloodhemogen_resonance.label>
+  <bloodhemogen_resonance.description>The host's vitality rises and falls with hemogen reserves. When hemogen is plentiful, the body surges with strength; when depleted, weakness and pain follow.
+
+-- easyrim</bloodhemogen_resonance.description>
+  <bloodhemogen_resonance.stages.0.label>hemogen peak</bloodhemogen_resonance.stages.0.label>
+  <bloodhemogen_resonance.stages.1.label>hemogen rich</bloodhemogen_resonance.stages.1.label>
+  <bloodhemogen_resonance.stages.2.label>hemogen balanced</bloodhemogen_resonance.stages.2.label>
+  <bloodhemogen_resonance.stages.3.label>hemogen lacking</bloodhemogen_resonance.stages.3.label>
+  <bloodhemogen_resonance.stages.4.label>hemogen depleted</bloodhemogen_resonance.stages.4.label>
+  <EM_CrimsonSpine_SanguineAscendancy.label>sanguine ascendancy</EM_CrimsonSpine_SanguineAscendancy.label>
+  <EM_CrimsonSpine_SanguineAscendancy.description>When blood resonance stays in the high band, the implanted dynasty spine pushes each movement and strike into a predatory peak cadence.
+
+-- easyrim</EM_CrimsonSpine_SanguineAscendancy.description>
+
+  <EM_CrimsonDynastySpine.label>crimson dynasty spine</EM_CrimsonDynastySpine.label>
+  <EM_CrimsonDynastySpine.labelNoun>a crimson dynasty spine</EM_CrimsonDynastySpine.labelNoun>
+  <EM_CrimsonDynastySpine.description>This spine keeps predator grace and hemogenic vigor as a baseline, then grants blood resonance only when the host carries the Hemogenic gene, with resonance stage adjusting dynamically to current blood state. Linked effects split by state: bloodfrenzy below 45% health in combat, noble poise above 80% health out of combat, duelist ascendancy during melee engagements, and sanguine ascendancy while resonance remains in the high range.
+
+-- easyrim</EM_CrimsonDynastySpine.description>
 </LanguageData>

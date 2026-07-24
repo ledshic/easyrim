@@ -296,12 +296,11 @@
 		<stages>
 			<li>
 				<statFactors>
-					<MoveSpeed>1.35</MoveSpeed>
-					<WorkSpeedGlobal>1.5</WorkSpeedGlobal>
-					<RangedCooldownFactor>0.62</RangedCooldownFactor>
-					<AimingDelayFactor>0.62</AimingDelayFactor>
-					<MeleeCooldownFactor>0.68</MeleeCooldownFactor>
-					<IncomingDamageFactor>1.18</IncomingDamageFactor>
+					<MoveSpeed>2</MoveSpeed>
+					<WorkSpeedGlobal>5</WorkSpeedGlobal>
+					<RangedCooldownFactor>0.6</RangedCooldownFactor>
+					<AimingDelayFactor>0.6</AimingDelayFactor>
+					<MeleeCooldownFactor>0.6</MeleeCooldownFactor>
 				</statFactors>
 			</li>
 		</stages>
@@ -411,7 +410,7 @@
 		<defName>WorkMotivation</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		<label>united as one</label>
-		<description>Inspired by a rallying call, this pawn works with exceptional drive and focus. All tasks are performed faster while the motivation holds.</description>
+		<description>Inspired by a rallying call, this pawn works with exceptional drive and focus. All tasks are performed faster, movement quickens, and every need is restored on a steady pulse while the motivation holds.</description>
 		<defaultLabelColor>(255,215,0)</defaultLabelColor>
 		<isBad>false</isBad>
 		<maxSeverity>1.0</maxSeverity>
@@ -420,13 +419,37 @@
 				<disappearsAfterTicks>60000</disappearsAfterTicks>
 				<showRemainingTime>true</showRemainingTime>
 			</li>
+			<li Class="EasyMode.HediffCompProperties_ColonyRallyMaintenance">
+				<tickInterval>240</tickInterval>
+				<followupHediffDef>ColonyRallyFatigue</followupHediffDef>
+			</li>
 		</comps>
 		<stages>
 			<li>
 				<statOffsets>
 					<WorkSpeedGlobal>0.75</WorkSpeedGlobal>
+					<MoveSpeed>0.5</MoveSpeed>
 				</statOffsets>
 			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>ColonyRallyFatigue</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>rally fatigue</label>
+		<description>The surge has passed and the colony feels the letdown. Food and rest slip away twice as fast for a while.</description>
+		<defaultLabelColor>(205,92,92)</defaultLabelColor>
+		<isBad>true</isBad>
+		<maxSeverity>1.0</maxSeverity>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>30000</disappearsAfterTicks>
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+		</comps>
+		<stages>
+			<li />
 		</stages>
 	</HediffDef>
 </Defs>

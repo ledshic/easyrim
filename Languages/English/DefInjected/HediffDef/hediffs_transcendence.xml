@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <transcendence.label>&lt;color=#C0C0C0&gt;eternal recreation&lt;/color&gt;</transcendence.label>
+  <transcendence.description>
+    A transcendence-tech integration matrix keeps cognitive, physical, biological, environmental, psychic, and combat channels active at all times. Linked effects switch with context: adaptive armor hardens as health drops, ranged calibration engages with ranged weapons, and somatic reinforcement resonance unlocks extra close-quarters optimization.
+
+-- easyrim</transcendence.description>
+  <adaptive_armor.label>&lt;color=#646464&gt;adaptive armor&lt;/color&gt;</adaptive_armor.label>
+  <adaptive_armor.description>
+    An adaptive surface armor system that responds to health condition. As health decreases, the armor becomes tougher but restricts movement.
+
+-- easyrim</adaptive_armor.description>
+  <adaptive_armor.stages.0.label>adaptive armor (active)</adaptive_armor.stages.0.label>
+  <adaptive_armor.stages.1.label>adaptive armor (alert)</adaptive_armor.stages.1.label>
+  <adaptive_armor.stages.2.label>adaptive armor (defensive)</adaptive_armor.stages.2.label>
+  <adaptive_armor.stages.3.label>adaptive armor (emergency)</adaptive_armor.stages.3.label>
+  <adaptive_armor.stages.4.label>adaptive armor (fortress)</adaptive_armor.stages.4.label>
+  <transcendence_battle_morph_verbs.label>combat protocol</transcendence_battle_morph_verbs.label>
+  <transcendence_battle_morph_verbs.description>A simulated battle-prosthetic action library that grants multiple melee maneuvers: phase cleave, kinetic ram, vector thrust, needle rake, and sweeping kick.
+
+-- easyrim</transcendence_battle_morph_verbs.description>
+  <transcendence_battle_morph_verbs.comps.0.tools.0.label>phase cleave</transcendence_battle_morph_verbs.comps.0.tools.0.label>
+  <transcendence_battle_morph_verbs.comps.0.tools.1.label>kinetic ram</transcendence_battle_morph_verbs.comps.0.tools.1.label>
+  <transcendence_battle_morph_verbs.comps.0.tools.2.label>vector thrust</transcendence_battle_morph_verbs.comps.0.tools.2.label>
+  <transcendence_battle_morph_verbs.comps.0.tools.3.label>needle rake</transcendence_battle_morph_verbs.comps.0.tools.3.label>
+  <transcendence_battle_morph_verbs.comps.0.tools.4.label>sweeping kick</transcendence_battle_morph_verbs.comps.0.tools.4.label>
+  <EM_NexusSpine_RangedAdaptation.label>ranged calibration</EM_NexusSpine_RangedAdaptation.label>
+  <EM_NexusSpine_RangedAdaptation.description>Detecting long-range combat tendencies, the adaptive nexus spine continuously calibrates posture, recoil compensation, and visual-motor timing.
+
+-- easyrim</EM_NexusSpine_RangedAdaptation.description>
+
+  <EM_NexusSpine_GeneAdaptation.label>somatic reinforcement resonance</EM_NexusSpine_GeneAdaptation.label>
+  <EM_NexusSpine_GeneAdaptation.description>The adaptive nexus spine resonates with strong fast-twitch melee genes and pushes close-quarters biomechanics to a higher output band.
+
+-- easyrim</EM_NexusSpine_GeneAdaptation.description>
+
+  <EM_AdaptiveNexusSpine.label>adaptive nexus spine</EM_AdaptiveNexusSpine.label>
+  <EM_AdaptiveNexusSpine.labelNoun>an adaptive nexus spine</EM_AdaptiveNexusSpine.labelNoun>
+  <EM_AdaptiveNexusSpine.description>This spine permanently distributes physical and biological transcendence channels as its baseline. Linked effects switch by state: adaptive armor below 75% health, combat protocol in combat, ranged calibration with ranged weapons, and somatic reinforcement resonance with strong melee genes.
+
+-- easyrim</EM_AdaptiveNexusSpine.description>
+</LanguageData>

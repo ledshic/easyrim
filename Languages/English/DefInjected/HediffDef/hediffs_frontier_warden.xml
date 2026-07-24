@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <frontierwarden.label>&lt;color=#6B8E23&gt;frontier warden&lt;/color&gt;</frontierwarden.label>
+  <frontierwarden.description>The frontier warden doctrine keeps pathfinder, fireline, field surgeon, and breachfighter channels online as a persistent defense baseline. Linked effects switch by posture: overwatch matrix in ranged combat, breach rampage in melee pressure, and camp triage command while undrafted to sustain recovery and logistics tempo.
+
+-- easyrim</frontierwarden.description>
+  <frontierwarden_pathfinder.label>pathfinder stride</frontierwarden_pathfinder.label>
+  <frontierwarden_pathfinder.description>Hard-march conditioning improves movement, hauling, and field awareness.
+
+-- easyrim</frontierwarden_pathfinder.description>
+  <frontierwarden_fireline.label>fireline doctrine</frontierwarden_fireline.label>
+  <frontierwarden_fireline.description>Battlefield drills improve aim discipline and target acquisition under pressure.
+
+-- easyrim</frontierwarden_fireline.description>
+  <frontierwarden_fieldsurgeon.label>field surgeon's calm</frontierwarden_fieldsurgeon.label>
+  <frontierwarden_fieldsurgeon.description>Triaged instincts and steady hands sustain allies through prolonged campaigns.
+
+-- easyrim</frontierwarden_fieldsurgeon.description>
+  <frontierwarden_breachfighter.label>breachfighter resolve</frontierwarden_breachfighter.label>
+  <frontierwarden_breachfighter.description>Close-quarters aggression and stubborn defense hold the line in chaos.
+
+-- easyrim</frontierwarden_breachfighter.description>
+  <frontierwarden_overwatch_matrix.label>overwatch matrix</frontierwarden_overwatch_matrix.label>
+  <frontierwarden_overwatch_matrix.description>Disciplined overwatch mode refines ranged cadence and exposes targets for line-breaking volleys.
+
+-- easyrim</frontierwarden_overwatch_matrix.description>
+  <frontierwarden_breach_rampage.label>breach rampage</frontierwarden_breach_rampage.label>
+  <frontierwarden_breach_rampage.description>Melee breach posture trades caution for violent breakthrough and sustained close-quarters pressure.
+
+-- easyrim</frontierwarden_breach_rampage.description>
+  <frontierwarden_camp_triage.label>camp triage command</frontierwarden_camp_triage.label>
+  <frontierwarden_camp_triage.description>Between firefights, the warden shifts to logistics medicine and rapid stabilization of wounded allies.
+
+-- easyrim</frontierwarden_camp_triage.description>
+  <frontier_bulwark_pulse.label>bulwark pulse</frontier_bulwark_pulse.label>
+  <frontier_bulwark_pulse.description>Warden pulse hardens posture and response speed for holding unstable defensive lines.
+
+-- easyrim</frontier_bulwark_pulse.description>
+  <EM_FrontierWardenSpine.label>frontier warden spine</EM_FrontierWardenSpine.label>
+  <EM_FrontierWardenSpine.labelNoun>a frontier warden spine</EM_FrontierWardenSpine.labelNoun>
+  <EM_FrontierWardenSpine.description>This spine keeps pathfinder stride and field surgeon calm active as baseline defense logistics. Linked effects switch with posture: fireline doctrine while drafted, overwatch matrix in ranged combat, breachfighter in melee, breach rampage below 70% health during melee combat, and camp triage while undrafted.
+
+-- easyrim</EM_FrontierWardenSpine.description>
+</LanguageData>

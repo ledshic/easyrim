@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+	<pioneerspirit.label>&lt;color=#87CEEB&gt;先驱意志&lt;/color&gt;</pioneerspirit.label>
+	<pioneerspirit.description>先驱意志会常驻维持体能、工艺、战斗与韧性四条主链，并与殖民地指挥能力协同。联动效果按状态分流：远程交火时启用先锋火力教范，未征召时启用拓殖吞吐引擎，生命较低且仍在战斗时强制进入边境死守。
+
+-- easyrim</pioneerspirit.description>
+	<pioneerspirit_physical.label>千锤百炼</pioneerspirit_physical.label>
+	<pioneerspirit_physical.description>日复一日的体能训练。
+
+-- easyrim</pioneerspirit_physical.description>
+	<pioneerspirit_industry.label>先驱工艺</pioneerspirit_industry.label>
+	<pioneerspirit_industry.description>敏而好学，终有所得。
+
+-- easyrim</pioneerspirit_industry.description>
+	<pioneerspirit_combat.label>边境战术</pioneerspirit_combat.label>
+	<pioneerspirit_combat.description>战术优势与随时就绪。
+
+-- easyrim</pioneerspirit_combat.description>
+	<pioneerspirit_resilience.label>求生本能</pioneerspirit_resilience.label>
+	<pioneerspirit_resilience.description>耐力与不动如山的意志。
+
+-- easyrim</pioneerspirit_resilience.description>
+	<pioneerspirit_vanguard_fire.label>先锋火力教范</pioneerspirit_vanguard_fire.label>
+	<pioneerspirit_vanguard_fire.description>进入实战后，侦巡心智会折叠为高精度远程压制与快速换靶流程。
+
+-- easyrim</pioneerspirit_vanguard_fire.description>
+	<pioneerspirit_settler_engine.label>负载均衡引擎</pioneerspirit_settler_engine.label>
+	<pioneerspirit_settler_engine.description>脱离正面战斗时，先驱意志会重组劳动节律，进入持续高产状态。
+
+-- easyrim</pioneerspirit_settler_engine.description>
+	<pioneerspirit_laststand.label>最终防线</pioneerspirit_laststand.label>
+	<pioneerspirit_laststand.description>当局势逼近崩溃，宿主会燃尽储备以维持机动、射击与生存能力。
+
+-- easyrim</pioneerspirit_laststand.description>
+	<pioneer_frontier_edict.label>紧急行动</pioneer_frontier_edict.label>
+	<pioneer_frontier_edict.description>短暂的行动力爆发，以应对高压时刻。
+
+-- easyrim</pioneer_frontier_edict.description>
+	<WorkGuidance.label>工作指点</WorkGuidance.label>
+	<WorkGuidance.description>被指点了工作细节与步骤，短时间内工作熟练度明显提升，学习速度显著加快。
+
+-- easyrim</WorkGuidance.description>
+	<WorkMotivation.label>万众一心</WorkMotivation.label>
+	<WorkMotivation.description>受到殖民地动员令的激励，与同伴同仇敌忾、全力以赴，干劲十足地投入手头的每一项工作。
+
+-- easyrim</WorkMotivation.description>
+	<ColonyRallyFatigue.label>动员疲态</ColonyRallyFatigue.label>
+	<ColonyRallyFatigue.description>激情已经消退，饥饿和困顿如潮水般涌来。
+
+-- easyrim</ColonyRallyFatigue.description>
+  <EM_PioneerSpine_OverclockHarmony.label>超频同步</EM_PioneerSpine_OverclockHarmony.label>
+  <EM_PioneerSpine_OverclockHarmony.description>当内置的神经超频程序被触发时，这条脊椎会把爆发期导入更稳定运动控制回路。
+
+-- easyrim</EM_PioneerSpine_OverclockHarmony.description>
+
+  <EM_PioneerSpine.label>拓荒晶格脊椎</EM_PioneerSpine.label>
+  <EM_PioneerSpine.labelNoun>拓荒晶格脊椎</EM_PioneerSpine.labelNoun>
+  <EM_PioneerSpine.description>拓荒晶格脊椎会常驻维持先驱工艺与求生本能，并直接赋予神经超频能力。联动效果按状态分流：远程交火启用先锋火力教范，未征召时启用负载均衡引擎，生命低于 40% 且在战斗中触发最终防线，神经超频生效时追加超频同步。
+
+-- easyrim</EM_PioneerSpine.description>
+	<EasyMode_NeuralOverclock.label>神经超频</EasyMode_NeuralOverclock.label>
+	<EasyMode_NeuralOverclock.description>神经系统与肌肉组织正在远超正常安全极限运转。动作变得极为迅猛精确，同时身体各处会不断积累组织损伤。
+
+-- easyrim</EasyMode_NeuralOverclock.description>
+	<EasyMode_NeuralOverclockStrain.label>超频劳损</EasyMode_NeuralOverclockStrain.label>
+	<EasyMode_NeuralOverclockStrain.labelNoun>一处超频劳损</EasyMode_NeuralOverclockStrain.labelNoun>
+	<EasyMode_NeuralOverclockStrain.description>强迫身体突破安全运转极限所造成的局部神经与肌肉组织损伤。
+
+-- easyrim</EasyMode_NeuralOverclockStrain.description>
+	<EasyMode_NeuralOverclockStrain.comps.0.labelTendedWell>已稳定</EasyMode_NeuralOverclockStrain.comps.0.labelTendedWell>
+	<EasyMode_NeuralOverclockStrain.comps.0.labelTendedWellInner>已稳定</EasyMode_NeuralOverclockStrain.comps.0.labelTendedWellInner>
+	<EasyMode_NeuralOverclockStrain.comps.0.labelSolidTendedWell>已稳定</EasyMode_NeuralOverclockStrain.comps.0.labelSolidTendedWell>
+	<EasyMode_NeuralOverclockStrain.injuryProps.destroyedLabel>过载损毁</EasyMode_NeuralOverclockStrain.injuryProps.destroyedLabel>
+	<EasyMode_NeuralOverclockStrain.injuryProps.destroyedOutLabel>过载损毁</EasyMode_NeuralOverclockStrain.injuryProps.destroyedOutLabel>
+</LanguageData>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+	<frontierwarden.label>&lt;color=#6B8E23&gt;边疆守望&lt;/color&gt;</frontierwarden.label>
+	<frontierwarden.description>边疆守望会常驻维持踏荒行军、火线教范、战地稳术与破阵意志四条守线链路，作为殖民地防御中枢。联动效果按姿态切换：远程交火时启用警戒火网矩阵，近战缠斗时启用破阵狂袭，脱离征召时切换营地分诊指挥以抬升恢复与后勤节奏。
+
+-- easyrim</frontierwarden.description>
+	<frontierwarden_pathfinder.label>踏荒行军</frontierwarden_pathfinder.label>
+	<frontierwarden_pathfinder.description>长期远行训练强化机动、负重与野外态势感知。
+
+-- easyrim</frontierwarden_pathfinder.description>
+	<frontierwarden_fireline.label>火线教范</frontierwarden_fireline.label>
+	<frontierwarden_fireline.description>战场操典磨炼瞄准纪律与压制下的目标捕获能力。
+
+-- easyrim</frontierwarden_fireline.description>
+	<frontierwarden_fieldsurgeon.label>战地稳术</frontierwarden_fieldsurgeon.label>
+	<frontierwarden_fieldsurgeon.description>分诊直觉与稳定手法让宿主在漫长战役中持续维系队伍战力。
+
+-- easyrim</frontierwarden_fieldsurgeon.description>
+	<frontierwarden_breachfighter.label>破阵意志</frontierwarden_breachfighter.label>
+	<frontierwarden_breachfighter.description>近距突击的凶猛与顽强抗压能力，使其能在混战中牢牢顶住战线。
+
+-- easyrim</frontierwarden_breachfighter.description>
+	<frontierwarden_overwatch_matrix.label>警戒火网矩阵</frontierwarden_overwatch_matrix.label>
+	<frontierwarden_overwatch_matrix.description>进入警戒火力模式后，远程节奏与火线压制能力会显著提高。
+
+-- easyrim</frontierwarden_overwatch_matrix.description>
+	<frontierwarden_breach_rampage.label>破阵狂袭</frontierwarden_breach_rampage.label>
+	<frontierwarden_breach_rampage.description>近战破阵姿态会放弃保守换取暴力突破与持续近距压制。
+
+-- easyrim</frontierwarden_breach_rampage.description>
+	<frontierwarden_camp_triage.label>营地分诊指挥</frontierwarden_camp_triage.label>
+	<frontierwarden_camp_triage.description>脱离交火后切换为后勤救治模式，提升稳定伤员与持续恢复能力。
+
+-- easyrim</frontierwarden_camp_triage.description>
+	<frontier_bulwark_pulse.label>壁垒脉冲</frontier_bulwark_pulse.label>
+	<frontier_bulwark_pulse.description>守望脉冲会强化姿态与反应速度，短时提高防线维持能力。
+
+-- easyrim</frontier_bulwark_pulse.description>
+  <EM_FrontierWardenSpine.label>边疆守望者脊椎</EM_FrontierWardenSpine.label>
+  <EM_FrontierWardenSpine.labelNoun>边疆守望者脊椎</EM_FrontierWardenSpine.labelNoun>
+  <EM_FrontierWardenSpine.description>边疆守望者脊椎会常驻维持踏荒行军与战场战术，提供防线机动与续航底座。联动效果按战场姿态切换：被征召启用火线教范，远程交火启用警戒火网矩阵，近战时启用破阵意志且生命低于 70% 追加破阵狂袭，未征召时切换营地分诊指挥。
+
+-- easyrim</EM_FrontierWardenSpine.description>
+</LanguageData>
