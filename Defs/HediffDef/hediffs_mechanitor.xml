@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!--
+    Mech nexus chip implant (Hediff_Level, max 6 installs).
+    Per severity: +9 bandwidth, +15% mech work speed offset, +25% mech repair speed.
+    3rd install: passive mech energy recharge every 240 ticks.
+    6th install: passive mech health restoration every 240 ticks.
+  -->
+  <HediffDef>
+    <defName>EM_MechNexusChipImplant</defName>
+    <hediffClass>Hediff_Level</hediffClass>
+    <descriptionHyperlinks>
+      <ThingDef>EM_MechNexusChip</ThingDef>
+    </descriptionHyperlinks>
+    <label>mech nexus chip</label>
+    <description>An archotech-grade mechanitor implant that fuses signal, powerfocus, and nanostructuring chip architectures into a single command nexus.\n\nEach install expands bandwidth, raises controlled-mech work efficiency, and accelerates mech repairs.\n\nAt the 3rd install, the nexus continuously recharges overseen mechanoids. At the 6th install, it also continuously mends their injuries.\n\nThis implant can be installed up to 6 times to increase its effect.</description>
+    <descriptionShort>Mechanitor implant: +bandwidth, +mech efficiency, +repair speed. 3rd install: passive mech recharge. 6th install: passive mech repair. Installable up to 6 times.</descriptionShort>
+    <defaultLabelColor>(0.55, 0.85, 1.0)</defaultLabelColor>
+    <isBad>false</isBad>
+    <priceImpact>true</priceImpact>
+    <initialSeverity>1</initialSeverity>
+    <minSeverity>0</minSeverity>
+    <maxSeverity>6</maxSeverity>
+    <keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+    <levelIsQuantity>true</levelIsQuantity>
+    <duplicationAllowed>false</duplicationAllowed>
+    <comps>
+      <!-- Unlocks at 3rd install. Uses Need_MechEnergy (same path as Building_MechCharger). -->
+      <li Class="EasyMode.HediffCompProperties_MechPowerRestore">
+        <tickInterval>240</tickInterval>
+        <minSeverity>3</minSeverity>
+        <fullRestore>true</fullRestore>
+        <energyPerPulse>5</energyPerPulse>
+        <scaleWithSeverity>true</scaleWithSeverity>
+      </li>
+      <!-- Unlocks at 6th install. Uses MechRepairUtility.RepairTick (same path as JobDriver_RepairMech). -->
+      <li Class="EasyMode.HediffCompProperties_MechHealthRestore">
+        <tickInterval>240</tickInterval>
+        <minSeverity>6</minSeverity>
+        <repairsPerPulse>1</repairsPerPulse>
+        <scaleWithSeverity>true</scaleWithSeverity>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>1</minSeverity>
+        <statOffsets>
+          <MechBandwidth>9</MechBandwidth>
+          <WorkSpeedGlobalOffsetMech>0.15</WorkSpeedGlobalOffsetMech>
+          <MechRepairSpeed>0.25</MechRepairSpeed>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>2</minSeverity>
+        <statOffsets>
+          <MechBandwidth>18</MechBandwidth>
+          <WorkSpeedGlobalOffsetMech>0.30</WorkSpeedGlobalOffsetMech>
+          <MechRepairSpeed>0.50</MechRepairSpeed>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>3</minSeverity>
+        <statOffsets>
+          <MechBandwidth>27</MechBandwidth>
+          <WorkSpeedGlobalOffsetMech>0.45</WorkSpeedGlobalOffsetMech>
+          <MechRepairSpeed>0.75</MechRepairSpeed>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>4</minSeverity>
+        <statOffsets>
+          <MechBandwidth>36</MechBandwidth>
+          <WorkSpeedGlobalOffsetMech>0.60</WorkSpeedGlobalOffsetMech>
+          <MechRepairSpeed>1.00</MechRepairSpeed>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>5</minSeverity>
+        <statOffsets>
+          <MechBandwidth>45</MechBandwidth>
+          <WorkSpeedGlobalOffsetMech>0.75</WorkSpeedGlobalOffsetMech>
+          <MechRepairSpeed>1.25</MechRepairSpeed>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>6</minSeverity>
+        <statOffsets>
+          <MechBandwidth>54</MechBandwidth>
+          <WorkSpeedGlobalOffsetMech>0.90</WorkSpeedGlobalOffsetMech>
+          <MechRepairSpeed>1.50</MechRepairSpeed>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+</Defs>

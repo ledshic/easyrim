@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <EM_MechNexusChipImplant.label>机械枢纽芯片</EM_MechNexusChipImplant.label>
+  <EM_MechNexusChipImplant.description>一枚超凡级机械师植入物，将同步信号芯片、能量汇聚芯片与纳米结构芯片的架构嵌于一体，形成统一的指挥枢纽。\n\n每次安装都会扩展带宽、提升受控机械体的作业效率，并加快机械体的维修速度。\n\n第 3 次安装后持续为机械体充能；第 6 次安装后持续修复机械体损伤。\n\n最多可安装 6 次以叠加效果。
+
+-- easyrim</EM_MechNexusChipImplant.description>
+  <EM_MechNexusChipImplant.descriptionShort>机械师植入：+带宽、+机械体效率、+维修速度。第 3 次：被动充能；第 6 次：被动修复。最多安装 6 次。
+
+-- easyrim</EM_MechNexusChipImplant.descriptionShort>
+</LanguageData>
